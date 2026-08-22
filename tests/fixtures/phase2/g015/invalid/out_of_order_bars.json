@@ -1,0 +1,7 @@
+{
+  "scenario": "out_of_order_bars",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "bars", "operation": "swap", "left": 1, "right": 2}],
+  "expected_issue_codes": ["out_of_order_bars"],
+  "expected_condition": "out_of_order_bars"
+}

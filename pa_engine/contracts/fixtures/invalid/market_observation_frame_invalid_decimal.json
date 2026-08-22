@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "market_observation_frame",
+  "extensions": {},
+  "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "formula_version": "g014-formula-0.1.0",
+  "rounding_mode": "exact_decimal",
+  "observations": [
+    {
+      "observation_id": "obv_5017e12b6ce6dfcfd675a325b1f808de953f3664779774863be1895188f2b733",
+      "bar_id": "bar_754b4492d460baa02f37232448ee18601e4d3daee3c1d59a430add9bf80fc509",
+      "direction": "bullish",
+      "range": "NaN",
+      "body": "1.5",
+      "upper_wick": "0.5",
+      "lower_wick": "0.5",
+      "range_relation": "none",
+      "gap_relation": "none",
+      "rolling_windows": [
+        {
+          "lookback": 2,
+          "status": "insufficient_history",
+          "high": null,
+          "low": null
+        }
+      ],
+      "quality": {
+        "status": "ok",
+        "codes": [],
+        "warnings": [],
+        "details": null
+      },
+      "uncertainty": {
+        "level": "low",
+        "codes": [],
+        "details": "deterministic fixture"
+      }
+    },
+    {
+      "observation_id": "obv_b591ae6bebed0ddbd39b18e0c9cc63b8ffc6d2e6d0f45bc6bd5355079ee3c5b2",
+      "bar_id": "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3",
+      "direction": "bearish",
+      "range": "3",
+      "body": "1",
+      "upper_wick": "1.5",
+      "lower_wick": "0.5",
+      "range_relation": "none",
+      "gap_relation": "none",
+      "rolling_windows": [
+        {
+          "lookback": 2,
+          "status": "available",
+          "high": "103",
+          "low": "99.5"
+        }
+      ],
+      "quality": {
+        "status": "ok",
+        "codes": [],
+        "warnings": [],
+        "details": null
+      },
+      "uncertainty": {
+        "level": "low",
+        "codes": [],
+        "details": "deterministic fixture"
+      }
+    },
+    {
+      "observation_id": "obv_42f7e5f4f30577b164c6832f28b321871a49344d66021a801aa811e51102e0df",
+      "bar_id": "bar_14dcf916b1b61c4ce043e987422580d969da855e204abdbb691a203e36761ef1",
+      "direction": "bearish",
+      "range": "2.5",
+      "body": "1",
+      "upper_wick": "0.5",
+      "lower_wick": "1",
+      "range_relation": "none",
+      "gap_relation": "none",
+      "rolling_windows": [
+        {
+          "lookback": 2,
+          "status": "available",
+          "high": "103",
+          "low": "99.5"
+        }
+      ],
+      "quality": {
+        "status": "ok",
+        "codes": [],
+        "warnings": [],
+        "details": null
+      },
+      "uncertainty": {
+        "level": "low",
+        "codes": [],
+        "details": "deterministic fixture"
+      }
+    }
+  ],
+  "quality": {
+    "status": "ok",
+    "codes": [],
+    "warnings": [],
+    "details": null
+  },
+  "uncertainty": {
+    "level": "low",
+    "codes": [],
+    "details": "deterministic fixture"
+  },
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "observation_frame_id": "obs_0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293"
+}

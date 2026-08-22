@@ -1,0 +1,10 @@
+{
+  "scenario": "direct_second",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [
+    {"path": "timeframe.unit", "value": "second"},
+    {"path": "timeframe.multiplier", "value": 1}
+  ],
+  "expected_issue_codes": ["malformed_ohlcv", "schema_violation"],
+  "expected_condition": "malformed_ohlcv"
+}

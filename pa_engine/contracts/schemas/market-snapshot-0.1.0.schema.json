@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/market-snapshot-0.1.0.schema.json",
+  "title": "Canonical OHLCV market snapshot v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "market_snapshot_id": {}, "content_hash": {}, "input_mode": {}, "instrument": {}, "timeframe": {}, "session": {}, "adjustment_policy": {}, "analysis_as_of": {}, "coverage": {}, "bars": {}, "quality": {}, "generated_at": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/marketSnapshot"
+}

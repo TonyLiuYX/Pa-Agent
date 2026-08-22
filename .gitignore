@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.pa-workspace/
+tmp/
+.DS_Store
+*.db
+*.db-shm
+*.db-wal
+.env*
+!.env.example
+
+# Cloud workspace artifacts
+paper-desk-cloud/node_modules/
+paper-desk-cloud/.next/
+paper-desk-cloud/.vinext/
+paper-desk-cloud/dist/
+paper-desk-cloud/.wrangler/
+paper-desk-cloud/coverage/

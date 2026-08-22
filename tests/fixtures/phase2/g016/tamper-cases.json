@@ -1,0 +1,14 @@
+{
+  "schema_version": "g016-fixture-0.1.0",
+  "cases": [
+    {"name": "sibling_setup_claim", "mutation": "sibling_claim", "expected_codes": ["cross_strategy_claim", "owner", "record"]},
+    {"name": "foreign_claim_id", "mutation": "foreign_claim_id", "expected_codes": ["cross_strategy_claim", "claim", "owner"]},
+    {"name": "foreign_claim_owner", "mutation": "foreign_claim_owner", "expected_codes": ["cross_strategy_claim", "owner", "record"]},
+    {"name": "setup_supplemental_executable", "mutation": "supplemental_setup", "expected_codes": ["cross_strategy_claim", "supplemental", "executable"]},
+    {"name": "duplicate_record_registration", "mutation": "duplicate_record", "expected_codes": ["duplicate_registration", "duplicate", "record"]},
+    {"name": "duplicate_claim_registration", "mutation": "duplicate_claim", "expected_codes": ["duplicate_claim", "duplicate", "claim"]},
+    {"name": "noncanonical_strategy_id", "mutation": "noncanonical_strategy_id", "expected_codes": ["strategy_id", "canonical", "record"]},
+    {"name": "foreign_executable_evidence", "mutation": "foreign_evidence", "expected_codes": ["cross_strategy_claim", "evidence", "owner"]},
+    {"name": "unused_citation", "mutation": "unused_citation", "expected_codes": ["unused", "citation", "evidence"]}
+  ]
+}

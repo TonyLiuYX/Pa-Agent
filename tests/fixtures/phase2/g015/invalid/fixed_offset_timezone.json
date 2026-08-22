@@ -1,0 +1,7 @@
+{
+  "scenario": "fixed_offset_timezone",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "session.timezone", "value": "UTC+05:30"}],
+  "expected_issue_codes": ["schema_violation"],
+  "expected_condition": "malformed_ohlcv"
+}

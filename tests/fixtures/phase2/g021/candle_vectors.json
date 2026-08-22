@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1.0",
+  "goal": "G021",
+  "symbol": "AAPL",
+  "session": {"kind": "regular", "timezone": "America/New_York"},
+  "vectors": [
+    {
+      "name": "one_minute_cutover",
+      "timeframe": {"unit": "minute", "multiplier": 1},
+      "cutover_at": "2026-03-09T13:33:00Z",
+      "trades": [
+        {"T": "t", "S": "AAPL", "i": 101, "x": "V", "p": "100.25", "s": 2, "c": ["@"], "t": "2026-03-09T13:33:00.100Z", "z": "C"},
+        {"T": "t", "S": "AAPL", "i": 102, "x": "V", "p": "101.50", "s": 3, "c": ["@"], "t": "2026-03-09T13:33:59.100Z", "z": "C"}
+      ],
+      "expected": {"start_at": "2026-03-09T13:33:00Z", "end_at": "2026-03-09T13:34:00Z", "open": "100.25", "high": "101.5", "low": "100.25", "close": "101.5", "volume": "5"}
+    },
+    {
+      "name": "five_minute_session_bucket",
+      "timeframe": {"unit": "minute", "multiplier": 5},
+      "cutover_at": "2026-03-09T13:35:00Z",
+      "trades": [
+        {"T": "t", "S": "AAPL", "i": 201, "x": "V", "p": "110", "s": 1, "c": ["@"], "t": "2026-03-09T13:35:00.100Z", "z": "C"},
+        {"T": "t", "S": "AAPL", "i": 202, "x": "V", "p": "111", "s": 1, "c": ["@"], "t": "2026-03-09T13:39:59.100Z", "z": "C"}
+      ],
+      "expected": {"start_at": "2026-03-09T13:35:00Z", "end_at": "2026-03-09T13:40:00Z", "open": "110", "high": "111", "low": "110", "close": "111", "volume": "2"}
+    },
+    {
+      "name": "one_hour_session_bucket",
+      "timeframe": {"unit": "hour", "multiplier": 1},
+      "cutover_at": "2026-03-09T14:30:00Z",
+      "trades": [
+        {"T": "t", "S": "AAPL", "i": 301, "x": "V", "p": "110", "s": 1, "c": ["@"], "t": "2026-03-09T14:30:00.100Z", "z": "C"},
+        {"T": "t", "S": "AAPL", "i": 302, "x": "V", "p": "115", "s": 1, "c": ["@"], "t": "2026-03-09T15:29:59.100Z", "z": "C"}
+      ],
+      "expected": {"start_at": "2026-03-09T14:30:00Z", "end_at": "2026-03-09T15:30:00Z", "open": "110", "high": "115", "low": "110", "close": "115", "volume": "2"}
+    },
+    {
+      "name": "one_day_local_midnight_dst_bucket",
+      "timeframe": {"unit": "day", "multiplier": 1},
+      "cutover_at": "2026-03-10T04:00:00Z",
+      "freeze_at": "2026-03-11T04:00:05Z",
+      "history_start_at": "2026-03-09T04:00:00Z",
+      "history_end_at": "2026-03-10T04:00:00Z",
+      "history_bar_at": "2026-03-09T04:00:00Z",
+      "trades": [
+        {"T": "t", "S": "AAPL", "i": 401, "x": "V", "p": "120", "s": 2, "c": ["@"], "t": "2026-03-10T13:30:00.100Z", "z": "C"},
+        {"T": "t", "S": "AAPL", "i": 402, "x": "V", "p": "121", "s": 3, "c": ["@"], "t": "2026-03-10T19:59:59.100Z", "z": "C"}
+      ],
+      "expected": {"start_at": "2026-03-10T04:00:00Z", "end_at": "2026-03-11T04:00:00Z", "open": "120", "high": "121", "low": "120", "close": "121", "volume": "5"}
+    },
+    {
+      "name": "one_week_monday_midnight_bucket",
+      "timeframe": {"unit": "week", "multiplier": 1},
+      "cutover_at": "2026-03-09T04:00:00Z",
+      "freeze_at": "2026-03-16T04:00:05Z",
+      "history_start_at": "2026-03-02T05:00:00Z",
+      "history_end_at": "2026-03-09T04:00:00Z",
+      "history_bar_at": "2026-03-02T05:00:00Z",
+      "trades": [
+        {"T": "t", "S": "AAPL", "i": 501, "x": "V", "p": "130", "s": 2, "c": ["@"], "t": "2026-03-09T13:30:00.100Z", "z": "C"},
+        {"T": "t", "S": "AAPL", "i": 502, "x": "V", "p": "131", "s": 3, "c": ["@"], "t": "2026-03-13T19:59:59.100Z", "z": "C"}
+      ],
+      "expected": {"start_at": "2026-03-09T04:00:00Z", "end_at": "2026-03-16T04:00:00Z", "open": "130", "high": "131", "low": "130", "close": "131", "volume": "5"}
+    }
+  ]
+}

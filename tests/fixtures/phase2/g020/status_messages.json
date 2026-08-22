@@ -1,0 +1,9 @@
+[
+  {"T":"success","msg":"authenticated"},
+  {"T":"subscription","trades":["AAPL"],"corrections":["AAPL"],"cancelErrors":["AAPL"],"quotes":[],"bars":[]},
+  {"T":"error","code":401,"msg":"authentication failed"},
+  {"T":"error","code":404,"msg":"authentication timeout"},
+  {"T":"error","code":407,"msg":"slow client"},
+  {"T":"error","code":409,"msg":"insufficient subscription"},
+  {"T":"error","code":500,"msg":"server unavailable"}
+]

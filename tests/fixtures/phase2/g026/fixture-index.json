@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "g026_fixture_index",
+  "fixtures": [
+    {"id": "long_stop_exact", "kind": "second", "direction": "long", "selected_exit": "99"},
+    {"id": "long_target_exact", "kind": "second", "direction": "long", "selected_exit": "102"},
+    {"id": "short_stop_exact", "kind": "second", "direction": "short", "selected_exit": "101"},
+    {"id": "short_target_exact", "kind": "second", "direction": "short", "selected_exit": "98"},
+    {"id": "dual_touch_stop_first", "kind": "second", "ambiguity_reason": "dual_touch_stop_first"},
+    {"id": "gap_recovery", "kind": "recovery", "path_precision": "minute_bar_no_path"}
+  ]
+}

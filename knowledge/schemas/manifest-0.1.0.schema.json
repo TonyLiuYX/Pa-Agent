@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/manifest-0.1.0.schema.json",
+  "title": "PA knowledge manifest v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "knowledge_base_version", "generated_at", "documents", "changes", "change_summary", "processing_summary"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"},
+    "knowledge_base_version": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "minLength": 1},
+    "documents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["source_id", "source_file", "file_name", "sha256", "status", "attempted", "semantic_configuration_status", "normalization_status"],
+        "properties": {
+          "source_id": {"type": "string", "minLength": 1},
+          "source_file": {"type": "string", "minLength": 1},
+          "file_name": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "status": {"enum": ["success", "partial", "failed"]},
+          "attempted": {"type": "boolean"},
+          "semantic_configuration_status": {"enum": ["configured", "pending"]},
+          "normalization_status": {"enum": ["configured", "pending"]},
+          "source_reverification_status": {"enum": ["not_required", "pending_source_reverification", "source_reverified"]},
+          "source_reverification_required": {"type": "boolean"},
+          "source_reverified_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "source_reverification_signal": {"type": "string", "const": "verified_source_sha256"},
+          "invalidation_reason": {"type": "string", "minLength": 1},
+          "page_count": {"type": ["integer", "null"], "minimum": 1},
+          "image_pages": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+          "extraction_errors": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "changes": {"type": "array", "items": {"type": "object", "additionalProperties": true, "required": ["status", "sha256"], "properties": {"status": {"enum": ["added", "changed", "deleted", "renamed", "unchanged"]}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}}},
+    "change_summary": {"type": "object", "additionalProperties": true},
+    "processing_summary": {"type": "object", "additionalProperties": true, "required": ["attempted", "success", "partial", "failed"], "properties": {"attempted": {"type": "integer", "minimum": 0}, "success": {"type": "integer", "minimum": 0}, "partial": {"type": "integer", "minimum": 0}, "failed": {"type": "integer", "minimum": 0}}}
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/visual_index-0.1.0.schema.json",
+  "title": "PA visual index v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "knowledge_base_version", "generated_at", "documents"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"}, "knowledge_base_version": {"type": "string", "minLength": 1}, "generated_at": {"type": "string", "minLength": 1},
+    "documents": {"type": "array", "items": {"type": "object", "additionalProperties": true, "required": ["source_id", "source_file", "status", "image_pages", "chunk_visual_refs"], "properties": {"source_id": {"type": "string", "minLength": 1}, "source_file": {"type": "string", "minLength": 1}, "status": {"enum": ["success", "partial", "failed"]}, "image_pages": {"type": "array", "items": {"type": "integer", "minimum": 1}}, "chunk_visual_refs": {"type": "array", "items": {"type": "integer", "minimum": 1}}}}}
+  }
+}

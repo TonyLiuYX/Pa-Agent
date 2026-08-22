@@ -1,0 +1,939 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json",
+  "title": "PA Engine contract common definitions v0.1.0",
+  "$defs": {
+    "extensions": {
+      "type": "object",
+      "description": "The only intentionally extensible namespace in a core object.",
+      "additionalProperties": true
+    },
+    "utcTimestamp": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]{1,9})?Z$"
+    },
+    "ianaTimezone": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!Etc/GMT[+-])(?:UTC|GMT|[A-Za-z][A-Za-z0-9._+-]*(?:/[A-Za-z0-9._+-]+)+)$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "decimal": {
+      "type": "string",
+      "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]*[1-9])?$",
+      "not": {"const": "-0"}
+    },
+    "nonnegativeDecimal": {
+      "type": "string",
+      "pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]*[1-9])?$"
+    },
+    "positiveDecimal": {
+      "type": "string",
+      "pattern": "^(?:[1-9][0-9]*(?:\\.[0-9]*[1-9])?|0\\.[0-9]*[1-9])$"
+    },
+    "confidenceDecimal": {
+      "type": ["string", "null"],
+      "pattern": "^(?:0|1|0\\.[0-9]*[1-9])$"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.:-]*$"
+    },
+    "knowledgeSnapshotId": {
+      "type": "string",
+      "pattern": "^kbs_[0-9a-f]{64}$"
+    },
+    "barId": {
+      "type": "string",
+      "pattern": "^bar_[0-9a-f]{64}$"
+    },
+    "observationId": {
+      "type": "string",
+      "pattern": "^obv_[0-9a-f]{64}$"
+    },
+    "evidenceItemId": {
+      "type": "string",
+      "pattern": "^evi_[0-9a-f]{64}$"
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "pattern": "^idem_[0-9a-f]{64}$"
+    },
+    "marketReference": {
+      "type": "string",
+      "pattern": "^(?:bar|obv)_[0-9a-f]{64}$"
+    },
+    "qualityCode": {
+      "type": "string",
+      "enum": ["invalid_market_data", "insufficient_history", "partial_data", "stale_data", "incomplete_last_bar_excluded"]
+    },
+    "qualityWarningCode": {
+      "type": "string",
+      "enum": ["partial_data", "stale_data", "incomplete_last_bar_excluded"]
+    },
+    "uncertaintyCode": {
+      "type": "string",
+      "enum": ["insufficient_history", "partial_data", "stale_data", "incomplete_last_bar_excluded", "no_actionable_evidence", "conflicting_evidence", "model_timeout", "invalid_model_response", "grounding_failure", "high_uncertainty"]
+    },
+    "marketSnapshotId": {
+      "type": "string",
+      "pattern": "^mkt_[0-9a-f]{64}$"
+    },
+    "analysisPolicyId": {
+      "type": "string",
+      "pattern": "^pol_[0-9a-f]{64}$"
+    },
+    "analysisRequestId": {
+      "type": "string",
+      "pattern": "^arq_[0-9a-f]{64}$"
+    },
+    "observationFrameId": {
+      "type": "string",
+      "pattern": "^obs_[0-9a-f]{64}$"
+    },
+    "citationId": {
+      "type": "string",
+      "pattern": "^cit_[0-9a-f]{64}$"
+    },
+    "evidencePackageId": {
+      "type": "string",
+      "pattern": "^evp_[0-9a-f]{64}$"
+    },
+    "modelRequestId": {
+      "type": "string",
+      "pattern": "^mrq_[0-9a-f]{64}$"
+    },
+    "modelResponseId": {
+      "type": "string",
+      "pattern": "^mrs_[0-9a-f]{64}$"
+    },
+    "modelCallId": {
+      "type": "string",
+      "pattern": "^mcl_[0-9a-f]{64}$"
+    },
+    "analysisResultId": {
+      "type": "string",
+      "pattern": "^par_[0-9a-f]{64}$"
+    },
+    "decisionEventId": {
+      "type": "string",
+      "pattern": "^dec_[0-9a-f]{64}$"
+    },
+    "outcomeEventId": {
+      "type": "string",
+      "pattern": "^out_[0-9a-f]{64}$"
+    },
+    "policyMatrixId": {
+      "type": "string",
+      "pattern": "^pom_[0-9a-f]{64}$"
+    },
+    "timeframe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["unit", "multiplier"],
+      "properties": {
+        "unit": {"type": "string", "enum": ["minute", "hour", "day", "week"]},
+        "multiplier": {"type": "integer", "minimum": 1}
+      }
+    },
+    "instrument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["asset_class", "symbol", "venue", "currency"],
+      "properties": {
+        "asset_class": {"type": "string", "const": "us_equity"},
+        "symbol": {"type": "string", "minLength": 1, "pattern": "^[A-Z][A-Z0-9.\\-]{0,11}$"},
+        "venue": {"type": "string", "minLength": 1},
+        "currency": {"type": "string", "const": "USD"}
+      }
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "timezone"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["regular", "extended", "all"]},
+        "timezone": {"$ref": "#/$defs/ianaTimezone"}
+      }
+    },
+    "interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start_at", "end_at"],
+      "properties": {
+        "start_at": {"$ref": "#/$defs/utcTimestamp"},
+        "end_at": {"$ref": "#/$defs/utcTimestamp"}
+      }
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["expected", "actual", "status", "missing_intervals"],
+      "properties": {
+        "expected": {"$ref": "#/$defs/interval"},
+        "actual": {"$ref": "#/$defs/interval"},
+        "status": {"type": "string", "enum": ["complete", "partial"]},
+        "missing_intervals": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/interval"}
+        }
+      }
+    },
+    "bar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bar_id", "start_at", "end_at", "open", "high", "low", "close", "volume", "is_closed"],
+      "properties": {
+        "bar_id": {"$ref": "#/$defs/barId"},
+        "start_at": {"$ref": "#/$defs/utcTimestamp"},
+        "end_at": {"$ref": "#/$defs/utcTimestamp"},
+        "open": {"$ref": "#/$defs/positiveDecimal"},
+        "high": {"$ref": "#/$defs/positiveDecimal"},
+        "low": {"$ref": "#/$defs/positiveDecimal"},
+        "close": {"$ref": "#/$defs/positiveDecimal"},
+        "volume": {"$ref": "#/$defs/nonnegativeDecimal"},
+        "is_closed": {"type": "boolean"}
+      }
+    },
+    "quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "codes", "warnings"],
+      "properties": {
+        "status": {"type": "string", "enum": ["ok", "partial", "invalid"]},
+        "codes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/qualityCode"}},
+        "warnings": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/qualityWarningCode"}},
+        "details": {"type": ["string", "null"]}
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "codes", "details"],
+      "properties": {
+        "level": {"type": "string", "enum": ["low", "medium", "high"]},
+        "codes": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/uncertaintyCode"}},
+        "details": {"type": "string", "minLength": 1}
+      }
+    },
+    "knowledgeCitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "citation_id", "content_hash", "citation_kind", "claim_id", "declaration_type", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "knowledge_citation"},
+        "citation_id": {"$ref": "#/$defs/citationId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "citation_kind": {"type": "string", "enum": ["local_chunk", "external"]},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "declaration_type": {"type": "string", "enum": ["source_assertion", "derived_interpretation", "source_not_stated"]},
+        "source_id": {"$ref": "#/$defs/id"},
+        "source_file": {"type": "string", "minLength": 1},
+        "source_sha256": {"$ref": "#/$defs/sha256"},
+        "chunk_id": {"$ref": "#/$defs/id"},
+        "chunk_text_sha256": {"$ref": "#/$defs/sha256"},
+        "page_start": {"type": "integer", "minimum": 1},
+        "page_end": {"type": "integer", "minimum": 1},
+        "pages": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "title_path": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "provenance_status": {"type": "string", "minLength": 1},
+        "source_locator": {"type": "string", "minLength": 1},
+        "external_url": {"type": "string", "format": "uri", "minLength": 1},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {
+          "if": {"required": ["citation_kind"], "properties": {"citation_kind": {"const": "local_chunk"}}},
+          "then": {
+            "required": ["source_id", "source_file", "source_sha256", "chunk_id", "chunk_text_sha256", "page_start", "page_end", "title_path", "provenance_status", "source_locator"],
+            "not": {"required": ["external_url"]}
+          }
+        },
+        {
+          "if": {"required": ["citation_kind"], "properties": {"citation_kind": {"const": "external"}}},
+          "then": {
+            "required": ["external_url"],
+            "properties": {"declaration_type": {"enum": ["derived_interpretation", "source_not_stated"]}},
+            "not": {"anyOf": [
+              {"required": ["source_id"]}, {"required": ["source_file"]}, {"required": ["source_sha256"]},
+              {"required": ["chunk_id"]}, {"required": ["chunk_text_sha256"]}, {"required": ["page_start"]},
+              {"required": ["page_end"]}, {"required": ["pages"]}, {"required": ["title_path"]},
+              {"required": ["source_locator"]}
+            ]}
+          }
+        }
+      ]
+    },
+    "evidenceItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "record_id", "field", "claim_id", "declaration_type", "statement", "statement_sha256", "rationale", "citation_ids"],
+      "properties": {
+        "evidence_id": {"$ref": "#/$defs/evidenceItemId"},
+        "record_id": {"$ref": "#/$defs/id"},
+        "field": {"type": "string", "minLength": 1},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "declaration_type": {"type": "string", "enum": ["source_assertion", "derived_interpretation", "source_not_stated"]},
+        "statement": {"type": "string", "minLength": 1},
+        "statement_sha256": {"$ref": "#/$defs/sha256"},
+        "rationale": {"type": ["string", "null"]},
+        "citation_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/citationId"}},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {
+          "if": {"required": ["declaration_type"], "properties": {"declaration_type": {"const": "source_assertion"}}},
+          "then": {"required": ["citation_ids"]}
+        }
+      ]
+    },
+    "rationale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["support_type", "text", "evidence_ids", "claim_ids", "citation_ids", "extensions"],
+      "properties": {
+        "support_type": {"type": "string", "enum": ["source_assertion", "derived_interpretation", "source_not_stated", "market_observation", "model_interpretation"]},
+        "text": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "items": {"$ref": "#/$defs/evidenceItemId"}},
+        "claim_ids": {"type": "array", "items": {"$ref": "#/$defs/id"}},
+        "citation_ids": {"type": "array", "items": {"$ref": "#/$defs/citationId"}},
+        "market_refs": {"type": "array", "items": {"$ref": "#/$defs/marketReference"}},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {
+          "if": {"required": ["support_type"], "properties": {"support_type": {"enum": ["source_assertion", "derived_interpretation", "source_not_stated"]}}},
+          "then": {"required": ["market_refs"], "properties": {"evidence_ids": {"minItems": 1}, "claim_ids": {"minItems": 1}, "citation_ids": {"minItems": 1}, "market_refs": {"minItems": 1}}}
+        },
+        {
+          "if": {"required": ["support_type"], "properties": {"support_type": {"const": "market_observation"}}},
+          "then": {"required": ["market_refs"], "properties": {"evidence_ids": {"const": []}, "claim_ids": {"const": []}, "citation_ids": {"const": []}, "market_refs": {"minItems": 1}}}
+        },
+        {
+          "if": {"required": ["support_type"], "properties": {"support_type": {"const": "model_interpretation"}}},
+          "then": {"properties": {"evidence_ids": {"const": []}, "claim_ids": {"const": []}, "citation_ids": {"const": []}}}
+        }
+      ]
+    },
+    "groundedCondition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["declaration_type", "text", "evidence_ids", "claim_ids", "citation_ids", "market_refs", "extensions"],
+      "properties": {
+        "declaration_type": {"type": "string", "enum": ["source_assertion", "derived_interpretation"]},
+        "text": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidenceItemId"}},
+        "claim_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/id"}},
+        "citation_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/citationId"}},
+        "market_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/marketReference"}},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "groundedSetup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "declaration_type", "evidence_ids", "claim_ids", "citation_ids", "market_refs", "extensions"],
+      "properties": {
+        "label": {"type": "string", "minLength": 1},
+        "declaration_type": {"type": "string", "enum": ["source_assertion", "derived_interpretation"]},
+        "evidence_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidenceItemId"}},
+        "claim_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/id"}},
+        "citation_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/citationId"}},
+        "market_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/marketReference"}},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "levelStatement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level_kind", "value", "declaration_type", "text", "evidence_ids", "claim_ids", "citation_ids", "market_refs", "extensions"],
+      "properties": {
+        "level_kind": {"type": "string", "enum": ["entry", "stop", "target", "support", "resistance", "other"]},
+        "value": {"$ref": "#/$defs/positiveDecimal"},
+        "declaration_type": {"type": "string", "enum": ["source_assertion", "derived_interpretation"]},
+        "text": {"type": "string", "minLength": 1},
+        "evidence_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidenceItemId"}},
+        "claim_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/id"}},
+        "citation_ids": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/citationId"}},
+        "market_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/marketReference"}},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "stance", "action", "setups", "rationales", "conditions", "levels", "model_confidence", "uncertainty", "extensions"],
+      "properties": {
+        "status": {"type": "string", "enum": ["signal", "conditional", "no_trade", "abstain", "error"]},
+        "stance": {"type": "string", "enum": ["bullish", "bearish", "neutral", "uncertain"]},
+        "action": {"type": "string", "enum": ["buy", "sell", "wait", "none"]},
+        "setups": {"type": "array", "items": {"$ref": "#/$defs/groundedSetup"}},
+        "rationales": {"type": "array", "items": {"$ref": "#/$defs/rationale"}},
+        "conditions": {"type": "array", "items": {"$ref": "#/$defs/groundedCondition"}},
+        "levels": {"type": "array", "items": {"$ref": "#/$defs/levelStatement"}},
+        "model_confidence": {"$ref": "#/$defs/confidenceDecimal"},
+        "uncertainty": {"$ref": "#/$defs/uncertainty"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {"if": {"required": ["status"], "properties": {"status": {"const": "signal"}}}, "then": {"properties": {"action": {"enum": ["buy", "sell"]}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"const": "conditional"}}}, "then": {"properties": {"action": {"const": "wait"}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"enum": ["no_trade", "abstain", "error"]}}}, "then": {"properties": {"action": {"const": "none"}, "levels": {"const": []}}}}
+      ]
+    },
+    "normalizedError": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message", "retryable"],
+      "properties": {
+        "code": {"type": "string", "enum": ["model_timeout", "rate_limit", "authentication_error", "transport_error", "provider_error", "invalid_model_response", "unsupported_capability", "grounding_failure", "internal_error"]},
+        "message": {"type": "string", "minLength": 1},
+        "retryable": {"type": "boolean"},
+        "details": {"type": ["string", "null"]},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "analysisError": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": {"type": "string", "enum": ["invalid_market_data", "insufficient_history", "partial_data", "stale_data", "no_actionable_evidence", "conflicting_evidence", "model_timeout", "invalid_model_response", "grounding_failure", "unsupported_capability", "internal_error"]},
+        "message": {"type": "string", "minLength": 1},
+        "details": {"type": ["string", "null"]},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "warning": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": {"type": "string", "enum": ["incomplete_last_bar_excluded", "partial_data", "stale_data", "conflicting_evidence", "high_uncertainty"]},
+        "message": {"type": "string", "minLength": 1},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "lineage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "market_snapshot_id", "market_snapshot_hash", "market_quality", "observation_frame_id", "observation_frame_hash",
+        "knowledge_snapshot_id", "knowledge_snapshot_version", "knowledge_snapshot_hash", "engine_version", "prompt_template_version",
+        "policy_version", "adapter_version", "provider", "model", "analysis_request_id", "analysis_request_hash",
+        "evidence_package_id", "evidence_package_hash", "model_response_id", "model_response_hash", "analysis_result_id", "analysis_result_hash"
+      ],
+      "properties": {
+        "market_snapshot_id": {"anyOf": [{"$ref": "#/$defs/marketSnapshotId"}, {"type": "null"}]},
+        "market_snapshot_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "market_quality": {"$ref": "#/$defs/quality"},
+        "observation_frame_id": {"anyOf": [{"$ref": "#/$defs/observationFrameId"}, {"type": "null"}]},
+        "observation_frame_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "knowledge_snapshot_id": {"$ref": "#/$defs/knowledgeSnapshotId"},
+        "knowledge_snapshot_version": {"type": "string", "minLength": 1},
+        "knowledge_snapshot_hash": {"$ref": "#/$defs/sha256"},
+        "engine_version": {"type": "string", "minLength": 1},
+        "prompt_template_version": {"type": "string", "minLength": 1},
+        "policy_version": {"type": "string", "minLength": 1},
+        "adapter_version": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "analysis_request_id": {"$ref": "#/$defs/analysisRequestId"},
+        "analysis_request_hash": {"$ref": "#/$defs/sha256"},
+        "evidence_package_id": {"anyOf": [{"$ref": "#/$defs/evidencePackageId"}, {"type": "null"}]},
+        "evidence_package_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "model_response_id": {"anyOf": [{"$ref": "#/$defs/modelResponseId"}, {"type": "null"}]},
+        "model_response_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "analysis_result_id": {"$ref": "#/$defs/analysisResultId"},
+        "analysis_result_hash": {"$ref": "#/$defs/sha256"}
+      },
+      "allOf": [
+        {"oneOf": [
+          {"properties": {"market_snapshot_id": {"type": "null"}, "market_snapshot_hash": {"type": "null"}}},
+          {"properties": {"market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"}, "market_snapshot_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"observation_frame_id": {"type": "null"}, "observation_frame_hash": {"type": "null"}}},
+          {"properties": {"observation_frame_id": {"$ref": "#/$defs/observationFrameId"}, "observation_frame_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"evidence_package_id": {"type": "null"}, "evidence_package_hash": {"type": "null"}}},
+          {"properties": {"evidence_package_id": {"$ref": "#/$defs/evidencePackageId"}, "evidence_package_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"model_response_id": {"type": "null"}, "model_response_hash": {"type": "null"}}},
+          {"properties": {"model_response_id": {"$ref": "#/$defs/modelResponseId"}, "model_response_hash": {"$ref": "#/$defs/sha256"}}}
+        ]}
+      ]
+    },
+    "marketSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "market_snapshot_id", "content_hash", "input_mode", "instrument", "timeframe", "session", "adjustment_policy", "analysis_as_of", "coverage", "bars", "quality", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "market_snapshot"},
+        "market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "input_mode": {"type": "string", "const": "ohlcv"},
+        "instrument": {"$ref": "#/$defs/instrument"},
+        "timeframe": {"$ref": "#/$defs/timeframe"},
+        "session": {"$ref": "#/$defs/session"},
+        "adjustment_policy": {"type": "string", "enum": ["unadjusted", "split_adjusted", "split_and_dividend_adjusted"]},
+        "analysis_as_of": {"$ref": "#/$defs/utcTimestamp"},
+        "coverage": {"$ref": "#/$defs/coverage"},
+        "bars": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/bar"}},
+        "quality": {"$ref": "#/$defs/quality"},
+        "generated_at": {"$ref": "#/$defs/utcTimestamp"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "analysisPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "analysis_policy_id", "content_hash", "minimum_closed_bars", "max_staleness_seconds", "allow_partial_data", "exclude_incomplete_last_bar", "required_capabilities", "policy_version", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "analysis_policy"},
+        "analysis_policy_id": {"$ref": "#/$defs/analysisPolicyId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "minimum_closed_bars": {"type": "integer", "minimum": 1},
+        "max_staleness_seconds": {"type": "integer", "minimum": 0},
+        "allow_partial_data": {"type": "boolean"},
+        "exclude_incomplete_last_bar": {"type": "boolean", "const": true},
+        "required_capabilities": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "policy_version": {"type": "string", "const": "0.1.0"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "analysisRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "analysis_request_id", "content_hash", "correlation_id", "input_mode", "analysis_as_of", "market_snapshot_id", "knowledge_snapshot_id", "knowledge_snapshot_hash", "analysis_policy_id", "purpose", "no_live_orders", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "analysis_request"},
+        "analysis_request_id": {"$ref": "#/$defs/analysisRequestId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "correlation_id": {"type": "string", "minLength": 1},
+        "input_mode": {"type": "string", "const": "ohlcv"},
+        "analysis_as_of": {"$ref": "#/$defs/utcTimestamp"},
+        "market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"},
+        "knowledge_snapshot_id": {"$ref": "#/$defs/knowledgeSnapshotId"},
+        "knowledge_snapshot_hash": {"$ref": "#/$defs/sha256"},
+        "analysis_policy_id": {"$ref": "#/$defs/analysisPolicyId"},
+        "purpose": {"type": "string", "enum": ["decision_support", "paper_replay", "forward_paper"]},
+        "instrument": {"$ref": "#/$defs/instrument"},
+        "timeframe": {"$ref": "#/$defs/timeframe"},
+        "session": {"$ref": "#/$defs/session"},
+        "no_live_orders": {"type": "boolean", "const": true},
+        "generated_at": {"$ref": "#/$defs/utcTimestamp"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observation_id", "bar_id", "direction", "range", "body", "upper_wick", "lower_wick", "range_relation", "gap_relation", "rolling_windows", "quality", "uncertainty"],
+      "properties": {
+        "observation_id": {"$ref": "#/$defs/observationId"},
+        "bar_id": {"$ref": "#/$defs/barId"},
+        "direction": {"type": "string", "enum": ["bullish", "bearish", "doji"]},
+        "range": {"$ref": "#/$defs/nonnegativeDecimal"},
+        "body": {"$ref": "#/$defs/nonnegativeDecimal"},
+        "upper_wick": {"$ref": "#/$defs/nonnegativeDecimal"},
+        "lower_wick": {"$ref": "#/$defs/nonnegativeDecimal"},
+        "range_relation": {"type": "string", "enum": ["none", "inside", "outside", "overlap"]},
+        "gap_relation": {"type": "string", "enum": ["none", "up", "down"]},
+        "rolling_windows": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["lookback", "status", "high", "low"],
+            "properties": {
+              "lookback": {"type": "integer", "minimum": 1},
+              "status": {"type": "string", "enum": ["available", "insufficient_history"]},
+              "high": {"type": ["string", "null"], "pattern": "^(?:[1-9][0-9]*(?:\\.[0-9]*[1-9])?|0\\.[0-9]*[1-9])$"},
+              "low": {"type": ["string", "null"], "pattern": "^(?:[1-9][0-9]*(?:\\.[0-9]*[1-9])?|0\\.[0-9]*[1-9])$"}
+            },
+            "allOf": [
+              {"if": {"required": ["status"], "properties": {"status": {"const": "insufficient_history"}}}, "then": {"properties": {"high": {"type": "null"}, "low": {"type": "null"}}}},
+              {"if": {"required": ["status"], "properties": {"status": {"const": "available"}}}, "then": {"required": ["high", "low"], "not": {"anyOf": [{"properties": {"high": {"type": "null"}}}, {"properties": {"low": {"type": "null"}}}]}}}
+            ]
+          }
+        },
+        "quality": {"$ref": "#/$defs/quality"},
+        "uncertainty": {"$ref": "#/$defs/uncertainty"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "observationFrame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "observation_frame_id", "content_hash", "market_snapshot_id", "market_snapshot_hash", "formula_version", "rounding_mode", "observations", "quality", "uncertainty", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "market_observation_frame"},
+        "observation_frame_id": {"$ref": "#/$defs/observationFrameId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"},
+        "market_snapshot_hash": {"$ref": "#/$defs/sha256"},
+        "formula_version": {"type": "string", "minLength": 1},
+        "rounding_mode": {"type": "string", "const": "exact_decimal"},
+        "observations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/observation"}},
+        "quality": {"$ref": "#/$defs/quality"},
+        "uncertainty": {"$ref": "#/$defs/uncertainty"},
+        "generated_at": {"$ref": "#/$defs/utcTimestamp"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "evidencePackage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "evidence_package_id", "content_hash", "knowledge_snapshot_id", "knowledge_snapshot_version", "knowledge_snapshot_hash", "retrieval_algorithm", "retrieval_version", "query_hash", "retrieval_status", "evidence_items", "citations", "conflicts", "uncertainty", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "knowledge_evidence_package"},
+        "evidence_package_id": {"$ref": "#/$defs/evidencePackageId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "knowledge_snapshot_id": {"$ref": "#/$defs/knowledgeSnapshotId"},
+        "knowledge_snapshot_version": {"type": "string", "minLength": 1},
+        "knowledge_snapshot_hash": {"$ref": "#/$defs/sha256"},
+        "retrieval_algorithm": {"type": "string", "minLength": 1},
+        "retrieval_version": {"type": "string", "minLength": 1},
+        "query_hash": {"$ref": "#/$defs/sha256"},
+        "retrieval_status": {"type": "string", "enum": ["hit", "empty", "ambiguous", "snapshot_mismatch"]},
+        "evidence_items": {"type": "array", "items": {"$ref": "#/$defs/evidenceItem"}},
+        "citations": {"type": "array", "items": {"$ref": "#/$defs/knowledgeCitation"}},
+        "conflicts": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "uncertainty": {"$ref": "#/$defs/uncertainty"},
+        "generated_at": {"$ref": "#/$defs/utcTimestamp"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {"if": {"required": ["retrieval_status"], "properties": {"retrieval_status": {"const": "hit"}}}, "then": {"properties": {"evidence_items": {"minItems": 1}, "citations": {"minItems": 1}}}},
+        {"if": {"required": ["retrieval_status"], "properties": {"retrieval_status": {"enum": ["empty", "snapshot_mismatch"]}}}, "then": {"properties": {"evidence_items": {"maxItems": 0}, "citations": {"maxItems": 0}}}}
+      ]
+    },
+    "contextRefs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["analysis_request_id", "analysis_request_hash", "market_snapshot_id", "market_snapshot_hash", "observation_frame_id", "observation_frame_hash", "evidence_package_id", "evidence_package_hash"],
+      "properties": {
+        "analysis_request_id": {"$ref": "#/$defs/analysisRequestId"},
+        "analysis_request_hash": {"$ref": "#/$defs/sha256"},
+        "market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"},
+        "market_snapshot_hash": {"$ref": "#/$defs/sha256"},
+        "observation_frame_id": {"$ref": "#/$defs/observationFrameId"},
+        "observation_frame_hash": {"$ref": "#/$defs/sha256"},
+        "evidence_package_id": {"$ref": "#/$defs/evidencePackageId"},
+        "evidence_package_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "modelParameters": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["temperature", "max_output_tokens"],
+      "properties": {
+        "temperature": {"$ref": "#/$defs/nonnegativeDecimal"},
+        "max_output_tokens": {"type": "integer", "minimum": 1}
+      }
+    },
+    "normalizedModelRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "model_request_id", "content_hash", "correlation_id", "provider", "model", "adapter", "requested_capabilities", "prompt_template_version", "prompt_hash", "context_refs", "response_schema_version", "instructions", "context_text", "parameters", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "normalized_model_request"},
+        "model_request_id": {"$ref": "#/$defs/modelRequestId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "correlation_id": {"type": "string", "minLength": 1},
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "adapter": {"type": "string", "minLength": 1},
+        "requested_capabilities": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "prompt_template_version": {"type": "string", "minLength": 1},
+        "prompt_hash": {"$ref": "#/$defs/sha256"},
+        "context_refs": {"$ref": "#/$defs/contextRefs"},
+        "response_schema_version": {"type": "string", "const": "0.1.0"},
+        "instructions": {"type": "string", "minLength": 1},
+        "context_text": {"type": "string", "minLength": 1},
+        "parameters": {"$ref": "#/$defs/modelParameters"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "normalizedModelResponse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "model_response_id", "content_hash", "model_request_id", "provider", "model", "adapter", "status", "candidate", "finish_reason", "error", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "normalized_model_response"},
+        "model_response_id": {"$ref": "#/$defs/modelResponseId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "model_request_id": {"$ref": "#/$defs/modelRequestId"},
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "adapter": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "enum": ["completed", "error", "unsupported"]},
+        "candidate": {"anyOf": [{"$ref": "#/$defs/candidate"}, {"type": "null"}]},
+        "finish_reason": {"type": ["string", "null"]},
+        "error": {"anyOf": [{"$ref": "#/$defs/normalizedError"}, {"type": "null"}]},
+        "generated_at": {"$ref": "#/$defs/utcTimestamp"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {"if": {"required": ["status"], "properties": {"status": {"const": "completed"}}}, "then": {"required": ["candidate"], "not": {"properties": {"candidate": {"type": "null"}}}, "properties": {"error": {"type": "null"}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"enum": ["error", "unsupported"]}}}, "then": {"required": ["error"], "not": {"properties": {"error": {"type": "null"}}}, "properties": {"candidate": {"type": "null"}}}}
+      ]
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt_tokens", "completion_tokens", "total_tokens"],
+      "properties": {
+        "prompt_tokens": {"type": "integer", "minimum": 0},
+        "completion_tokens": {"type": "integer", "minimum": 0},
+        "total_tokens": {"type": "integer", "minimum": 0}
+      }
+    },
+    "modelCallMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "model_call_id", "content_hash", "model_request_id", "model_request_hash", "model_response_id", "model_response_hash", "provider", "model", "adapter", "started_at", "completed_at", "latency_ms", "usage", "provider_request_id", "correlation_id", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "model_call_metadata"},
+        "model_call_id": {"$ref": "#/$defs/modelCallId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "model_request_id": {"$ref": "#/$defs/modelRequestId"},
+        "model_request_hash": {"$ref": "#/$defs/sha256"},
+        "model_response_id": {"$ref": "#/$defs/modelResponseId"},
+        "model_response_hash": {"$ref": "#/$defs/sha256"},
+        "provider": {"type": "string", "minLength": 1},
+        "model": {"type": "string", "minLength": 1},
+        "adapter": {"type": "string", "minLength": 1},
+        "started_at": {"anyOf": [{"$ref": "#/$defs/utcTimestamp"}, {"type": "null"}]},
+        "completed_at": {"anyOf": [{"$ref": "#/$defs/utcTimestamp"}, {"type": "null"}]},
+        "latency_ms": {"type": ["integer", "null"], "minimum": 0},
+        "usage": {"anyOf": [{"$ref": "#/$defs/usage"}, {"type": "null"}]},
+        "provider_request_id": {"type": ["string", "null"]},
+        "correlation_id": {"type": ["string", "null"]},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "analysisResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version", "artifact_kind", "pa_analysis_result_id", "content_hash", "analysis_request_id", "analysis_request_hash",
+        "market_snapshot_id", "market_snapshot_hash", "observation_frame_id", "observation_frame_hash", "evidence_package_id", "evidence_package_hash",
+        "model_request_id", "model_request_hash", "model_response_id", "model_response_hash", "model_call_id", "model_call_hash", "engine_version", "prompt_template_version",
+        "policy_version", "adapter_version", "status", "stance", "action", "setups", "rationales", "conditions", "levels",
+        "knowledge_confidence", "model_confidence", "analysis_uncertainty", "warnings", "errors", "analysis_as_of", "input_mode", "no_live_orders", "extensions"
+      ],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "pa_analysis_result"},
+        "pa_analysis_result_id": {"$ref": "#/$defs/analysisResultId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "analysis_request_id": {"$ref": "#/$defs/analysisRequestId"},
+        "analysis_request_hash": {"$ref": "#/$defs/sha256"},
+        "market_snapshot_id": {"anyOf": [{"$ref": "#/$defs/marketSnapshotId"}, {"type": "null"}]},
+        "market_snapshot_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "observation_frame_id": {"anyOf": [{"$ref": "#/$defs/observationFrameId"}, {"type": "null"}]},
+        "observation_frame_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "evidence_package_id": {"anyOf": [{"$ref": "#/$defs/evidencePackageId"}, {"type": "null"}]},
+        "evidence_package_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "model_request_id": {"anyOf": [{"$ref": "#/$defs/modelRequestId"}, {"type": "null"}]},
+        "model_request_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "model_response_id": {"anyOf": [{"$ref": "#/$defs/modelResponseId"}, {"type": "null"}]},
+        "model_response_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "model_call_id": {"anyOf": [{"$ref": "#/$defs/modelCallId"}, {"type": "null"}]},
+        "model_call_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "engine_version": {"type": "string", "minLength": 1},
+        "prompt_template_version": {"type": "string", "minLength": 1},
+        "policy_version": {"type": "string", "minLength": 1},
+        "adapter_version": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "enum": ["signal", "conditional", "no_trade", "abstain", "error"]},
+        "stance": {"type": "string", "enum": ["bullish", "bearish", "neutral", "uncertain"]},
+        "action": {"type": "string", "enum": ["buy", "sell", "wait", "none"]},
+        "setups": {"type": "array", "items": {"$ref": "#/$defs/groundedSetup"}},
+        "rationales": {"type": "array", "items": {"$ref": "#/$defs/rationale"}},
+        "conditions": {"type": "array", "items": {"$ref": "#/$defs/groundedCondition"}},
+        "levels": {"type": "array", "items": {"$ref": "#/$defs/levelStatement"}},
+        "knowledge_confidence": {"$ref": "#/$defs/confidenceDecimal"},
+        "model_confidence": {"$ref": "#/$defs/confidenceDecimal"},
+        "analysis_uncertainty": {"$ref": "#/$defs/uncertainty"},
+        "warnings": {"type": "array", "items": {"$ref": "#/$defs/warning"}},
+        "errors": {"type": "array", "items": {"$ref": "#/$defs/analysisError"}},
+        "analysis_as_of": {"$ref": "#/$defs/utcTimestamp"},
+        "input_mode": {"type": "string", "const": "ohlcv"},
+        "no_live_orders": {"type": "boolean", "const": true},
+        "generated_at": {"$ref": "#/$defs/utcTimestamp"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {"oneOf": [
+          {"properties": {"market_snapshot_id": {"type": "null"}, "market_snapshot_hash": {"type": "null"}}},
+          {"properties": {"market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"}, "market_snapshot_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"observation_frame_id": {"type": "null"}, "observation_frame_hash": {"type": "null"}}},
+          {"properties": {"observation_frame_id": {"$ref": "#/$defs/observationFrameId"}, "observation_frame_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"evidence_package_id": {"type": "null"}, "evidence_package_hash": {"type": "null"}}},
+          {"properties": {"evidence_package_id": {"$ref": "#/$defs/evidencePackageId"}, "evidence_package_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"model_request_id": {"type": "null"}, "model_request_hash": {"type": "null"}}},
+          {"properties": {"model_request_id": {"$ref": "#/$defs/modelRequestId"}, "model_request_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"model_response_id": {"type": "null"}, "model_response_hash": {"type": "null"}}},
+          {"properties": {"model_response_id": {"$ref": "#/$defs/modelResponseId"}, "model_response_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"model_call_id": {"type": "null"}, "model_call_hash": {"type": "null"}}},
+          {"properties": {"model_call_id": {"$ref": "#/$defs/modelCallId"}, "model_call_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"if": {"required": ["status"], "properties": {"status": {"enum": ["signal", "conditional", "no_trade"]}}}, "then": {"properties": {
+          "market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"}, "market_snapshot_hash": {"$ref": "#/$defs/sha256"},
+          "observation_frame_id": {"$ref": "#/$defs/observationFrameId"}, "observation_frame_hash": {"$ref": "#/$defs/sha256"},
+          "evidence_package_id": {"$ref": "#/$defs/evidencePackageId"}, "evidence_package_hash": {"$ref": "#/$defs/sha256"},
+          "model_request_id": {"$ref": "#/$defs/modelRequestId"}, "model_request_hash": {"$ref": "#/$defs/sha256"},
+          "model_response_id": {"$ref": "#/$defs/modelResponseId"}, "model_response_hash": {"$ref": "#/$defs/sha256"}
+        }}},
+        {"if": {"required": ["status"], "properties": {"status": {"const": "signal"}}}, "then": {"properties": {"rationales": {"minItems": 1}, "levels": {"minItems": 1}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"const": "conditional"}}}, "then": {"properties": {"action": {"const": "wait"}, "conditions": {"minItems": 1}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"const": "signal"}}}, "then": {"properties": {"action": {"enum": ["buy", "sell"]}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"enum": ["no_trade", "abstain", "error"]}}}, "then": {"properties": {"action": {"const": "none"}, "levels": {"const": []}}}},
+        {"if": {"required": ["status"], "properties": {"status": {"enum": ["abstain", "error"]}}}, "then": {"properties": {"errors": {"minItems": 1}}}}
+      ]
+    },
+    "decisionEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "decision_event_id", "content_hash", "idempotency_key", "event_type", "mode", "stream", "data_origin", "synthetic", "recorded_at", "decision_as_of", "instrument", "timeframe", "session", "input_mode", "lineage", "final_status", "action", "no_live_orders", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "analysis_run_decision_event"},
+        "decision_event_id": {"$ref": "#/$defs/decisionEventId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "idempotency_key": {"$ref": "#/$defs/idempotencyKey"},
+        "event_type": {"type": "string", "const": "analysis_decision"},
+        "mode": {"type": "string", "enum": ["paper_replay", "forward_paper"]},
+        "stream": {"type": "string", "enum": ["paper_replay", "forward_paper"]},
+        "data_origin": {"type": "string", "enum": ["historical_fixture", "synthetic_fixture", "live_market"]},
+        "synthetic": {"type": "boolean"},
+        "recorded_at": {"$ref": "#/$defs/utcTimestamp"},
+        "decision_as_of": {"$ref": "#/$defs/utcTimestamp"},
+        "instrument": {"$ref": "#/$defs/instrument"},
+        "timeframe": {"$ref": "#/$defs/timeframe"},
+        "session": {"$ref": "#/$defs/session"},
+        "input_mode": {"type": "string", "const": "ohlcv"},
+        "lineage": {"$ref": "#/$defs/lineage"},
+        "final_status": {"type": "string", "enum": ["signal", "conditional", "no_trade", "abstain", "error"]},
+        "action": {"type": "string", "enum": ["buy", "sell", "wait", "none"]},
+        "no_live_orders": {"type": "boolean", "const": true},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {"oneOf": [
+          {"properties": {"mode": {"const": "paper_replay"}, "stream": {"const": "paper_replay"}}},
+          {"properties": {"mode": {"const": "forward_paper"}, "stream": {"const": "forward_paper"}}}
+        ]},
+        {"if": {"required": ["data_origin"], "properties": {"data_origin": {"const": "synthetic_fixture"}}}, "then": {"properties": {"synthetic": {"const": true}}}},
+        {"if": {"required": ["data_origin"], "properties": {"data_origin": {"const": "live_market"}}}, "then": {"properties": {"synthetic": {"const": false}}}},
+        {"if": {"required": ["final_status"], "properties": {"final_status": {"enum": ["signal", "conditional", "no_trade"]}}}, "then": {"properties": {"lineage": {"properties": {
+          "market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"}, "market_snapshot_hash": {"$ref": "#/$defs/sha256"},
+          "observation_frame_id": {"$ref": "#/$defs/observationFrameId"}, "observation_frame_hash": {"$ref": "#/$defs/sha256"},
+          "evidence_package_id": {"$ref": "#/$defs/evidencePackageId"}, "evidence_package_hash": {"$ref": "#/$defs/sha256"},
+          "model_response_id": {"$ref": "#/$defs/modelResponseId"}, "model_response_hash": {"$ref": "#/$defs/sha256"}
+        }}}}},
+        {"if": {"required": ["final_status"], "properties": {"final_status": {"const": "signal"}}}, "then": {"properties": {"action": {"enum": ["buy", "sell"]}}}},
+        {"if": {"required": ["final_status"], "properties": {"final_status": {"const": "conditional"}}}, "then": {"properties": {"action": {"const": "wait"}}}},
+        {"if": {"required": ["final_status"], "properties": {"final_status": {"enum": ["no_trade", "abstain", "error"]}}}, "then": {"properties": {"action": {"const": "none"}}}}
+      ]
+    },
+    "outcomeEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "outcome_event_id", "content_hash", "idempotency_key", "event_type", "decision_event_id", "decision_event_hash", "mode", "stream", "data_origin", "synthetic", "recorded_at", "outcome_as_of", "outcome_status", "market_snapshot_id", "market_snapshot_hash", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "analysis_run_outcome_event"},
+        "outcome_event_id": {"$ref": "#/$defs/outcomeEventId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "idempotency_key": {"$ref": "#/$defs/idempotencyKey"},
+        "event_type": {"type": "string", "const": "analysis_outcome"},
+        "decision_event_id": {"$ref": "#/$defs/decisionEventId"},
+        "decision_event_hash": {"$ref": "#/$defs/sha256"},
+        "mode": {"type": "string", "enum": ["paper_replay", "forward_paper"]},
+        "stream": {"type": "string", "enum": ["paper_replay", "forward_paper"]},
+        "data_origin": {"type": "string", "enum": ["historical_fixture", "synthetic_fixture", "live_market"]},
+        "synthetic": {"type": "boolean"},
+        "recorded_at": {"$ref": "#/$defs/utcTimestamp"},
+        "outcome_as_of": {"$ref": "#/$defs/utcTimestamp"},
+        "outcome_status": {"type": "string", "enum": ["condition_met", "condition_not_met", "expired", "invalidated", "not_evaluated"]},
+        "market_snapshot_id": {"anyOf": [{"$ref": "#/$defs/marketSnapshotId"}, {"type": "null"}]},
+        "market_snapshot_hash": {"anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      },
+      "allOf": [
+        {"oneOf": [
+          {"properties": {"market_snapshot_id": {"type": "null"}, "market_snapshot_hash": {"type": "null"}}},
+          {"properties": {"market_snapshot_id": {"$ref": "#/$defs/marketSnapshotId"}, "market_snapshot_hash": {"$ref": "#/$defs/sha256"}}}
+        ]},
+        {"oneOf": [
+          {"properties": {"mode": {"const": "paper_replay"}, "stream": {"const": "paper_replay"}}},
+          {"properties": {"mode": {"const": "forward_paper"}, "stream": {"const": "forward_paper"}}}
+        ]},
+        {"if": {"required": ["data_origin"], "properties": {"data_origin": {"const": "synthetic_fixture"}}}, "then": {"properties": {"synthetic": {"const": true}}}},
+        {"if": {"required": ["data_origin"], "properties": {"data_origin": {"const": "live_market"}}}, "then": {"properties": {"synthetic": {"const": false}}}}
+      ]
+    },
+    "policyCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "condition", "precedence", "stage", "disposition", "expected_status", "code", "model_call_allowed", "warning_codes", "uncertainty", "exclude_incomplete_last_bar"],
+      "properties": {
+        "case_id": {"type": "string", "minLength": 1},
+        "condition": {"type": "string", "minLength": 1},
+        "precedence": {"type": "integer", "minimum": 1},
+        "stage": {"type": "string", "enum": ["market", "evidence", "model", "grounding"]},
+        "disposition": {"type": "string", "enum": ["continue", "terminal"]},
+        "expected_status": {"anyOf": [{"type": "string", "enum": ["signal", "conditional", "no_trade", "abstain", "error"]}, {"type": "null"}]},
+        "code": {"type": "string", "enum": ["invalid_market_data", "insufficient_history", "partial_data", "stale_data", "incomplete_last_bar_excluded", "no_actionable_evidence", "conflicting_evidence", "model_timeout", "invalid_model_response", "grounding_failure"]},
+        "model_call_allowed": {"type": "boolean"},
+        "warning_codes": {"type": "array", "items": {"type": "string", "enum": ["incomplete_last_bar_excluded", "partial_data", "stale_data", "conflicting_evidence", "high_uncertainty"]}},
+        "uncertainty": {"anyOf": [{"$ref": "#/$defs/uncertainty"}, {"type": "null"}]},
+        "exclude_incomplete_last_bar": {"type": "boolean"},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    },
+    "policyMatrix": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "artifact_kind", "policy_matrix_id", "content_hash", "policy_version", "cases", "extensions"],
+      "properties": {
+        "schema_version": {"type": "string", "const": "0.1.0"},
+        "artifact_kind": {"type": "string", "const": "policy_outcome_matrix"},
+        "policy_matrix_id": {"$ref": "#/$defs/policyMatrixId"},
+        "content_hash": {"$ref": "#/$defs/sha256"},
+        "policy_version": {"type": "string", "const": "0.1.0"},
+        "cases": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/policyCase"}},
+        "extensions": {"$ref": "#/$defs/extensions"}
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "pa_analysis_result",
+  "extensions": {},
+  "analysis_request_id": "arq_c9499b7339dfc2108e525f348ed7d876ce85f446776caebb097b53533ea7f46b",
+  "analysis_request_hash": "c9499b7339dfc2108e525f348ed7d876ce85f446776caebb097b53533ea7f46b",
+  "market_snapshot_id": null,
+  "market_snapshot_hash": null,
+  "observation_frame_id": null,
+  "observation_frame_hash": null,
+  "evidence_package_id": null,
+  "evidence_package_hash": null,
+  "model_request_id": null,
+  "model_request_hash": null,
+  "model_response_id": null,
+  "model_response_hash": null,
+  "model_call_id": null,
+  "model_call_hash": null,
+  "engine_version": "g014-engine-0.1.0",
+  "prompt_template_version": "g014-prompt-0.1.0",
+  "policy_version": "0.1.0",
+  "adapter_version": "fixture-adapter-0.1.0",
+  "status": "error",
+  "stance": "uncertain",
+  "action": "none",
+  "setups": [],
+  "rationales": [],
+  "conditions": [],
+  "levels": [],
+  "knowledge_confidence": null,
+  "model_confidence": null,
+  "analysis_uncertainty": {
+    "level": "high",
+    "codes": [],
+    "details": "Malformed or invariant-violating market input stopped the run before provider selection."
+  },
+  "warnings": [],
+  "errors": [
+    {
+      "code": "invalid_market_data",
+      "message": "Market input failed validation before any model call.",
+      "details": null,
+      "extensions": {}
+    }
+  ],
+  "analysis_as_of": "2026-08-10T14:45:00Z",
+  "input_mode": "ohlcv",
+  "no_live_orders": true,
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "58db19f538058d5666cd1d3922545375eddab7f9e3888f26cedfa8303299fa6c",
+  "pa_analysis_result_id": "par_58db19f538058d5666cd1d3922545375eddab7f9e3888f26cedfa8303299fa6c"
+}

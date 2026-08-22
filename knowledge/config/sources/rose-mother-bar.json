@@ -1,0 +1,514 @@
+{
+  "source_id": "rose-mother-bar",
+  "document_spec": {
+    "file_name": "价格行为学 - Rose 的 Mother Bar (孕线) 策略 - forecho's Blog.pdf",
+    "title": "Rose 的 Mother Bar（孕线）策略",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "verified_source_sha256": "fcfc0a4f59916f752981efee491b7bc4e64816bd97e13a409ac81b803baa7f64",
+    "chunk_specs": [
+      {
+        "key": "definition-zones",
+        "pages": [
+          1,
+          2
+        ],
+        "title_path": [
+          "Mother Bar",
+          "定义与关键价位"
+        ],
+        "kind": "concept",
+        "boundary_reason": "第 1 页定义母线/子线；第 2 页图表和列表给出 0-1 分层、买入区、卖出区、陷阱区、中间区与 0.21/0.79 竞争位。第 2 页结尾的背景一入口只作为相邻上下文，背景二/三及规则在后续块中承载。",
+        "visual_notes": "第 1 页孕线示意图归属于形态定义；第 2 页 TradingView 图表实际标出 1.5、1.33、1.1、0.89、0.79、0.66、0.5、0.33、0.21、0.11、-0.11 等比例，归属于关键价位。"
+      },
+      {
+        "key": "contexts-confirmation-risk",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "Mother Bar",
+          "三类市场背景、突破确认与风险控制"
+        ],
+        "kind": "setup",
+        "boundary_reason": "第 3 页按真实顺序承接背景二/三，然后给出双重突破条件、实体而非影线的确认、仓位比例、宽硬止损与仅针对卖出区做空的软止损。页级抽取无法把同页标题再拆成两个不同 source_text，因此由 claim 级 supporting_chunk_keys/声明类型分别定位背景、确认和风险规则，避免制造相同 p3 检索块。",
+        "visual_notes": "第 3 页为纯文字规则页，没有可归属的图像页；第 4/5 页图表只归 MB36 示例块。"
+      },
+      {
+        "key": "example",
+        "pages": [
+          4,
+          5
+        ],
+        "title_path": [
+          "Mother Bar",
+          "MB36 示例"
+        ],
+        "kind": "example",
+        "boundary_reason": "第 4 页只有 ES1 5m 图表，第 5 页承接 MB36、123、150/161.80、79/66%、50%、runner、退出和 MR 文字；同一示例的图文不拆散。第 5 页随后出现总结标题，文字归属在 claims 中显式标注。",
+        "visual_notes": "第 4 页 image-14 是 ES1 5m 的 MB36 图示，第 5 页 image-15 是同一示例的后续图表；两页都属于 MB36 example，不把红色手写标注解释成新的数值规则。"
+      },
+      {
+        "key": "conclusion",
+        "pages": [
+          6,
+          6
+        ],
+        "title_path": [
+          "Mother Bar",
+          "总结延续"
+        ],
+        "kind": "summary",
+        "boundary_reason": "第 6 页只有总结最后一句，承接第 5 页总结段；独立保留可定位的结论延续，不把第 5 页 MB36 图表当成总结视觉证据。",
+        "visual_notes": "第 6 页是无图短结论页；第 5 页总结标题与要点仍在 MB36 example 的页面文本中，相关 summary claims 明确引用其原块或标 derived。"
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "rose-mother-bar",
+      "type": "setup",
+      "name": "Mother Bar（孕线）区域反转与突破",
+      "aliases": [
+        "Mother Bar",
+        "Inside Bar",
+        "母子线",
+        "MB"
+      ],
+      "tags": [
+        "Rose",
+        "孕线",
+        "限价",
+        "Trading Range",
+        "Trap Zone",
+        "MB36"
+      ],
+      "chunk_keys": [
+        "definition-zones",
+        "contexts-confirmation-risk",
+        "example",
+        "conclusion"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源示例图为 ES1 5m；文档没有规定唯一适用周期。"
+      ],
+      "market_context": [
+        {
+          "statement": "这个形态之所以重要，是因为它直观地表示市场进入了一个短暂的平衡状态或震荡区间（Trading Range）。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "在震荡区间内，80% 的突破尝试都会失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "当市场处于明确的趋势中（无论是上涨还是下跌），策略需要调整。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "当趋势发展到第三条腿时，通常意味着趋势衰竭，可能形成楔形顶部（Wedge Top）或楔形底部（Wedge Bottom），反转的概率大大增加。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "Mother Bar（母线）是第一根 K 线。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "Inside Bar（子线）是第二根 K 线，其最高价和最低价完全被第一根 K 线的范围所包裹。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "将 Mother Bar 的范围从下到上标记为 0 到 1。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "来源关键位包括卖出区 0.66~1.1、买入区 0.33~-0.11、陷阱区 0.89~1.1 与 0.11~-0.11，以及 0.21/0.79 竞争位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "在一个大的震荡区间内出现 Mother Bar 时，交易策略是高抛低吸，进行剥头皮交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "上涨趋势前两波上涨（第一、二条腿）中，可以利用买入区挂限价单加入趋势。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "上涨趋势前两波中应避免在卖出区做空，因为这相当于逆势交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "下跌趋势中利用卖出区做空，避免在买入区抄底。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "上涨趋势末端的 Wedge Top 使用卖出区做空并忽略买入区做多；下跌趋势末端的 Wedge Bottom 使用买入区积极做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "看涨突破：K 线实体（不是影线）收盘在 Mother Bar 的 1 水平之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "看跌突破：K 线实体（不是影线）收盘在 Mother Bar 的 0 水平之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "看涨突破的实体还需要收盘在 1.1 陷阱区之上；看跌突破的实体需要收盘在 -0.11 陷阱区之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "当这两个信号同时出现时，意味着真突破的概率大大增加，此时就不应再坚持逆势剥头皮交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "震荡区间中在卖出区挂限价空单、在买入区挂限价多单，并在中间区域止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "趋势第一、二条腿按趋势方向在对应区域挂限价：上涨用买入区，下跌用卖出区。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源分别给出的上涨与下跌文字合并为方向映射；来源没有用一条对称总则表述。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源没有给出第三腿参与必须等待结构证据的独立规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "第三腿段落只说明 Wedge Top/Wedge Bottom 的方向与反转概率，没有给出名为结构证据的额外入场门槛。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "可以设置一个较宽、轻易不会触发的硬止损（Hard Stop）以应对黑天鹅事件。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源明确的软止损例子是：在卖出区做空时，若市场连续出现两根强劲的阳线收在最高点，应主动提前离场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源没有给出与上述卖出区做空软止损完全对称的多头版本。",
+          "declaration_type": "source_not_stated",
+          "rationale": "PDF 只写卖出区做空遇到两根强阳线收最高点的案例；不把它未经说明扩展到买入区做多。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "实体突破与陷阱区外收盘两个确认条件同时出现后，不再坚持逆势剥头皮。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "中间区域 0.33~0.66 通常作为剥头皮交易的初步止盈目标。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "MB36 示例在 123 和 150/161.80 水平位进行剥头皮交易，并以 MB36 高点获利了结。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example"
+          ]
+        },
+        {
+          "statement": "46 号 K 线实体收盘在 MB36 区间内时，持有部分盈利仓位（runner）以达到 79/66% 或 50% 水平位；若未能收盘在 MB36 高点之下，交易结束。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example"
+          ]
+        },
+        {
+          "statement": "突破确认后转为顺势管理，是对来源‘不应再坚持逆势剥头皮’的派生执行解释。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源明确要求停止逆势剥头皮，但没有单独定义顺势管理的仓位、追踪或目标流程。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "剥头皮交易的仓位应该远小于正常摇摆交易仓位，例如只有正常仓位的 1/10。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源写的是该策略追求 80%~90% 高胜率和震荡区间 80% 突破失败；本项目没有对这些比例做绩效验证。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "前半句是来源叙述，后半句是本项目的证据边界，不能把来源宣传性比例当作验证结果。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "所有百分比都以具体 Mother Bar 母线范围为基准，不能脱离图表直接套用绝对价格。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源把比例定义在母线 0 到 1 的归一化范围内；绝对价格换算是实现时的必要解释。",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "上涨趋势前两腿避免在卖出区做空；下跌趋势前两腿避免在买入区抄底。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "两个突破确认信号同时出现后，不应继续坚持逆势剥头皮。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "忽略软止损而等待宽硬止损，是对来源‘主动提前离场’要求的反向执行。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源没有使用 prohibited 标题；该项只是把软止损优先级转写为禁止行为。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "同一 Mother Bar 在震荡、趋势第一/二腿和趋势第三腿背景下方向规则不同，背景优先于形态名称。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源逐段列出三类背景及方向；这里将其归纳为背景优先原则，不新增规则。",
+          "supporting_chunk_keys": [
+            "definition-zones",
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "label": "MB36 图表示例（image-14/page 4 与 image-15/page 5）",
+          "pages": [
+            4,
+            5
+          ],
+          "statement": "第 4-5 页图表与文字共同构成 MB36 示例；页面图像本身不单独声明完整入场规则。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "PDF 的规则文字在第 5 页，图像标注承载比例和 K 线位置；将二者合称为一个示例是视觉归属解释。",
+          "supporting_chunk_keys": [
+            "example"
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "第 5 页总结要点与 MB36 文字同页；总结核心/关键/风险的归纳只作为 derived interpretation，唯一独立的结论页 source assertion 是第 6 页练习与观察市场微观结构的句子。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "页内标题无法在现有页级抽取器中再切成文字块，因此通过 claim 级支持键和声明类型保留真实归属。",
+          "supporting_chunk_keys": [
+            "example",
+            "conclusion"
+          ]
+        },
+        {
+          "statement": "通过不断练习，理解不同市场背景下的应对之道，Mother Bar 策略可以成为你观察和利用市场微观结构的有力工具。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "conclusion"
+          ]
+        }
+      ],
+      "confidence": 0.94,
+      "source_id": "rose-mother-bar"
+    }
+  ],
+  "terminology": {
+    "terms": [
+      {
+        "term_en": "Price Action",
+        "term_zh": "价格行为",
+        "aliases": [
+          "PA"
+        ],
+        "source_ids": [
+          "rose-strategy",
+          "rose-caveman",
+          "rose-gap-bar",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "项目工作术语，不代表策略有效性结论。"
+      },
+      {
+        "term_en": "Mother Bar",
+        "term_zh": "Mother Bar / 孕线 / 母线",
+        "aliases": [
+          "Inside Bar",
+          "子线",
+          "母子线",
+          "MB"
+        ],
+        "source_ids": [
+          "rose-mother-bar",
+          "rose-strategy"
+        ],
+        "note": "Mother Bar 是母线包住 Inside Bar 子线的两 K 结构；百分比区域以该来源的母线范围为基准。"
+      },
+      {
+        "term_en": "Trading Range",
+        "term_zh": "震荡区间",
+        "aliases": [
+          "TR",
+          "TTR",
+          "窄幅震荡区间"
+        ],
+        "source_ids": [
+          "rose-strategy",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "不同来源的区间规则不同，使用时必须保留 source_id 和具体 setup。"
+      },
+      {
+        "term_en": "R / Risk unit",
+        "term_zh": "风险单位",
+        "aliases": [
+          "1R",
+          "0.5R",
+          "HR",
+          "RR"
+        ],
+        "source_ids": [
+          "rose-caveman",
+          "rose-mtr",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "R 的测量端点随来源和 setup 变化；Mother Bar 来源本页未给出 R 目标，不应跨策略强行统一。"
+      },
+      {
+        "term_en": "Trap Zone",
+        "term_zh": "陷阱区",
+        "aliases": [
+          "Trap"
+        ],
+        "source_ids": [
+          "rose-mother-bar",
+          "rose-strategy"
+        ],
+        "note": "Mother Bar 来源以 0.89~1.1 标注上方陷阱区，以 0.11~-0.11 标注下方陷阱区；上下方向不可互换。"
+      }
+    ],
+    "conflicts": [
+      {
+        "topic": "Mother Bar 百分比区域",
+        "sources": [
+          "rose-mother-bar",
+          "rose-strategy"
+        ],
+        "description": "两份 Rose 材料都使用 0.66/0.33、0.79/0.21 等区域，但图示上下界和文字表达可能随案例改变；查询结果保留各自页码和 setup。"
+      },
+      {
+        "topic": "高胜率/80% 等概率表述",
+        "sources": [
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "description": "这些是来源中的策略叙述，不是本项目对策略表现的统计验证，也不应被解释为盈利保证。"
+      },
+      {
+        "topic": "Mother Bar 软止损方向",
+        "sources": [
+          "rose-mother-bar"
+        ],
+        "description": "来源只给出卖出区做空遇到两根强劲阳线收在最高点时主动离场的例子；本配置不把该软止损未经说明扩展到买入区做多。"
+      }
+    ]
+  }
+}

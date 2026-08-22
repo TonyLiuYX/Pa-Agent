@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "knowledge_citation",
+  "extensions": {},
+  "citation_kind": "local_chunk",
+  "claim_id": "rose-mtr:market_context:1",
+  "declaration_type": "source_assertion",
+  "source_id": "rose-mtr",
+  "source_file": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+  "source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+  "chunk_id": "rose-mtr:intro-core",
+  "chunk_text_sha256": "5670fc037d987c4eab886d5833fa0f1718db764627e6fd071975060f2b496372",
+  "page_start": 1,
+  "page_end": 1,
+  "pages": [
+    1
+  ],
+  "title_path": [
+    "MTR",
+    "背景、被套交易者与失败突破定义"
+  ],
+  "source_locator": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf pages 1-1",
+  "provenance_status": "source_faithful_pdf",
+  "content_hash": "afa6a3f1e955f15310203f8c1cc7688b086bb5e78b984c0f0d4d65c5bfd5b9f6",
+  "citation_id": "cit_afa6a3f1e955f15310203f8c1cc7688b086bb5e78b984c0f0d4d65c5bfd5b9f6",
+  "external_url": "https://example.invalid/mixed"
+}

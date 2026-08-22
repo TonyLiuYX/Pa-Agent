@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/strategy/decision/decision-profile-0.1.0.schema.json",
+  "title": "Grounded strategy decision candidate v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "branch", "reason", "direction", "entry_price", "stop_price", "target_price", "N", "X", "grounding", "confidence", "uncertainty", "shared_market_view_ref", "second_event_ref"],
+  "properties": {
+    "schema_version": {"const": "0.1.0"},
+    "branch": {"enum": ["no_entry", "enter_immediately", "wait_for_price"]},
+    "reason": {"type": ["string", "null"], "maxLength": 240, "pattern": "^(?:[^\\r\\n]*\\S[^\\r\\n]*)$"},
+    "direction": {"enum": ["long", "short", null]},
+    "entry_price": {"anyOf": [{"$ref": "#/$defs/positiveDecimal"}, {"type": "null"}]},
+    "stop_price": {"anyOf": [{"$ref": "#/$defs/positiveDecimal"}, {"type": "null"}]},
+    "target_price": {"anyOf": [{"$ref": "#/$defs/positiveDecimal"}, {"type": "null"}]},
+    "N": {"anyOf": [{"$ref": "#/$defs/seconds"}, {"type": "null"}]},
+    "X": {"anyOf": [{"$ref": "#/$defs/seconds"}, {"type": "null"}]},
+    "grounding": {"$ref": "#/$defs/grounding"},
+    "confidence": {"anyOf": [{"$ref": "#/$defs/confidence"}, {"type": "null"}]},
+    "uncertainty": {"$ref": "#/$defs/uncertainty"},
+    "shared_market_view_ref": {"$ref": "#/$defs/sharedMarketViewRef"},
+    "second_event_ref": {"anyOf": [{"$ref": "#/$defs/secondEventRef"}, {"type": "null"}]}
+  },
+  "$defs": {
+    "positiveDecimal": {"type": "string", "pattern": "^(?:[1-9][0-9]*(?:\\.[0-9]*[1-9])?|0\\.[0-9]*[1-9])$"},
+    "confidence": {"type": "string", "pattern": "^(?:0|1|0\\.[0-9]*[1-9])$"},
+    "seconds": {"type": "integer", "minimum": 1, "maximum": 86400},
+    "id": {"type": "string", "minLength": 1},
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "groundingRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["declaration_type", "claim_ids", "evidence_ids", "citation_ids", "market_refs"],
+      "properties": {
+        "declaration_type": {"enum": ["source_assertion", "derived_interpretation", "source_not_stated"]},
+        "claim_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+        "evidence_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^evi_[0-9a-f]{64}$"}},
+        "citation_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^cit_[0-9a-f]{64}$"}},
+        "market_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^(?:bar|obv)_[0-9a-f]{64}$"}}
+      }
+    },
+    "derivedGroundingRef": {
+      "allOf": [
+        {"$ref": "#/$defs/groundingRef"},
+        {"properties": {"declaration_type": {"const": "derived_interpretation"}}}
+      ]
+    },
+    "grounding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["reason", "entry_price", "stop_price", "target_price"],
+      "properties": {
+        "reason": {"anyOf": [{"$ref": "#/$defs/groundingRef"}, {"type": "null"}]},
+        "entry_price": {"anyOf": [{"$ref": "#/$defs/groundingRef"}, {"type": "null"}]},
+        "stop_price": {"anyOf": [{"$ref": "#/$defs/groundingRef"}, {"type": "null"}]},
+        "target_price": {"anyOf": [{"$ref": "#/$defs/groundingRef"}, {"type": "null"}]}
+      }
+    },
+    "uncertainty": {
+      "type": "object", "additionalProperties": false, "required": ["level", "codes", "details"],
+      "properties": {
+        "level": {"enum": ["low", "medium", "high"]},
+        "codes": {"type": "array", "uniqueItems": true, "items": {"enum": ["insufficient_history", "partial_data", "stale_data", "incomplete_last_bar_excluded", "no_actionable_evidence", "conflicting_evidence", "model_timeout", "invalid_model_response", "grounding_failure", "high_uncertainty"]}},
+        "details": {"type": "string", "minLength": 1, "pattern": "^(?:[^\\r\\n]*\\S[^\\r\\n]*)$"}
+      }
+    },
+    "sharedMarketViewRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "market_snapshot_id", "market_snapshot_hash", "observation_frame_id", "observation_frame_hash", "shared_market_view_id", "shared_market_view_hash"],
+      "properties": {
+        "schema_version": {"const": "0.1.0"},
+        "market_snapshot_id": {"type": "string", "pattern": "^mkt_[0-9a-f]{64}$"},
+        "market_snapshot_hash": {"$ref": "#/$defs/hash"},
+        "observation_frame_id": {"type": "string", "pattern": "^obs_[0-9a-f]{64}$"},
+        "observation_frame_hash": {"$ref": "#/$defs/hash"},
+        "shared_market_view_id": {"type": "string", "pattern": "^smv_[0-9a-f]{64}$"},
+        "shared_market_view_hash": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "secondEventRef": {
+      "type": "object", "additionalProperties": false,
+      "required": ["schema_version", "event_id", "event_hash", "reference_price"],
+      "properties": {
+        "schema_version": {"const": "0.1.0"},
+        "event_id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.:-]{0,127}$"},
+        "event_hash": {"$ref": "#/$defs/hash"},
+        "reference_price": {"$ref": "#/$defs/positiveDecimal"}
+      }
+    }
+  },
+  "allOf": [
+    {"if": {"required": ["branch"], "properties": {"branch": {"const": "no_entry"}}}, "then": {"required": ["N"], "properties": {"reason": {"type": "null"}, "direction": {"type": "null"}, "entry_price": {"type": "null"}, "stop_price": {"type": "null"}, "target_price": {"type": "null"}, "N": {"$ref": "#/$defs/seconds"}, "X": {"type": "null"}, "confidence": {"type": "null"}, "second_event_ref": {"type": "null"}, "grounding": {"properties": {"reason": {"type": "null"}, "entry_price": {"type": "null"}, "stop_price": {"type": "null"}, "target_price": {"type": "null"}}}}}},
+    {"if": {"required": ["branch"], "properties": {"branch": {"const": "enter_immediately"}}}, "then": {"required": ["reason", "direction", "stop_price", "target_price", "confidence", "second_event_ref"], "properties": {"reason": {"type": "string", "minLength": 1}, "direction": {"enum": ["long", "short"]}, "entry_price": {"type": "null"}, "stop_price": {"$ref": "#/$defs/positiveDecimal"}, "target_price": {"$ref": "#/$defs/positiveDecimal"}, "N": {"type": "null"}, "X": {"type": "null"}, "confidence": {"$ref": "#/$defs/confidence"}, "second_event_ref": {"$ref": "#/$defs/secondEventRef"}, "grounding": {"required": ["reason", "stop_price", "target_price"], "properties": {"reason": {"$ref": "#/$defs/groundingRef"}, "entry_price": {"type": "null"}, "stop_price": {"$ref": "#/$defs/derivedGroundingRef"}, "target_price": {"$ref": "#/$defs/derivedGroundingRef"}}}}}},
+    {"if": {"required": ["branch"], "properties": {"branch": {"const": "wait_for_price"}}}, "then": {"required": ["reason", "direction", "entry_price", "stop_price", "target_price", "confidence", "X"], "properties": {"reason": {"type": "string", "minLength": 1}, "direction": {"enum": ["long", "short"]}, "entry_price": {"$ref": "#/$defs/positiveDecimal"}, "stop_price": {"$ref": "#/$defs/positiveDecimal"}, "target_price": {"$ref": "#/$defs/positiveDecimal"}, "N": {"type": "null"}, "X": {"$ref": "#/$defs/seconds"}, "confidence": {"$ref": "#/$defs/confidence"}, "second_event_ref": {"type": "null"}, "grounding": {"required": ["reason", "entry_price", "stop_price", "target_price"], "properties": {"reason": {"$ref": "#/$defs/groundingRef"}, "entry_price": {"$ref": "#/$defs/derivedGroundingRef"}, "stop_price": {"$ref": "#/$defs/derivedGroundingRef"}, "target_price": {"$ref": "#/$defs/derivedGroundingRef"}}}}}}
+  ]
+}

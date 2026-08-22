@@ -1,0 +1,32 @@
+{
+  "ready": {
+    "shared_market_view_id": "view_ready_1",
+    "closed_snapshot_id": "snapshot_1",
+    "regular_session": true,
+    "fresh": true,
+    "complete": true,
+    "non_gapped": true,
+    "sufficient": true,
+    "frozen_second": true
+  },
+  "ready_next": {
+    "shared_market_view_id": "view_ready_2",
+    "closed_snapshot_id": "snapshot_2",
+    "regular_session": true,
+    "fresh": true,
+    "complete": true,
+    "non_gapped": true,
+    "sufficient": true,
+    "frozen_second": true
+  },
+  "not_ready": {
+    "shared_market_view_id": "view_bad_1",
+    "closed_snapshot_id": "snapshot_bad_1",
+    "regular_session": false,
+    "fresh": false,
+    "complete": false,
+    "non_gapped": false,
+    "sufficient": false,
+    "frozen_second": false
+  }
+}

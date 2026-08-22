@@ -1,0 +1,22 @@
+{
+  "id": "cmpl-g022-resource",
+  "object": "chat.completion",
+  "created": 1775904000,
+  "model": "deepseek-v4-flash",
+  "system_fingerprint": "fp-g022-resource",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "insufficient_system_resource",
+      "message": {"role": "assistant", "content": ""}
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 128,
+    "completion_tokens": 0,
+    "total_tokens": 128,
+    "prompt_cache_hit_tokens": 32,
+    "prompt_cache_miss_tokens": 96,
+    "completion_tokens_details": {"reasoning_tokens": 0}
+  }
+}

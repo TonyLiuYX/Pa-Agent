@@ -1,0 +1,11 @@
+{
+  "schema_version": "0.1.0",
+  "goal": "G021",
+  "entries": [
+    {"path": "README.md", "kind": "fixture_readme"},
+    {"path": "market_feed_iex.json", "kind": "market_feed_ref"},
+    {"path": "candle_vectors.json", "kind": "candle_vectors"},
+    {"path": "session_edges.json", "kind": "session_edges"},
+    {"path": "gap_revision_cases.json", "kind": "gap_revision_cases"}
+  ]
+}

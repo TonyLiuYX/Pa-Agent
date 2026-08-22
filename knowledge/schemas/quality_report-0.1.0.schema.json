@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/quality_report-0.1.0.schema.json",
+  "title": "PA knowledge quality report v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "knowledge_base_version", "generated_at", "overall_status", "checks", "warnings", "summary"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"}, "knowledge_base_version": {"type": "string", "minLength": 1}, "generated_at": {"type": "string", "minLength": 1}, "overall_status": {"enum": ["pass", "fail"]}, "warnings": {"type": "array", "items": {"type": "string"}},
+    "checks": {"type": "array", "items": {"type": "object", "additionalProperties": true, "required": ["name", "status", "details"], "properties": {"name": {"type": "string", "minLength": 1}, "status": {"enum": ["pass", "fail", "warn"]}, "details": {"type": "object"}}}},
+    "summary": {"type": "object", "additionalProperties": true, "required": ["documents", "chunks", "normalized_records"], "properties": {"documents": {"type": "integer", "minimum": 0}, "chunks": {"type": "integer", "minimum": 0}, "normalized_records": {"type": "integer", "minimum": 0}}}
+  }
+}

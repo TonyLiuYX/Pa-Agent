@@ -1,0 +1,141 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "pa_analysis_result",
+  "extensions": {},
+  "analysis_request_id": "arq_c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+  "analysis_request_hash": "c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+  "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "observation_frame_id": "obs_0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "observation_frame_hash": "0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "evidence_package_id": "evp_ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "evidence_package_hash": "ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "model_request_id": "mrq_8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_request_hash": "8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_response_id": "mrs_bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+  "model_response_hash": "bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+  "model_call_id": "mcl_a2217d0519a755f7ab5c514e6c0e6d114ed5b4933f34058bf415014411dcc4fb",
+  "model_call_hash": "a2217d0519a755f7ab5c514e6c0e6d114ed5b4933f34058bf415014411dcc4fb",
+  "engine_version": "g014-engine-0.1.0",
+  "prompt_template_version": "g014-prompt-0.1.0",
+  "policy_version": "0.1.0",
+  "adapter_version": "fixture-adapter-0.1.0",
+  "status": "signal",
+  "stance": "bearish",
+  "action": "sell",
+  "setups": [
+    {
+      "label": "MTR bull-trap reversal",
+      "declaration_type": "source_assertion",
+      "evidence_ids": [
+        "evi_51807c2ee7187c03ca1fed545b0e97d173752f02fbd2cb01df77da42d2d2839c"
+      ],
+      "claim_ids": [
+        "rose-mtr:market_context:1"
+      ],
+      "citation_ids": [
+        "cit_2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11"
+      ],
+      "market_refs": [
+        "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3"
+      ],
+      "extensions": {}
+    }
+  ],
+  "rationales": [
+    {
+      "support_type": "source_assertion",
+      "text": "MTR evidence supports the trapped-trader setup.",
+      "evidence_ids": [
+        "evi_51807c2ee7187c03ca1fed545b0e97d173752f02fbd2cb01df77da42d2d2839c"
+      ],
+      "claim_ids": [
+        "rose-mtr:market_context:1"
+      ],
+      "citation_ids": [
+        "cit_2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11"
+      ],
+      "market_refs": [
+        "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3"
+      ],
+      "extensions": {}
+    }
+  ],
+  "conditions": [],
+  "levels": [
+    {
+      "level_kind": "entry",
+      "value": "100.5",
+      "declaration_type": "source_assertion",
+      "text": "在 B5 收盘时或其下方挂单做空。",
+      "evidence_ids": [
+        "evi_fdd04dd26215d8a2fc0272b58c615f365a747ab32caf033c6c233035f747f686"
+      ],
+      "claim_ids": [
+        "rose-mtr:entry:2"
+      ],
+      "citation_ids": [
+        "cit_7bbeebb19de0fc7b5806c941b980e274fd3c311c497bbebf8dcf9dfde402d854"
+      ],
+      "market_refs": [
+        "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3"
+      ],
+      "extensions": {}
+    },
+    {
+      "level_kind": "stop",
+      "value": "103.1",
+      "declaration_type": "source_assertion",
+      "text": "止损: 放在 B5 的最高点上方。",
+      "evidence_ids": [
+        "evi_b123e6fd8c974b5a692bdf74e11804a27982aad7aef88f0db92e209fe20e87a7"
+      ],
+      "claim_ids": [
+        "rose-mtr:invalidation_stop:4"
+      ],
+      "citation_ids": [
+        "cit_ea61a66654673e60f26f8748deae2f038a5a757f899a4b46c32a232d6b9253f5"
+      ],
+      "market_refs": [
+        "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3"
+      ],
+      "extensions": {}
+    },
+    {
+      "level_kind": "target",
+      "value": "97",
+      "declaration_type": "source_assertion",
+      "text": "从 B4 的开盘价到 B5 的最高价画出风险区间 (R),然后向下寻找 1R 和 2R 的目标位。",
+      "evidence_ids": [
+        "evi_484541edbab40b9f2125ea9b141df376b48bffa47f8664fd29c9855bea44e71b"
+      ],
+      "claim_ids": [
+        "rose-mtr:targets_exit:1"
+      ],
+      "citation_ids": [
+        "cit_23faa415755676614b5d7c50b6b425c84bdf8595e1d341c96b8966f91f7b65ed"
+      ],
+      "market_refs": [
+        "bar_14dcf916b1b61c4ce043e987422580d969da855e204abdbb691a203e36761ef1"
+      ],
+      "extensions": {}
+    }
+  ],
+  "knowledge_confidence": "0.9",
+  "model_confidence": "0.8",
+  "analysis_uncertainty": {
+    "level": "low",
+    "codes": [
+      "unknown_uncertainty_code"
+    ],
+    "details": "fixture"
+  },
+  "warnings": [],
+  "errors": [],
+  "analysis_as_of": "2026-08-10T14:45:00Z",
+  "input_mode": "ohlcv",
+  "no_live_orders": true,
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "d80a4bd241dca913c484246179ff855b07e4ec78cdbf690b11f218795000444d",
+  "pa_analysis_result_id": "par_d80a4bd241dca913c484246179ff855b07e4ec78cdbf690b11f218795000444d"
+}

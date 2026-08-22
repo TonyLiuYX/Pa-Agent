@@ -1,0 +1,19 @@
+{
+  "schema_version": "g016-fixture-0.1.0",
+  "cases": [
+    {"name": "missing_record", "mutation": "remove_record", "expected_codes": ["record_not_found", "missing", "registry"]},
+    {"name": "inactive_record", "mutation": "inactive_record", "expected_codes": ["record_inactive", "inactive", "non_executable"]},
+    {"name": "pending_source_reverification", "mutation": "pending_source", "expected_codes": ["record_pending"]},
+    {"name": "non_setup_record", "mutation": "non_setup", "expected_codes": ["non_setup_record", "non_setup", "setup"]},
+    {"name": "snapshot_version_mismatch", "mutation": "version_mismatch", "expected_codes": ["snapshot_mismatch", "version", "schema"]},
+    {"name": "snapshot_hash_mismatch", "mutation": "hash_mismatch", "expected_codes": ["snapshot_mismatch", "hash", "integrity"]},
+    {"name": "source_sha_mismatch", "mutation": "source_sha", "expected_codes": ["grounding_failure", "source", "sha"]},
+    {"name": "chunk_id_mismatch", "mutation": "chunk_id", "expected_codes": ["grounding_failure", "chunk", "claim"]},
+    {"name": "chunk_text_sha_mismatch", "mutation": "chunk_text_sha", "expected_codes": ["grounding_failure", "text", "sha"]},
+    {"name": "page_mismatch", "mutation": "page", "expected_codes": ["grounding_failure", "page", "source"]},
+    {"name": "title_path_mismatch", "mutation": "title_path", "expected_codes": ["grounding_failure", "title", "lineage"]},
+    {"name": "source_file_mismatch", "mutation": "source_file", "expected_codes": ["grounding_failure", "source", "file"]},
+    {"name": "external_source_assertion", "mutation": "external_source", "expected_codes": ["grounding_failure", "external", "source_assertion"]},
+    {"name": "declaration_relabel", "mutation": "declaration_relabel", "expected_codes": ["declaration_mismatch", "grounding_failure", "source_assertion", "packet_hash"]}
+  ]
+}

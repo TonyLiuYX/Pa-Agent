@@ -1,0 +1,1355 @@
+{
+  "source_id": "nanqiao-checklist",
+  "document_spec": {
+    "file_name": "（公开版）PA日内交易setup清单-南桥价格行为.pdf",
+    "title": "南桥价格行为：交易桌前执行手册",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "page_coverage": {
+      "page_count": 17,
+      "processed_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "visual_pages": [2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 16],
+      "text_only_pages": [1, 9, 15, 17],
+      "coverage_note": "每页均有 page chunk 或跨页 setup；图像页按图块而不是仅按页码归属。"
+    },
+    "visual_blocks": [
+      {"id": "p2-h2-l2-chart", "pages": [2], "setup_key": "breakout-h2-l2", "region": "p2 lower chart", "evidence": "H2/L2 green annotation and chart"},
+      {"id": "p3-h2-l2-chart", "pages": [3], "setup_key": "breakout-h2-l2", "region": "p3 upper chart", "evidence": "H2/L2 continuation chart; not breakout-failure"},
+      {"id": "p3-breakout-failure-table", "pages": [3], "setup_key": "breakout-failure-breakout", "region": "p3 lower table", "evidence": "突破-失败-突破 text table"},
+      {"id": "p4-failure-failure-top", "pages": [4], "setup_key": "breakout-failure-breakout", "region": "p4 upper chart", "evidence": "失败的失败 visual case; K14 entry/stop/targets"},
+      {"id": "p4-failure-failure-bottom", "pages": [4], "setup_key": "breakout-failure-breakout", "region": "p4 middle chart", "evidence": "成功/失败的失败 visual cases"},
+      {"id": "p4-key-level-heading", "pages": [4], "setup_key": "key-level-reversal", "region": "p4 lower table", "evidence": "关键位结构反转突破单 heading and structure list"},
+      {"id": "p5-key-level-charts", "pages": [5], "setup_key": "key-level-reversal", "region": "p5 charts", "evidence": "key-level structures and signal K"},
+      {"id": "p6-key-level-charts", "pages": [6], "setup_key": "key-level-reversal", "region": "p6 charts", "evidence": "key-level reversal chart continuation"},
+      {"id": "p7-range-extreme-chart", "pages": [7], "setup_key": "limit-range-extremes", "region": "p7 lower chart", "evidence": "区间前高/前低限价反转 examples"},
+      {"id": "p8-point3-chart", "pages": [8], "setup_key": "limit-point3", "region": "p8 chart", "evidence": "Point 3 weak-channel chart"},
+      {"id": "p10-pullback-charts", "pages": [10], "setup_key": "limit-50-pullback", "region": "p10 charts", "evidence": "50% pullback examples continue p9"},
+      {"id": "p11-trapped-chart", "pages": [11], "setup_key": "trapped-pullback", "region": "p11 lower chart", "evidence": "Trapped breakout/retest chart"},
+      {"id": "p12-trapped-continuation", "pages": [12], "setup_key": "trapped-pullback", "region": "p12 upper chart", "evidence": "Trapped continuation image above Always-in text"},
+      {"id": "p12-opposite1-table", "pages": [12], "setup_key": "always-in-opposite-1", "region": "p12 lower table", "evidence": "逆1 failure execution table"},
+      {"id": "p13-opposite1-chart", "pages": [13], "setup_key": "always-in-opposite-1", "region": "p13 upper chart", "evidence": "强势 scalp / inverse-1 visual case"},
+      {"id": "p13-third-bar-chart", "pages": [13], "setup_key": "always-in-third-bar", "region": "p13 lower chart", "evidence": "Third-Bar Failure visual case"},
+      {"id": "p14-ema20-chart", "pages": [14], "setup_key": "always-in-ema20", "region": "p14 lower chart", "evidence": "EMA20 first-retest chart"},
+      {"id": "p14-breakout-heading", "pages": [14], "setup_key": "always-in-breakout-scalp", "region": "p14 bottom table", "evidence": "breakout scalp heading and 50% condition"},
+      {"id": "p15-breakout-table", "pages": [15], "setup_key": "always-in-breakout-scalp", "region": "p15 table", "evidence": "breakout scalp entry/target/stop/forced exit continuation"},
+      {"id": "p16-breakout-chart", "pages": [16], "setup_key": "always-in-breakout-scalp", "region": "p16 chart", "evidence": "顺势 scalp chart and only-follow statement"},
+      {"id": "p17-discipline-table", "pages": [17], "setup_key": "discipline-checklist", "region": "p17 table", "evidence": "10-second discipline checklist"}
+    ],
+    "chunk_specs": [
+      {"key": "page-01-semantic", "pages": [1, 1], "title_path": ["交易桌前执行手册", "使用边界"], "kind": "context", "boundary_reason": "封面定义文档用途：盘中回答能否交易与是否违规。", "visual_notes": "页面 1 是文档封面，无需提取装饰性图形。"},
+      {"key": "page-02-semantic", "pages": [2, 2], "title_path": ["第一部分｜突破单", "趋势回调 H2 / L2"], "kind": "page_semantic", "boundary_reason": "p2 页语义块：H2/L2 文字与 p2 图块；中性页块供同页/跨页 setup 共同引用。", "visual_notes": "p2-h2-l2-chart 属于 H2/L2；p3 上部另有 p3-h2-l2-chart，p3 下方表属于突破-失败-突破。", "visual_blocks": ["p2-h2-l2-chart"]},
+      {"key": "page-03-semantic", "pages": [3, 3], "title_path": ["第一部分｜突破单", "p3 页语义块"], "kind": "page_semantic", "boundary_reason": "p3 页语义块同时保留 H2/L2 上部图、突破-失败-突破下部表；视觉归属由 claim metadata 区分。", "visual_notes": "p3-h2-l2-chart（上部）与 p3-breakout-failure-table（下部）同页不同 setup；p3 图示 H2/L2：K25 低点外 1 tick、固定 RR 1:1/1:2 或前低、信号 K 高点止损。", "visual_blocks": ["p3-h2-l2-chart", "p3-breakout-failure-table"]},
+      {"key": "page-04-semantic", "pages": [4, 4], "title_path": ["第一部分｜突破单", "p4 页语义块"], "kind": "page_semantic", "boundary_reason": "p4 页语义块同时保留失败的失败图与关键位反转标题；视觉归属由 claim metadata 区分。", "visual_notes": "p4-failure-failure-top/bottom 属于突破-失败-突破；p4-key-level-heading 属于关键位反转。失败图含 K14 止损、RR/平均波动/结构目标。", "visual_blocks": ["p4-failure-failure-top", "p4-failure-failure-bottom", "p4-key-level-heading"]},
+      {"key": "page-05-semantic", "pages": [5, 5], "title_path": ["第一部分｜突破单", "关键位结构反转突破单", "p5 页语义块"], "kind": "page_semantic", "boundary_reason": "p5 页语义块：关键位结构图与头肩精确视觉规则。", "visual_notes": "p5-key-level-charts 图组；下部头肩绿框：右肩信号 K 突破建仓、右肩极值外 1 tick 止损、固定 RR/固定点数/结构破坏三类目标。", "visual_blocks": ["p5-key-level-charts"]},
+      {"key": "page-06-semantic", "pages": [6, 6], "title_path": ["第一部分｜突破单", "关键位结构反转突破单", "p6 页语义块"], "kind": "page_semantic", "boundary_reason": "p6 页语义块保留关键位图组延续，供父 setup 跨页链。", "visual_notes": "p6-key-level-charts 属于关键位结构反转；与 p4 标题、p5 头肩图保持相邻页链。", "visual_blocks": ["p6-key-level-charts"]},
+      {"key": "page-07-semantic", "pages": [7, 7], "title_path": ["第二部分｜限价单", "p7 页语义块"], "kind": "page_semantic", "boundary_reason": "p7 页语义块同时保留区间前高/前低与 Point 3 标题背景，供两个限价 setup 共同引用。", "visual_notes": "p7-range-extreme-chart 属于区间反转；p7 末尾 Point 3 标题/背景由 page-08-semantic 记录共同引用，不能把整页图机械归给单一 setup。", "visual_blocks": ["p7-range-extreme-chart"]},
+      {"key": "page-08-semantic", "pages": [8, 8], "title_path": ["第二部分｜限价单", "宽通道 Point 3 限价反转", "p8 页语义块"], "kind": "page_semantic", "boundary_reason": "p8 页语义块：Point 3 入场、两种止损和当日平均波动目标。", "visual_notes": "p8-point3-chart 绿色注释：止损方法一按止盈点数做 1:1；方法二强势突破+跟随后跟随 K 极值外 1 tick；止盈按当日平均波动幅度。", "visual_blocks": ["p8-point3-chart"]},
+      {"key": "page-09-semantic", "pages": [9, 9], "title_path": ["第二部分｜限价单", "趋势 50% 回调限价顺势", "p9 页语义块"], "kind": "page_semantic", "boundary_reason": "p9 页语义块：50% 回调 setup 的背景、条件与入场起始段。", "visual_notes": "p9 是文字规则页；p10 图示由 page-10-semantic 相邻页块承接。"},
+      {"key": "page-10-semantic", "pages": [10, 10], "title_path": ["第二部分｜限价单", "趋势 50% 回调限价顺势", "p10 页语义块"], "kind": "page_semantic", "boundary_reason": "p10 页语义块：50% 回调视觉延续。", "visual_notes": "p10-pullback-charts 属于 50% 回调 setup；与 p9 文字块保持相邻页链。", "visual_blocks": ["p10-pullback-charts"]},
+      {"key": "page-11-semantic", "pages": [11, 11], "title_path": ["第二部分｜限价单", "真突破后的回踩限价顺势", "p11 页语义块"], "kind": "page_semantic", "boundary_reason": "p11 页语义块：Trapped 文字与 p11 图块。", "visual_notes": "p11-trapped-chart 属于 Trapped；p12 上部 continuation 图与 p12 逆1表分别由 p12 页语义块的 claim metadata 区分。", "visual_blocks": ["p11-trapped-chart"]},
+      {"key": "page-12-semantic", "pages": [12, 12], "title_path": ["第三部分｜Always in/强突破行情", "p12 页语义块"], "kind": "page_semantic", "boundary_reason": "p12 页语义块同时保留 Trapped continuation 图与逆1失败表；视觉归属由 claim metadata 区分。", "visual_notes": "p12-trapped-continuation（上部）归 Trapped；p12-opposite1-table（下部）归逆1失败。两 setup 共同引用本中性页块。", "visual_blocks": ["p12-trapped-continuation", "p12-opposite1-table"]},
+      {"key": "page-13-semantic", "pages": [13, 13], "title_path": ["第三部分｜Always in/强突破行情", "p13 页语义块"], "kind": "page_semantic", "boundary_reason": "p13 页语义块同时保留逆1图与第三根未遂图；视觉归属由 claim metadata 区分。", "visual_notes": "p13-opposite1-chart（上部）归逆1失败：K18 高点限价空、5 点止盈；p13-third-bar-chart（下部）归第三根未遂。", "visual_blocks": ["p13-opposite1-chart", "p13-third-bar-chart"]},
+      {"key": "page-14-semantic", "pages": [14, 14], "title_path": ["第三部分｜Always in/强突破行情", "p14 页语义块"], "kind": "page_semantic", "boundary_reason": "p14 页语义块同时保留 EMA20 图与 breakout scalp 标题；视觉归属由 claim metadata 区分。", "visual_notes": "p14-ema20-chart（下部）归 EMA20：K35 成交、ATR 固定止盈 5 点；p14-breakout-heading（底部）归 breakout scalp。", "visual_blocks": ["p14-ema20-chart", "p14-breakout-heading"]},
+      {"key": "page-15-semantic", "pages": [15, 15], "title_path": ["第三部分｜Always in/强突破行情", "突破单：顺势突破 scalp", "p15 页语义块"], "kind": "page_semantic", "boundary_reason": "p15 页语义块：breakout scalp 入场、ATR 目标、止损与强制退出。", "visual_notes": "p15-breakout-table 属于 breakout scalp；与 p14 heading、p16 图块保持跨页链。", "visual_blocks": ["p15-breakout-table"]},
+      {"key": "page-16-semantic", "pages": [16, 16], "title_path": ["第三部分｜Always in/强突破行情", "突破单：顺势突破 scalp", "p16 页语义块"], "kind": "page_semantic", "boundary_reason": "p16 页语义块：breakout scalp 图表与只跟随用途。", "visual_notes": "p16-breakout-chart；p14→p15→p16 规则文字由三个相邻页块组成。", "visual_blocks": ["p16-breakout-chart"]},
+      {"key": "page-17-semantic", "pages": [17, 17], "title_path": ["第四部分｜每一单的纪律检查表"], "kind": "discipline", "boundary_reason": "10 秒自检项、强制退出、次数上限和停止交易规则是一个执行约束单元。", "visual_notes": "p17-discipline-table 保留 10 项自检顺序与提醒。", "visual_blocks": ["p17-discipline-table"]}
+    ]
+  },
+  "records": [
+    {
+      "id": "nanqiao-h2-l2",
+      "type": "setup",
+      "name": "趋势回调 H2 / L2（顺大逆小）",
+      "aliases": [
+        "H2",
+        "L2",
+        "高2",
+        "低2"
+      ],
+      "tags": [
+        "南桥",
+        "Breakout",
+        "趋势回调",
+        "一 tick"
+      ],
+      "chunk_keys": [
+        "page-02-semantic",
+        "page-03-semantic"
+      ],
+      "source_scope": {"text_pages": [2], "visual_pages": [2, 3], "visual_blocks": ["p2-h2-l2-chart", "p3-h2-l2-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中；清单未限定具体周期"
+      ],
+      "market_context": [
+        "趋势明确 HH/HL 或 LL/LH",
+        "强突破或窄通道的回调；宽通道不用"
+      ],
+      "prerequisites": [
+        "逆势回调必须为两段式",
+        "触发 H2/L2",
+        "做多信号 K 必须阳线，做空信号 K 必须阴线"
+      ],
+      "recognition_features": [
+        "与建仓方向一致的信号 K",
+        "反向信号 K 会使 H2/L2 无效"
+      ],
+      "trigger": [
+        {
+          "statement": "信号 K 极值被突破",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+        "page-02-semantic"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "信号 K 极值外 1 tick 突破单",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-02-semantic"]
+        },
+        {
+          "statement": "图示 K25 低点外 1 tick 挂突破单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-03-semantic"],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        }
+      ],
+      "invalidation_stop": [
+        "3 根逆势 K 离场或结构性反转离场",
+        {
+          "statement": "图示止损：信号 K 高点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-03-semantic"],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "图示止盈：固定盈亏比 1:1、1:2",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-03-semantic"],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        },
+        {
+          "statement": "图示止盈：拿到前低",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-03-semantic"],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        },
+        {
+          "statement": "文字清单未给出独立固定 H2/L2 目标；以上目标仅来自 p3 图示",
+          "declaration_type": "source_not_stated",
+          "supporting_chunk_keys": ["page-02-semantic"]
+        }
+      ],
+      "risk_notes": [
+        "强势反向趋势 K 会改变背景"
+      ],
+      "prohibited": [
+        "宽通道",
+        "回调出现强势反向趋势 K",
+        "信号 K 与方向不一致"
+      ],
+      "exceptions": [
+        "结构反转后转入反转 setup，不再按普通 H2/L2 处理"
+      ],
+      "examples": [
+        {
+          "label": "H2/L2 执行表与图例",
+          "pages": [
+            2,
+            2
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "完全按南桥执行清单字段归一化，未补充外部 H2/L2 规则。"
+      ],
+      "confidence": 0.95,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-breakout-failure-breakout",
+      "type": "setup",
+      "name": "突破-失败-突破（二次突破确认）",
+      "aliases": [
+        "Breakout-Failure-Breakout",
+        "失败的失败",
+        "二次突破"
+      ],
+      "tags": [
+        "南桥",
+        "Breakout",
+        "确认",
+        "时间限制"
+      ],
+      "chunk_keys": [
+        "page-03-semantic",
+        "page-04-semantic"
+      ],
+      "source_scope": {"text_pages": [3], "visual_pages": [3, 4], "visual_blocks": ["p3-breakout-failure-table", "p4-failure-failure-top", "p4-failure-failure-bottom"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "关键位发生实体突破后，第一次尝试失败"
+      ],
+      "prerequisites": [
+        "结构为突破 K → 失败 K → 再次突破 K",
+        "第一次突破必须是实体突破而非影线刺透",
+        "关键位后 3 根 K 内完成"
+      ],
+      "recognition_features": [
+        "失败后价格仍围绕关键位",
+        "第二次突破重新显示方向"
+      ],
+      "trigger": [
+        "第二次突破 K 极值被突破"
+      ],
+      "entry": [
+        {
+          "statement": "第二次突破 K 极值外 1 tick",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-03-semantic"]
+        },
+        {
+          "statement": "图示在 K14 下方 1 tick 挂突破单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-04-semantic"],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper 失败的失败 annotation"
+        }
+      ],
+      "invalidation_stop": [
+        "若建仓后成交订单对应 K 收盘为逆势 K，在该 K 极值外 1 tick 突破离场",
+        {
+          "statement": "图示止损：K14 高点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-04-semantic"],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper 失败的失败 annotation"
+        }
+      ],
+      "targets_exit": [
+        "用途是确认关键位方向成立；清单未给固定目标",
+        {
+          "statement": "失败的失败图示止盈方法一：固定盈亏比 1:1、1:2",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-04-semantic"],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper green box"
+        },
+        {
+          "statement": "失败的失败图示止盈方法二：根据平均波动，拿固定点数",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-04-semantic"],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper green box"
+        },
+        {
+          "statement": "失败的失败图示止盈方法三：拿到空头结构彻底破坏",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-04-semantic"],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper green box"
+        }
+      ],
+      "risk_notes": [
+        "超过 3 根 K 结构退化"
+      ],
+      "prohibited": [
+        "超过时间限制",
+        "把影线刺透当成实体突破"
+      ],
+      "exceptions": [
+        "若后续重新形成其他合规结构，应转用对应 setup"
+      ],
+      "examples": [
+        {
+          "label": "二次突破确认表",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "label": "失败的失败视觉案例（K14）",
+          "pages": [4, 4],
+          "visual_page": 4,
+          "visual_blocks": ["p4-failure-failure-top", "p4-failure-failure-bottom"]
+        }
+      ],
+      "interpretation_notes": [
+        "保留南桥文档的硬性时间条件。"
+      ],
+      "confidence": 0.96,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-key-level-reversal",
+      "type": "setup",
+      "name": "关键位结构反转突破单",
+      "aliases": [
+        "关键位反转",
+        "结构反转突破"
+      ],
+      "tags": [
+        "南桥",
+        "双顶",
+        "双底",
+        "楔形",
+        "头肩",
+        "OB",
+        "IB"
+      ],
+      "chunk_keys": [
+        "page-04-semantic",
+        "page-05-semantic",
+        "page-06-semantic"
+      ],
+      "source_scope": {"text_pages": [4, 5, 6], "visual_pages": [4, 5, 6], "visual_blocks": ["p4-key-level-heading", "p5-key-level-charts", "p6-key-level-charts"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "支撑/阻力、均线、趋势线或通道线附近"
+      ],
+      "prerequisites": [
+        "形成双顶/双底、高2/低2、楔形、头肩、OB/IB 之一",
+        "结构位于关键价位附近"
+      ],
+      "recognition_features": [
+        "关键位出现反向结构",
+        "信号 K 能代表结构突破方向"
+      ],
+      "trigger": [
+        "信号 K 极值突破"
+      ],
+      "entry": [
+        "信号 K 极值外 1 tick 突破单",
+        {
+          "statement": "图示头肩结构：在右肩信号 K 突破建仓",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-05-semantic"],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        }
+      ],
+      "invalidation_stop": [
+        "以信号 K/结构失效极值外 1 tick 退出",
+        {
+          "statement": "图示头肩结构止损：右肩极值外 1 tick",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-05-semantic"],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        }
+      ],
+      "targets_exit": [
+        "清单未给统一目标，按结构与常规风控管理",
+        {
+          "statement": "关键位结构图示止盈方法一：固定盈亏比 1:1、1:2",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-05-semantic"],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        },
+        {
+          "statement": "关键位结构图示止盈方法二：固定点数",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-05-semantic"],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        },
+        {
+          "statement": "关键位结构图示止盈方法三：拿到空头结构被破坏",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-05-semantic"],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        }
+      ],
+      "risk_notes": [
+        "形态必须与关键位结合"
+      ],
+      "prohibited": [
+        "远离关键位时机械使用形态名"
+      ],
+      "exceptions": [
+        "不同结构的背景和后续跟随可能改变概率"
+      ],
+      "examples": [
+        {
+          "label": "关键位结构图组",
+          "pages": [
+            4,
+            6
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "页面 6 主要是图文上下文，已链接到同一 key，避免拆散结构。"
+      ],
+      "confidence": 0.86,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-range-extreme-limit",
+      "type": "setup",
+      "name": "区间前高/前低限价反转",
+      "aliases": [
+        "Range Extreme Limit Reversal",
+        "固定 1:1"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "Trading Range",
+        "1:1"
+      ],
+      "chunk_keys": [
+        "page-07-semantic"
+      ],
+      "source_scope": {"text_pages": [7], "visual_pages": [7], "visual_blocks": ["p7-range-extreme-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "无趋势的震荡区间"
+      ],
+      "prerequisites": [
+        "识别前高/前低及相近关键位",
+        "若有相近关键位，挂在距离当前更远者"
+      ],
+      "recognition_features": [
+        "价格接近区间前高/前低",
+        "窄区间高度低于 ATR 3 倍或宽区间有 2-3 次单边推动"
+      ],
+      "trigger": [
+        "价格触及限价位置"
+      ],
+      "entry": [
+        "前高挂空，前低挂多，触发即进场"
+      ],
+      "invalidation_stop": [
+        "窄区间使用 1:1 风险回报",
+        "宽区间使用宽止损但遵循强制退出",
+        "突破 K + 跟随 K 后，在跟随 K 极值外 1 tick 突破止损"
+      ],
+      "targets_exit": [
+        "固定 1:1 盈亏比"
+      ],
+      "risk_notes": [
+        "宽区间止损更宽，必须执行强制退出"
+      ],
+      "prohibited": [
+        "有明确趋势时把前高/前低当作区间反转"
+      ],
+      "exceptions": [
+        "实体突破+跟随说明区间反转假设失效"
+      ],
+      "examples": [
+        {
+          "label": "区间前高/前低表",
+          "pages": [
+            7,
+            7
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.93,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-point3-limit",
+      "type": "setup",
+      "name": "宽通道 Point 3 限价反转",
+      "aliases": [
+        "Point 3",
+        "宽通道反转"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "Weak Channel",
+        "Point 3"
+      ],
+      "chunk_keys": [
+        "page-07-semantic",
+        "page-08-semantic"
+      ],
+      "source_scope": {"text_pages": [7, 8], "visual_pages": [8], "visual_blocks": ["p8-point3-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "宽通道（Weak Channel）"
+      ],
+      "prerequisites": [
+        "识别通道线和第三次触碰位置"
+      ],
+      "recognition_features": [
+        "价格到达通道线 Point 3"
+      ],
+      "trigger": [
+        "触及 Point 3 限价位置"
+      ],
+      "entry": [
+        "在通道线 Point 3 位置提前挂限价单"
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损方法一：根据止盈点数确定止损点数，做 1:1 盈亏比",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-08-semantic"],
+          "visual_page": 8,
+          "visual_block": "p8-point3-chart",
+          "visual_locator": "p8 green Point 3 annotation"
+        },
+        {
+          "statement": "止损方法二：出现强势趋势突破通道线且有跟随时，在跟随 K 极值外 1 tick 挂突破单止损离场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-08-semantic"],
+          "visual_page": 8,
+          "visual_block": "p8-point3-chart",
+          "visual_locator": "p8 green Point 3 annotation"
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "止盈：根据当日平均波动幅度，决定止盈多少点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-08-semantic"],
+          "visual_page": 8,
+          "visual_block": "p8-point3-chart",
+          "visual_locator": "p8 green Point 3 annotation"
+        }
+      ],
+      "risk_notes": [
+        "宽通道反转必须容纳更大波动"
+      ],
+      "prohibited": [
+        "窄区间或强趋势中直接套用 Point 3"
+      ],
+      "exceptions": [
+        "实体突破与跟随出现时转为突破处理"
+      ],
+      "examples": [
+        {
+          "label": "Point 3 宽通道表",
+          "pages": [
+            8,
+            8
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.9,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-trend-50-pullback",
+      "type": "setup",
+      "name": "趋势 50% 回调限价顺势",
+      "aliases": [
+        "50% Pullback",
+        "趋势 50% 回调"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "趋势",
+        "50%"
+      ],
+      "chunk_keys": [
+        "page-09-semantic",
+        "page-10-semantic"
+      ],
+      "source_scope": {"text_pages": [9, 10], "visual_pages": [10], "visual_blocks": ["p10-pullback-charts"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "强趋势推进段"
+      ],
+      "prerequisites": [
+        "回调为两段式 Low1→Low2/High1→High2，或不超过连续 3 根逆势 K 的弱回调",
+        "不能是单段连续 3 根反向趋势 K"
+      ],
+      "recognition_features": [
+        "趋势段清晰，回调深度到达测量的 50%"
+      ],
+      "trigger": [
+        "价格触及趋势段 50%"
+      ],
+      "entry": [
+        "在趋势段 50% 挂顺势限价单"
+      ],
+      "invalidation_stop": [
+        "强反向趋势 K 收破 50% 时，在极值外 1 tick 止损",
+        "成交 K 收盘后形成连续 3 根逆势 K 时，在第三根极值外 1 tick 退出"
+      ],
+      "targets_exit": [
+        "按趋势和常规风险管理退出；清单未给单一固定目标"
+      ],
+      "risk_notes": [
+        "连续 3 根逆势趋势 K 被视为反转风险"
+      ],
+      "prohibited": [
+        "单段连续 3 根反向趋势 K",
+        "把反转当作普通回调"
+      ],
+      "exceptions": [
+        "若重新出现强趋势控制，可回到顺势 setup 但需重新验证前置条件"
+      ],
+      "examples": [
+        {
+          "label": "50% 回调图文页",
+          "pages": [
+            9,
+            10
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.94,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-trapped-pullback",
+      "type": "setup",
+      "name": "真突破后的回踩限价顺势（Trapped 对手盘）",
+      "aliases": [
+        "Trapped",
+        "突破回踩",
+        "被套对手盘"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "突破",
+        "跟随"
+      ],
+      "chunk_keys": [
+        "page-11-semantic",
+        "page-12-semantic"
+      ],
+      "source_scope": {"text_pages": [11], "visual_pages": [11, 12], "visual_blocks": ["p11-trapped-chart", "p12-trapped-continuation"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "关键位真突破并站稳，一方强力推进而另一方被套"
+      ],
+      "prerequisites": [
+        "突破 K 必须是强势趋势 K、实体明显、收盘站在突破方向",
+        "跟随 K 必须同方向延续动能",
+        "两根都不能是十字星/弱实体/明显犹豫"
+      ],
+      "recognition_features": [
+        "突破与跟随同时显示强度",
+        "回踩突破点提供被套对手盘的顺势再入场"
+      ],
+      "trigger": [
+        "价格回踩到突破点且突破方向未被强势否定"
+      ],
+      "entry": [
+        "在突破点挂顺势限价单",
+        {
+          "statement": "图示回踩突破点挂顺势限价单（p12 上部 Trapped 延续图）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-12-semantic"],
+          "visual_page": 12,
+          "visual_block": "p12-trapped-continuation",
+          "visual_locator": "p12 upper chart green callouts"
+        }
+      ],
+      "invalidation_stop": [
+        "回到突破位内并出现反向强趋势 K，在极值外 1 tick 突破止损",
+        {
+          "statement": "图示 Trapped 失败时回到突破位内，按极值外 1 tick 突破止损",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-12-semantic"],
+          "visual_page": 12,
+          "visual_block": "p12-trapped-continuation",
+          "visual_locator": "p12 upper chart green callouts"
+        }
+      ],
+      "targets_exit": [
+        "按顺势交易和关键位管理，清单未给固定目标"
+      ],
+      "risk_notes": [
+        "突破 K 或跟随 K 弱时，即使短暂越过关键位也不能使用"
+      ],
+      "prohibited": [
+        "突破/跟随含十字星、弱实体或犹豫形态"
+      ],
+      "exceptions": [
+        "价格未回踩突破点时不追价，等待其他合规 setup"
+      ],
+      "examples": [
+        {
+          "label": "Trapped 回踩表与图",
+          "pages": [
+            11,
+            11
+          ]
+        },
+        {
+          "label": "Trapped 跨页延续图",
+          "pages": [11, 12],
+          "visual_page": 12,
+          "visual_blocks": ["p11-trapped-chart", "p12-trapped-continuation"]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.95,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-opposite-1",
+      "type": "setup",
+      "name": "Always in：逆1失败限价单",
+      "aliases": [
+        "逆1失败",
+        "Low 1 / High 1"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "Limit",
+        "scalp"
+      ],
+      "chunk_keys": [
+        "page-12-semantic",
+        "page-13-semantic"
+      ],
+      "source_scope": {"text_pages": [12], "visual_pages": [12, 13], "visual_blocks": ["p12-opposite1-table", "p13-opposite1-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情，Always in long/short"
+      ],
+      "prerequisites": [
+        "确定强趋势主方向",
+        "多头等待空头回调触发 Low1，空头等待多头反弹触发 High1"
+      ],
+      "recognition_features": [
+        "顺势 K 后的第一次逆势尝试未能改变主方向"
+      ],
+      "trigger": [
+        "Low1/High1 触发限价单"
+      ],
+      "entry": [
+        "多头强趋势在跟随 K 低点挂多，空头强趋势在跟随 K 高点挂空",
+        {
+          "statement": "图示强势 scalp：在 K18 高点挂限价单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-13-semantic"],
+          "visual_page": 13,
+          "visual_block": "p13-opposite1-chart",
+          "visual_locator": "p13 upper green 强势 scalp box"
+        }
+      ],
+      "invalidation_stop": [
+        "可放在波段起点/前关键高低点，或前一根顺势趋势 K 极值",
+        "逆势连续 3 根 K 时在第 3 根极值外 1 tick 强制退出"
+      ],
+      "targets_exit": [
+        "scalp 到最后一根顺势趋势 K 收盘，或按 ATR 固定点数",
+        {
+          "statement": "图示结果：顺利止盈 5 个点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-13-semantic"],
+          "visual_page": 13,
+          "visual_block": "p13-opposite1-chart",
+          "visual_locator": "p13 upper green 强势 scalp box"
+        }
+      ],
+      "risk_notes": [
+        "强趋势中逆势失败的风险由主方向控制"
+      ],
+      "prohibited": [
+        "忽略 Always in 方向而做逆势预测"
+      ],
+      "exceptions": [
+        "三根逆势 K 后退出，不等待主方向自行恢复"
+      ],
+      "examples": [
+        {
+          "label": "Always in 逆1失败表",
+          "pages": [
+            12,
+            12
+          ]
+        },
+        {
+          "label": "逆1强势 scalp 视觉案例",
+          "pages": [12, 13],
+          "visual_page": 13,
+          "visual_blocks": ["p12-opposite1-table", "p13-opposite1-chart"]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.94,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-third-bar",
+      "type": "setup",
+      "name": "Always in：第三根未遂（Third-Bar Failure）",
+      "aliases": [
+        "Third-Bar Failure",
+        "第三根未遂"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "Limit",
+        "逆势失败"
+      ],
+      "chunk_keys": [
+        "page-13-semantic"
+      ],
+      "source_scope": {"text_pages": [13], "visual_pages": [13], "visual_blocks": ["p13-third-bar-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情，Always in long/short"
+      ],
+      "prerequisites": [
+        "逆势方第一次或第二次尝试反转",
+        "押注逆势方无法收出连续第三根逆势 K"
+      ],
+      "recognition_features": [
+        "第 2 根逆势 K 收盘仍未形成三根连续逆势趋势"
+      ],
+      "trigger": [
+        "第 2 根逆势 K 收盘确认第三根失败机会"
+      ],
+      "entry": [
+        "在第 2 根逆势 K 收盘价反手建仓，顺主方向"
+      ],
+      "invalidation_stop": [
+        "逆势方收出连续 3 根 K 时，在第 3 根极值外 1 tick 强制退出"
+      ],
+      "targets_exit": [
+        "按 ATR 固定点数或前关键位止盈"
+      ],
+      "risk_notes": [
+        "来源给出逆势第三根失败的经验概率表述，但本项目未验证"
+      ],
+      "prohibited": [
+        "连续第三根逆势 K 已经形成后仍新增该 setup"
+      ],
+      "exceptions": [
+        "若主方向已经被结构性反转取代，转用反转 setup"
+      ],
+      "examples": [
+        {
+          "label": "第三根未遂表",
+          "pages": [
+            13,
+            13
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.92,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-ema20",
+      "type": "setup",
+      "name": "Always in：均线回补 EMA20",
+      "aliases": [
+        "EMA20 Pullback",
+        "均线回补"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "EMA20",
+        "Limit"
+      ],
+      "chunk_keys": [
+        "page-14-semantic"
+      ],
+      "source_scope": {"text_pages": [14], "visual_pages": [14], "visual_blocks": ["p14-ema20-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情，Always in long/short"
+      ],
+      "prerequisites": [
+        "强趋势中第一次回补 EMA20",
+        "仍需与 Always in 主方向一致"
+      ],
+      "recognition_features": [
+        "价格第一次回到 EMA20 附近",
+        "趋势参与者可能再次入场"
+      ],
+      "trigger": [
+        "价格触及 EMA20 附近而没有良好反向跟随"
+      ],
+      "entry": [
+        "在 EMA20 附近挂顺趋势限价单",
+        {
+          "statement": "图示 EMA20：在 EMA20 处提前挂限价单做空，后由 K35 成交",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-14-semantic"],
+          "visual_page": 14,
+          "visual_block": "p14-ema20-chart",
+          "visual_locator": "p14 lower EMA20 chart green box"
+        }
+      ],
+      "invalidation_stop": [
+        "可按目标固定盈亏比，或在逆势实体突破均线且有良好跟随后，于跟随 K 极值外 1 tick 退出"
+      ],
+      "targets_exit": [
+        "按 ATR 固定点数或前一个关键位",
+        {
+          "statement": "图示止盈：根据 ATR 数值，固定止盈 5 个点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-14-semantic"],
+          "visual_page": 14,
+          "visual_block": "p14-ema20-chart",
+          "visual_locator": "p14 lower EMA20 chart green box"
+        }
+      ],
+      "risk_notes": [
+        "第一次回补与后续反复穿越均线的含义不同"
+      ],
+      "prohibited": [
+        "逆势交易均线回补",
+        "忽略实体突破+跟随退出"
+      ],
+      "exceptions": [
+        "均线另一侧形成强反向趋势时退出并重新判断市场状态",
+        {
+          "statement": "图示风控例外：K35 阳线实体收在均线之上但没有跟随，不立即退出，持仓至止盈目标或重新触发反转离场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-14-semantic"],
+          "visual_page": 14,
+          "visual_block": "p14-ema20-chart",
+          "visual_locator": "p14 lower EMA20 chart green box"
+        }
+      ],
+      "examples": [
+        {
+          "label": "EMA20 回补表",
+          "pages": [
+            14,
+            14
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.93,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-breakout-scalp",
+      "type": "setup",
+      "name": "Always in：顺势突破 scalp",
+      "aliases": [
+        "顺势突破",
+        "Breakout scalp"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "Breakout",
+        "scalp",
+        "ATR"
+      ],
+      "chunk_keys": [
+        "page-14-semantic",
+        "page-15-semantic",
+        "page-16-semantic"
+      ],
+      "source_scope": {"text_pages": [14, 15, 16], "visual_pages": [16], "visual_blocks": ["p14-breakout-heading", "p15-breakout-table", "p16-breakout-chart"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情或强趋势行情"
+      ],
+      "prerequisites": [
+        {
+          "statement": "趋势 K 收盘 ≥ 实体 50%（多头）或 ≤ 50%（空头）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-15-semantic"]
+        }
+      ],
+      "recognition_features": [
+        "趋势 K 收盘位置符合方向阈值",
+        "不做方向预测，只跟随"
+      ],
+      "trigger": [
+        "趋势 K 极值被突破"
+      ],
+      "entry": [
+        {
+          "statement": "趋势 K 极值外 1 tick",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-15-semantic"]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损方法一：根据止盈目标位，固定盈亏比",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-15-semantic"]
+        },
+        {
+          "statement": "止损方法二：逆势方连续 3 根逆势 K 后，在第 3 根 K 极值外 1 tick 挂突破单离场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-15-semantic"]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "止盈：根据 ATR 数值固定点数止盈",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-15-semantic"]
+        }
+      ],
+      "risk_notes": [
+        "执行版强调不做判断、只跟随；ATR 和固定盈亏比必须有外部参数定义"
+      ],
+      "prohibited": [
+        "不符合实体 50% 收盘条件时交易",
+        "与 Always in 方向相反"
+      ],
+      "exceptions": [
+        {
+          "statement": "用途：顺势 scalp，不做判断，只跟随",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": ["page-16-semantic"],
+          "visual_page": 16,
+          "visual_block": "p16-breakout-chart",
+          "visual_locator": "p16 chart top statement"
+        },
+        "逆势连续 3 根 K 触发强制退出"
+      ],
+      "examples": [
+        {
+          "label": "顺势突破 scalp 表和连续页",
+          "pages": [
+            14,
+            16
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.91,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-discipline-checklist",
+      "type": "discipline",
+      "name": "每一单的 10 秒纪律检查表",
+      "aliases": [
+        "执行清单",
+        "防违规检查",
+        "盘中自检"
+      ],
+      "tags": [
+        "南桥",
+        "纪律",
+        "风险",
+        "执行"
+      ],
+      "chunk_keys": [
+        "page-17-semantic"
+      ],
+      "source_scope": {"text_pages": [17], "visual_pages": [], "visual_blocks": ["p17-discipline-table"]},
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "每笔盘中交易"
+      ],
+      "market_context": [
+        "任何准备执行的盘中交易"
+      ],
+      "prerequisites": [
+        "明确趋势/区间/宽通道背景",
+        "确认属于已定义合规 setup 且满足全部前置条件"
+      ],
+      "recognition_features": [
+        "检查入场方式、止损、强制退出、当日止损/次数上限和情绪状态"
+      ],
+      "trigger": [
+        "下单前和持仓中进行 10 秒自检"
+      ],
+      "entry": [
+        "只按对应 setup 规定的突破单或限价单入场"
+      ],
+      "invalidation_stop": [
+        "必须复核对应 setup 的止损和强制退出条件",
+        "连续 3 笔止损后立即下班"
+      ],
+      "targets_exit": [
+        "达到当日目标停止交易",
+        "出现强制退出信号立即执行"
+      ],
+      "risk_notes": [
+        "清单是执行纪律，不替代具体 setup 的结构规则"
+      ],
+      "prohibited": [
+        "不属于已定义 setup 的交易",
+        "情绪化、无聊或报复性交易",
+        "触及限制后继续交易"
+      ],
+      "exceptions": [
+        "无；检查表要求不合规交易全部忽略"
+      ],
+      "examples": [
+        {
+          "label": "南桥 10 秒自检清单",
+          "pages": [
+            17,
+            17
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "纪律检查表要求按系统交易、不按感觉交易，并逐项核对入场、止损和强制退出信号。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将第17页纪律检查表及提醒归一化为可由后续 agent 自动调用的执行约束；不是原文逐字引述，也不是人工审批门槛。",
+          "supporting_chunk_keys": ["page-17-semantic"]
+        }
+      ],
+      "confidence": 0.97,
+      "source_id": "nanqiao-checklist"
+    }
+  ],
+  "terminology": {
+    "terms": [
+      {
+        "term_en": "Price Action",
+        "term_zh": "价格行为",
+        "aliases": [
+          "PA"
+        ],
+        "source_ids": [
+          "rose-strategy",
+          "rose-caveman",
+          "rose-gap-bar",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "项目工作术语，不代表策略有效性结论。"
+      },
+      {
+        "term_en": "High 2 / Low 2",
+        "term_zh": "高2 / 低2",
+        "aliases": [
+          "H2",
+          "L2",
+          "二次入场"
+        ],
+        "source_ids": [
+          "nanqiao-checklist"
+        ],
+        "note": "南桥清单要求信号 K 与建仓方向一致，并把入场放在信号 K 极值外 1 tick。"
+      },
+      {
+        "term_en": "Trading Range",
+        "term_zh": "震荡区间",
+        "aliases": [
+          "TR",
+          "TTR",
+          "窄幅震荡区间"
+        ],
+        "source_ids": [
+          "rose-strategy",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "不同来源的区间规则不同，使用时必须保留 source_id 和具体 setup。"
+      },
+      {
+        "term_en": "Always In",
+        "term_zh": "Always in / 单边主导方向",
+        "aliases": [
+          "AI",
+          "AIL",
+          "AIS"
+        ],
+        "source_ids": [
+          "nanqiao-checklist"
+        ],
+        "note": "南桥第三部分按 Always in long/short 处理强突破行情。"
+      },
+      {
+        "term_en": "EMA20",
+        "term_zh": "20 周期指数移动平均线",
+        "aliases": [
+          "EMA-20",
+          "20EMA"
+        ],
+        "source_ids": [
+          "nanqiao-checklist",
+          "rose-caveman"
+        ],
+        "note": "仅作为来源中的背景/退出参考，不在本知识库中推导额外指标规则。"
+      },
+      {
+        "term_en": "R / Risk unit",
+        "term_zh": "风险单位",
+        "aliases": [
+          "1R",
+          "0.5R",
+          "HR",
+          "RR"
+        ],
+        "source_ids": [
+          "rose-caveman",
+          "rose-mtr",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "R 的测量端点随来源和 setup 变化；记录中保留具体来源，不跨策略强行统一。"
+      },
+      {
+        "term_en": "Follow-through",
+        "term_zh": "跟随 K / 跟随",
+        "aliases": [
+          "FT"
+        ],
+        "source_ids": [
+          "rose-mtr",
+          "nanqiao-checklist"
+        ],
+        "note": "主要用于确认突破是否持续或触发强制退出。"
+      },
+      {
+        "term_en": "Point 3",
+        "term_zh": "通道第三点",
+        "aliases": [
+          "Point 3"
+        ],
+        "source_ids": [
+          "nanqiao-checklist"
+        ],
+        "note": "宽通道限价反转的预挂单位置。"
+      },
+      {
+        "term_en": "Tick",
+        "term_zh": "最小跳动单位",
+        "aliases": [
+          "1 tick"
+        ],
+        "source_ids": [
+          "rose-caveman",
+          "rose-mtr",
+          "nanqiao-checklist"
+        ],
+        "note": "入场或突破止损位置相对 K 线极值的最小偏移。"
+      },
+      {
+        "term_en": "Breakout-Failure-Breakout",
+        "term_zh": "突破-失败-突破 / 失败的失败",
+        "aliases": ["失败的失败", "二次突破"],
+        "source_ids": ["nanqiao-checklist"],
+        "note": "南桥要求关键位实体突破后失败，再次突破须在关键位后 3 根 K 内完成；p4 图块提供 K14 例子的视觉规则。"
+      },
+      {
+        "term_en": "Trapped pullback",
+        "term_zh": "真突破后的回踩限价顺势",
+        "aliases": ["Trapped", "被套对手盘"],
+        "source_ids": ["nanqiao-checklist"],
+        "note": "p11 表格与 p12 上部图块共同构成来源范围；p12 下部已另起逆1。"
+      }
+    ],
+    "conflicts": []
+  }
+}

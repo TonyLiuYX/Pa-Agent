@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/policy-outcome-matrix-0.1.0.schema.json",
+  "title": "Policy outcome matrix v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "policy_matrix_id": {}, "content_hash": {}, "policy_version": {}, "cases": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/policyMatrix"
+}

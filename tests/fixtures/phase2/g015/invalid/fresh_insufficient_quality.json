@@ -1,0 +1,7 @@
+{
+  "scenario": "fresh_insufficient_quality",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "quality.codes", "value": ["insufficient_history"]}],
+  "expected_issue_codes": ["insufficient_history"],
+  "expected_condition": "malformed_ohlcv"
+}

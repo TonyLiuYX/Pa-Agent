@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "model_call_metadata",
+  "extensions": {},
+  "model_request_id": "mrq_8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_request_hash": "8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_response_id": "mrs_bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+  "model_response_hash": "bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+  "provider": "offline",
+  "model": "fixture-model",
+  "adapter": "fixture-adapter-0.1.0",
+  "started_at": "2026-08-10T15:00:00Z",
+  "completed_at": "2026-08-10T15:00:01Z",
+  "latency_ms": 1000,
+  "usage": {
+    "prompt_tokens": 10,
+    "completion_tokens": 20,
+    "total_tokens": 30
+  },
+  "provider_request_id": null,
+  "correlation_id": "corr-g014-001",
+  "content_hash": "a2217d0519a755f7ab5c514e6c0e6d114ed5b4933f34058bf415014411dcc4fb",
+  "model_call_id": "mcl_a2217d0519a755f7ab5c514e6c0e6d114ed5b4933f34058bf415014411dcc4fb"
+}

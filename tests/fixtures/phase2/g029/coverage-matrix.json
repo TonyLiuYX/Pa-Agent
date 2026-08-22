@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0",
+  "criteria": [
+    {"id": "AC01", "requirement": "12 compact branches and outcomes", "evidence": ["scenario_results", "scenario_count", "branch_set", "outcome_set"]},
+    {"id": "AC02", "requirement": "Exact IEX market and internal claim/citation lineage", "evidence": ["lineage_assertions", "actionable_outcomes", "event_market_refs", "profile_ref", "packet_hash", "second_event_hash"]},
+    {"id": "AC03", "requirement": "Long/short Decimal R quantity P&L balance goldens", "evidence": ["golden_checks", "phase1_retrieval_goldens.unchanged", "scenario_results.accounts"]},
+    {"id": "AC04", "requirement": "40 shared-view startup and 200 bounded scale", "evidence": ["scale.forty.service_counts", "scale.forty.reentry", "scale.two_hundred.service_records", "scale.two_hundred.peak_in_flight", "scale.two_hundred.work_conserving_refill"]},
+    {"id": "AC05", "requirement": "Opposite and same-direction strategy isolation", "evidence": ["isolation.pass", "isolation.cases.*.per_strategy", "isolation.cases.*.schedule_due_generation_isolated", "isolation.cases.*.lineage_strategy_ids_isolated"]},
+    {"id": "AC06", "requirement": "Restart duplicate late-event idempotency", "evidence": ["restart.event_multiplicity_unchanged", "restart.no_provider_call_on_duplicate_or_late", "restart.no_fill_duplicate_or_late", "restart.no_close_duplicate_or_late", "restart.balance_pnl_stable_after_replay", "recovery.exit_settlement_once.one_settlement"]},
+    {"id": "AC07", "requirement": "RecoveryBar entry exit and lineage precision", "evidence": ["recovery.entry_recovery", "recovery.entry_recovery.lineage_exact", "recovery.entry_recovery.duplicate_no_effect", "recovery.exit_settlement_once", "recovery.whole_interval_recovery", "recovery.typed_lineage_tamper_rejected"]},
+    {"id": "AC08", "requirement": "Cutover revisions gaps stale drift scales callbacks", "evidence": ["boundaries.half_open_cutover", "revision_lineage.native_fields", "revision_lineage.golden_fields", "revision_lineage.feed_session_ingested_one", "revision_lineage.shared_view_join_ok", "derived_seconds.pass", "market_quality", "immediate_drift", "decimal_scales.assertions", "recovery.whole_interval_recovery.entry_bar_covers_gap", "recovery.whole_interval_recovery.exit_gap_recorded"]},
+    {"id": "AC09", "requirement": "IEX-only source and SIP rejection", "evidence": ["feed_lineage.pass", "feed_lineage.history_feed", "feed_lineage.trade_derived_second_feeds", "feed_lineage.shared_market_view_feed", "feed_lineage.paper_event_feeds", "feed_lineage.*_sip_mismatch_rejected"]},
+    {"id": "AC10", "requirement": "Regular-session close and next-session resume", "evidence": ["session_close.open_position_resume", "session_close.pending_x_across_close", "session_close.pending_x_across_close.closed_session_no_model_call", "session_close.pending_x_across_close.next_session_resume_call_observed"]},
+    {"id": "AC11", "requirement": "X=1 and final-second grace", "evidence": ["deadlines.x", "deadlines.arrived_during_grace", "deadlines.deadline_not_extended", "scenario_results.wait_expiry"]},
+    {"id": "AC12", "requirement": "Startup quality and exact retry backoff", "evidence": ["startup.insufficient_startup", "startup.partial_startup", "startup.terminal_configuration", "retry_backoff.observed_delays_seconds", "scenario_results.terminal_auth_no_hot_loop", "disabled_exhausted.no_recall"]},
+    {"id": "AC13", "requirement": "Thinking mode hashes differ without isolation drift", "evidence": ["thinking_hashes", "thinking_isolation"]},
+    {"id": "AC14", "requirement": "Recursive leak and pre-execution grounding/profile/packet/second tamper rejection", "evidence": ["tampering.recursive_leak_found", "tampering.provider_calls_before_execution", "tampering.grounding_tamper_rejected", "tampering.packet_tamper_rejected", "tampering.profile_tamper_rejected", "tampering.second_lineage_tamper_rejected", "revision_lineage.native_fields.wrapper_passthrough_equal"]},
+    {"id": "AC15", "requirement": "Two canonical replays are identical", "evidence": ["reproducibility", "canonical_hashes"]},
+    {"id": "AC16", "requirement": "Report states structural/reproducibility limitation", "evidence": ["limitations", "report_status"]}
+  ]
+}

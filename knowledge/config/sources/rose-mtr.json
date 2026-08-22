@@ -1,0 +1,612 @@
+{
+  "source_id": "rose-mtr",
+  "document_spec": {
+    "file_name": "价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+    "title": "Rose 的 MTR（主趋势反转）",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "verified_source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+    "chunk_specs": [
+      {
+        "key": "intro-core",
+        "pages": [
+          1,
+          1
+        ],
+        "title_path": [
+          "MTR",
+          "背景、被套交易者与失败突破定义"
+        ],
+        "kind": "concept",
+        "boundary_reason": "引言、趋势末期/关键位背景、Bull Trap/Bear Trap 和 MTR 失败突破定义共同构成策略背景，不拆成孤立术语。",
+        "visual_notes": "页面 1 为文字引言与 MTR 定义，无嵌入图；页面级文本保留完整背景。"
+      },
+      {
+        "key": "trap-confirmation",
+        "pages": [
+          2,
+          2
+        ],
+        "title_path": [
+          "MTR",
+          "阳线/阴线反转：信号、陷阱与实体确认"
+        ],
+        "kind": "setup",
+        "boundary_reason": "多头陷阱和空头陷阱共享信号 K、陷阱 K、实体确认和耐心等待条件，作为一组对称但方向明确的识别链。",
+        "visual_notes": "页面 2 含阳线/阴线反转图示；图表与信号 K、陷阱 K、确认收盘文字共同承载规则。"
+      },
+      {
+        "key": "video-example",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "MTR",
+          "B4/B5 复盘实例：被套多头与做空计划"
+        ],
+        "kind": "example",
+        "boundary_reason": "2025-04-10 ES B4/B5 案例把窄幅背景、突破失败、被套识别、做空入场、止损和 R 倍数目标连成完整示例。",
+        "visual_notes": "页面 3 的 B4/B5 K 线图是失败突破与交易计划的直接视觉上下文。"
+      },
+      {
+        "key": "example-one-two",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "MTR",
+          "ES 示例一与楔形底失败背景"
+        ],
+        "kind": "example",
+        "boundary_reason": "ES B41/B42/B45/B46 示例及其后续失败的楔形底三推背景同页出现，必须同时保留方向、止损、目标与背景过滤。",
+        "visual_notes": "页面 4 含示例一与示例二图表；图示分别对应 B41/B42 失败突破和楔形底失败背景。"
+      },
+      {
+        "key": "example-two-three",
+        "pages": [
+          5,
+          5
+        ],
+        "title_path": [
+          "MTR",
+          "示例二退出与 ETH 示例三"
+        ],
+        "kind": "example",
+        "boundary_reason": "B18/B19 失败后的止损处理与 2025-06-15 ETH B190/B194/B199/B202 案例连续说明失败管理和限价入场。",
+        "visual_notes": "页面 5 的示例二/三图表分别展示失败退出和 ETH 多头陷阱后的 0.21/0.33 限价卖出。"
+      },
+      {
+        "key": "risk-management",
+        "pages": [
+          6,
+          6
+        ],
+        "title_path": [
+          "MTR",
+          "风险测量、止损、止盈与被套修复"
+        ],
+        "kind": "risk",
+        "boundary_reason": "R 的端点、Tick 止损、1R/2R 目标及被套后的修复模式共同构成执行与退出管理链。",
+        "visual_notes": "页面 6 含 15 分钟图和交易管理文字；图示用于保留示例一类走势与止盈后管理上下文。"
+      },
+      {
+        "key": "summary",
+        "pages": [
+          7,
+          7
+        ],
+        "title_path": [
+          "MTR",
+          "来源总结与执行原则"
+        ],
+        "kind": "summary",
+        "boundary_reason": "总结页把对手盘、失败突破、实体确认和风险倍数四个原则收束为可检索回退。",
+        "visual_notes": "页面 7 为文字总结，无嵌入图；保留来源原始四点原则。"
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "rose-mtr",
+      "type": "setup",
+      "name": "MTR（主趋势反转）失败突破与被套盘",
+      "aliases": [
+        "Major Trend Reversal",
+        "主趋势反转",
+        "MTR",
+        "多头陷阱",
+        "空头陷阱",
+        "Bull Trap",
+        "Bear Trap"
+      ],
+      "tags": [
+        "Rose",
+        "MTR",
+        "失败突破",
+        "被套交易者",
+        "实体确认",
+        "风险单位"
+      ],
+      "chunk_keys": [
+        "intro-core",
+        "trap-confirmation",
+        "video-example",
+        "example-one-two",
+        "example-two-three",
+        "risk-management",
+        "summary"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "日内交易中的波段拐点；来源示例包含 ES 期货和 ETH 5 分钟/15 分钟图表"
+      ],
+      "market_context": [
+        {
+          "statement": "本策略的核心在于识别那些被市场\"欺骗\"并套牢的交易者，然后利用他们平仓（止损）时产生的强大动能来获利。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "这通常发生在趋势的末期或者关键的支撑/阻力位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "多头陷阱（Bull Trap）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "空头陷阱（Bear Trap）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "理解谁被套牢了，以及他们将在哪里离场，是交易成功的关键。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "识别信号K线、陷阱K线和随后的确认 K 线",
+          "declaration_type": "derived_interpretation",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ],
+          "rationale": "这是将页面 2 的阳线反转与阴线反转小节归纳为一条检索前置条件；来源分别列出信号 K 线、陷阱 K 线和确认步骤，并未逐字写出这一合并句。"
+        },
+        {
+          "statement": "MTR 本质上是一种\"陷阱\"模式，利用的是突破失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "信号K线: 出现一根强劲的阳线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "陷阱K线: 紧接着的 K 线，其最高价超过了信号K线的最高价",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "信号K线: 出现一根强劲的阴线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "陷阱K线: 紧接着的 K 线，其最低价超过了信号K线的最低价",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "有实体阴线收盘 在信号K线的开盘价或最低价之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "有实体阳线收盘 在信号K线的开盘价或最高价之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "等待一个强有力的\"实体K线收盘\"作为确认信号",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "summary"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "在确认之后，可以寻找机会做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "在 B5 收盘时或其下方挂单做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ]
+        },
+        {
+          "statement": "在 0.21 和 0.33 的位置挂限价单卖出。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损单应放置在陷阱K线端点之外一个 Tick 的位置。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做多时：放在陷阱阳线的最低价之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做空时：放在陷阱阴线的最高价之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "止损: 放在 B5 的最高点上方。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ]
+        },
+        {
+          "statement": "初始止损放在 B42 最高点的上面。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "初始止损放在 B194 最高点的上面。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        },
+        {
+          "statement": "或者看到 B19 没跌破 B18 的最低点，应该尽早止损。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "从 B4 的开盘价到 B5 的最高价画出风险区间 (R)，然后向下寻找 1R 和 2R 的目标位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ]
+        },
+        {
+          "statement": "目标位是风险区间 (R) 的倍数。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "第一个目标位是 1R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "第二个目标位是 2R，以此类推。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "补救的目标是让整体仓位回到盈亏平衡点，甚至盈利。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "当价格回到你最初的入场点附近时，就是你解套获利的时机。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "目标价是我们测量区间的 1 倍距离，我们在 B46 顺利止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "目标价是我们测量区间的 1 倍距离，我们在 B202 顺利止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "风险区间 (R) 通常是 从信号K线(第一根K线)的开盘价到陷阱K线(第二根K线)的端点。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做空时：从信号阳线的开盘价，测量到陷阱阴线的最高价。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做多时：从信号阴线的开盘价，测量到陷阱阳线的最低价。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "使用开盘价进行测量是因为这种方式更保守且更安全。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "根据 Rose 的讲解，一个完整的交易计划不仅包括入场，更重要的是风险和资金管理。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "有时，我们自己也会被套。Rose 对此的建议是：不要慌乱，进入\"修复模式\"。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "如果你做空被套，不要在低位止损，而应该在一个更小的震荡区间的上沿（比如 33% 或 50% 的回调位）去加仓做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "不能光看 k 线，重要是分析背景。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "不要急于在陷阱出现时就立刻入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "summary"
+          ]
+        },
+        {
+          "statement": "例如，她观察到 Bar 12 并未跌破 Bar 11 的开盘价，因此她认为卖出信号尚不明确，需要更多证据。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "这里是一个楔形底的背景，三推。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "如果做空看到 B19 之后应该把止损放在 B19 上方一个 tick。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "在 2025-04-10 的 ES 复盘视频中，经典的例子发生在 B4 和 B5",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ],
+          "label": "B4/B5 复盘实例",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "statement": "2025 年 6 月 13 日 的 ES 期货",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ],
+          "label": "示例一",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "statement": "2025 年 6 月 15 日 ETH 5 分钟的图表",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ],
+          "label": "示例三",
+          "pages": [
+            5,
+            5
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "规范化层仅把来源文字组织为背景—识别—确认—入场—风控链，不把来源未给出的胜率或对称规则升级为来源陈述。",
+          "declaration_type": "derived_interpretation",
+          "supporting_chunk_keys": [
+            "intro-core",
+            "trap-confirmation",
+            "video-example",
+            "example-one-two",
+            "example-two-three",
+            "risk-management",
+            "summary"
+          ],
+          "rationale": "这是对同一 MTR 来源多个页面的检索组织，不是 PDF 中逐字出现的单句规则。"
+        }
+      ],
+      "confidence": 0.95,
+      "source_id": "rose-mtr"
+    }
+  ],
+  "terminology": {
+    "terms": [
+      {
+        "term_en": "Major Trend Reversal",
+        "term_zh": "主趋势反转",
+        "aliases": [
+          "MTR",
+          "大反转"
+        ],
+        "source_ids": [
+          "rose-mtr"
+        ],
+        "note": "本来源将 MTR 描述为利用失败突破、识别被套交易者的陷阱模式；日内更多表现为波段拐点。"
+      },
+      {
+        "term_en": "Bull Trap",
+        "term_zh": "多头陷阱",
+        "aliases": [
+          "被套多头"
+        ],
+        "source_ids": [
+          "rose-mtr"
+        ],
+        "note": "上涨后的假突破吸引追高多头，随后反转使其止损卖出。"
+      },
+      {
+        "term_en": "Bear Trap",
+        "term_zh": "空头陷阱",
+        "aliases": [
+          "被套空头"
+        ],
+        "source_ids": [
+          "rose-mtr"
+        ],
+        "note": "下跌后的假破位吸引卖家，随后反转迫使空头买入平仓。"
+      },
+      {
+        "term_en": "R / Risk unit",
+        "term_zh": "风险区间 / 风险单位",
+        "aliases": [
+          "1R",
+          "2R"
+        ],
+        "source_ids": [
+          "rose-mtr"
+        ],
+        "note": "本来源以信号 K 开盘价至陷阱 K 端点测量 R，再按 1R、2R 倍数管理目标。"
+      },
+      {
+        "term_en": "Tick",
+        "term_zh": "最小跳动单位",
+        "aliases": [
+          "1 tick"
+        ],
+        "source_ids": [
+          "rose-mtr"
+        ],
+        "note": "本来源将陷阱 K 端点外一个 Tick 作为止损位置示例。"
+      }
+    ],
+    "conflicts": [
+      {
+        "topic": "MTR 触发确认",
+        "sources": [
+          "rose-mtr"
+        ],
+        "description": "来源同时强调陷阱 K 的失败突破和后续实体 K 收盘确认；Bar 12 未跌破 Bar 11 开盘价时，卖出信号仍需更多证据，不能把影线失败直接当作已确认入场。"
+      },
+      {
+        "topic": "MTR 背景过滤",
+        "sources": [
+          "rose-mtr"
+        ],
+        "description": "示例二在楔形底三推背景下失败，来源明确要求不能只看 K 线而忽略背景。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "g009-definition-and-proportions",
+    "kind": "positive",
+    "query": "Gap Bar 单 K 连续 K 隐含供需区 0.66 50% 33%",
+    "expected_record_ids": [
+      "rose-gap-bar"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-gap-bar",
+        "field": "recognition_features",
+        "statement": "隐含供需区(Implicit Gap)不要求 K 线之间出现可见空间;看涨 K 线的上影线与下一根看跌 K 线实体重叠时形成供应区,看跌 K 线的下影线与下一根看涨 K 线实体重叠时形成需求区。"
+      },
+      {
+        "record_id": "rose-gap-bar",
+        "field": "trigger",
+        "statement": "看涨 Gap Bar 的首次回调中,首批买家通常在 0.66 水平附近出现,更多买家可能在 50% 的位置等待入场。"
+      },
+      {
+        "record_id": "rose-gap-bar",
+        "field": "trigger",
+        "statement": "看跌 Gap Bar 的首次回调中,卖家通常在 33% 左右出现,市场可能上探到 50% 的位置。"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-gap-bar",
+        "chunk_id": "rose-gap-bar:definition",
+        "page_start": 1,
+        "page_end": 2
+      },
+      {
+        "record_id": "rose-gap-bar",
+        "chunk_id": "rose-gap-bar:execution",
+        "page_start": 3,
+        "page_end": 3
+      }
+    ]
+  },
+  {
+    "id": "g009-unsupported-risk-rules",
+    "kind": "negative",
+    "query": "Gap Bar 固定止损 止盈 2R",
+    "expected_record_ids": [
+      "rose-gap-bar"
+    ],
+    "expected_source_not_stated": [
+      {
+        "record_id": "rose-gap-bar",
+        "field": "invalidation_stop",
+        "statement": "来源未声明统一的止损价位或止损距离;本记录不推定具体止损规则。"
+      },
+      {
+        "record_id": "rose-gap-bar",
+        "field": "targets_exit",
+        "statement": "来源未声明固定止盈价位、风险倍数或目标距离;本记录不推定具体目标规则。"
+      },
+      {
+        "record_id": "rose-gap-bar",
+        "field": "prohibited",
+        "statement": "来源未声明独立的 prohibited/禁止交易清单;本记录不推定通用禁做条件。"
+      },
+      {
+        "record_id": "rose-gap-bar",
+        "field": "exceptions",
+        "statement": "来源未声明独立的 exceptions/例外条件;本记录不推定趋势失效或反向交易规则。"
+      }
+    ],
+    "forbidden_declaration_type": "source_assertion"
+  }
+]

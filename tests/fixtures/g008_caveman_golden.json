@@ -1,0 +1,39 @@
+{
+  "source_id": "rose-caveman",
+  "page_count": 14,
+  "visual_pages": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
+  "p2_visual_required": [
+    "最多间隔2根K线",
+    "2R",
+    "DT或Wedge Top",
+    "强趋势中Caveman大概率会失败",
+    "二次入场",
+    "第二推中的Caveman容易失败",
+    "均线",
+    "TR上沿",
+    "TR下沿",
+    "顺势做Caveman成功率比较高",
+    "pullback to breakout"
+  ],
+  "case_chunks": {
+    "case-1": {"page_range": [5, 6], "direction": "看涨", "trigger": "B5"},
+    "case-2": {"page_range": [6, 7], "direction": "看跌", "trigger": "B20"},
+    "case-3": {"page_range": [7, 7], "direction": "看跌", "trigger": "B24"},
+    "case-4": {"page_range": [7, 8], "direction": "看跌", "trigger": "B30"},
+    "case-5": {"page_range": [8, 9], "direction": "看涨", "trigger": "B36"},
+    "case-6": {"page_range": [9, 10], "direction": "看跌", "trigger": "B49"},
+    "case-7": {"page_range": [11, 12], "direction": "看涨", "trigger": "B59"},
+    "case-8": {"page_range": [12, 13], "direction": "看跌", "trigger": "B65"},
+    "case-9": {"page_range": [13, 14], "direction": "看涨", "trigger": "B74"}
+  },
+  "conflicts": {
+    "信号棒与触发棒的时序": ["紧随", "最多间隔2根K"],
+    "目标风险单位": ["2R", "HR与1R"]
+  },
+  "query": {
+    "text": "Caveman 第二推 均线 TR 边缘",
+    "record_id": "rose-caveman",
+    "required_logic_terms": ["第二推", "均线", "TR", "入场"],
+    "required_citation_pages": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  }
+}

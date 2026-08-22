@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "analysis_run_outcome_event",
+  "extensions": {},
+  "event_type": "analysis_outcome",
+  "decision_event_id": "dec_1fe039d853ad06dc3f4e3f83e7c7358655d6397d7aea686eef12691af2931fac",
+  "decision_event_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "mode": "paper_replay",
+  "stream": "paper_replay",
+  "data_origin": "synthetic_fixture",
+  "synthetic": true,
+  "recorded_at": "2026-08-10T15:02:00Z",
+  "outcome_as_of": "2026-08-10T15:10:00Z",
+  "outcome_status": "condition_met",
+  "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "idempotency_key": "idem_b1b6884bae4fe43f99cc3204e954df1705052115dbe2e8575e51a47604e046bb",
+  "content_hash": "9128e2724cba05013fd0277d380dc5c0a9c035d5fa69677a529930205504cf97",
+  "outcome_event_id": "out_9128e2724cba05013fd0277d380dc5c0a9c035d5fa69677a529930205504cf97"
+}

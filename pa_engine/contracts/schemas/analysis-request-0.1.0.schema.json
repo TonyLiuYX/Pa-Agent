@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/analysis-request-0.1.0.schema.json",
+  "title": "Analysis request v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "analysis_request_id": {}, "content_hash": {}, "correlation_id": {}, "input_mode": {}, "analysis_as_of": {}, "market_snapshot_id": {}, "knowledge_snapshot_id": {}, "knowledge_snapshot_hash": {}, "analysis_policy_id": {}, "purpose": {}, "instrument": {}, "timeframe": {}, "session": {}, "no_live_orders": {}, "generated_at": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/analysisRequest"
+}

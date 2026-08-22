@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "pa_analysis_result",
+  "extensions": {},
+  "analysis_request_id": "arq_c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+  "analysis_request_hash": "c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+  "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "observation_frame_id": "obs_0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "observation_frame_hash": "0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "evidence_package_id": "evp_ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "evidence_package_hash": "ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "model_request_id": null,
+  "model_request_hash": null,
+  "model_response_id": null,
+  "model_response_hash": null,
+  "model_call_id": null,
+  "model_call_hash": null,
+  "engine_version": "g014-engine-0.1.0",
+  "prompt_template_version": "g014-prompt-0.1.0",
+  "policy_version": "0.1.0",
+  "adapter_version": "fixture-adapter-0.1.0",
+  "status": "abstain",
+  "stance": "uncertain",
+  "action": "none",
+  "setups": [],
+  "rationales": [],
+  "conditions": [],
+  "levels": [],
+  "knowledge_confidence": null,
+  "model_confidence": null,
+  "analysis_uncertainty": {
+    "level": "high",
+    "codes": [
+      "no_actionable_evidence"
+    ],
+    "details": "No actionable knowledge-backed evidence was available before provider selection."
+  },
+  "warnings": [],
+  "errors": [
+    {
+      "code": "no_actionable_evidence",
+      "message": "No actionable evidence was available before any model call.",
+      "details": null,
+      "extensions": {}
+    }
+  ],
+  "analysis_as_of": "2026-08-10T14:45:00Z",
+  "input_mode": "ohlcv",
+  "no_live_orders": true,
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "8d4a5028e2707c58dd6b6d693162b3517c0345bf46baf4d8bba2a41c0ba1fcb6",
+  "pa_analysis_result_id": "par_8d4a5028e2707c58dd6b6d693162b3517c0345bf46baf4d8bba2a41c0ba1fcb6"
+}

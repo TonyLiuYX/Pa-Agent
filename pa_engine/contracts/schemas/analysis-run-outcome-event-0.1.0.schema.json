@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/analysis-run-outcome-event-0.1.0.schema.json",
+  "title": "Analysis run outcome event v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "outcome_event_id": {}, "content_hash": {}, "idempotency_key": {}, "event_type": {}, "decision_event_id": {}, "decision_event_hash": {}, "mode": {}, "stream": {}, "data_origin": {}, "synthetic": {}, "recorded_at": {}, "outcome_as_of": {}, "outcome_status": {}, "market_snapshot_id": {}, "market_snapshot_hash": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/outcomeEvent"
+}

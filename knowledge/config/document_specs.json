@@ -1,0 +1,1861 @@
+{
+  "nanqiao-checklist": {
+    "file_name": "（公开版）PA日内交易setup清单-南桥价格行为.pdf",
+    "title": "南桥价格行为：交易桌前执行手册",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "page_coverage": {
+      "page_count": 17,
+      "processed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "visual_pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16
+      ],
+      "text_only_pages": [
+        1,
+        9,
+        15,
+        17
+      ],
+      "coverage_note": "每页均有 page chunk 或跨页 setup；图像页按图块而不是仅按页码归属。"
+    },
+    "visual_blocks": [
+      {
+        "id": "p2-h2-l2-chart",
+        "pages": [
+          2
+        ],
+        "setup_key": "breakout-h2-l2",
+        "region": "p2 lower chart",
+        "evidence": "H2/L2 green annotation and chart"
+      },
+      {
+        "id": "p3-h2-l2-chart",
+        "pages": [
+          3
+        ],
+        "setup_key": "breakout-h2-l2",
+        "region": "p3 upper chart",
+        "evidence": "H2/L2 continuation chart; not breakout-failure"
+      },
+      {
+        "id": "p3-breakout-failure-table",
+        "pages": [
+          3
+        ],
+        "setup_key": "breakout-failure-breakout",
+        "region": "p3 lower table",
+        "evidence": "突破-失败-突破 text table"
+      },
+      {
+        "id": "p4-failure-failure-top",
+        "pages": [
+          4
+        ],
+        "setup_key": "breakout-failure-breakout",
+        "region": "p4 upper chart",
+        "evidence": "失败的失败 visual case; K14 entry/stop/targets"
+      },
+      {
+        "id": "p4-failure-failure-bottom",
+        "pages": [
+          4
+        ],
+        "setup_key": "breakout-failure-breakout",
+        "region": "p4 middle chart",
+        "evidence": "成功/失败的失败 visual cases"
+      },
+      {
+        "id": "p4-key-level-heading",
+        "pages": [
+          4
+        ],
+        "setup_key": "key-level-reversal",
+        "region": "p4 lower table",
+        "evidence": "关键位结构反转突破单 heading and structure list"
+      },
+      {
+        "id": "p5-key-level-charts",
+        "pages": [
+          5
+        ],
+        "setup_key": "key-level-reversal",
+        "region": "p5 charts",
+        "evidence": "key-level structures and signal K"
+      },
+      {
+        "id": "p6-key-level-charts",
+        "pages": [
+          6
+        ],
+        "setup_key": "key-level-reversal",
+        "region": "p6 charts",
+        "evidence": "key-level reversal chart continuation"
+      },
+      {
+        "id": "p7-range-extreme-chart",
+        "pages": [
+          7
+        ],
+        "setup_key": "limit-range-extremes",
+        "region": "p7 lower chart",
+        "evidence": "区间前高/前低限价反转 examples"
+      },
+      {
+        "id": "p8-point3-chart",
+        "pages": [
+          8
+        ],
+        "setup_key": "limit-point3",
+        "region": "p8 chart",
+        "evidence": "Point 3 weak-channel chart"
+      },
+      {
+        "id": "p10-pullback-charts",
+        "pages": [
+          10
+        ],
+        "setup_key": "limit-50-pullback",
+        "region": "p10 charts",
+        "evidence": "50% pullback examples continue p9"
+      },
+      {
+        "id": "p11-trapped-chart",
+        "pages": [
+          11
+        ],
+        "setup_key": "trapped-pullback",
+        "region": "p11 lower chart",
+        "evidence": "Trapped breakout/retest chart"
+      },
+      {
+        "id": "p12-trapped-continuation",
+        "pages": [
+          12
+        ],
+        "setup_key": "trapped-pullback",
+        "region": "p12 upper chart",
+        "evidence": "Trapped continuation image above Always-in text"
+      },
+      {
+        "id": "p12-opposite1-table",
+        "pages": [
+          12
+        ],
+        "setup_key": "always-in-opposite-1",
+        "region": "p12 lower table",
+        "evidence": "逆1 failure execution table"
+      },
+      {
+        "id": "p13-opposite1-chart",
+        "pages": [
+          13
+        ],
+        "setup_key": "always-in-opposite-1",
+        "region": "p13 upper chart",
+        "evidence": "强势 scalp / inverse-1 visual case"
+      },
+      {
+        "id": "p13-third-bar-chart",
+        "pages": [
+          13
+        ],
+        "setup_key": "always-in-third-bar",
+        "region": "p13 lower chart",
+        "evidence": "Third-Bar Failure visual case"
+      },
+      {
+        "id": "p14-ema20-chart",
+        "pages": [
+          14
+        ],
+        "setup_key": "always-in-ema20",
+        "region": "p14 lower chart",
+        "evidence": "EMA20 first-retest chart"
+      },
+      {
+        "id": "p14-breakout-heading",
+        "pages": [
+          14
+        ],
+        "setup_key": "always-in-breakout-scalp",
+        "region": "p14 bottom table",
+        "evidence": "breakout scalp heading and 50% condition"
+      },
+      {
+        "id": "p15-breakout-table",
+        "pages": [
+          15
+        ],
+        "setup_key": "always-in-breakout-scalp",
+        "region": "p15 table",
+        "evidence": "breakout scalp entry/target/stop/forced exit continuation"
+      },
+      {
+        "id": "p16-breakout-chart",
+        "pages": [
+          16
+        ],
+        "setup_key": "always-in-breakout-scalp",
+        "region": "p16 chart",
+        "evidence": "顺势 scalp chart and only-follow statement"
+      },
+      {
+        "id": "p17-discipline-table",
+        "pages": [
+          17
+        ],
+        "setup_key": "discipline-checklist",
+        "region": "p17 table",
+        "evidence": "10-second discipline checklist"
+      }
+    ],
+    "chunk_specs": [
+      {
+        "key": "page-01-semantic",
+        "pages": [
+          1,
+          1
+        ],
+        "title_path": [
+          "交易桌前执行手册",
+          "使用边界"
+        ],
+        "kind": "context",
+        "boundary_reason": "封面定义文档用途：盘中回答能否交易与是否违规。",
+        "visual_notes": "页面 1 是文档封面，无需提取装饰性图形。"
+      },
+      {
+        "key": "page-02-semantic",
+        "pages": [
+          2,
+          2
+        ],
+        "title_path": [
+          "第一部分｜突破单",
+          "趋势回调 H2 / L2"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p2 页语义块：H2/L2 文字与 p2 图块；中性页块供同页/跨页 setup 共同引用。",
+        "visual_notes": "p2-h2-l2-chart 属于 H2/L2；p3 上部另有 p3-h2-l2-chart，p3 下方表属于突破-失败-突破。",
+        "visual_blocks": [
+          "p2-h2-l2-chart"
+        ]
+      },
+      {
+        "key": "page-03-semantic",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "第一部分｜突破单",
+          "p3 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p3 页语义块同时保留 H2/L2 上部图、突破-失败-突破下部表；视觉归属由 claim metadata 区分。",
+        "visual_notes": "p3-h2-l2-chart（上部）与 p3-breakout-failure-table（下部）同页不同 setup；p3 图示 H2/L2：K25 低点外 1 tick、固定 RR 1:1/1:2 或前低、信号 K 高点止损。",
+        "visual_blocks": [
+          "p3-h2-l2-chart",
+          "p3-breakout-failure-table"
+        ]
+      },
+      {
+        "key": "page-04-semantic",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "第一部分｜突破单",
+          "p4 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p4 页语义块同时保留失败的失败图与关键位反转标题；视觉归属由 claim metadata 区分。",
+        "visual_notes": "p4-failure-failure-top/bottom 属于突破-失败-突破；p4-key-level-heading 属于关键位反转。失败图含 K14 止损、RR/平均波动/结构目标。",
+        "visual_blocks": [
+          "p4-failure-failure-top",
+          "p4-failure-failure-bottom",
+          "p4-key-level-heading"
+        ]
+      },
+      {
+        "key": "page-05-semantic",
+        "pages": [
+          5,
+          5
+        ],
+        "title_path": [
+          "第一部分｜突破单",
+          "关键位结构反转突破单",
+          "p5 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p5 页语义块：关键位结构图与头肩精确视觉规则。",
+        "visual_notes": "p5-key-level-charts 图组；下部头肩绿框：右肩信号 K 突破建仓、右肩极值外 1 tick 止损、固定 RR/固定点数/结构破坏三类目标。",
+        "visual_blocks": [
+          "p5-key-level-charts"
+        ]
+      },
+      {
+        "key": "page-06-semantic",
+        "pages": [
+          6,
+          6
+        ],
+        "title_path": [
+          "第一部分｜突破单",
+          "关键位结构反转突破单",
+          "p6 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p6 页语义块保留关键位图组延续，供父 setup 跨页链。",
+        "visual_notes": "p6-key-level-charts 属于关键位结构反转；与 p4 标题、p5 头肩图保持相邻页链。",
+        "visual_blocks": [
+          "p6-key-level-charts"
+        ]
+      },
+      {
+        "key": "page-07-semantic",
+        "pages": [
+          7,
+          7
+        ],
+        "title_path": [
+          "第二部分｜限价单",
+          "p7 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p7 页语义块同时保留区间前高/前低与 Point 3 标题背景，供两个限价 setup 共同引用。",
+        "visual_notes": "p7-range-extreme-chart 属于区间反转；p7 末尾 Point 3 标题/背景由 page-08-semantic 记录共同引用，不能把整页图机械归给单一 setup。",
+        "visual_blocks": [
+          "p7-range-extreme-chart"
+        ]
+      },
+      {
+        "key": "page-08-semantic",
+        "pages": [
+          8,
+          8
+        ],
+        "title_path": [
+          "第二部分｜限价单",
+          "宽通道 Point 3 限价反转",
+          "p8 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p8 页语义块：Point 3 入场、两种止损和当日平均波动目标。",
+        "visual_notes": "p8-point3-chart 绿色注释：止损方法一按止盈点数做 1:1；方法二强势突破+跟随后跟随 K 极值外 1 tick；止盈按当日平均波动幅度。",
+        "visual_blocks": [
+          "p8-point3-chart"
+        ]
+      },
+      {
+        "key": "page-09-semantic",
+        "pages": [
+          9,
+          9
+        ],
+        "title_path": [
+          "第二部分｜限价单",
+          "趋势 50% 回调限价顺势",
+          "p9 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p9 页语义块：50% 回调 setup 的背景、条件与入场起始段。",
+        "visual_notes": "p9 是文字规则页；p10 图示由 page-10-semantic 相邻页块承接。"
+      },
+      {
+        "key": "page-10-semantic",
+        "pages": [
+          10,
+          10
+        ],
+        "title_path": [
+          "第二部分｜限价单",
+          "趋势 50% 回调限价顺势",
+          "p10 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p10 页语义块：50% 回调视觉延续。",
+        "visual_notes": "p10-pullback-charts 属于 50% 回调 setup；与 p9 文字块保持相邻页链。",
+        "visual_blocks": [
+          "p10-pullback-charts"
+        ]
+      },
+      {
+        "key": "page-11-semantic",
+        "pages": [
+          11,
+          11
+        ],
+        "title_path": [
+          "第二部分｜限价单",
+          "真突破后的回踩限价顺势",
+          "p11 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p11 页语义块：Trapped 文字与 p11 图块。",
+        "visual_notes": "p11-trapped-chart 属于 Trapped；p12 上部 continuation 图与 p12 逆1表分别由 p12 页语义块的 claim metadata 区分。",
+        "visual_blocks": [
+          "p11-trapped-chart"
+        ]
+      },
+      {
+        "key": "page-12-semantic",
+        "pages": [
+          12,
+          12
+        ],
+        "title_path": [
+          "第三部分｜Always in/强突破行情",
+          "p12 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p12 页语义块同时保留 Trapped continuation 图与逆1失败表；视觉归属由 claim metadata 区分。",
+        "visual_notes": "p12-trapped-continuation（上部）归 Trapped；p12-opposite1-table（下部）归逆1失败。两 setup 共同引用本中性页块。",
+        "visual_blocks": [
+          "p12-trapped-continuation",
+          "p12-opposite1-table"
+        ]
+      },
+      {
+        "key": "page-13-semantic",
+        "pages": [
+          13,
+          13
+        ],
+        "title_path": [
+          "第三部分｜Always in/强突破行情",
+          "p13 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p13 页语义块同时保留逆1图与第三根未遂图；视觉归属由 claim metadata 区分。",
+        "visual_notes": "p13-opposite1-chart（上部）归逆1失败：K18 高点限价空、5 点止盈；p13-third-bar-chart（下部）归第三根未遂。",
+        "visual_blocks": [
+          "p13-opposite1-chart",
+          "p13-third-bar-chart"
+        ]
+      },
+      {
+        "key": "page-14-semantic",
+        "pages": [
+          14,
+          14
+        ],
+        "title_path": [
+          "第三部分｜Always in/强突破行情",
+          "p14 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p14 页语义块同时保留 EMA20 图与 breakout scalp 标题；视觉归属由 claim metadata 区分。",
+        "visual_notes": "p14-ema20-chart（下部）归 EMA20：K35 成交、ATR 固定止盈 5 点；p14-breakout-heading（底部）归 breakout scalp。",
+        "visual_blocks": [
+          "p14-ema20-chart",
+          "p14-breakout-heading"
+        ]
+      },
+      {
+        "key": "page-15-semantic",
+        "pages": [
+          15,
+          15
+        ],
+        "title_path": [
+          "第三部分｜Always in/强突破行情",
+          "突破单：顺势突破 scalp",
+          "p15 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p15 页语义块：breakout scalp 入场、ATR 目标、止损与强制退出。",
+        "visual_notes": "p15-breakout-table 属于 breakout scalp；与 p14 heading、p16 图块保持跨页链。",
+        "visual_blocks": [
+          "p15-breakout-table"
+        ]
+      },
+      {
+        "key": "page-16-semantic",
+        "pages": [
+          16,
+          16
+        ],
+        "title_path": [
+          "第三部分｜Always in/强突破行情",
+          "突破单：顺势突破 scalp",
+          "p16 页语义块"
+        ],
+        "kind": "page_semantic",
+        "boundary_reason": "p16 页语义块：breakout scalp 图表与只跟随用途。",
+        "visual_notes": "p16-breakout-chart；p14→p15→p16 规则文字由三个相邻页块组成。",
+        "visual_blocks": [
+          "p16-breakout-chart"
+        ]
+      },
+      {
+        "key": "page-17-semantic",
+        "pages": [
+          17,
+          17
+        ],
+        "title_path": [
+          "第四部分｜每一单的纪律检查表"
+        ],
+        "kind": "discipline",
+        "boundary_reason": "10 秒自检项、强制退出、次数上限和停止交易规则是一个执行约束单元。",
+        "visual_notes": "p17-discipline-table 保留 10 项自检顺序与提醒。",
+        "visual_blocks": [
+          "p17-discipline-table"
+        ]
+      }
+    ],
+    "source_id": "nanqiao-checklist"
+  },
+  "rose-caveman": {
+    "file_name": "价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf",
+    "title": "Rose 的 Caveman（野人）策略",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "chunk_specs": [
+      {
+        "key": "intro",
+        "pages": [
+          1,
+          1
+        ],
+        "title_path": [
+          "Caveman",
+          "引言与来源边界"
+        ],
+        "kind": "concept",
+        "boundary_reason": "封面引言说明失败趋势突破反转和 Discord 整理来源，作为后续规则的文档上下文。",
+        "visual_notes": "页面 1 含策略封面图；保留其图像页引用，不把装饰性封面误当成规则。"
+      },
+      {
+        "key": "p2-core-visual",
+        "pages": [
+          2,
+          2
+        ],
+        "title_path": [
+          "Caveman",
+          "p2 原始规则图片与核心逻辑"
+        ],
+        "kind": "setup",
+        "boundary_reason": "p2 的 Discord 图片规则与正文二棒定义共同给出时序、目标、背景过滤和入场方式；视觉转录不能拆离该页文字。",
+        "visual_notes": "视觉转录（p2 图片，规则以做多为例）：左侧有一个强势阴线，体积要中等大小以上，上下影线要短；多头强势突破左侧阴线的开盘价，并收在开盘价以上；突破K和左侧的阴线之间最多间隔2根K线，多于2根就不是Caveman模式了；This will give you most of the time 2R targets；如果在DT或Wedge Top的位置出现这一模式，胜率会更高；止盈：大概率去到2R；注意：强趋势中Caveman大概率会失败，最好出现在二次入场位置；顺势做Caveman成功率比较高；入场位置：收盘价位置和突破左侧K线的开盘价位置（pullback to breakout）；处于第二推中的Caveman容易失败；在均线附近的Caveman容易失败，比如在均线上方做空；多头Caveman入场点处于TR上沿或空头Caveman入场点处于TR下沿，均容易失败。EMA 仅作为“均线”的检索别名，原文未给出具体周期。图中另有英文 Discord 原话：a certain type of bar has to close above a certain type of bar to start the reversal；if you cannot recognize that you should not be trading reversals。"
+      },
+      {
+        "key": "bearish-rules",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "Caveman",
+          "看跌规则与风险回报"
+        ],
+        "kind": "setup",
+        "boundary_reason": "看跌信号棒、触发棒、三种入场、上三分之一补救、HR/1R 止盈和信号棒高点止损在同页形成完整条件链。",
+        "visual_notes": "页面 3 图表标出看跌触发箭头、TR/RR 测量、stop 和目标线；文字规则与图示同时保留。"
+      },
+      {
+        "key": "bullish-rules",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "Caveman",
+          "看涨规则与背景为王"
+        ],
+        "kind": "setup",
+        "boundary_reason": "看涨对称规则、弱信号棒无效边界和背景为王总结均在同页，不能只保留多空一侧。",
+        "visual_notes": "页面 4 图表标出看涨箭头、止损和目标区域；页面底部承接无效案例说明。"
+      },
+      {
+        "key": "invalid-signal-case",
+        "pages": [
+          5,
+          5
+        ],
+        "title_path": [
+          "Caveman",
+          "弱信号棒无效案例与复盘开始"
+        ],
+        "kind": "exception",
+        "boundary_reason": "bar 51/52 的弱信号棒无效案例和总结收束了规则，页面底部同时给出案例一标题；保留为独立过滤上下文。",
+        "visual_notes": "页面 5 图表标出 bar 51/52 和弱信号棒；底部是 2025-06-11 复盘及案例一标题。",
+        "page_excerpts": {
+          "5": [
+            "在上图中,有交易者尝试在 bar 52 进行看涨 Caveman 交易。然而,Rose 指出这是一个糟糕的交易,因为它的信号棒(bar 51)非常疲弱,并没有显示出空头强力打压的意图。没有强力的失败,就不会有强力的反转。",
+            "因此,在运用此策略时,必须优先过滤掉那些信号棒不够强劲的形态。"
+          ]
+        }
+      },
+      {
+        "key": "case-1",
+        "pages": [
+          5,
+          6
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例一｜Caveman 1 看涨"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例一标题在 p5，B5 分析/入场/目标在 p6；跨页关联标题与后页分析，不混入其他案例。",
+        "visual_notes": "p5 底部标题 + p6 上方 ES 图表和 B5 文字；回调至区间入场在该案例明确不适用。",
+        "page_excerpts": {
+          "5": [
+            "案例一:Caveman 1 - 看涨 (Bullish)"
+          ],
+          "6": [
+            "分析:B5 作为触发棒,强势收盘于信号棒 B4 之上,形成看涨信号。",
+            "入场点:",
+            "在 B5 收盘时买入。",
+            "在 B5 上方挂单买入。",
+            "(回调至区间的入场方式在此处不适用)。",
+            "目标:1R 和 2R。"
+          ]
+        }
+      },
+      {
+        "key": "case-2",
+        "pages": [
+          6,
+          7
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例二｜Caveman 2 看跌"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例二标题/图表在 p6，B20/B22 分析在 p7；保留回调至突破区的方向与触发。",
+        "visual_notes": "p6 下半图和 p7 顶部文字共同标出 B20、B22、R7。",
+        "page_excerpts": {
+          "6": [
+            "案例二:Caveman 2 - 看跌 (Bearish)"
+          ],
+          "7": [
+            "分析:B20 作为触发棒,强势收盘于强力阳线信号棒 B19 之下,形成看跌信号。B22 提供了回调至突破区的入场机会。",
+            "入场点:",
+            "在 B20 收盘时做空。",
+            "在 B20 下方一 tick 挂单做空。",
+            "利用 B22 回调至突破点时做空。",
+            "目标:R7。"
+          ]
+        }
+      },
+      {
+        "key": "case-3",
+        "pages": [
+          7,
+          7
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例三｜Caveman 3 看跌"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例三标题、B24 二次触发/回调 B25 和 R4 分析均在 p7，单独建立二次入场子 chunk。",
+        "visual_notes": "p7 中部 ES 图表标出 B22 回调后 B24/B25；二次入场与案例二分开引用。",
+        "page_excerpts": {
+          "7": [
+            "案例三:Caveman 3 - 看跌 (Bearish)",
+            "分析:在 B22 的回调之后,B24 再次成为触发棒,收盘于 B23 之下,提供了二次入场机会。",
+            "在 B24 收盘时做空。",
+            "在 B24 下方挂单做空。",
+            "利用 B25 回调至突破点时做空。",
+            "目标:R4。"
+          ]
+        }
+      },
+      {
+        "key": "case-4",
+        "pages": [
+          7,
+          8
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例四｜Caveman 4 看跌"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例四标题在 p7，B30/B31 分析和 R3 在 p8；跨页只关联本案例。",
+        "visual_notes": "p7 底部标题 + p8 图表/文字，触发与回调均为看跌。",
+        "page_excerpts": {
+          "7": [
+            "案例四:Caveman 4 - 看跌 (Bearish)"
+          ],
+          "8": [
+            "分析:B30 触发了又一个看跌信号,B31 提供了回调入场的机会。",
+            "入场点:",
+            "在 B30 收盘时做空。",
+            "在 B30 下方挂单做空。",
+            "利用 B31 回调至突破点时做空。",
+            "目标:R3。"
+          ]
+        }
+      },
+      {
+        "key": "case-5",
+        "pages": [
+          8,
+          9
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例五｜Caveman 5 看涨"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例五标题在 p8，B36/B38/B39 分析和 2R 在 p9；独立保留多次回调买入。",
+        "visual_notes": "p8 底部标题 + p9 ES 图表/文字标出 B36 及 B38、B39 回调。",
+        "page_excerpts": {
+          "8": [
+            "案例五:Caveman 5 - 看涨 (Bullish)"
+          ],
+          "9": [
+            "分析:B36 强势收盘,形成看涨信号,随后的 B38 和 B39 提供了回调买入的机会。",
+            "入场点:",
+            "在 B36 收盘时买入。",
+            "在 B36 上方挂单买入。",
+            "利用 B38 或 B39 的回调买入。",
+            "目标:2R。"
+          ]
+        }
+      },
+      {
+        "key": "case-6",
+        "pages": [
+          9,
+          10
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例六｜Caveman 6 看跌"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例六标题在 p9，B49 无需回调分析和 4R 在 p10；不与 p11 的替代测量/案例七混合。",
+        "visual_notes": "p9 底部标题 + p10 图表/文字标出 B48/B49、无需等待回调和 4R。",
+        "page_excerpts": {
+          "9": [
+            "案例六:Caveman 6 - 看跌 (Bearish)"
+          ],
+          "10": [
+            "分析:B49 收盘于强阳线 B48 之下,形成看跌信号。这是一个无需等待回调即可入场的例子。",
+            "入场点:",
+            "在 B49 收盘时做空。",
+            "在 B49 下方挂单做空。",
+            "目标:4R。"
+          ]
+        }
+      },
+      {
+        "key": "case-7",
+        "pages": [
+          11,
+          12
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例七｜Caveman 7 看涨"
+        ],
+        "kind": "example",
+        "boundary_reason": "p11 先给 B43 更强信号棒的替代测量和案例七标题，p12 给 B59/B61/1.5R 分析；二者均属于该案例的跨页图文。",
+        "visual_notes": "p11 图表与备选方案、p12 图表/文字共同定位 B43、B59、B61；50% 回调为加仓/二次入场。",
+        "page_excerpts": {
+          "11": [
+            "案例七:Caveman 7 - 看涨 (Bullish)",
+            "备选方案:如上图所示,如果以更强的信号棒 B43 作为基准来重新测量,可以获得更优的目标位,尤其是在趋势延续的情况下。"
+          ],
+          "12": [
+            "分析:B59 作为触发棒,强势收盘。B61 回调至整个价格波动区间的 50% 位置,提供了绝佳的加仓或二次入场点。",
+            "入场点:",
+            "在 B59 收盘时买入。",
+            "在 B59 上方挂单买入。",
+            "在 B61 回调至区间 50% 位置时买入。",
+            "目标:1.5R。"
+          ]
+        }
+      },
+      {
+        "key": "case-8",
+        "pages": [
+          12,
+          13
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例八｜Caveman 8 看跌"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例八标题在 p12，B65 无需回调的看跌分析和 3R 在 p13；保持方向与触发独立。",
+        "visual_notes": "p12 底部标题 + p13 图表/文字标出 B65、下方挂单和 3R。",
+        "page_excerpts": {
+          "12": [
+            "案例八:Caveman 8 - 看跌 (Bearish)"
+          ],
+          "13": [
+            "分析:B65 触发了一个无需等待回调的看跌信号。",
+            "入场点:",
+            "在 B65 收盘时做空。",
+            "在 B65 下方挂单做空。",
+            "目标:3R。"
+          ]
+        }
+      },
+      {
+        "key": "case-9",
+        "pages": [
+          13,
+          14
+        ],
+        "title_path": [
+          "Caveman",
+          "2025-06-11 实战案例",
+          "案例九｜Caveman 9 看涨"
+        ],
+        "kind": "example",
+        "boundary_reason": "案例九标题在 p13，B74/B75/B76/B77 分析和 1.5R 在 p14；只关联本案例连续三次回调。",
+        "visual_notes": "p13 底部标题 + p14 图表/文字标出 B74 及 B75、B76、B77 回调至突破区。",
+        "page_excerpts": {
+          "13": [
+            "案例九:Caveman 9 - 看涨 (Bullish)"
+          ],
+          "14": [
+            "分析:B74 触发看涨信号后,市场连续给出了 B75, B76, B77 三次回调至突破区的机会。",
+            "入场点:",
+            "在 B74 收盘时买入。",
+            "在 B74 上方挂单买入。",
+            "利用 B75, B76 或 B77 的回调买入。",
+            "目标:1.5R。"
+          ]
+        }
+      }
+    ],
+    "source_id": "rose-caveman"
+  },
+  "rose-gap-bar": {
+    "file_name": "价格行为学 - Rose 的 Gap Bar - forecho's Blog.pdf",
+    "title": "Rose 的 Gap Bar",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "chunk_specs": [
+      {
+        "key": "definition",
+        "pages": [
+          1,
+          2
+        ],
+        "title_path": [
+          "Gap Bar",
+          "定义与识别"
+        ],
+        "kind": "concept",
+        "boundary_reason": "页面 1 的三种 Gap Bar 定义与页面 2 的看涨单 K、连续 K 测量说明构成一个完整概念；页面 2 只在此块保留一次，避免与后续检索块机械重复。",
+        "visual_notes": "页面 2 图示把 Gap Bar 的范围和斐波那契回撤位叠加在趋势图上。"
+      },
+      {
+        "key": "execution",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "Gap Bar",
+          "回调入场与方向规则"
+        ],
+        "kind": "setup",
+        "boundary_reason": "页面 3 同时承接连续看涨 K 的回调后支撑结果与看跌 Gap Bar 的文字方向/比例规则；页面 2 的测量前置和页面 4 的来源总结分别由相邻块引用，避免整页重叠。",
+        "visual_notes": "页面 3 图示是连续看涨 K 线的回调后支撑与延续案例。"
+      },
+      {
+        "key": "summary",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "Gap Bar",
+          "来源总结"
+        ],
+        "kind": "summary",
+        "boundary_reason": "页面 4 的原文摘要单独保留作检索回退；不再把它拼入执行块，避免精确子串重复。",
+        "visual_notes": "页面 4 以文字总结为主，无需额外识别无关图片。"
+      }
+    ],
+    "source_id": "rose-gap-bar"
+  },
+  "rose-mother-bar": {
+    "file_name": "价格行为学 - Rose 的 Mother Bar (孕线) 策略 - forecho's Blog.pdf",
+    "title": "Rose 的 Mother Bar（孕线）策略",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "verified_source_sha256": "fcfc0a4f59916f752981efee491b7bc4e64816bd97e13a409ac81b803baa7f64",
+    "chunk_specs": [
+      {
+        "key": "definition-zones",
+        "pages": [
+          1,
+          2
+        ],
+        "title_path": [
+          "Mother Bar",
+          "定义与关键价位"
+        ],
+        "kind": "concept",
+        "boundary_reason": "第 1 页定义母线/子线；第 2 页图表和列表给出 0-1 分层、买入区、卖出区、陷阱区、中间区与 0.21/0.79 竞争位。第 2 页结尾的背景一入口只作为相邻上下文，背景二/三及规则在后续块中承载。",
+        "visual_notes": "第 1 页孕线示意图归属于形态定义；第 2 页 TradingView 图表实际标出 1.5、1.33、1.1、0.89、0.79、0.66、0.5、0.33、0.21、0.11、-0.11 等比例，归属于关键价位。"
+      },
+      {
+        "key": "contexts-confirmation-risk",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "Mother Bar",
+          "三类市场背景、突破确认与风险控制"
+        ],
+        "kind": "setup",
+        "boundary_reason": "第 3 页按真实顺序承接背景二/三，然后给出双重突破条件、实体而非影线的确认、仓位比例、宽硬止损与仅针对卖出区做空的软止损。页级抽取无法把同页标题再拆成两个不同 source_text，因此由 claim 级 supporting_chunk_keys/声明类型分别定位背景、确认和风险规则，避免制造相同 p3 检索块。",
+        "visual_notes": "第 3 页为纯文字规则页，没有可归属的图像页；第 4/5 页图表只归 MB36 示例块。"
+      },
+      {
+        "key": "example",
+        "pages": [
+          4,
+          5
+        ],
+        "title_path": [
+          "Mother Bar",
+          "MB36 示例"
+        ],
+        "kind": "example",
+        "boundary_reason": "第 4 页只有 ES1 5m 图表，第 5 页承接 MB36、123、150/161.80、79/66%、50%、runner、退出和 MR 文字；同一示例的图文不拆散。第 5 页随后出现总结标题，文字归属在 claims 中显式标注。",
+        "visual_notes": "第 4 页 image-14 是 ES1 5m 的 MB36 图示，第 5 页 image-15 是同一示例的后续图表；两页都属于 MB36 example，不把红色手写标注解释成新的数值规则。"
+      },
+      {
+        "key": "conclusion",
+        "pages": [
+          6,
+          6
+        ],
+        "title_path": [
+          "Mother Bar",
+          "总结延续"
+        ],
+        "kind": "summary",
+        "boundary_reason": "第 6 页只有总结最后一句，承接第 5 页总结段；独立保留可定位的结论延续，不把第 5 页 MB36 图表当成总结视觉证据。",
+        "visual_notes": "第 6 页是无图短结论页；第 5 页总结标题与要点仍在 MB36 example 的页面文本中，相关 summary claims 明确引用其原块或标 derived。"
+      }
+    ],
+    "source_id": "rose-mother-bar"
+  },
+  "rose-mtr": {
+    "file_name": "价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+    "title": "Rose 的 MTR（主趋势反转）",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "verified_source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+    "chunk_specs": [
+      {
+        "key": "intro-core",
+        "pages": [
+          1,
+          1
+        ],
+        "title_path": [
+          "MTR",
+          "背景、被套交易者与失败突破定义"
+        ],
+        "kind": "concept",
+        "boundary_reason": "引言、趋势末期/关键位背景、Bull Trap/Bear Trap 和 MTR 失败突破定义共同构成策略背景，不拆成孤立术语。",
+        "visual_notes": "页面 1 为文字引言与 MTR 定义，无嵌入图；页面级文本保留完整背景。"
+      },
+      {
+        "key": "trap-confirmation",
+        "pages": [
+          2,
+          2
+        ],
+        "title_path": [
+          "MTR",
+          "阳线/阴线反转：信号、陷阱与实体确认"
+        ],
+        "kind": "setup",
+        "boundary_reason": "多头陷阱和空头陷阱共享信号 K、陷阱 K、实体确认和耐心等待条件，作为一组对称但方向明确的识别链。",
+        "visual_notes": "页面 2 含阳线/阴线反转图示；图表与信号 K、陷阱 K、确认收盘文字共同承载规则。"
+      },
+      {
+        "key": "video-example",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "MTR",
+          "B4/B5 复盘实例：被套多头与做空计划"
+        ],
+        "kind": "example",
+        "boundary_reason": "2025-04-10 ES B4/B5 案例把窄幅背景、突破失败、被套识别、做空入场、止损和 R 倍数目标连成完整示例。",
+        "visual_notes": "页面 3 的 B4/B5 K 线图是失败突破与交易计划的直接视觉上下文。"
+      },
+      {
+        "key": "example-one-two",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "MTR",
+          "ES 示例一与楔形底失败背景"
+        ],
+        "kind": "example",
+        "boundary_reason": "ES B41/B42/B45/B46 示例及其后续失败的楔形底三推背景同页出现，必须同时保留方向、止损、目标与背景过滤。",
+        "visual_notes": "页面 4 含示例一与示例二图表；图示分别对应 B41/B42 失败突破和楔形底失败背景。"
+      },
+      {
+        "key": "example-two-three",
+        "pages": [
+          5,
+          5
+        ],
+        "title_path": [
+          "MTR",
+          "示例二退出与 ETH 示例三"
+        ],
+        "kind": "example",
+        "boundary_reason": "B18/B19 失败后的止损处理与 2025-06-15 ETH B190/B194/B199/B202 案例连续说明失败管理和限价入场。",
+        "visual_notes": "页面 5 的示例二/三图表分别展示失败退出和 ETH 多头陷阱后的 0.21/0.33 限价卖出。"
+      },
+      {
+        "key": "risk-management",
+        "pages": [
+          6,
+          6
+        ],
+        "title_path": [
+          "MTR",
+          "风险测量、止损、止盈与被套修复"
+        ],
+        "kind": "risk",
+        "boundary_reason": "R 的端点、Tick 止损、1R/2R 目标及被套后的修复模式共同构成执行与退出管理链。",
+        "visual_notes": "页面 6 含 15 分钟图和交易管理文字；图示用于保留示例一类走势与止盈后管理上下文。"
+      },
+      {
+        "key": "summary",
+        "pages": [
+          7,
+          7
+        ],
+        "title_path": [
+          "MTR",
+          "来源总结与执行原则"
+        ],
+        "kind": "summary",
+        "boundary_reason": "总结页把对手盘、失败突破、实体确认和风险倍数四个原则收束为可检索回退。",
+        "visual_notes": "页面 7 为文字总结，无嵌入图；保留来源原始四点原则。"
+      }
+    ],
+    "source_id": "rose-mtr"
+  },
+  "rose-strategy": {
+    "file_name": "Rose的策略.pdf",
+    "title": "Rose的策略",
+    "language": "zh-CN",
+    "verified_source_sha256": "7497feb5f87297e95c749b0758959ab027eeffdc2b9d0e672db8d4175a203faf",
+    "ocr_when_text_chars_below": 160,
+    "noise_policy": {
+      "rule": "TradingView chrome, price-axis ticks, timestamps, toolbar labels and OCR glyph noise are context only; retrieval claims use annotated strategy text/visuals.",
+      "visual_review": "20 image pages were rendered and checked; page 31 is an update notice and never serves as a trading-rule citation."
+    },
+    "retrieval_source_text_policy": {
+      "enabled": true,
+      "include_visual_notes": true,
+      "visual_notes_field": "retrieval_visual_notes",
+      "ocr_drop_patterns": [
+        "TradingView|UTC|RTH|B[-_]ADJ|\\bVol\\b|\\bUSD\\b|\\bETH\\b|\\bYTD\\b|面板隐藏|ESC键|全部"
+      ],
+      "ocr_time_patterns": [
+        "[0-9]{1,2}:[0-9]{2}"
+      ],
+      "ocr_date_patterns": [
+        "[0-9]{4}[./-][0-9]{1,2}[./-][0-9]{1,2}"
+      ],
+      "ocr_strip_patterns": [
+        "[0-9]{1,2},[0-9]{3}(?:\\.[0-9]+)?"
+      ]
+    },
+    "page_coverage": [
+      {
+        "page": 1,
+        "status": "title_only",
+        "theme": null,
+        "visual": false
+      },
+      {
+        "page": 2,
+        "status": "index_only",
+        "theme": null,
+        "visual": false
+      },
+      {
+        "page": 3,
+        "status": "theme_intro",
+        "theme": "zones",
+        "visual": false
+      },
+      {
+        "page": 4,
+        "status": "rule_visual",
+        "theme": "zones",
+        "visual": true
+      },
+      {
+        "page": 5,
+        "status": "rule_visual",
+        "theme": "zones",
+        "visual": true
+      },
+      {
+        "page": 6,
+        "status": "theme_intro",
+        "theme": "three-pushes",
+        "visual": false
+      },
+      {
+        "page": 7,
+        "status": "rule_visual",
+        "theme": "three-pushes",
+        "visual": true
+      },
+      {
+        "page": 8,
+        "status": "rule_visual",
+        "theme": "three-pushes",
+        "visual": true
+      },
+      {
+        "page": 9,
+        "status": "theme_intro",
+        "theme": "sentiment-line",
+        "visual": false
+      },
+      {
+        "page": 10,
+        "status": "rule_visual",
+        "theme": "sentiment-line",
+        "visual": true
+      },
+      {
+        "page": 11,
+        "status": "rule_visual",
+        "theme": "sentiment-line",
+        "visual": true
+      },
+      {
+        "page": 12,
+        "status": "theme_intro",
+        "theme": "mother-bar",
+        "visual": false
+      },
+      {
+        "page": 13,
+        "status": "rule_visual",
+        "theme": "mother-bar",
+        "visual": true
+      },
+      {
+        "page": 14,
+        "status": "rule_visual",
+        "theme": "mother-bar",
+        "visual": true
+      },
+      {
+        "page": 15,
+        "status": "theme_intro",
+        "theme": "fofs",
+        "visual": false
+      },
+      {
+        "page": 16,
+        "status": "rule_visual",
+        "theme": "fofs",
+        "visual": true
+      },
+      {
+        "page": 17,
+        "status": "rule_visual",
+        "theme": "fofs",
+        "visual": true
+      },
+      {
+        "page": 18,
+        "status": "case_visual",
+        "theme": "fofs",
+        "visual": true
+      },
+      {
+        "page": 19,
+        "status": "case_visual",
+        "theme": "fofs",
+        "visual": true
+      },
+      {
+        "page": 20,
+        "status": "theme_intro",
+        "theme": "range-breakout",
+        "visual": false
+      },
+      {
+        "page": 21,
+        "status": "rule_visual",
+        "theme": "range-breakout",
+        "visual": true
+      },
+      {
+        "page": 22,
+        "status": "case_visual",
+        "theme": "range-breakout",
+        "visual": true
+      },
+      {
+        "page": 23,
+        "status": "case_visual",
+        "theme": "range-breakout",
+        "visual": true
+      },
+      {
+        "page": 24,
+        "status": "theme_intro",
+        "theme": "flag-pullback",
+        "visual": false
+      },
+      {
+        "page": 25,
+        "status": "rule_visual",
+        "theme": "flag-pullback",
+        "visual": true
+      },
+      {
+        "page": 26,
+        "status": "case_visual",
+        "theme": "flag-pullback",
+        "visual": true
+      },
+      {
+        "page": 27,
+        "status": "case_visual",
+        "theme": "flag-pullback",
+        "visual": true
+      },
+      {
+        "page": 28,
+        "status": "case_visual",
+        "theme": "flag-pullback",
+        "visual": true
+      },
+      {
+        "page": 29,
+        "status": "theme_intro",
+        "theme": "missed-trend",
+        "visual": false
+      },
+      {
+        "page": 30,
+        "status": "rule_visual",
+        "theme": "missed-trend",
+        "visual": true
+      },
+      {
+        "page": 31,
+        "status": "update_notice",
+        "theme": null,
+        "visual": false
+      }
+    ],
+    "visual_coverage": [
+      {
+        "page": 4,
+        "themes": [
+          "zones"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "sell-zone boundary from prior signal bar; trapped longs unwind"
+      },
+      {
+        "page": 5,
+        "themes": [
+          "zones"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "price is sold at Sell Zone and bought at Buy Zone"
+      },
+      {
+        "page": 7,
+        "themes": [
+          "three-pushes"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "balanced three-push shape and first/second push measurements"
+      },
+      {
+        "page": 8,
+        "themes": [
+          "three-pushes"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "second push two-leg composition and approximately equal spacing"
+      },
+      {
+        "page": 10,
+        "themes": [
+          "sentiment-line"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "first-push top to second-push pullback ray and target"
+      },
+      {
+        "page": 11,
+        "themes": [
+          "sentiment-line"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "second-push pullback point and sentiment-line continuation"
+      },
+      {
+        "page": 13,
+        "themes": [
+          "mother-bar"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "0.66–1.11 Sell Zone, 0.33–-0.11 Buy Zone, 0.79/0.21 control and 50% order/exit chain"
+      },
+      {
+        "page": 14,
+        "themes": [
+          "mother-bar"
+        ],
+        "visual_type": "settings_panel",
+        "rule_focus": "source Fibonacci retracement levels; UI controls are not rules"
+      },
+      {
+        "page": 16,
+        "themes": [
+          "fofs"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "TTR, double tops/bottoms, midpoint, two trend bars and 1MM target"
+      },
+      {
+        "page": 17,
+        "themes": [
+          "fofs"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "FOFS continuation, AB=CD and stop below first trend bar"
+      },
+      {
+        "page": 18,
+        "themes": [
+          "fofs"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "TTR/double-top-bottom case and midpoint entry"
+      },
+      {
+        "page": 19,
+        "themes": [
+          "fofs"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "AB/CD case with 1MM swing target"
+      },
+      {
+        "page": 21,
+        "themes": [
+          "range-breakout"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "three legs, upper/lower-half control, failed recapture and breakout"
+      },
+      {
+        "page": 22,
+        "themes": [
+          "range-breakout"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "bull-control case and long breakout order above trend bar"
+      },
+      {
+        "page": 23,
+        "themes": [
+          "range-breakout"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "range case with failed opposing control and successful bull control"
+      },
+      {
+        "page": 25,
+        "themes": [
+          "flag-pullback"
+        ],
+        "visual_type": "annotated_two_direction_case",
+        "rule_focus": "bear and bull flag four-step examples"
+      },
+      {
+        "page": 26,
+        "themes": [
+          "flag-pullback"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "bull flag: lower wick trap, inside bar, failed second try, breakout order"
+      },
+      {
+        "page": 27,
+        "themes": [
+          "flag-pullback"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "bear flag: upper wick trap, inside bar, failed second try, sell"
+      },
+      {
+        "page": 28,
+        "themes": [
+          "flag-pullback"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "second bull flag example with lower-wick trap and breakout order"
+      },
+      {
+        "page": 30,
+        "themes": [
+          "missed-trend"
+        ],
+        "visual_type": "annotated_candlestick",
+        "rule_focus": "doji pause, high/low breakout and 1MM/2MM range target"
+      }
+    ],
+    "chunk_specs": [
+      {
+        "key": "zones-sell",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "Rose的策略",
+          "1. 买入区域/卖出区域",
+          "卖出区域规则"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 4 的卖出区边界和被套多头解套图示独立成规则 chunk。",
+        "visual_notes": "仅保留卖出区域的标注与图注；TradingView 工具栏、坐标轴和时间轴是 UI/OCR 噪声。",
+        "ocr_keep_patterns": [
+          "买入解套|卖出区域|买入区域|Buy Zone|Sell Zone"
+        ],
+        "retrieval_visual_notes": "Sell Zone 卖出区域边界与前面空头在此买入解套的图示规则。"
+      },
+      {
+        "key": "zones-buy",
+        "pages": [
+          5,
+          5
+        ],
+        "title_path": [
+          "Rose的策略",
+          "1. 买入区域/卖出区域",
+          "买入区域规则"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 5 同时写出价格到卖出区被卖下、到买入区被买上的方向规则。",
+        "visual_notes": "页面 5 的 Buy Zone/Sell Zone 方向标注；UI/OCR 仅作上下文。",
+        "ocr_keep_patterns": [
+          "价格到卖出区域|价格到买入区域|Buy Zone|Sell Zone"
+        ],
+        "retrieval_visual_notes": "Buy Zone/Sell Zone 到达后的买入与卖出方向规则。"
+      },
+      {
+        "key": "three-pushes-shape",
+        "pages": [
+          7,
+          7
+        ],
+        "title_path": [
+          "Rose的策略",
+          "2. 三推的正确画法",
+          "平衡三推形态"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 7 说明平衡三推和第一推测量，独立于页面 8 的第二推细分。",
+        "visual_notes": "图示的三推趋势、平衡楔形和第一推/第二推测量；TradingView chrome 不承载规则。",
+        "ocr_keep_patterns": [
+          "三推|第一推|第二推|平衡"
+        ],
+        "retrieval_visual_notes": "三推趋势、平衡楔形以及第一推/第二推测量。"
+      },
+      {
+        "key": "three-pushes-distance",
+        "pages": [
+          8,
+          8
+        ],
+        "title_path": [
+          "Rose的策略",
+          "2. 三推的正确画法",
+          "推段距离与第四/第五推边界"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 8 说明第二推两段组成和三推间距比较；未把标题问题扩写成来源未给出的第四/第五推规则。",
+        "visual_notes": "图中粉色测量框和箭头是视觉规则；F11/TradingView 提示为 UI 噪声。",
+        "ocr_keep_patterns": [
+          "三推|第一推|第二推|推的正确|距离|距"
+        ],
+        "retrieval_visual_notes": "粉色测量框说明推段距离和第二推两段结构。"
+      },
+      {
+        "key": "sentiment-definition",
+        "pages": [
+          10,
+          10
+        ],
+        "title_path": [
+          "Rose的策略",
+          "3. 三推情绪线",
+          "情绪线定义与目标"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 10 明确写出第一推顶点、第二推回调点连线及楔形目标。",
+        "visual_notes": "Sentiment line、第一推顶点、第二推回调点和目标框均为视觉规则。",
+        "ocr_keep_patterns": [
+          "Sentiment|情绪|第一推|第二推|目标位|楔形"
+        ],
+        "retrieval_visual_notes": "Sentiment line 从第一推顶点经第二推回调点延伸到楔形目标。"
+      },
+      {
+        "key": "sentiment-pullback",
+        "pages": [
+          11,
+          11
+        ],
+        "title_path": [
+          "Rose的策略",
+          "3. 三推情绪线",
+          "第二推回调点案例"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 11 是情绪线延伸的独立案例，保留回调点和目标邻近关系。",
+        "visual_notes": "第二推回调点与情绪线延伸图；TradingView 面板提示不纳入规则。",
+        "ocr_keep_patterns": [
+          "情绪线|情绪|第二推的回调点|回调点"
+        ],
+        "retrieval_visual_notes": "第二推回调点及情绪线延伸案例。"
+      },
+      {
+        "key": "mother-bar-levels",
+        "pages": [
+          13,
+          13
+        ],
+        "title_path": [
+          "Rose的策略",
+          "4. 孕线 Mother Bar 刮头皮",
+          "比例区域、控制位与订单链"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 13 同时承载比例区域、0.79/0.21 控制、50% 判断、分层挂单和止盈链，保留为一个完整规则页。",
+        "visual_notes": "0.66–1.11 Sell Zone、0.33–-0.11 Buy Zone、0.89–1.11/0.11–-0.11 Trap Zone、0.79/0.21 竞争位均为图中标注；价格轴和工具栏为噪声。",
+        "ocr_keep_patterns": [
+          "Mother|孕线|Sell Zone|Buy Zone|Trap Zone|0\\.66|1\\.11|0\\.89|0\\.79|0\\.21|0\\.33|0\\.11|50%|50％|控制价格|挂单|止盈|卖出区域|买入区域"
+        ],
+        "retrieval_visual_notes": "0.66–1.11 Sell Zone；0.33–-0.11 Buy Zone；0.89–1.11/0.11–-0.11 Trap Zone；0.79/0.21 竞争位与 50% 控制、挂单、止盈链。"
+      },
+      {
+        "key": "mother-bar-fibonacci",
+        "pages": [
+          14,
+          14
+        ],
+        "title_path": [
+          "Rose的策略",
+          "4. 孕线 Mother Bar 刮头皮",
+          "斐波那契回撤设置"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 14 只记录来源的斐波那契设置面板，和页面 13 的执行逻辑分开。",
+        "visual_notes": "设置面板用于比例 provenance；面板按钮、颜色控件和坐标标签不转成交易规则。",
+        "ocr_keep_patterns": [
+          "斐波那契|回撤线|0\\.618|0\\.21|0\\.11|1\\.23|1\\.14|-1\\.618|2\\.618"
+        ],
+        "retrieval_visual_notes": "斐波那契回撤比例设置及延长线。"
+      },
+      {
+        "key": "fofs-construction",
+        "pages": [
+          16,
+          16
+        ],
+        "title_path": [
+          "Rose的策略",
+          "5. FOFS 失败的失败是波段",
+          "TTR/双顶双底/矩形构建"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 16 给出 FOFS 四步结构、矩形上下沿、中线和第一根趋势 K 止损。",
+        "visual_notes": "TTR 矩形、DT/DB、0.5 中线、趋势 K 与 1MM 目标为视觉规则；坐标轴/UI 去噪。",
+        "ocr_keep_patterns": [
+          "FOFS|TTR|双顶|双底|矩形|中线|趋势|目标位|1MM|波段|寻找|止损|参与方式"
+        ],
+        "retrieval_visual_notes": "TTR 矩形、DT/DB、0.5 中线、趋势K、止损与 1MM 目标。"
+      },
+      {
+        "key": "fofs-midpoint-breakout",
+        "pages": [
+          17,
+          17
+        ],
+        "title_path": [
+          "Rose的策略",
+          "5. FOFS 失败的失败是波段",
+          "中线突破与 AB=CD"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 17 补充连续趋势 K 越中线、AB=CD 和第一根趋势 K 外止损。",
+        "visual_notes": "AB、CD 箭头及中线突破案例承载方向规则。",
+        "ocr_keep_patterns": [
+          "FOFS|TTR|双顶|双底|矩形|中线|AB.?CD|趋势|目标|止损|参与方式|波段"
+        ],
+        "retrieval_visual_notes": "中线突破、AB=CD 与第一根趋势K外止损案例。"
+      },
+      {
+        "key": "fofs-example-ttr",
+        "pages": [
+          18,
+          18
+        ],
+        "title_path": [
+          "Rose的策略",
+          "5. FOFS 失败的失败是波段",
+          "TTR 波段案例"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 18 是完整的 TTR/双顶双底/中线入场案例，独立检索。",
+        "visual_notes": "案例图和 4 步文字保留；大箭头及 TradingView UI 不作为条件。",
+        "ocr_keep_patterns": [
+          "如何抓住|FOFS|TTR|双顶|双底|中线|参与方式|波段|入场|止损"
+        ],
+        "retrieval_visual_notes": "TTR/双顶双底、中线突破入场的四步波段案例。"
+      },
+      {
+        "key": "fofs-example-abcd",
+        "pages": [
+          19,
+          19
+        ],
+        "title_path": [
+          "Rose的策略",
+          "5. FOFS 失败的失败是波段",
+          "AB=CD/1MM 案例"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 19 是 AB=CD 与 1MM 目标案例，避免并入长 OCR 父块。",
+        "visual_notes": "AB/CD 量测和 1MM 目标框是视觉规则；价格轴、日期控件和工具栏去噪。",
+        "ocr_keep_patterns": [
+          "AB.?CD|1MM|FOFS|TTR|中线|双顶|双底|目标|止损|波段"
+        ],
+        "retrieval_visual_notes": "AB/CD 量测与 1MM 目标案例。"
+      },
+      {
+        "key": "range-method",
+        "pages": [
+          21,
+          21
+        ],
+        "title_path": [
+          "Rose的策略",
+          "6. 怎样判断区间突破",
+          "价格控制判定步骤"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 21 明确给出三次多空腿、上下半区控制、失败重夺与顺势等待突破的条件链。",
+        "visual_notes": "区间阴影、多空腿箭头、控制半区和目标线均为视觉规则。",
+        "ocr_keep_patterns": [
+          "区间|多头|空头|控制|价格|三次|3次|腿|上半区|下半区|突破|AB.?CD|目标"
+        ],
+        "retrieval_visual_notes": "区间三腿、上/下半区控制、失败重夺与突破条件链。"
+      },
+      {
+        "key": "range-bull-case",
+        "pages": [
+          22,
+          22
+        ],
+        "title_path": [
+          "Rose的策略",
+          "6. 怎样判断区间突破",
+          "多头控制案例"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 22 的多头上半区控制、空头无法收在下半区和突破单独立成案例。",
+        "visual_notes": "页面 22 的四步标注和多头趋势 K 突破单；UI/OCR 坐标信息不纳入。",
+        "ocr_keep_patterns": [
+          "区间|多头|空头|控制|价格|腿|上半区|下半区|趋势|突破|做多"
+        ],
+        "retrieval_visual_notes": "多头上半区控制、空头无法收在下半区及趋势K突破单。"
+      },
+      {
+        "key": "range-control-case",
+        "pages": [
+          23,
+          23
+        ],
+        "title_path": [
+          "Rose的策略",
+          "6. 怎样判断区间突破",
+          "失败控制与突破案例"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 23 展示另一组区间腿和失败控制后的成功掌控，独立于页面 22。",
+        "visual_notes": "多空腿箭头、上/下半区、趋势 K 和目标线为视觉规则。",
+        "ocr_keep_patterns": [
+          "区间|多头|空头|控制|价格|腿|上半区|下半区|趋势|突破|做多"
+        ],
+        "retrieval_visual_notes": "多空腿、上/下半区、趋势K与成功掌控价格的案例。"
+      },
+      {
+        "key": "flag-overview",
+        "pages": [
+          25,
+          25
+        ],
+        "title_path": [
+          "Rose的策略",
+          "7. 如何参与旗形回调",
+          "双方向四步规则"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 25 并列呈现空头旗形和多头旗形四步链，保留为方向总览。",
+        "visual_notes": "左右两套带大影线/内包线/第二次尝试/顺势入场标注均为规则；英文标题与 UI 控件去噪。",
+        "ocr_keep_patterns": [
+          "旗形|回调|大影线|外包|内包线|第二次|尝试|失败|多头|空头|Step|卖出|突破单|入场"
+        ],
+        "retrieval_visual_notes": "空头旗形与多头旗形的大影线、内包线、第二次尝试失败和顺势入场四步链。"
+      },
+      {
+        "key": "flag-bull-case-1",
+        "pages": [
+          26,
+          26
+        ],
+        "title_path": [
+          "Rose的策略",
+          "7. 如何参与旗形回调",
+          "多头旗形案例一"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 26 只保留下影线空头陷阱、内包线、第二次失败和多头突破单。",
+        "visual_notes": "下影线、内包线和多头信号 K 突破单为视觉规则。",
+        "ocr_keep_patterns": [
+          "旗形|回调|大影线|外包|内包线|第二个|第二次|尝试|失败|多头|空头|下影线|陷阱|信号k|突破单|入场|买入"
+        ],
+        "retrieval_visual_notes": "下影线空头陷阱、内包线、第二次失败与多头突破单。"
+      },
+      {
+        "key": "flag-bear-case",
+        "pages": [
+          27,
+          27
+        ],
+        "title_path": [
+          "Rose的策略",
+          "7. 如何参与旗形回调",
+          "空头旗形案例"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 27 独立描述上影线多头陷阱及空头回调卖出链。",
+        "visual_notes": "上影线、内包线、第二次失败和空头信号 K 卖出为视觉规则。",
+        "ocr_keep_patterns": [
+          "旗形|回调|大影线|外包|内包线|第二个|第二次|尝试|失败|多头|空头|上影线|陷阱|信号k|卖出|入场"
+        ],
+        "retrieval_visual_notes": "上影线多头陷阱、内包线、第二次失败与空头卖出。"
+      },
+      {
+        "key": "flag-bull-case-2",
+        "pages": [
+          28,
+          28
+        ],
+        "title_path": [
+          "Rose的策略",
+          "7. 如何参与旗形回调",
+          "多头旗形案例二"
+        ],
+        "kind": "case",
+        "boundary_reason": "页面 28 是第二个多头旗形案例，独立保留避免将多方向图示合并成噪声块。",
+        "visual_notes": "外包大影线、下影线陷阱、内包线、第二次失败和突破单为视觉规则。",
+        "ocr_keep_patterns": [
+          "旗形|回调|大影线|外包|内包线|第二个|第二次|尝试|失败|多头|空头|下影线|陷阱|信号k|突破单|入场|买入"
+        ],
+        "retrieval_visual_notes": "外包大影线、下影线陷阱、内包线、第二次失败与突破单。"
+      },
+      {
+        "key": "missed-trend-doji",
+        "pages": [
+          30,
+          30
+        ],
+        "title_path": [
+          "Rose的策略",
+          "8. 错过趋势如何补救",
+          "十字星突破补救"
+        ],
+        "kind": "rule",
+        "boundary_reason": "页面 30 给出十字星暂停、连接高低点、突破单和 1MM/2MM 目标完整链。",
+        "visual_notes": "十字星、上下突破线和 1MM/2MM 目标框是视觉规则；页面 31 更新提示不纳入。",
+        "ocr_keep_patterns": [
+          "十字星|趋势|暂停|突破|高低点|突破单|1MM|2MM|1M|2M|目标|入场"
+        ],
+        "retrieval_visual_notes": "十字星暂停、连接高低点突破单和 1MM/2MM 目标。"
+      }
+    ],
+    "source_id": "rose-strategy"
+  }
+}

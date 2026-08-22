@@ -1,0 +1,8 @@
+{
+  "strategies": [
+    {"strategy_id": "pa:long", "symbol": "XYZ", "direction": "long"},
+    {"strategy_id": "pa:short", "symbol": "XYZ", "direction": "short"}
+  ],
+  "netting": false,
+  "shared_balance": false
+}

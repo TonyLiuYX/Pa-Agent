@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/terminology-0.1.0.schema.json",
+  "title": "PA terminology register v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "knowledge_base_version", "terms", "conflicts"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"}, "knowledge_base_version": {"type": "string", "minLength": 1},
+    "terms": {"type": "array", "items": {"type": "object", "additionalProperties": true, "required": ["term_en", "term_zh", "aliases", "source_ids", "note"], "properties": {"term_en": {"type": "string", "minLength": 1}, "term_zh": {"type": "string", "minLength": 1}, "aliases": {"type": "array", "items": {"type": "string"}}, "source_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "note": {"type": "string", "minLength": 1}}}},
+    "conflicts": {"type": "array", "items": {"type": "object", "additionalProperties": true, "required": ["topic", "sources", "description"], "properties": {"topic": {"type": "string", "minLength": 1}, "sources": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}, "description": {"type": "string", "minLength": 1}}}}
+  }
+}

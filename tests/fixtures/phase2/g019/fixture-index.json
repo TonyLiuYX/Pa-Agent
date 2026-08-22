@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_kind": "g019_alpaca_iex_history",
+  "entries": [
+    {"path": "iex_history_page_1.json", "purpose": "pagination first page"},
+    {"path": "iex_history_page_2.json", "purpose": "pagination terminal page"},
+    {"path": "iex_history_success.json", "purpose": "three regular-session bars"}
+  ]
+}

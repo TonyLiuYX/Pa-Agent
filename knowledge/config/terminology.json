@@ -1,0 +1,540 @@
+{
+  "terms": [
+    {
+      "term_en": "Price Action",
+      "term_zh": "价格行为",
+      "aliases": [
+        "PA"
+      ],
+      "source_ids": [
+        "rose-strategy",
+        "rose-caveman",
+        "rose-gap-bar",
+        "rose-mother-bar",
+        "nanqiao-checklist"
+      ],
+      "note": "项目工作术语，不代表策略有效性结论。"
+    },
+    {
+      "term_en": "High 2 / Low 2",
+      "term_zh": "高2 / 低2",
+      "aliases": [
+        "H2",
+        "L2",
+        "二次入场"
+      ],
+      "source_ids": [
+        "nanqiao-checklist"
+      ],
+      "note": "南桥清单要求信号 K 与建仓方向一致，并把入场放在信号 K 极值外 1 tick。"
+    },
+    {
+      "term_en": "Trading Range",
+      "term_zh": "震荡区间",
+      "aliases": [
+        "TR",
+        "TTR",
+        "窄幅震荡区间"
+      ],
+      "source_ids": [
+        "rose-strategy",
+        "rose-mother-bar",
+        "nanqiao-checklist"
+      ],
+      "note": "不同来源的区间规则不同，使用时必须保留 source_id 和具体 setup。"
+    },
+    {
+      "term_en": "Always In",
+      "term_zh": "Always in / 单边主导方向",
+      "aliases": [
+        "AI",
+        "AIL",
+        "AIS"
+      ],
+      "source_ids": [
+        "nanqiao-checklist"
+      ],
+      "note": "南桥第三部分按 Always in long/short 处理强突破行情。"
+    },
+    {
+      "term_en": "EMA20",
+      "term_zh": "20 周期指数移动平均线",
+      "aliases": [
+        "EMA-20",
+        "20EMA"
+      ],
+      "source_ids": [
+        "nanqiao-checklist",
+        "rose-caveman"
+      ],
+      "note": "仅作为来源中的背景/退出参考，不在本知识库中推导额外指标规则。"
+    },
+    {
+      "term_en": "R / Risk unit",
+      "term_zh": "风险单位",
+      "aliases": [
+        "1R",
+        "0.5R",
+        "HR",
+        "RR"
+      ],
+      "source_ids": [
+        "rose-caveman",
+        "rose-mtr",
+        "rose-mother-bar",
+        "nanqiao-checklist"
+      ],
+      "note": "R 的测量端点随来源和 setup 变化；记录中保留具体来源，不跨策略强行统一。"
+    },
+    {
+      "term_en": "Follow-through",
+      "term_zh": "跟随 K / 跟随",
+      "aliases": [
+        "FT"
+      ],
+      "source_ids": [
+        "rose-mtr",
+        "nanqiao-checklist"
+      ],
+      "note": "主要用于确认突破是否持续或触发强制退出。"
+    },
+    {
+      "term_en": "Point 3",
+      "term_zh": "通道第三点",
+      "aliases": [
+        "Point 3"
+      ],
+      "source_ids": [
+        "nanqiao-checklist"
+      ],
+      "note": "宽通道限价反转的预挂单位置。"
+    },
+    {
+      "term_en": "Tick",
+      "term_zh": "最小跳动单位",
+      "aliases": [
+        "1 tick"
+      ],
+      "source_ids": [
+        "rose-caveman",
+        "rose-mtr",
+        "nanqiao-checklist"
+      ],
+      "note": "入场或突破止损位置相对 K 线极值的最小偏移。"
+    },
+    {
+      "term_en": "Breakout-Failure-Breakout",
+      "term_zh": "突破-失败-突破 / 失败的失败",
+      "aliases": [
+        "失败的失败",
+        "二次突破"
+      ],
+      "source_ids": [
+        "nanqiao-checklist"
+      ],
+      "note": "南桥要求关键位实体突破后失败，再次突破须在关键位后 3 根 K 内完成；p4 图块提供 K14 例子的视觉规则。"
+    },
+    {
+      "term_en": "Trapped pullback",
+      "term_zh": "真突破后的回踩限价顺势",
+      "aliases": [
+        "Trapped",
+        "被套对手盘"
+      ],
+      "source_ids": [
+        "nanqiao-checklist"
+      ],
+      "note": "p11 表格与 p12 上部图块共同构成来源范围；p12 下部已另起逆1。"
+    },
+    {
+      "term_en": "Caveman Setup",
+      "term_zh": "Caveman / 野人策略",
+      "aliases": [
+        "野人",
+        "Caveman"
+      ],
+      "source_ids": [
+        "rose-caveman"
+      ],
+      "note": "强信号棒与更强反向触发棒组成的失败突破反转 setup。"
+    },
+    {
+      "term_en": "EMA / moving average context",
+      "term_zh": "均线附近过滤",
+      "aliases": [
+        "EMA",
+        "均线",
+        "20EMA"
+      ],
+      "source_ids": [
+        "rose-caveman"
+      ],
+      "note": "p2 图片只陈述均线附近容易失败；不把来源扩写为未给出的具体周期。"
+    },
+    {
+      "term_en": "R / Risk unit",
+      "term_zh": "风险单位",
+      "aliases": [
+        "1R",
+        "0.5R",
+        "HR",
+        "2R",
+        "RR"
+      ],
+      "source_ids": [
+        "rose-caveman",
+        "rose-mtr",
+        "rose-mother-bar",
+        "nanqiao-checklist"
+      ],
+      "note": "R 的测量端点随来源和 setup 变化；Caveman 同时出现 HR/1R 与 most-of-the-time 2R，具体案例 R 目标原样保留。"
+    },
+    {
+      "term_en": "Tick",
+      "term_zh": "最小跳动单位",
+      "aliases": [
+        "1 tick"
+      ],
+      "source_ids": [
+        "rose-caveman",
+        "rose-mtr",
+        "nanqiao-checklist"
+      ],
+      "note": "入场或突破位置相对 K 线极值的最小偏移。"
+    },
+    {
+      "term_en": "Gap Bar",
+      "term_zh": "Gap Bar / 跳空 K 线",
+      "aliases": [
+        "隐含缺口",
+        "隐含供需区"
+      ],
+      "source_ids": [
+        "rose-gap-bar"
+      ],
+      "note": "该来源把 Gap Bar 扩展为强趋势单 K、连续趋势 K 或 K 线重叠形成的隐含供需区，不等同于所有市场的可见跳空。"
+    },
+    {
+      "term_en": "Mother Bar",
+      "term_zh": "Mother Bar / 孕线 / 母线",
+      "aliases": [
+        "Inside Bar",
+        "子线",
+        "母子线",
+        "MB"
+      ],
+      "source_ids": [
+        "rose-mother-bar",
+        "rose-strategy"
+      ],
+      "note": "Mother Bar 是母线包住 Inside Bar 子线的两 K 结构；百分比区域以该来源的母线范围为基准。"
+    },
+    {
+      "term_en": "R / Risk unit",
+      "term_zh": "风险单位",
+      "aliases": [
+        "1R",
+        "0.5R",
+        "HR",
+        "RR"
+      ],
+      "source_ids": [
+        "rose-caveman",
+        "rose-mtr",
+        "rose-mother-bar",
+        "nanqiao-checklist"
+      ],
+      "note": "R 的测量端点随来源和 setup 变化；Mother Bar 来源本页未给出 R 目标，不应跨策略强行统一。"
+    },
+    {
+      "term_en": "Trap Zone",
+      "term_zh": "陷阱区",
+      "aliases": [
+        "Trap"
+      ],
+      "source_ids": [
+        "rose-mother-bar",
+        "rose-strategy"
+      ],
+      "note": "Mother Bar 来源以 0.89~1.1 标注上方陷阱区，以 0.11~-0.11 标注下方陷阱区；上下方向不可互换。"
+    },
+    {
+      "term_en": "Major Trend Reversal",
+      "term_zh": "主趋势反转",
+      "aliases": [
+        "MTR",
+        "大反转"
+      ],
+      "source_ids": [
+        "rose-mtr"
+      ],
+      "note": "本来源将 MTR 描述为利用失败突破、识别被套交易者的陷阱模式；日内更多表现为波段拐点。"
+    },
+    {
+      "term_en": "Bull Trap",
+      "term_zh": "多头陷阱",
+      "aliases": [
+        "被套多头"
+      ],
+      "source_ids": [
+        "rose-mtr"
+      ],
+      "note": "上涨后的假突破吸引追高多头，随后反转使其止损卖出。"
+    },
+    {
+      "term_en": "Bear Trap",
+      "term_zh": "空头陷阱",
+      "aliases": [
+        "被套空头"
+      ],
+      "source_ids": [
+        "rose-mtr"
+      ],
+      "note": "下跌后的假破位吸引卖家，随后反转迫使空头买入平仓。"
+    },
+    {
+      "term_en": "R / Risk unit",
+      "term_zh": "风险区间 / 风险单位",
+      "aliases": [
+        "1R",
+        "2R"
+      ],
+      "source_ids": [
+        "rose-mtr"
+      ],
+      "note": "本来源以信号 K 开盘价至陷阱 K 端点测量 R，再按 1R、2R 倍数管理目标。"
+    },
+    {
+      "term_en": "Tick",
+      "term_zh": "最小跳动单位",
+      "aliases": [
+        "1 tick"
+      ],
+      "source_ids": [
+        "rose-mtr"
+      ],
+      "note": "本来源将陷阱 K 端点外一个 Tick 作为止损位置示例。"
+    },
+    {
+      "term_en": "Price Action",
+      "term_zh": "价格行为",
+      "aliases": [
+        "PA"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "项目工作术语；本来源不以此证明策略有效性。"
+    },
+    {
+      "term_en": "Buy Zone / Sell Zone",
+      "term_zh": "买入区域 / 卖出区域",
+      "aliases": [
+        "Buy Zone",
+        "Sell Zone",
+        "买卖区域"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "p4-p5 的区域与被套盘方向标注。"
+    },
+    {
+      "term_en": "Three Pushes",
+      "term_zh": "三推",
+      "aliases": [
+        "三推结构",
+        "平衡三推"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "p7-p8 的推段距离和第二推两段结构。"
+    },
+    {
+      "term_en": "Sentiment Line",
+      "term_zh": "情绪线",
+      "aliases": [
+        "Sentiment",
+        "Sentiment line"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "第一推顶点到第二推回调点的延长线，指向楔形目标。"
+    },
+    {
+      "term_en": "Mother Bar",
+      "term_zh": "孕线 / 母线",
+      "aliases": [
+        "Mother Bar",
+        "Inside Bar",
+        "孕线刮头皮"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "本来源 p13-p14 的 Fibonacci 分层与 50% 控制链；不与其他来源比例混用。"
+    },
+    {
+      "term_en": "Failure of Failure is Swing",
+      "term_zh": "失败的失败是波段",
+      "aliases": [
+        "FOFS",
+        "失败的失败"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "TTR、双顶/双底、中线和 1MM/AB=CD 目标的来源术语。"
+    },
+    {
+      "term_en": "Trading Range",
+      "term_zh": "震荡区间",
+      "aliases": [
+        "TTR",
+        "TR",
+        "区间"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "FOFS 与区间突破主题均使用区间，但各自条件链必须保留。"
+    },
+    {
+      "term_en": "Trap Zone",
+      "term_zh": "陷阱区",
+      "aliases": [
+        "Trap",
+        "0.89–1.11",
+        "0.11–-0.11"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "p13 的 Mother Bar 上下陷阱区标注。"
+    },
+    {
+      "term_en": "Flag Pullback",
+      "term_zh": "旗形回调",
+      "aliases": [
+        "Bear flag",
+        "Bull flag",
+        "大影线回调"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "p25-p28 的大影线、内包线、第二次失败和顺势入场链。"
+    },
+    {
+      "term_en": "One Measured Move",
+      "term_zh": "1MM",
+      "aliases": [
+        "1 MM",
+        "一段量测目标"
+      ],
+      "source_ids": [
+        "rose-strategy"
+      ],
+      "note": "来源图示目标标记；不额外推导点数。"
+    }
+  ],
+  "conflicts": [
+    {
+      "topic": "信号棒与触发棒的时序",
+      "sources": [
+        "rose-caveman"
+      ],
+      "description": "同一来源并列保留两种表述：p2 正文称触发棒“紧随信号棒之后”；p2 规则图片称突破K和左侧阴线之间“最多间隔2根K线，多于2根就不是Caveman模式了”。未擅自选择或合成为单一时限。",
+      "side_a": {
+        "label": "紧随",
+        "statement": "触发棒紧随信号棒之后",
+        "pages": [
+          2
+        ],
+        "chunk_key": "p2-core-visual",
+        "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf pages 2 (正文)"
+      },
+      "side_b": {
+        "label": "最多间隔2根K",
+        "statement": "突破K和左侧的阴线之间最多间隔2根K线，多于2根就不是Caveman模式了",
+        "pages": [
+          2
+        ],
+        "chunk_key": "p2-core-visual",
+        "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf page 2 (规则图片视觉转录)"
+      }
+    },
+    {
+      "topic": "目标风险单位",
+      "sources": [
+        "rose-caveman"
+      ],
+      "description": "同一来源并列保留 p2 图片的 most-of-the-time 2R/大概率2R 与 p3-p4 正文 HR(0.5R)/1R 剥头皮规则；案例也有 1R/2R、R7、R4、R3 等具体标注。检索不得静默选择一方。",
+      "side_a": {
+        "label": "2R",
+        "statement": "This will give you most of the time 2R targets；止盈：大概率去到2R",
+        "pages": [
+          2
+        ],
+        "chunk_key": "p2-core-visual",
+        "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf page 2 (规则图片视觉转录)"
+      },
+      "side_b": {
+        "label": "HR与1R",
+        "statement": "止盈总是在HR（Half R，即0.5R）和1R的位置进行剥头皮式止盈",
+        "pages": [
+          3,
+          4
+        ],
+        "chunk_key": "bearish-rules/bullish-rules",
+        "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf pages 3-4 (正文规则)"
+      }
+    },
+    {
+      "topic": "Gap Bar 的定义",
+      "sources": [
+        "rose-gap-bar"
+      ],
+      "description": "该来源将强趋势单 K、连续趋势 K 和隐含供需重叠均称为 Gap Bar；知识库保留该来源定义，未与一般可见跳空定义合并。"
+    },
+    {
+      "topic": "Mother Bar 百分比区域",
+      "sources": [
+        "rose-mother-bar",
+        "rose-strategy"
+      ],
+      "description": "两份 Rose 材料都使用 0.66/0.33、0.79/0.21 等区域，但图示上下界和文字表达可能随案例改变；查询结果保留各自页码和 setup。"
+    },
+    {
+      "topic": "高胜率/80% 等概率表述",
+      "sources": [
+        "rose-mother-bar",
+        "nanqiao-checklist"
+      ],
+      "description": "这些是来源中的策略叙述，不是本项目对策略表现的统计验证，也不应被解释为盈利保证。"
+    },
+    {
+      "topic": "Mother Bar 软止损方向",
+      "sources": [
+        "rose-mother-bar"
+      ],
+      "description": "来源只给出卖出区做空遇到两根强劲阳线收在最高点时主动离场的例子；本配置不把该软止损未经说明扩展到买入区做多。"
+    },
+    {
+      "topic": "MTR 触发确认",
+      "sources": [
+        "rose-mtr"
+      ],
+      "description": "来源同时强调陷阱 K 的失败突破和后续实体 K 收盘确认；Bar 12 未跌破 Bar 11 开盘价时，卖出信号仍需更多证据，不能把影线失败直接当作已确认入场。"
+    },
+    {
+      "topic": "MTR 背景过滤",
+      "sources": [
+        "rose-mtr"
+      ],
+      "description": "示例二在楔形底三推背景下失败，来源明确要求不能只看 K 线而忽略背景。"
+    }
+  ]
+}

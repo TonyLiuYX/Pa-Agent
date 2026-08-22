@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/market-observation-frame-0.1.0.schema.json",
+  "title": "Deterministic market observation frame v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "observation_frame_id": {}, "content_hash": {}, "market_snapshot_id": {}, "market_snapshot_hash": {}, "formula_version": {}, "rounding_mode": {}, "observations": {}, "quality": {}, "uncertainty": {}, "generated_at": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/observationFrame"
+}

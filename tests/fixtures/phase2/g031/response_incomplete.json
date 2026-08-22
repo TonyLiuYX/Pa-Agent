@@ -1,0 +1,11 @@
+{
+  "id": "resp-g031-incomplete",
+  "object": "response",
+  "created_at": 1775904000,
+  "model": "gpt-5.6-luna",
+  "status": "incomplete",
+  "incomplete_details": {"reason": "max_output_tokens"},
+  "service_tier": "default",
+  "usage": {"input_tokens": 128, "output_tokens": 4, "total_tokens": 132},
+  "output": []
+}

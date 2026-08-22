@@ -1,0 +1,8 @@
+# Python runtime dependency for PDF text extraction.
+# Poppler and Tesseract are installed by the operating system package manager;
+# see knowledge/README.md for the exact commands.
+# Install from the full exact pin (includes pytest) at requirements-lock.txt,
+# via scripts/bootstrap_env.sh.
+pypdf>=5.0,<7
+jsonschema>=4.20,<5
+websockets>=14,<16

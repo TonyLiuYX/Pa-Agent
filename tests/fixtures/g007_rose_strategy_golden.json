@@ -1,0 +1,153 @@
+{
+  "source_id": "rose-strategy",
+  "source_file": "策略/Rose的策略.pdf",
+  "expected_page_count": 31,
+  "expected_visual_pages": [4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 28, 30],
+  "expected_retrieval_chunks": [
+    "zones-sell",
+    "zones-buy",
+    "three-pushes-shape",
+    "three-pushes-distance",
+    "sentiment-definition",
+    "sentiment-pullback",
+    "mother-bar-levels",
+    "mother-bar-fibonacci",
+    "fofs-construction",
+    "fofs-midpoint-breakout",
+    "fofs-example-ttr",
+    "fofs-example-abcd",
+    "range-method",
+    "range-bull-case",
+    "range-control-case",
+    "flag-overview",
+    "flag-bull-case-1",
+    "flag-bear-case",
+    "flag-bull-case-2",
+    "missed-trend-doji"
+  ],
+  "cases": [
+    {
+      "theme": "zones",
+      "query": "前高 前低 买卖区域",
+      "expected_record_ids": ["rose-zone-buy-sell"],
+      "expected_claims": [
+        {"record_id": "rose-zone-buy-sell", "field": "trigger", "statement": "价格到卖出区域会被卖下来", "declaration_type": "source_assertion"},
+        {"record_id": "rose-zone-buy-sell", "field": "trigger", "statement": "价格到买入区域会被买上来", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-zone-buy-sell", "chunk_id": "rose-strategy:zones-sell", "page_start": 4, "page_end": 4},
+        {"record_id": "rose-zone-buy-sell", "chunk_id": "rose-strategy:zones-buy", "page_start": 5, "page_end": 5}
+      ],
+      "forbidden_claim_fragments": ["固定止损 2 tick"]
+    },
+    {
+      "theme": "three-pushes",
+      "query": "三推 平衡 推段 距离",
+      "expected_record_ids": ["rose-three-pushes"],
+      "expected_claims": [
+        {"record_id": "rose-three-pushes", "field": "recognition_features", "statement": "平衡的三推需要每一推间距大致相同", "declaration_type": "source_assertion"},
+        {"record_id": "rose-three-pushes", "field": "recognition_features", "statement": "第二推由两段结构组成,两段加起来才是第二次推动", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-three-pushes", "chunk_id": "rose-strategy:three-pushes-distance", "page_start": 8, "page_end": 8}
+      ],
+      "forbidden_claim_fragments": ["第四推固定入场", "第五推固定止损"]
+    },
+    {
+      "theme": "sentiment-line",
+      "query": "Sentiment 情绪线 楔形 目标",
+      "expected_record_ids": ["rose-sentiment-line"],
+      "expected_claims": [
+        {"record_id": "rose-sentiment-line", "field": "recognition_features", "statement": "这根射线就是情绪线Sentiment", "declaration_type": "source_assertion"},
+        {"record_id": "rose-sentiment-line", "field": "targets_exit", "statement": "延长线穿过的位置就是楔形之后的目标位", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-sentiment-line", "chunk_id": "rose-strategy:sentiment-definition", "page_start": 10, "page_end": 10},
+        {"record_id": "rose-sentiment-line", "chunk_id": "rose-strategy:sentiment-pullback", "page_start": 11, "page_end": 11}
+      ],
+      "forbidden_claim_fragments": ["情绪线固定入场价"]
+    },
+    {
+      "theme": "mother-bar",
+      "query": "Mother Bar 0.66 1.11 0.89 50%",
+      "expected_record_ids": ["rose-mother-bar-scalp"],
+      "expected_claims": [
+        {"record_id": "rose-mother-bar-scalp", "field": "market_context", "statement": "0.66到1.11是Sell Zone", "declaration_type": "source_assertion"},
+        {"record_id": "rose-mother-bar-scalp", "field": "recognition_features", "statement": "0.89到1.11是Trap Zone", "declaration_type": "source_assertion"},
+        {"record_id": "rose-mother-bar-scalp", "field": "trigger", "statement": "孕线后面的两根线收盘价如果在50%之下,说明空头现在控制价格", "declaration_type": "source_assertion"},
+        {"record_id": "rose-mother-bar-scalp", "field": "targets_exit", "statement": "0.66的卖单在0.33止盈", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-mother-bar-scalp", "chunk_id": "rose-strategy:mother-bar-levels", "page_start": 13, "page_end": 13},
+        {"record_id": "rose-mother-bar-scalp", "chunk_id": "rose-strategy:mother-bar-fibonacci", "page_start": 14, "page_end": 14}
+      ],
+      "forbidden_claim_fragments": ["固定止损 10 tick", "0.89 到 1.11 必然反转"]
+    },
+    {
+      "theme": "fofs",
+      "query": "FOFS TTR 中线 1MM AB=CD",
+      "expected_record_ids": ["rose-fofs-swing"],
+      "expected_claims": [
+        {"record_id": "rose-fofs-swing", "field": "prerequisites", "statement": "再找出两组双顶和双底", "declaration_type": "source_assertion"},
+        {"record_id": "rose-fofs-swing", "field": "invalidation_stop", "statement": "止损放在第一根趋势K下面", "declaration_type": "source_assertion"},
+        {"record_id": "rose-fofs-swing", "field": "targets_exit", "statement": "TTR顶底1MM目标位", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-fofs-swing", "chunk_id": "rose-strategy:fofs-construction", "page_start": 16, "page_end": 16},
+        {"record_id": "rose-fofs-swing", "chunk_id": "rose-strategy:fofs-example-abcd", "page_start": 19, "page_end": 19}
+      ],
+      "forbidden_claim_fragments": ["固定胜率", "固定点数目标"]
+    },
+    {
+      "theme": "range-breakout",
+      "query": "区间突破 上半区 多头 三次腿",
+      "expected_record_ids": ["rose-range-breakout"],
+      "expected_claims": [
+        {"record_id": "rose-range-breakout", "field": "prerequisites", "statement": "区间内寻找3次多头和空头腿", "declaration_type": "source_assertion"},
+        {"record_id": "rose-range-breakout", "field": "recognition_features", "statement": "多头控制价格在区间上半区", "declaration_type": "source_assertion"},
+        {"record_id": "rose-range-breakout", "field": "entry", "statement": "多头趋势K上方突破单做多", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-range-breakout", "chunk_id": "rose-strategy:range-method", "page_start": 21, "page_end": 21},
+        {"record_id": "rose-range-breakout", "chunk_id": "rose-strategy:range-bull-case", "page_start": 22, "page_end": 22}
+      ],
+      "forbidden_claim_fragments": ["空头固定突破价", "上半区必然上涨"]
+    },
+    {
+      "theme": "flag-pullback",
+      "query": "旗形回调 大影线 内包线 第二次失败",
+      "expected_record_ids": ["rose-flag-pullback"],
+      "expected_claims": [
+        {"record_id": "rose-flag-pullback", "field": "recognition_features", "statement": "上影线意味着多头陷阱", "declaration_type": "source_assertion"},
+        {"record_id": "rose-flag-pullback", "field": "recognition_features", "statement": "下影线意味着空头陷阱", "declaration_type": "source_assertion"},
+        {"record_id": "rose-flag-pullback", "field": "entry", "statement": "在一个好的空头信号k之后卖出", "declaration_type": "source_assertion"},
+        {"record_id": "rose-flag-pullback", "field": "entry", "statement": "在一个好的多头信号k上面突破单入场", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-flag-pullback", "chunk_id": "rose-strategy:flag-bull-case-1", "page_start": 26, "page_end": 26},
+        {"record_id": "rose-flag-pullback", "chunk_id": "rose-strategy:flag-bear-case", "page_start": 27, "page_end": 27},
+        {"record_id": "rose-flag-pullback", "chunk_id": "rose-strategy:flag-bull-case-2", "page_start": 28, "page_end": 28}
+      ],
+      "forbidden_claim_fragments": ["单根影线直接入场", "固定目标 2R"]
+    },
+    {
+      "theme": "missed-trend",
+      "query": "十字星 趋势暂停 突破 1MM 2MM",
+      "expected_record_ids": ["rose-missed-trend"],
+      "expected_claims": [
+        {"record_id": "rose-missed-trend", "field": "prerequisites", "statement": "等待趋势中的十字星,意味着趋势暂停", "declaration_type": "source_assertion"},
+        {"record_id": "rose-missed-trend", "field": "entry", "statement": "连接十字星高低点,突破单入场", "declaration_type": "source_assertion"},
+        {"record_id": "rose-missed-trend", "field": "targets_exit", "statement": "十字星整体的1MM或2MM", "declaration_type": "source_assertion"}
+      ],
+      "expected_citations": [
+        {"record_id": "rose-missed-trend", "chunk_id": "rose-strategy:missed-trend-doji", "page_start": 30, "page_end": 30}
+      ],
+      "forbidden_claim_fragments": ["十字星固定止损 1 tick"]
+    }
+  ],
+  "negative_queries": [
+    {"query": "Mother Bar 固定止损 10 tick", "forbidden_statements": ["固定止损 10 tick", "0.89 到 1.11 必然反转"]},
+    {"query": "旗形 单根影线 固定目标 2R", "forbidden_statements": ["单根影线直接入场", "固定目标 2R"]},
+    {"query": "三推 第四推 第五推 固定止损", "forbidden_statements": ["第四推固定入场", "第五推固定止损"]}
+  ]
+}

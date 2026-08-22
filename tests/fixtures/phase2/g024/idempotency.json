@@ -1,0 +1,6 @@
+{
+  "same_key_same_content": "replay",
+  "same_key_changed_content": "conflict",
+  "replay_changes_state": false,
+  "conflict_changes_state": false
+}

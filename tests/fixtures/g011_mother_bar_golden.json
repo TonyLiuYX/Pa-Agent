@@ -1,0 +1,118 @@
+[
+  {
+    "query": "Mother Bar 震荡区间 平衡",
+    "expected_record_ids": [
+      "rose-mother-bar"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar",
+        "field": "market_context",
+        "statement": "这个形态之所以重要,是因为它直观地表示市场进入了一个短暂的平衡状态或震荡区间(Trading Range)。",
+        "declaration_type": "source_assertion"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar",
+        "chunk_id": "rose-mother-bar:definition-zones",
+        "page_start": 1,
+        "page_end": 2
+      }
+    ]
+  },
+  {
+    "query": "实体突破 陷阱区 软止损",
+    "expected_record_ids": [
+      "rose-mother-bar"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar",
+        "field": "trigger",
+        "statement": "看涨突破的实体还需要收盘在 1.1 陷阱区之上;看跌突破的实体需要收盘在 -0.11 陷阱区之下。",
+        "declaration_type": "source_assertion"
+      },
+      {
+        "record_id": "rose-mother-bar",
+        "field": "invalidation_stop",
+        "statement": "来源明确的软止损例子是:在卖出区做空时,若市场连续出现两根强劲的阳线收在最高点,应主动提前离场。",
+        "declaration_type": "source_assertion"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar",
+        "chunk_id": "rose-mother-bar:contexts-confirmation-risk",
+        "page_start": 3,
+        "page_end": 3
+      }
+    ]
+  },
+  {
+    "query": "MB36 runner 79/66% 50% MR",
+    "expected_record_ids": [
+      "rose-mother-bar"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar",
+        "field": "targets_exit",
+        "statement": "46 号 K 线实体收盘在 MB36 区间内时,持有部分盈利仓位(runner)以达到 79/66% 或 50% 水平位;若未能收盘在 MB36 高点之下,交易结束。",
+        "declaration_type": "source_assertion"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar",
+        "chunk_id": "rose-mother-bar:example",
+        "page_start": 4,
+        "page_end": 5
+      }
+    ]
+  },
+  {
+    "query": "Mother Bar 第三腿 楔形 反转",
+    "expected_record_ids": [
+      "rose-mother-bar"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar",
+        "field": "market_context",
+        "statement": "当趋势发展到第三条腿时,通常意味着趋势衰竭,可能形成楔形顶部(Wedge Top)或楔形底部(Wedge Bottom),反转的概率大大增加。",
+        "declaration_type": "source_assertion"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar",
+        "chunk_id": "rose-mother-bar:contexts-confirmation-risk",
+        "page_start": 3,
+        "page_end": 3
+      }
+    ]
+  },
+  {
+    "query": "第三腿 等待结构证据",
+    "expected_record_ids": [
+      "rose-mother-bar"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar",
+        "field": "entry",
+        "statement": "来源没有给出第三腿参与必须等待结构证据的独立规则。",
+        "declaration_type": "source_not_stated"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar",
+        "chunk_id": "rose-mother-bar:contexts-confirmation-risk",
+        "page_start": 3,
+        "page_end": 3
+      }
+    ]
+  }
+]

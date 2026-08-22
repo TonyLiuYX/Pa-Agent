@@ -1,0 +1,491 @@
+{
+  "manifest_version": "0.1.0",
+  "contract_version": "0.1.0",
+  "fixture_root": "pa_engine/contracts/fixtures",
+  "entries": [
+    {
+      "path": "valid/market_snapshot.json",
+      "artifact_kind": "market_snapshot",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/analysis_policy.json",
+      "artifact_kind": "analysis_policy",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/analysis_request.json",
+      "artifact_kind": "analysis_request",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/market_snapshot.json",
+        "valid/analysis_policy.json",
+        "valid/knowledge_evidence_package.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/market_observation_frame.json",
+      "artifact_kind": "market_observation_frame",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/market_snapshot.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/knowledge_citation.json",
+      "artifact_kind": "knowledge_citation",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/knowledge_evidence_package.json",
+      "artifact_kind": "knowledge_evidence_package",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/normalized_model_request.json",
+      "artifact_kind": "normalized_model_request",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/normalized_model_response.json",
+      "artifact_kind": "normalized_model_response",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/normalized_model_request.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/model_call_metadata.json",
+      "artifact_kind": "model_call_metadata",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/pa_analysis_result_signal.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json",
+        "valid/model_call_metadata.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/pa_analysis_result_conditional.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json",
+        "valid/model_call_metadata.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/pa_analysis_result_no_trade.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json",
+        "valid/model_call_metadata.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/pa_analysis_result_abstain.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/pa_analysis_result_error.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_request_pre_provider_invalid_market.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/analysis_run_decision_event.json",
+      "artifact_kind": "analysis_run_decision_event",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/analysis_request.json",
+        "valid/normalized_model_response.json",
+        "valid/pa_analysis_result_signal.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/analysis_run_outcome_event.json",
+      "artifact_kind": "analysis_run_outcome_event",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [
+        "valid/analysis_run_decision_event.json",
+        "valid/market_snapshot.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/policy_outcome_matrix.json",
+      "artifact_kind": "policy_outcome_matrix",
+      "valid": true,
+      "expected_issue_codes": [],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": null
+    },
+    {
+      "path": "valid/analysis_request_pre_provider_invalid_market.json",
+      "artifact_kind": "analysis_request",
+      "valid": true,
+      "expected_issue_codes": [],
+      "expected_issue_code": null,
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null
+    },
+    {
+      "path": "valid/analysis_run_decision_event_pre_provider_error.json",
+      "artifact_kind": "analysis_run_decision_event",
+      "valid": true,
+      "expected_issue_codes": [],
+      "expected_issue_code": null,
+      "related_fixture_paths": [
+        "valid/analysis_request_pre_provider_invalid_market.json",
+        "valid/pa_analysis_result_error.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null
+    },
+    {
+      "path": "invalid/market_snapshot_unknown_field.json",
+      "artifact_kind": "market_snapshot",
+      "valid": false,
+      "expected_issue_codes": [
+        "unknown_field"
+      ],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "unknown_field"
+    },
+    {
+      "path": "invalid/analysis_policy_version_mismatch.json",
+      "artifact_kind": "analysis_policy",
+      "valid": false,
+      "expected_issue_codes": [
+        "version_mismatch"
+      ],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "version_mismatch"
+    },
+    {
+      "path": "invalid/analysis_request_non_utc.json",
+      "artifact_kind": "analysis_request",
+      "valid": false,
+      "expected_issue_codes": [
+        "non_utc_timestamp"
+      ],
+      "related_fixture_paths": [
+        "valid/market_snapshot.json",
+        "valid/analysis_policy.json",
+        "valid/knowledge_evidence_package.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "non_utc_timestamp"
+    },
+    {
+      "path": "invalid/market_observation_frame_invalid_decimal.json",
+      "artifact_kind": "market_observation_frame",
+      "valid": false,
+      "expected_issue_codes": [
+        "invalid_decimal"
+      ],
+      "related_fixture_paths": [
+        "valid/market_snapshot.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "invalid_decimal"
+    },
+    {
+      "path": "invalid/knowledge_citation_wrong_claim.json",
+      "artifact_kind": "knowledge_citation",
+      "valid": false,
+      "expected_issue_codes": [
+        "grounding_failure"
+      ],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": "grounding_failure"
+    },
+    {
+      "path": "invalid/knowledge_evidence_package_wrong_citation.json",
+      "artifact_kind": "knowledge_evidence_package",
+      "valid": false,
+      "expected_issue_codes": [
+        "grounding_failure"
+      ],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": "grounding_failure"
+    },
+    {
+      "path": "invalid/normalized_model_request_prompt_hash.json",
+      "artifact_kind": "normalized_model_request",
+      "valid": false,
+      "expected_issue_codes": [
+        "related_artifact_mismatch"
+      ],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "related_artifact_mismatch"
+    },
+    {
+      "path": "invalid/normalized_model_response_malformed.json",
+      "artifact_kind": "normalized_model_response",
+      "valid": false,
+      "expected_issue_codes": [
+        "status_invariant"
+      ],
+      "related_fixture_paths": [
+        "valid/normalized_model_request.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "status_invariant"
+    },
+    {
+      "path": "invalid/model_call_metadata_usage.json",
+      "artifact_kind": "model_call_metadata",
+      "valid": false,
+      "expected_issue_codes": [
+        "status_invariant"
+      ],
+      "related_fixture_paths": [
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json"
+      ],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "status_invariant"
+    },
+    {
+      "path": "invalid/pa_analysis_result_status_action.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": false,
+      "expected_issue_codes": [
+        "status_invariant"
+      ],
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json",
+        "valid/model_call_metadata.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": "status_invariant"
+    },
+    {
+      "path": "invalid/analysis_run_decision_event_mode_stream.json",
+      "artifact_kind": "analysis_run_decision_event",
+      "valid": false,
+      "expected_issue_codes": [
+        "status_invariant"
+      ],
+      "related_fixture_paths": [
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/analysis_request.json",
+        "valid/normalized_model_response.json",
+        "valid/pa_analysis_result_signal.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": "status_invariant"
+    },
+    {
+      "path": "invalid/analysis_run_outcome_event_lineage.json",
+      "artifact_kind": "analysis_run_outcome_event",
+      "valid": false,
+      "expected_issue_codes": [
+        "grounding_failure"
+      ],
+      "related_fixture_paths": [
+        "valid/analysis_run_decision_event.json",
+        "valid/market_snapshot.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge",
+      "expected_issue_code": "grounding_failure"
+    },
+    {
+      "path": "invalid/policy_outcome_matrix_duplicate.json",
+      "artifact_kind": "policy_outcome_matrix",
+      "valid": false,
+      "expected_issue_codes": [
+        "policy_matrix_ambiguous"
+      ],
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null,
+      "expected_issue_code": "policy_matrix_ambiguous"
+    },
+    {
+      "path": "invalid/market_snapshot_unknown_quality_code.json",
+      "artifact_kind": "market_snapshot",
+      "valid": false,
+      "expected_issue_codes": [
+        "schema_violation"
+      ],
+      "expected_issue_code": "schema_violation",
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": false,
+      "knowledge_dir": null
+    },
+    {
+      "path": "invalid/pa_analysis_result_unknown_uncertainty_code.json",
+      "artifact_kind": "pa_analysis_result",
+      "valid": false,
+      "expected_issue_codes": [
+        "schema_violation"
+      ],
+      "expected_issue_code": "schema_violation",
+      "related_fixture_paths": [
+        "valid/analysis_request.json",
+        "valid/market_snapshot.json",
+        "valid/market_observation_frame.json",
+        "valid/knowledge_evidence_package.json",
+        "valid/normalized_model_request.json",
+        "valid/normalized_model_response.json",
+        "valid/model_call_metadata.json"
+      ],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge"
+    },
+    {
+      "path": "invalid/knowledge_citation_mixed_source_assertion.json",
+      "artifact_kind": "knowledge_citation",
+      "valid": false,
+      "expected_issue_codes": [
+        "grounding_failure"
+      ],
+      "expected_issue_code": "grounding_failure",
+      "related_fixture_paths": [],
+      "requires_knowledge_dir": true,
+      "knowledge_dir": "knowledge"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/knowledge-citation-0.1.0.schema.json",
+  "title": "Knowledge citation v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "citation_id": {}, "content_hash": {}, "citation_kind": {}, "claim_id": {}, "declaration_type": {}, "source_id": {}, "source_file": {}, "source_sha256": {}, "chunk_id": {}, "chunk_text_sha256": {}, "page_start": {}, "page_end": {}, "pages": {}, "title_path": {}, "provenance_status": {}, "source_locator": {}, "external_url": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/knowledgeCitation"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "g028-engine-fixtures",
+  "description": "Deterministic builders for the G028 automatic runtime tests",
+  "entries": [{"path": "builders.py", "kind": "python-module"}]
+}

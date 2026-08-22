@@ -1,0 +1,116 @@
+[
+  {
+    "query": "MTR 被套交易者 失败突破",
+    "expected_record_ids": [
+      "rose-mtr"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mtr",
+        "field": "market_context",
+        "statement": "本策略的核心在于识别那些被市场\"欺骗\"并套牢的交易者,然后利用他们平仓(止损)时产生的强大动能来获利。"
+      },
+      {
+        "record_id": "rose-mtr",
+        "field": "recognition_features",
+        "statement": "陷阱K线: 紧接着的 K 线,其最高价超过了信号K线的最高价"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mtr",
+        "chunk_id": "rose-mtr:intro-core",
+        "page_start": 1,
+        "page_end": 1
+      },
+      {
+        "record_id": "rose-mtr",
+        "chunk_id": "rose-mtr:trap-confirmation",
+        "page_start": 2,
+        "page_end": 2
+      }
+    ]
+  },
+  {
+    "query": "MTR B4 B5 做空 1R 2R",
+    "expected_record_ids": [
+      "rose-mtr"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mtr",
+        "field": "entry",
+        "statement": "在 B5 收盘时或其下方挂单做空。"
+      },
+      {
+        "record_id": "rose-mtr",
+        "field": "targets_exit",
+        "statement": "从 B4 的开盘价到 B5 的最高价画出风险区间 (R),然后向下寻找 1R 和 2R 的目标位。"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mtr",
+        "chunk_id": "rose-mtr:video-example",
+        "page_start": 3,
+        "page_end": 3
+      }
+    ]
+  },
+  {
+    "query": "MTR 风险 Tick 止损 1R 2R 被套修复 33% 50% 初始入场",
+    "expected_record_ids": [
+      "rose-mtr"
+    ],
+    "expected_claims": [
+      {
+        "record_id": "rose-mtr",
+        "field": "invalidation_stop",
+        "statement": "止损单应放置在陷阱K线端点之外一个 Tick 的位置。",
+        "expected_chunk_id": "rose-mtr:risk-management",
+        "expected_page_start": 6,
+        "expected_page_end": 6
+      },
+      {
+        "record_id": "rose-mtr",
+        "field": "targets_exit",
+        "statement": "第二个目标位是 2R,以此类推。",
+        "expected_chunk_id": "rose-mtr:risk-management",
+        "expected_page_start": 6,
+        "expected_page_end": 6
+      },
+      {
+        "record_id": "rose-mtr",
+        "field": "risk_notes",
+        "statement": "有时,我们自己也会被套。Rose 对此的建议是:不要慌乱,进入\"修复模式\"。",
+        "expected_chunk_id": "rose-mtr:risk-management",
+        "expected_page_start": 6,
+        "expected_page_end": 6
+      },
+      {
+        "record_id": "rose-mtr",
+        "field": "risk_notes",
+        "statement": "如果你做空被套,不要在低位止损,而应该在一个更小的震荡区间的上沿(比如 33% 或 50% 的回调位)去加仓做空。",
+        "expected_chunk_id": "rose-mtr:risk-management",
+        "expected_page_start": 6,
+        "expected_page_end": 6
+      },
+      {
+        "record_id": "rose-mtr",
+        "field": "targets_exit",
+        "statement": "当价格回到你最初的入场点附近时,就是你解套获利的时机。",
+        "expected_chunk_id": "rose-mtr:risk-management",
+        "expected_page_start": 6,
+        "expected_page_end": 6
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mtr",
+        "chunk_id": "rose-mtr:risk-management",
+        "page_start": 6,
+        "page_end": 6
+      }
+    ]
+  }
+]

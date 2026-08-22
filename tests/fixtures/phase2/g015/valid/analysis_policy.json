@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "analysis_policy",
+  "extensions": {
+    "market_feed": {
+      "schema_version": "0.1.0",
+      "provider": "alpaca",
+      "feed": "iex",
+      "coverage": "single_exchange"
+    }
+  },
+  "minimum_closed_bars": 3,
+  "max_staleness_seconds": 600,
+  "allow_partial_data": false,
+  "exclude_incomplete_last_bar": true,
+  "required_capabilities": [
+    "price_action"
+  ],
+  "policy_version": "0.1.0",
+  "content_hash": "0ea4fdf6c4640acd0f46ae73aadaaf2933b0eaf7da7d3036e09e6aee1c61b716",
+  "analysis_policy_id": "pol_0ea4fdf6c4640acd0f46ae73aadaaf2933b0eaf7da7d3036e09e6aee1c61b716"
+}

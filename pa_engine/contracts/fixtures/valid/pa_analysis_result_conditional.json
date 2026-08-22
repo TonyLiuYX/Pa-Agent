@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "pa_analysis_result",
+  "extensions": {},
+  "analysis_request_id": "arq_c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+  "analysis_request_hash": "c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+  "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+  "observation_frame_id": "obs_0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "observation_frame_hash": "0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+  "evidence_package_id": "evp_ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "evidence_package_hash": "ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "model_request_id": "mrq_8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_request_hash": "8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_response_id": "mrs_bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+  "model_response_hash": "bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+  "model_call_id": "mcl_a2217d0519a755f7ab5c514e6c0e6d114ed5b4933f34058bf415014411dcc4fb",
+  "model_call_hash": "a2217d0519a755f7ab5c514e6c0e6d114ed5b4933f34058bf415014411dcc4fb",
+  "engine_version": "g014-engine-0.1.0",
+  "prompt_template_version": "g014-prompt-0.1.0",
+  "policy_version": "0.1.0",
+  "adapter_version": "fixture-adapter-0.1.0",
+  "status": "conditional",
+  "stance": "bearish",
+  "action": "wait",
+  "setups": [
+    {
+      "label": "MTR bull-trap reversal",
+      "declaration_type": "source_assertion",
+      "evidence_ids": [
+        "evi_51807c2ee7187c03ca1fed545b0e97d173752f02fbd2cb01df77da42d2d2839c"
+      ],
+      "claim_ids": [
+        "rose-mtr:market_context:1"
+      ],
+      "citation_ids": [
+        "cit_2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11"
+      ],
+      "market_refs": [
+        "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3"
+      ],
+      "extensions": {}
+    }
+  ],
+  "rationales": [
+    {
+      "support_type": "source_assertion",
+      "text": "MTR evidence supports the trapped-trader setup.",
+      "evidence_ids": [
+        "evi_51807c2ee7187c03ca1fed545b0e97d173752f02fbd2cb01df77da42d2d2839c"
+      ],
+      "claim_ids": [
+        "rose-mtr:market_context:1"
+      ],
+      "citation_ids": [
+        "cit_2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11"
+      ],
+      "market_refs": [
+        "bar_93e393b8a215fdfa489566abf69fb7e3efd20147212f30ca986394f864f929a3"
+      ],
+      "extensions": {}
+    }
+  ],
+  "conditions": [
+    {
+      "declaration_type": "source_assertion",
+      "text": "Wait for a strong closed-bar confirmation.",
+      "evidence_ids": [
+        "evi_ba630c77b38193e855129e4bfa123be6d4b3391ba9fe6f295b634defc3ad841c"
+      ],
+      "claim_ids": [
+        "rose-mtr:trigger:3"
+      ],
+      "citation_ids": [
+        "cit_6da26be3dd505499e4e554cea1e3843f9a394a41284111e68b43075a7ab2aad4"
+      ],
+      "market_refs": [
+        "bar_14dcf916b1b61c4ce043e987422580d969da855e204abdbb691a203e36761ef1"
+      ],
+      "extensions": {}
+    }
+  ],
+  "levels": [
+    {
+      "level_kind": "support",
+      "value": "100",
+      "declaration_type": "source_assertion",
+      "text": "等待一个强有力的\"实体K线收盘\"作为确认信号",
+      "evidence_ids": [
+        "evi_ba630c77b38193e855129e4bfa123be6d4b3391ba9fe6f295b634defc3ad841c"
+      ],
+      "claim_ids": [
+        "rose-mtr:trigger:3"
+      ],
+      "citation_ids": [
+        "cit_6da26be3dd505499e4e554cea1e3843f9a394a41284111e68b43075a7ab2aad4"
+      ],
+      "market_refs": [
+        "bar_14dcf916b1b61c4ce043e987422580d969da855e204abdbb691a203e36761ef1"
+      ],
+      "extensions": {}
+    }
+  ],
+  "knowledge_confidence": "0.9",
+  "model_confidence": "0.6",
+  "analysis_uncertainty": {
+    "level": "medium",
+    "codes": [
+      "high_uncertainty"
+    ],
+    "details": "awaiting confirmation"
+  },
+  "warnings": [],
+  "errors": [],
+  "analysis_as_of": "2026-08-10T14:45:00Z",
+  "input_mode": "ohlcv",
+  "no_live_orders": true,
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "b7d0dba7aeab152ccd710de35ebfc9417b20bff4ec743620615efba027357d5d",
+  "pa_analysis_result_id": "par_b7d0dba7aeab152ccd710de35ebfc9417b20bff4ec743620615efba027357d5d"
+}

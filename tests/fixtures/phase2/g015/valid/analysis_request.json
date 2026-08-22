@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "analysis_request",
+  "extensions": {
+    "market_feed": {
+      "schema_version": "0.1.0",
+      "provider": "alpaca",
+      "feed": "iex",
+      "coverage": "single_exchange"
+    }
+  },
+  "correlation_id": "corr-g015-001",
+  "input_mode": "ohlcv",
+  "analysis_as_of": "2026-08-10T14:43:00Z",
+  "market_snapshot_id": "mkt_9e17c5d051f94b49053521b481b12927236bfad6788b24e6dd74a2331543d76a",
+  "knowledge_snapshot_id": "kbs_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "knowledge_snapshot_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "analysis_policy_id": "pol_0ea4fdf6c4640acd0f46ae73aadaaf2933b0eaf7da7d3036e09e6aee1c61b716",
+  "purpose": "decision_support",
+  "instrument": {
+    "asset_class": "us_equity",
+    "symbol": "AAPL",
+    "venue": "NASDAQ",
+    "currency": "USD"
+  },
+  "timeframe": {
+    "unit": "minute",
+    "multiplier": 1
+  },
+  "session": {
+    "kind": "regular",
+    "timezone": "America/New_York"
+  },
+  "no_live_orders": true,
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "4a2dc4d49827ced27ddb7a1cf4413ab09be606ae35e38e4ae90173e6b61a8f3e",
+  "analysis_request_id": "arq_4a2dc4d49827ced27ddb7a1cf4413ab09be606ae35e38e4ae90173e6b61a8f3e"
+}

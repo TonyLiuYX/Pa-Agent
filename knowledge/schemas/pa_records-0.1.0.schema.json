@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/pa_records-0.1.0.schema.json",
+  "title": "PA normalized records v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "$defs": {
+    "sourceRef": {
+      "type": "object", "additionalProperties": true,
+      "required": ["chunk_id", "source_id", "source_file", "source_sha256", "page_start", "page_end", "title_path", "source_locator", "provenance_status"],
+      "properties": {
+        "chunk_id": {"type": ["string", "null"]}, "source_id": {"type": "string", "minLength": 1}, "source_file": {"type": "string", "minLength": 1}, "source_sha256": {"type": ["string", "null"]}, "page_start": {"type": ["integer", "null"], "minimum": 1}, "page_end": {"type": ["integer", "null"], "minimum": 1}, "title_path": {"type": "array", "minItems": 1}, "source_locator": {"type": ["string", "null"]}, "provenance_status": {"type": "string", "minLength": 1}, "external_url": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"chunk_id": {"type": "null"}}},
+          "then": {
+            "required": ["external_url"],
+            "properties": {
+              "external_url": {"type": "string", "minLength": 1},
+              "provenance_status": {"const": "supplemental_external_due_to_pdf_failure"},
+              "page_start": {"type": "null"},
+              "page_end": {"type": "null"}
+            }
+          },
+          "else": {
+            "properties": {
+              "chunk_id": {"type": "string", "minLength": 1},
+              "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+              "page_start": {"type": "integer", "minimum": 1},
+              "page_end": {"type": "integer", "minimum": 1}
+            }
+          }
+        }
+      ]
+    },
+    "localSourceRef": {
+      "allOf": [
+        {"$ref": "#/$defs/sourceRef"},
+        {
+          "type": "object",
+          "required": ["chunk_id", "source_sha256", "page_start", "page_end"],
+          "properties": {
+            "chunk_id": {"type": "string", "minLength": 1},
+            "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "page_start": {"type": "integer", "minimum": 1},
+            "page_end": {"type": "integer", "minimum": 1}
+          }
+        }
+      ]
+    },
+    "claim": {
+      "type": "object", "additionalProperties": true,
+      "required": ["claim_id", "statement", "declaration_type", "source_refs"],
+      "properties": {
+        "claim_id": {"type": "string", "minLength": 1}, "statement": {"type": "string", "minLength": 1}, "declaration_type": {"enum": ["source_assertion", "derived_interpretation", "source_not_stated"]}, "rationale": {"type": "string"}, "source_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sourceRef"}}
+      },
+      "allOf": [
+        {"if": {"properties": {"declaration_type": {"enum": ["derived_interpretation", "source_not_stated"]}}}, "then": {"required": ["rationale"], "properties": {"rationale": {"type": "string", "minLength": 1}}}},
+        {
+          "if": {
+            "required": ["declaration_type"],
+            "properties": {"declaration_type": {"const": "source_assertion"}}
+          },
+          "then": {
+            "properties": {
+              "source_refs": {"items": {"$ref": "#/$defs/localSourceRef"}}
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": ["schema_version", "knowledge_base_version", "records"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"}, "knowledge_base_version": {"type": "string", "minLength": 1},
+    "records": {
+      "type": "array", "items": {
+        "type": "object", "additionalProperties": true,
+        "required": ["id", "source_id", "type", "name", "aliases", "tags", "source_refs", "market_context", "direction", "timeframes", "prerequisites", "recognition_features", "trigger", "entry", "invalidation_stop", "targets_exit", "risk_notes", "prohibited", "exceptions", "examples", "interpretation_notes", "confidence", "knowledge_base_version"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1}, "source_id": {"type": "string", "minLength": 1}, "type": {"enum": ["concept", "setup", "risk", "discipline", "summary", "exception", "example"]}, "name": {"type": "string", "minLength": 1}, "aliases": {"type": "array", "items": {"type": "string"}}, "tags": {"type": "array", "items": {"type": "string"}}, "source_refs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/sourceRef"}}, "direction": {"type": "array"}, "timeframes": {"type": "array"},
+          "market_context": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "prerequisites": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "recognition_features": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "trigger": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "entry": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "invalidation_stop": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "targets_exit": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "risk_notes": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "prohibited": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "exceptions": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "examples": {"type": "array", "items": {"$ref": "#/$defs/claim"}}, "interpretation_notes": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "knowledge_base_version": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

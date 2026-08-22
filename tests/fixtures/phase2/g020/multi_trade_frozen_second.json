@@ -1,0 +1,37 @@
+{
+  "adjustment": "raw",
+  "adjustment_policy": "unadjusted",
+  "artifact_kind": "second_aggregate_event",
+  "close": "11",
+  "content_hash": "46533c12f1dc48cfdf1a1d79f982b585c584544a5d9ac810dca2fec082accef7",
+  "contributors": {
+    "hash": "bc2b777ff542ee5085053949d6dba3ae19b1c40ac31e5b4a1bf4f1d7af54993f",
+    "ids": ["201", "202"]
+  },
+  "end_at": "2026-03-09T13:30:01Z",
+  "event_hash": "46533c12f1dc48cfdf1a1d79f982b585c584544a5d9ac810dca2fec082accef7",
+  "event_id": "sec_a7a5dacb6acbc64c20e1753b2ddf1428a7df7b0956cab5f93636e125cc5be79a",
+  "execution_watermark": "2026-03-09T13:30:04Z",
+  "extensions": {
+    "adjustment": "raw",
+    "market_feed": {"coverage": "single_exchange", "feed": "iex", "provider": "alpaca", "schema_version": "0.1.0"}
+  },
+  "high": "11",
+  "low": "10",
+  "market_feed": {"coverage": "single_exchange", "feed": "iex", "provider": "alpaca", "schema_version": "0.1.0"},
+  "open": "10",
+  "parent_revision_id": null,
+  "price": "11",
+  "quality": {"codes": [], "connection_gap": false, "status": "ok"},
+  "raw_adjustment": "raw",
+  "reference_price": "11",
+  "revision_id": "sec_rev_6a86ebf6faf6b3194d687cd2b8e59357e712c3cbf685cf9762fa56aacb50f488",
+  "revision_lineage": {"parent_revision_id": null, "revision_sequence": 0},
+  "revision_sequence": 0,
+  "schema_version": "0.1.0",
+  "source": "alpaca_iex",
+  "start_at": "2026-03-09T13:30:00Z",
+  "status": "frozen",
+  "symbol": "AAPL",
+  "volume": "5"
+}

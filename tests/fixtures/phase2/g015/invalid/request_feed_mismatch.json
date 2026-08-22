@@ -1,0 +1,7 @@
+{
+  "scenario": "request_feed_mismatch",
+  "base_fixture": "valid/analysis_request.json",
+  "mutations": [{"path": "extensions.market_feed.feed", "value": "sip"}],
+  "expected_issue_codes": ["market_feed_mismatch"],
+  "expected_condition": "invalid_market_data"
+}

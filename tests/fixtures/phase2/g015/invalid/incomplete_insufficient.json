@@ -1,0 +1,13 @@
+{
+  "scenario": "incomplete_insufficient",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [
+    {"path": "bars", "operation": "truncate", "length": 3},
+    {"path": "bars[2].is_closed", "value": false},
+    {"path": "coverage.expected.end_at", "value": "2026-08-10T14:33:00Z"},
+    {"path": "coverage.actual.end_at", "value": "2026-08-10T14:33:00Z"},
+    {"path": "analysis_as_of", "value": "2026-08-10T14:33:00Z"}
+  ],
+  "expected_issue_codes": ["insufficient_history", "incomplete_last_bar_excluded"],
+  "expected_condition": "incomplete_final_bar_insufficient"
+}

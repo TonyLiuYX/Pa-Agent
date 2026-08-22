@@ -1,0 +1,7 @@
+{
+  "scenario": "duplicate_bars",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "bars", "operation": "duplicate", "index": 1}],
+  "expected_issue_codes": ["duplicate_bars"],
+  "expected_condition": "duplicate_bars"
+}

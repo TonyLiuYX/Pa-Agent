@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/pa-analysis-result-0.1.0.schema.json",
+  "title": "PA analysis result v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "pa_analysis_result_id": {}, "content_hash": {}, "analysis_request_id": {}, "analysis_request_hash": {}, "market_snapshot_id": {}, "market_snapshot_hash": {}, "observation_frame_id": {}, "observation_frame_hash": {}, "evidence_package_id": {}, "evidence_package_hash": {}, "model_request_id": {}, "model_request_hash": {}, "model_response_id": {}, "model_response_hash": {}, "model_call_id": {}, "model_call_hash": {}, "engine_version": {}, "prompt_template_version": {}, "policy_version": {}, "adapter_version": {}, "status": {}, "stance": {}, "action": {}, "setups": {}, "rationales": {}, "conditions": {}, "levels": {}, "knowledge_confidence": {}, "model_confidence": {}, "analysis_uncertainty": {}, "warnings": {}, "errors": {}, "analysis_as_of": {}, "input_mode": {}, "no_live_orders": {}, "generated_at": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/analysisResult"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/processing_issues-0.1.0.schema.json",
+  "title": "PA processing issues v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schema_version", "knowledge_base_version", "issues"],
+  "properties": {
+    "schema_version": {"type": "string", "const": "0.1.0"}, "knowledge_base_version": {"type": "string", "minLength": 1},
+    "issues": {"type": "array", "items": {"type": "object", "additionalProperties": true, "required": ["source_id", "source_file", "status", "errors"], "properties": {"source_id": {"type": "string", "minLength": 1}, "source_file": {"type": "string", "minLength": 1}, "status": {"enum": ["success", "partial", "failed"]}, "errors": {"type": "array", "items": {"type": "string"}}}}}
+  }
+}

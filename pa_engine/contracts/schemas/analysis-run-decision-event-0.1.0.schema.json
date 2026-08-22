@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/analysis-run-decision-event-0.1.0.schema.json",
+  "title": "Analysis run decision event v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "decision_event_id": {}, "content_hash": {}, "idempotency_key": {}, "event_type": {}, "mode": {}, "stream": {}, "data_origin": {}, "synthetic": {}, "recorded_at": {}, "decision_as_of": {}, "instrument": {}, "timeframe": {}, "session": {}, "input_mode": {}, "lineage": {}, "final_status": {}, "action": {}, "no_live_orders": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/decisionEvent"
+}

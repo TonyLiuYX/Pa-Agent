@@ -1,0 +1,13 @@
+{
+  "scenario": "partial_coverage",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [
+    {"path": "bars", "operation": "drop", "index": 4},
+    {"path": "coverage.status", "value": "partial"},
+    {"path": "coverage.missing_intervals", "value": [{"start_at": "2026-08-10T14:34:00Z", "end_at": "2026-08-10T14:35:00Z"}]},
+    {"path": "quality.status", "value": "partial"},
+    {"path": "quality.codes", "value": ["partial_data"]}
+  ],
+  "expected_issue_codes": ["partial_data"],
+  "expected_condition": "partial_coverage_disallowed"
+}

@@ -1,0 +1,30 @@
+{
+  "registry_version": "0.1.0",
+  "snapshot_algorithm": "g016.manifest-chunks-records.v1",
+  "snapshot_version": "0.1.0",
+  "snapshot_hash": "fb71f20c8f5c80fc8b96554a7d3b9eb1d328fd0ee571d9b7701a4a3d753f4b0c",
+  "snapshot_id": "kbs_fb71f20c8f5c80fc8b96554a7d3b9eb1d328fd0ee571d9b7701a4a3d753f4b0c",
+  "strategies": [
+    {"strategy_id": "pa:nanqiao-always-in-breakout-scalp", "record_id": "nanqiao-always-in-breakout-scalp", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-always-in-ema20", "record_id": "nanqiao-always-in-ema20", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-always-in-opposite-1", "record_id": "nanqiao-always-in-opposite-1", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-always-in-third-bar", "record_id": "nanqiao-always-in-third-bar", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-breakout-failure-breakout", "record_id": "nanqiao-breakout-failure-breakout", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-h2-l2", "record_id": "nanqiao-h2-l2", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-key-level-reversal", "record_id": "nanqiao-key-level-reversal", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-point3-limit", "record_id": "nanqiao-point3-limit", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-range-extreme-limit", "record_id": "nanqiao-range-extreme-limit", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-trapped-pullback", "record_id": "nanqiao-trapped-pullback", "supplemental_record_ids": []},
+    {"strategy_id": "pa:nanqiao-trend-50-pullback", "record_id": "nanqiao-trend-50-pullback", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-caveman", "record_id": "rose-caveman", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-flag-pullback", "record_id": "rose-flag-pullback", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-fofs-swing", "record_id": "rose-fofs-swing", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-gap-bar", "record_id": "rose-gap-bar", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-missed-trend", "record_id": "rose-missed-trend", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-mother-bar", "record_id": "rose-mother-bar", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-mother-bar-scalp", "record_id": "rose-mother-bar-scalp", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-mtr", "record_id": "rose-mtr", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-range-breakout", "record_id": "rose-range-breakout", "supplemental_record_ids": []},
+    {"strategy_id": "pa:rose-three-pushes", "record_id": "rose-three-pushes", "supplemental_record_ids": []}
+  ]
+}

@@ -1,0 +1,94 @@
+[
+  {
+    "category": "breakout",
+    "query": "突破 失败 K14 止损 盈亏比 结构目标",
+    "expected_record_ids": ["nanqiao-breakout-failure-breakout"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-breakout-failure-breakout",
+        "statement": "图示止损:K14 高点"
+      },
+      {
+        "record_id": "nanqiao-breakout-failure-breakout",
+        "statement": "失败的失败图示止盈方法一:固定盈亏比 1:1、1:2"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-breakout-failure-breakout",
+        "chunk_id": "nanqiao-checklist:page-04-semantic",
+        "page_start": 4,
+        "page_end": 4
+      }
+    ]
+  },
+  {
+    "category": "limit",
+    "query": "Point 3 宽通道 当日平均波动 两种止损",
+    "expected_record_ids": ["nanqiao-point3-limit"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-point3-limit",
+        "statement": "止损方法一:根据止盈点数确定止损点数,做 1:1 盈亏比"
+      },
+      {
+        "record_id": "nanqiao-point3-limit",
+        "statement": "止盈:根据当日平均波动幅度,决定止盈多少点"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-point3-limit",
+        "chunk_id": "nanqiao-checklist:page-08-semantic",
+        "page_start": 8,
+        "page_end": 8
+      }
+    ]
+  },
+  {
+    "category": "always_in",
+    "query": "Always in EMA20 K35 ATR 5 个点",
+    "expected_record_ids": ["nanqiao-always-in-ema20"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-always-in-ema20",
+        "statement": "图示 EMA20:在 EMA20 处提前挂限价单做空,后由 K35 成交"
+      },
+      {
+        "record_id": "nanqiao-always-in-ema20",
+        "statement": "图示止盈:根据 ATR 数值,固定止盈 5 个点"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-always-in-ema20",
+        "chunk_id": "nanqiao-checklist:page-14-semantic",
+        "page_start": 14,
+        "page_end": 14
+      }
+    ]
+  },
+  {
+    "category": "always_in",
+    "query": "Always in 逆1 K18 scalp 5 个点",
+    "expected_record_ids": ["nanqiao-always-in-opposite-1"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-always-in-opposite-1",
+        "statement": "图示强势 scalp:在 K18 高点挂限价单做空"
+      },
+      {
+        "record_id": "nanqiao-always-in-opposite-1",
+        "statement": "图示结果:顺利止盈 5 个点"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-always-in-opposite-1",
+        "chunk_id": "nanqiao-checklist:page-13-semantic",
+        "page_start": 13,
+        "page_end": 13
+      }
+    ]
+  }
+]

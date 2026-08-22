@@ -1,0 +1,6 @@
+{
+  "schema_version": "0.1.0",
+  "provider": "alpaca",
+  "feed": "iex",
+  "coverage": "single_exchange"
+}

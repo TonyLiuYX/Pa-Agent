@@ -1,0 +1,458 @@
+[
+  {
+    "query": "买入区域 / 卖出区域",
+    "expected_record_ids": ["rose-zone-buy-sell"],
+    "expected_claims": [
+      {
+        "record_id": "rose-zone-buy-sell",
+        "field": "market_context",
+        "statement": "前高处最后的多头信号K线底部到后面K线的顶部,就是卖出区域"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-zone-buy-sell",
+        "chunk_id": "rose-strategy:zones-sell",
+        "page_start": 4,
+        "page_end": 4
+      }
+    ]
+  },
+  {
+    "query": "三推的正确画法",
+    "expected_record_ids": ["rose-three-pushes"],
+    "expected_claims": [
+      {
+        "record_id": "rose-three-pushes",
+        "field": "market_context",
+        "statement": "三推的形态一推距离差不多可以达到平衡"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-three-pushes",
+        "chunk_id": "rose-strategy:three-pushes-shape",
+        "page_start": 7,
+        "page_end": 7
+      }
+    ]
+  },
+  {
+    "query": "三推情绪线",
+    "expected_record_ids": ["rose-sentiment-line"],
+    "expected_claims": [
+      {
+        "record_id": "rose-sentiment-line",
+        "field": "market_context",
+        "statement": "三推情绪线 Sentiment"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-sentiment-line",
+        "chunk_id": "rose-strategy:sentiment-definition",
+        "page_start": 10,
+        "page_end": 10
+      }
+    ]
+  },
+  {
+    "query": "Rose 幻灯片 Mother Bar 刮头皮",
+    "expected_record_ids": ["rose-mother-bar-scalp"],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar-scalp",
+        "field": "market_context",
+        "statement": "0.66到1.11是Sell Zone"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar-scalp",
+        "chunk_id": "rose-strategy:mother-bar-levels",
+        "page_start": 13,
+        "page_end": 13
+      }
+    ]
+  },
+  {
+    "query": "FOFS 失败的失败是波段",
+    "expected_record_ids": ["rose-fofs-swing"],
+    "expected_claims": [
+      {
+        "record_id": "rose-fofs-swing",
+        "field": "market_context",
+        "statement": "FOFS 失败的失败是波段"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-fofs-swing",
+        "chunk_id": "rose-strategy:fofs-construction",
+        "page_start": 16,
+        "page_end": 16
+      }
+    ]
+  },
+  {
+    "query": "区间突破与价格控制",
+    "expected_record_ids": ["rose-range-breakout"],
+    "expected_claims": [
+      {
+        "record_id": "rose-range-breakout",
+        "field": "market_context",
+        "statement": "区间突破判断方法"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-range-breakout",
+        "chunk_id": "rose-strategy:range-method",
+        "page_start": 21,
+        "page_end": 21
+      }
+    ]
+  },
+  {
+    "query": "大影线旗形回调",
+    "expected_record_ids": ["rose-flag-pullback"],
+    "expected_claims": [
+      {
+        "record_id": "rose-flag-pullback",
+        "field": "market_context",
+        "statement": "如何卖出回调并识别空头旗形"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-flag-pullback",
+        "chunk_id": "rose-strategy:flag-overview",
+        "page_start": 25,
+        "page_end": 25
+      }
+    ]
+  },
+  {
+    "query": "错过趋势后的十字星补救",
+    "expected_record_ids": ["rose-missed-trend"],
+    "expected_claims": [
+      {
+        "record_id": "rose-missed-trend",
+        "field": "market_context",
+        "statement": "在一段趋势中出现十字星"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-missed-trend",
+        "chunk_id": "rose-strategy:missed-trend-doji",
+        "page_start": 30,
+        "page_end": 30
+      }
+    ]
+  },
+  {
+    "query": "Caveman（野人）策略",
+    "expected_record_ids": ["rose-caveman"],
+    "expected_claims": [
+      {
+        "record_id": "rose-caveman",
+        "field": "market_context",
+        "statement": "Caveman 由强劲信号棒与反向触发棒组成:一方尝试突破失败,另一方完全压制并启动反转。"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-caveman",
+        "chunk_id": "rose-caveman:intro",
+        "page_start": 1,
+        "page_end": 1
+      }
+    ]
+  },
+  {
+    "query": "Gap Bar 顺势回调策略",
+    "expected_record_ids": ["rose-gap-bar"],
+    "expected_claims": [
+      {
+        "record_id": "rose-gap-bar",
+        "field": "market_context",
+        "statement": "Gap Bar 是市场力量失衡的信号。"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-gap-bar",
+        "chunk_id": "rose-gap-bar:definition",
+        "page_start": 1,
+        "page_end": 2
+      }
+    ]
+  },
+  {
+    "query": "Mother Bar（孕线）区域反转与突破",
+    "expected_record_ids": ["rose-mother-bar"],
+    "expected_claims": [
+      {
+        "record_id": "rose-mother-bar",
+        "field": "market_context",
+        "statement": "这个形态之所以重要,是因为它直观地表示市场进入了一个短暂的平衡状态或震荡区间(Trading Range)。"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mother-bar",
+        "chunk_id": "rose-mother-bar:definition-zones",
+        "page_start": 1,
+        "page_end": 2
+      }
+    ]
+  },
+  {
+    "query": "MTR（主趋势反转）失败突破与被套盘",
+    "expected_record_ids": ["rose-mtr"],
+    "expected_claims": [
+      {
+        "record_id": "rose-mtr",
+        "field": "market_context",
+        "statement": "本策略的核心在于识别那些被市场\"欺骗\"并套牢的交易者,然后利用他们平仓(止损)时产生的强大动能来获利。"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "rose-mtr",
+        "chunk_id": "rose-mtr:intro-core",
+        "page_start": 1,
+        "page_end": 1
+      }
+    ]
+  },
+  {
+    "query": "趋势回调 H2 / L2（顺大逆小）",
+    "expected_record_ids": ["nanqiao-h2-l2"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-h2-l2",
+        "field": "market_context",
+        "statement": "趋势明确 HH/HL 或 LL/LH"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-h2-l2",
+        "chunk_id": "nanqiao-checklist:page-02-semantic",
+        "page_start": 2,
+        "page_end": 2
+      }
+    ]
+  },
+  {
+    "query": "突破-失败-突破（二次突破确认）",
+    "expected_record_ids": ["nanqiao-breakout-failure-breakout"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-breakout-failure-breakout",
+        "field": "market_context",
+        "statement": "关键位发生实体突破后,第一次尝试失败"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-breakout-failure-breakout",
+        "chunk_id": "nanqiao-checklist:page-03-semantic",
+        "page_start": 3,
+        "page_end": 3
+      }
+    ]
+  },
+  {
+    "query": "关键位结构反转突破单",
+    "expected_record_ids": ["nanqiao-key-level-reversal"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-key-level-reversal",
+        "field": "market_context",
+        "statement": "支撑/阻力、均线、趋势线或通道线附近"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-key-level-reversal",
+        "chunk_id": "nanqiao-checklist:page-04-semantic",
+        "page_start": 4,
+        "page_end": 4
+      }
+    ]
+  },
+  {
+    "query": "区间前高/前低限价反转",
+    "expected_record_ids": ["nanqiao-range-extreme-limit"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-range-extreme-limit",
+        "field": "market_context",
+        "statement": "无趋势的震荡区间"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-range-extreme-limit",
+        "chunk_id": "nanqiao-checklist:page-07-semantic",
+        "page_start": 7,
+        "page_end": 7
+      }
+    ]
+  },
+  {
+    "query": "宽通道 Point 3 限价反转",
+    "expected_record_ids": ["nanqiao-point3-limit"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-point3-limit",
+        "field": "market_context",
+        "statement": "宽通道(Weak Channel)"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-point3-limit",
+        "chunk_id": "nanqiao-checklist:page-07-semantic",
+        "page_start": 7,
+        "page_end": 7
+      }
+    ]
+  },
+  {
+    "query": "趋势 50% 回调限价顺势",
+    "expected_record_ids": ["nanqiao-trend-50-pullback"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-trend-50-pullback",
+        "field": "market_context",
+        "statement": "强趋势推进段"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-trend-50-pullback",
+        "chunk_id": "nanqiao-checklist:page-09-semantic",
+        "page_start": 9,
+        "page_end": 9
+      }
+    ]
+  },
+  {
+    "query": "真突破后的回踩限价顺势（Trapped 对手盘）",
+    "expected_record_ids": ["nanqiao-trapped-pullback"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-trapped-pullback",
+        "field": "market_context",
+        "statement": "关键位真突破并站稳,一方强力推进而另一方被套"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-trapped-pullback",
+        "chunk_id": "nanqiao-checklist:page-11-semantic",
+        "page_start": 11,
+        "page_end": 11
+      }
+    ]
+  },
+  {
+    "query": "Always in：逆1失败限价单",
+    "expected_record_ids": ["nanqiao-always-in-opposite-1"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-always-in-opposite-1",
+        "field": "market_context",
+        "statement": "突破行情,Always in long/short"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-always-in-opposite-1",
+        "chunk_id": "nanqiao-checklist:page-12-semantic",
+        "page_start": 12,
+        "page_end": 12
+      }
+    ]
+  },
+  {
+    "query": "Always in：第三根未遂（Third-Bar Failure）",
+    "expected_record_ids": ["nanqiao-always-in-third-bar"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-always-in-third-bar",
+        "field": "market_context",
+        "statement": "突破行情,Always in long/short"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-always-in-third-bar",
+        "chunk_id": "nanqiao-checklist:page-13-semantic",
+        "page_start": 13,
+        "page_end": 13
+      }
+    ]
+  },
+  {
+    "query": "Always in：均线回补 EMA20",
+    "expected_record_ids": ["nanqiao-always-in-ema20"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-always-in-ema20",
+        "field": "market_context",
+        "statement": "突破行情,Always in long/short"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-always-in-ema20",
+        "chunk_id": "nanqiao-checklist:page-14-semantic",
+        "page_start": 14,
+        "page_end": 14
+      }
+    ]
+  },
+  {
+    "query": "Always in：顺势突破 scalp",
+    "expected_record_ids": ["nanqiao-always-in-breakout-scalp"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-always-in-breakout-scalp",
+        "field": "market_context",
+        "statement": "突破行情或强趋势行情"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-always-in-breakout-scalp",
+        "chunk_id": "nanqiao-checklist:page-14-semantic",
+        "page_start": 14,
+        "page_end": 14
+      }
+    ]
+  },
+  {
+    "query": "每一单的 10 秒纪律检查表",
+    "expected_record_ids": ["nanqiao-discipline-checklist"],
+    "expected_claims": [
+      {
+        "record_id": "nanqiao-discipline-checklist",
+        "field": "market_context",
+        "statement": "任何准备执行的盘中交易"
+      }
+    ],
+    "expected_citations": [
+      {
+        "record_id": "nanqiao-discipline-checklist",
+        "chunk_id": "nanqiao-checklist:page-17-semantic",
+        "page_start": 17,
+        "page_end": 17
+      }
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "scenario": "incomplete_warning_without_bar",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "quality.warnings", "value": ["incomplete_last_bar_excluded"]}],
+  "expected_issue_codes": ["incomplete_last_bar_excluded"],
+  "expected_condition": "malformed_ohlcv"
+}

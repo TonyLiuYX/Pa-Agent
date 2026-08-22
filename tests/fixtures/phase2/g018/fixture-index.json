@@ -1,0 +1,22 @@
+{
+  "schema_version": "g018-fixture-0.1.0",
+  "valid": [
+    "valid/no_entry.json",
+    "valid/immediate_long.json",
+    "valid/immediate_short.json",
+    "valid/wait_long.json",
+    "valid/wait_short.json"
+  ],
+  "invalid": [
+    "invalid/n_zero.json",
+    "invalid/x_zero.json",
+    "invalid/bool_timer.json",
+    "invalid/float_price.json",
+    "invalid/reason_multiline.json",
+    "invalid/reversed_levels.json",
+    "invalid/branch_leakage.json",
+    "invalid/second_event_mismatch.json",
+    "invalid/market_view_mismatch.json",
+    "invalid/source_not_stated_level.json"
+  ]
+}

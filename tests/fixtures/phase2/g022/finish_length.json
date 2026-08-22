@@ -1,0 +1,14 @@
+{
+  "id": "cmpl-g022-truncated",
+  "object": "chat.completion",
+  "created": 1775904000,
+  "model": "deepseek-v4-flash",
+  "choices": [
+    {
+      "index": 0,
+      "finish_reason": "length",
+      "message": {"role": "assistant", "content": "{\"schema_version\":\"0.1.0\""}
+    }
+  ],
+  "usage": {"prompt_tokens": 128, "completion_tokens": 256, "total_tokens": 384}
+}

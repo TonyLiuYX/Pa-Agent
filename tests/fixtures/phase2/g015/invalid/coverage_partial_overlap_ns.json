@@ -1,0 +1,16 @@
+{
+  "scenario": "coverage_partial_overlap_ns",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [
+    {"path": "bars", "operation": "drop", "index": 4},
+    {"path": "coverage.status", "value": "partial"},
+    {"path": "coverage.missing_intervals", "value": [
+      {"start_at": "2026-08-10T14:34:00.0000001Z", "end_at": "2026-08-10T14:34:30.000000200Z"},
+      {"start_at": "2026-08-10T14:34:00.0000002Z", "end_at": "2026-08-10T14:35:00.000000300Z"}
+    ]},
+    {"path": "quality.status", "value": "partial"},
+    {"path": "quality.codes", "value": ["partial_data"]}
+  ],
+  "expected_issue_codes": ["malformed_ohlcv", "invalid_market_data"],
+  "expected_condition": "malformed_ohlcv"
+}

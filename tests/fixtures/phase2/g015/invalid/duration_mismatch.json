@@ -1,0 +1,7 @@
+{
+  "scenario": "duration_mismatch",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "bars[12].end_at", "value": "2026-08-10T14:42:30Z"}],
+  "expected_issue_codes": ["out_of_order_bars"],
+  "expected_condition": "out_of_order_bars"
+}

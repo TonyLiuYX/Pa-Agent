@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1.0",
+  "paper_math_version": "0.1.0",
+  "initial_balance": "1000.00",
+  "scenarios": {
+    "immediate_long_tp": {"direction": "long", "entry": "100.5", "stop": "99", "target": "102", "quantity": "9.95024875", "planned_r": "1.0000", "gross_pnl": "14.925373125", "applied_pnl": "14.93", "balance_after": "1014.93", "filled_at": "2026-03-09T13:33:01Z", "closed_at": "2026-03-09T13:33:24Z", "exit_reason": "take_profit", "selected_exit": "102", "final_state": "analysis_due"},
+    "immediate_short_sl": {"direction": "short", "entry": "100.5", "stop": "101", "target": "99", "quantity": "9.95024875", "planned_r": "3.0000", "gross_pnl": "-4.975124375", "applied_pnl": "-4.98", "balance_after": "995.02", "filled_at": "2026-03-09T13:33:01Z", "closed_at": "2026-03-09T13:33:54Z", "exit_reason": "stop_loss", "selected_exit": "101", "final_state": "analysis_due"},
+    "wait_long_fill_tp": {"direction": "long", "entry": "100", "stop": "99", "target": "102", "quantity": "10.00000000", "planned_r": "2.0000", "gross_pnl": "20.00000000", "applied_pnl": "20.00", "balance_after": "1020.00", "filled_at": "2026-03-09T13:34:01Z", "closed_at": "2026-03-09T13:34:24Z", "exit_reason": "take_profit", "selected_exit": "102", "final_state": "analysis_due"},
+    "wait_short_fill_sl": {"direction": "short", "entry": "100", "stop": "101", "target": "98", "quantity": "10.00000000", "planned_r": "2.0000", "gross_pnl": "-10.00000000", "applied_pnl": "-10.00", "balance_after": "990.00", "filled_at": "2026-03-09T13:34:01Z", "closed_at": "2026-03-09T13:34:44Z", "exit_reason": "stop_loss", "selected_exit": "101", "final_state": "analysis_due"},
+    "dual_touch_stop_first": {"exit_reason": "stop_loss", "ambiguity_reason": "dual_touch_stop_first", "selected_exit": "99", "balance_after": "985.07", "final_state": "analysis_due"},
+    "no_entry_N": {"branch": "no_entry", "status": "sleeping", "next_call_after_seconds": 57, "decision_accepted_at": "2026-03-09T13:33:05Z", "due_at": "2026-03-09T13:34:02Z", "final_state": "sleeping"},
+    "wait_expiry": {"branch": "wait_for_price", "status": "expired", "scheduler_status": "analysis_due", "resolution_at": "2026-03-09T13:33:11Z", "entry_deadline": "2026-03-09T13:33:08Z", "final_state": "analysis_due"}
+  },
+  "lineage": {
+    "immediate_long_tp": {
+      "strategy_id": "pa:nanqiao-range-extreme-limit",
+      "claim_ids": [
+        "nanqiao-range-extreme-limit:invalidation_stop:1",
+        "nanqiao-range-extreme-limit:market_context:1",
+        "nanqiao-range-extreme-limit:targets_exit:1"
+      ],
+      "citation_ids": [
+        "cit_8d85c3b57ac70203899367695f1dcbba962741198248cf202ff6afafd45465ec",
+        "cit_a3c006ee12ec9be10f8e47a2fc5785440ad2139bf2423547499092d62e9dc1c7",
+        "cit_c60d04e547b6c8f9c181b7653c5ac340e82c3e4ad61ebf28b90ceb88b0472349"
+      ],
+      "market_refs": ["bar_79171e2fdbb566ea349e4e5ac923960c6dc933d3435317a0fec2163551332f0f"],
+      "candidate_id": "moc_9fd01a42536a94f9fb9a8487f3d255d9e4b6d5cb4208dae649124df1bf15f0dc",
+      "candidate_hash": "9fd01a42536a94f9fb9a8487f3d255d9e4b6d5cb4208dae649124df1bf15f0dc",
+      "profile_ref_id": "spr_d1bc217e6f78d3e0488cd5db31934cce9f722b3f85a3ff708b9f4a106582e0d3",
+      "profile_ref_hash": "d1bc217e6f78d3e0488cd5db31934cce9f722b3f85a3ff708b9f4a106582e0d3",
+      "packet_id": "spk_5d59653b979d0a0dbbbf57f078b2a823ddb2b1995e74a01dffe09178b606e3a6",
+      "packet_hash": "5d59653b979d0a0dbbbf57f078b2a823ddb2b1995e74a01dffe09178b606e3a6",
+      "evidence_package_id": "evp_b86f01d5d1ebba8b55c3dcdfbc040506a4d028d5b994ee320f3814c1723ad7c1",
+      "evidence_package_hash": "b86f01d5d1ebba8b55c3dcdfbc040506a4d028d5b994ee320f3814c1723ad7c1",
+      "market_snapshot_id": "mkt_4597ee8cbb0299433f17566eda76e0690f7ab7d5e1602be82479a63e0c678e4f",
+      "market_snapshot_hash": "4597ee8cbb0299433f17566eda76e0690f7ab7d5e1602be82479a63e0c678e4f",
+      "observation_frame_id": "obs_5b5e426591add23b903cf561e5759ce8cb424306ce9b5ba26a2754636c48ed5d",
+      "observation_frame_hash": "5b5e426591add23b903cf561e5759ce8cb424306ce9b5ba26a2754636c48ed5d",
+      "second_event_id": "sec_e3a181557a11049d0a37444e3f3a9584c6f3c56bed41f74d36bdb0dd7e99ca21",
+      "second_event_hash": "55a272ff9c73e2d069b53400c95a1de9bff8019fa568613c9a2627a9860b879e",
+      "request_semantic_hash": "ee013580a238d27b47b6bb16b24777b0485ef2b09ad2bfe651ee2f23b2151c50",
+      "event_hashes": {
+        "model_decision_accepted": "327df12fa6409a3c863036500cbb1d2ac748e438661ac35c652d5b4414b98d7c",
+        "paper_fill": "58b24deb2be948ddc23eb7fe64242caa44530e81ec3503485eb9e13b6bcc54cb",
+        "paper_close": "2ebdd01dd16a254992dd03e13c8270dd353234014436c7644ffad855116b853a"
+      },
+      "event_timestamps": {
+        "model_decision_accepted": "2026-03-09T13:33:05Z",
+        "paper_fill": "2026-03-09T13:33:05Z",
+        "paper_close": "2026-03-09T13:33:25Z"
+      },
+      "state_transitions": [
+        ["analysis_due", "market_wait", "market_not_ready"],
+        ["market_wait", "analysis_due", "market_ready"],
+        ["analysis_due", "analyzing", "job_claimed"],
+        ["analyzing", "open_position", "immediate_open_accepted"],
+        ["open_position", "analysis_due", "position_closed"]
+      ]
+    }
+  },
+  "independent_authored": true,
+  "volatile_telemetry_excluded": ["run_id", "provider_workers_alive", "provider_pending_results", "latency_ms", "provider_request_id"]
+}

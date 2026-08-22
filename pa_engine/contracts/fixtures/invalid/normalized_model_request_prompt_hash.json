@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "normalized_model_request",
+  "extensions": {},
+  "correlation_id": "corr-g014-001",
+  "provider": "offline",
+  "model": "fixture-model",
+  "adapter": "fixture-adapter-0.1.0",
+  "requested_capabilities": [
+    "structured_json"
+  ],
+  "prompt_template_version": "g014-prompt-0.1.0",
+  "prompt_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "context_refs": {
+    "analysis_request_id": "arq_c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+    "analysis_request_hash": "c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+    "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+    "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+    "observation_frame_id": "obs_0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+    "observation_frame_hash": "0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+    "evidence_package_id": "evp_ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+    "evidence_package_hash": "ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e"
+  },
+  "response_schema_version": "0.1.0",
+  "instructions": "Return only normalized PA candidate JSON.",
+  "context_text": "AAPL MTR evidence-backed fixture.",
+  "parameters": {
+    "temperature": "0",
+    "max_output_tokens": 256
+  },
+  "content_hash": "8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9",
+  "model_request_id": "mrq_8fe1e021cbe8630fa55ffe685e0d2ba11db0eec14fb9cf0e752114aa950dfdf9"
+}

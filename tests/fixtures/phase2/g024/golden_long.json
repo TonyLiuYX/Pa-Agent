@@ -1,0 +1,14 @@
+{
+  "paper_math_version": "0.1.0",
+  "direction": "long",
+  "balance_before": "1000.00",
+  "entry_price": "3",
+  "stop_price": "2",
+  "target_price": "5",
+  "quantity": "333.33333333",
+  "planned_r": "2.0000",
+  "exit_price": "5",
+  "gross_pnl": "666.66666666",
+  "applied_pnl": "666.67",
+  "closing_balance": "1666.67"
+}

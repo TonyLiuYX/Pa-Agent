@@ -1,0 +1,195 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "market_snapshot",
+  "extensions": {
+    "market_feed": {
+      "schema_version": "0.1.0",
+      "provider": "alpaca",
+      "feed": "iex",
+      "coverage": "single_exchange"
+    }
+  },
+  "input_mode": "ohlcv",
+  "instrument": {
+    "asset_class": "us_equity",
+    "symbol": "AAPL",
+    "venue": "NASDAQ",
+    "currency": "USD"
+  },
+  "timeframe": {
+    "unit": "minute",
+    "multiplier": 1
+  },
+  "session": {
+    "kind": "regular",
+    "timezone": "America/New_York"
+  },
+  "adjustment_policy": "unadjusted",
+  "analysis_as_of": "2026-08-10T14:43:00Z",
+  "coverage": {
+    "expected": {
+      "start_at": "2026-08-10T14:30:00Z",
+      "end_at": "2026-08-10T14:43:00Z"
+    },
+    "actual": {
+      "start_at": "2026-08-10T14:30:00Z",
+      "end_at": "2026-08-10T14:43:00Z"
+    },
+    "status": "complete",
+    "missing_intervals": []
+  },
+  "bars": [
+    {
+      "bar_id": "bar_874b489b95091ec3d0390b2f3335e87d0539c0d16bdee3d4493f90e99bb29d29",
+      "start_at": "2026-08-10T14:30:00Z",
+      "end_at": "2026-08-10T14:31:00Z",
+      "open": "100",
+      "high": "102",
+      "low": "99",
+      "close": "101",
+      "volume": "1000",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_084e9d0905f018e7e3e63fce74f1056375c7f335abea06f76b39a5afbb278215",
+      "start_at": "2026-08-10T14:31:00Z",
+      "end_at": "2026-08-10T14:32:00Z",
+      "open": "101",
+      "high": "101.5",
+      "low": "100.5",
+      "close": "101",
+      "volume": "1100",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_31c5abccf8a27f136a9fda25a172bd6b2192e474a3de29e6f1ee0a13bcb4479c",
+      "start_at": "2026-08-10T14:32:00Z",
+      "end_at": "2026-08-10T14:33:00Z",
+      "open": "101",
+      "high": "104",
+      "low": "100",
+      "close": "103",
+      "volume": "1200",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_a6a9869eb6fb8634e14acf2c83e5698d30ad25eb6c9193ef7e762cc0b4fbe258",
+      "start_at": "2026-08-10T14:33:00Z",
+      "end_at": "2026-08-10T14:34:00Z",
+      "open": "105",
+      "high": "106",
+      "low": "103",
+      "close": "104",
+      "volume": "1300",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_d799f682847fdee331951ed008418e91769cc24bcc2b7310942f4936d3d320dc",
+      "start_at": "2026-08-10T14:34:00Z",
+      "end_at": "2026-08-10T14:35:00Z",
+      "open": "104",
+      "high": "105",
+      "low": "103",
+      "close": "104",
+      "volume": "1400",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_93fa376d9dc6de2620108699c87c4b8dc6f2804aa370e56e46210b1012d14cfa",
+      "start_at": "2026-08-10T14:35:00Z",
+      "end_at": "2026-08-10T14:36:00Z",
+      "open": "104",
+      "high": "105",
+      "low": "101",
+      "close": "102",
+      "volume": "1500",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_f7697e9933584a385fd91bc10ff15b2fda809547cd29d060033726edade5230a",
+      "start_at": "2026-08-10T14:36:00Z",
+      "end_at": "2026-08-10T14:37:00Z",
+      "open": "102",
+      "high": "104",
+      "low": "102",
+      "close": "103",
+      "volume": "1600",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_2a0c3e8108d1adbfeebecb0218f939aef8d150de2c75c32201715ee11161e12a",
+      "start_at": "2026-08-10T14:37:00Z",
+      "end_at": "2026-08-10T14:38:00Z",
+      "open": "103",
+      "high": "104",
+      "low": "100",
+      "close": "101",
+      "volume": "1700",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_65dde8d1239f2f22faad0487ff61ac952bec47bb8d4215eca6b2d3e357f1f0be",
+      "start_at": "2026-08-10T14:38:00Z",
+      "end_at": "2026-08-10T14:39:00Z",
+      "open": "101",
+      "high": "103",
+      "low": "101",
+      "close": "102",
+      "volume": "1800",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_f7e07e913c51f18bf78f2d503376d2db0a5462ceee528eac3df6838bf3856af7",
+      "start_at": "2026-08-10T14:39:00Z",
+      "end_at": "2026-08-10T14:40:00Z",
+      "open": "105",
+      "high": "106",
+      "low": "104",
+      "close": "104",
+      "volume": "1900",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_e0f2af8f8d459a36b6641c31a0cf1f63f49bbae34212806be17b59cbcdc71e54",
+      "start_at": "2026-08-10T14:40:00Z",
+      "end_at": "2026-08-10T14:41:00Z",
+      "open": "104",
+      "high": "106",
+      "low": "104",
+      "close": "106",
+      "volume": "2000",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_fb36c40d2ab5e8f51f3cf062bf4c5f7dd948b10cdf3407311d91e245807a9db8",
+      "start_at": "2026-08-10T14:41:00Z",
+      "end_at": "2026-08-10T14:42:00Z",
+      "open": "106",
+      "high": "107",
+      "low": "105",
+      "close": "105",
+      "volume": "2100",
+      "is_closed": true
+    },
+    {
+      "bar_id": "bar_53409f580f2b621245660bcc9058333c4b1a58bcb30c085479b3bab81e6db038",
+      "start_at": "2026-08-10T14:42:00Z",
+      "end_at": "2026-08-10T14:43:00Z",
+      "open": "104",
+      "high": "104",
+      "low": "103",
+      "close": "103",
+      "volume": "2200",
+      "is_closed": true
+    }
+  ],
+  "quality": {
+    "status": "ok",
+    "codes": [],
+    "warnings": [],
+    "details": null
+  },
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "9e17c5d051f94b49053521b481b12927236bfad6788b24e6dd74a2331543d76a",
+  "market_snapshot_id": "mkt_9e17c5d051f94b49053521b481b12927236bfad6788b24e6dd74a2331543d76a"
+}

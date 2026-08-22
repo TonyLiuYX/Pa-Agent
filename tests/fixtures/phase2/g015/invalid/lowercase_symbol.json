@@ -1,0 +1,7 @@
+{
+  "scenario": "lowercase_symbol",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "instrument.symbol", "value": "aapl"}],
+  "expected_issue_codes": ["schema_violation"],
+  "expected_condition": "malformed_ohlcv"
+}

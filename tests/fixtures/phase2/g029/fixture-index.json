@@ -1,0 +1,12 @@
+{
+  "name": "g029-offline-paper-evaluation",
+  "schema_version": "0.1.0",
+  "description": "Recorded Alpaca IEX history/trades and independently authored G029 evaluation goldens.",
+  "network": false,
+  "credentials": false,
+  "entries": [
+    {"path": "recorded_market.json", "kind": "alpaca_iex_history_and_trades"},
+    {"path": "goldens.json", "kind": "offline_evaluation_goldens"},
+    {"path": "coverage-matrix.json", "kind": "acceptance_matrix"}
+  ]
+}

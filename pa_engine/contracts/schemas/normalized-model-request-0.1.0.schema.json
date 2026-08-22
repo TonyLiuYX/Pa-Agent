@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/normalized-model-request-0.1.0.schema.json",
+  "title": "Normalized model request v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "model_request_id": {}, "content_hash": {}, "correlation_id": {}, "provider": {}, "model": {}, "adapter": {}, "requested_capabilities": {}, "prompt_template_version": {}, "prompt_hash": {}, "context_refs": {}, "response_schema_version": {}, "instructions": {}, "context_text": {}, "parameters": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/normalizedModelRequest"
+}

@@ -1,0 +1,10 @@
+{
+  "scenario": "quality_invalid",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [
+    {"path": "quality.status", "value": "invalid"},
+    {"path": "quality.codes", "value": ["invalid_market_data"]}
+  ],
+  "expected_issue_codes": ["invalid_market_data"],
+  "expected_condition": "malformed_ohlcv"
+}

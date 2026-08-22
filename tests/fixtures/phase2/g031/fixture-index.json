@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1.0",
+  "goal": "G031",
+  "entries": [
+    {"path": "response_success.json", "kind": "official_responses_success"},
+    {"path": "response_fast.json", "kind": "official_responses_fast_effective_tier"},
+    {"path": "response_incomplete.json", "kind": "official_responses_incomplete"}
+  ]
+}

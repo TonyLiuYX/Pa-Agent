@@ -1,0 +1,22 @@
+{
+  "goal": "G032",
+  "fixture_version": "0.1.0",
+  "presentation": "presentation_fixture.json",
+  "closed_bar_count": 63,
+  "states": [
+    "analysis_due",
+    "analyzing",
+    "sleeping",
+    "waiting_entry",
+    "open_position",
+    "tp_close",
+    "sl_close",
+    "market_wait",
+    "blocked"
+  ],
+  "secrets": {
+    "model_key": "G032_MODEL_CANARY_7f3c",
+    "alpaca_key_id": "G032_ALPACA_ID_CANARY_9a1d",
+    "alpaca_secret_key": "G032_ALPACA_SECRET_CANARY_4b8e"
+  }
+}

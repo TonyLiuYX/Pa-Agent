@@ -1,0 +1,7 @@
+{
+  "scenario": "fresh_stale_quality",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "quality.codes", "value": ["stale_data"]}],
+  "expected_issue_codes": ["stale_data"],
+  "expected_condition": "malformed_ohlcv"
+}

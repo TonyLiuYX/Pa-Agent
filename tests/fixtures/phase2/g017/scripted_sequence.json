@@ -1,0 +1,20 @@
+[
+  {
+    "status": "no_trade",
+    "stance": "neutral",
+    "action": "none",
+    "setups": [],
+    "rationales": [],
+    "conditions": [],
+    "levels": [],
+    "model_confidence": null,
+    "uncertainty": {
+      "level": "low",
+      "codes": [],
+      "details": "G017 deterministic JSON fixture"
+    },
+    "extensions": {}
+  },
+  "timeout",
+  "authentication"
+]

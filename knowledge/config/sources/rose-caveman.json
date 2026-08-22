@@ -1,0 +1,371 @@
+{
+  "source_id": "rose-caveman",
+  "document_spec": {
+    "file_name": "价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf",
+    "title": "Rose 的 Caveman（野人）策略",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "chunk_specs": [
+      {
+        "key": "intro",
+        "pages": [1, 1],
+        "title_path": ["Caveman", "引言与来源边界"],
+        "kind": "concept",
+        "boundary_reason": "封面引言说明失败趋势突破反转和 Discord 整理来源，作为后续规则的文档上下文。",
+        "visual_notes": "页面 1 含策略封面图；保留其图像页引用，不把装饰性封面误当成规则。"
+      },
+      {
+        "key": "p2-core-visual",
+        "pages": [2, 2],
+        "title_path": ["Caveman", "p2 原始规则图片与核心逻辑"],
+        "kind": "setup",
+        "boundary_reason": "p2 的 Discord 图片规则与正文二棒定义共同给出时序、目标、背景过滤和入场方式；视觉转录不能拆离该页文字。",
+        "visual_notes": "视觉转录（p2 图片，规则以做多为例）：左侧有一个强势阴线，体积要中等大小以上，上下影线要短；多头强势突破左侧阴线的开盘价，并收在开盘价以上；突破K和左侧的阴线之间最多间隔2根K线，多于2根就不是Caveman模式了；This will give you most of the time 2R targets；如果在DT或Wedge Top的位置出现这一模式，胜率会更高；止盈：大概率去到2R；注意：强趋势中Caveman大概率会失败，最好出现在二次入场位置；顺势做Caveman成功率比较高；入场位置：收盘价位置和突破左侧K线的开盘价位置（pullback to breakout）；处于第二推中的Caveman容易失败；在均线附近的Caveman容易失败，比如在均线上方做空；多头Caveman入场点处于TR上沿或空头Caveman入场点处于TR下沿，均容易失败。EMA 仅作为“均线”的检索别名，原文未给出具体周期。图中另有英文 Discord 原话：a certain type of bar has to close above a certain type of bar to start the reversal；if you cannot recognize that you should not be trading reversals。"
+      },
+      {
+        "key": "bearish-rules",
+        "pages": [3, 3],
+        "title_path": ["Caveman", "看跌规则与风险回报"],
+        "kind": "setup",
+        "boundary_reason": "看跌信号棒、触发棒、三种入场、上三分之一补救、HR/1R 止盈和信号棒高点止损在同页形成完整条件链。",
+        "visual_notes": "页面 3 图表标出看跌触发箭头、TR/RR 测量、stop 和目标线；文字规则与图示同时保留。"
+      },
+      {
+        "key": "bullish-rules",
+        "pages": [4, 4],
+        "title_path": ["Caveman", "看涨规则与背景为王"],
+        "kind": "setup",
+        "boundary_reason": "看涨对称规则、弱信号棒无效边界和背景为王总结均在同页，不能只保留多空一侧。",
+        "visual_notes": "页面 4 图表标出看涨箭头、止损和目标区域；页面底部承接无效案例说明。"
+      },
+      {
+        "key": "invalid-signal-case",
+        "pages": [5, 5],
+        "title_path": ["Caveman", "弱信号棒无效案例与复盘开始"],
+        "kind": "exception",
+        "boundary_reason": "bar 51/52 的弱信号棒无效案例和总结收束了规则，页面底部同时给出案例一标题；保留为独立过滤上下文。",
+        "visual_notes": "页面 5 图表标出 bar 51/52 和弱信号棒；底部是 2025-06-11 复盘及案例一标题。",
+        "page_excerpts": {
+          "5": [
+            "在上图中,有交易者尝试在 bar 52 进行看涨 Caveman 交易。然而,Rose 指出这是一个糟糕的交易,因为它的信号棒(bar 51)非常疲弱,并没有显示出空头强力打压的意图。没有强力的失败,就不会有强力的反转。",
+            "因此,在运用此策略时,必须优先过滤掉那些信号棒不够强劲的形态。"
+          ]
+        }
+      },
+      {
+        "key": "case-1",
+        "pages": [5, 6],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例一｜Caveman 1 看涨"],
+        "kind": "example",
+        "boundary_reason": "案例一标题在 p5，B5 分析/入场/目标在 p6；跨页关联标题与后页分析，不混入其他案例。",
+        "visual_notes": "p5 底部标题 + p6 上方 ES 图表和 B5 文字；回调至区间入场在该案例明确不适用。",
+        "page_excerpts": {
+          "5": ["案例一:Caveman 1 - 看涨 (Bullish)"],
+          "6": [
+            "分析:B5 作为触发棒,强势收盘于信号棒 B4 之上,形成看涨信号。",
+            "入场点:",
+            "在 B5 收盘时买入。",
+            "在 B5 上方挂单买入。",
+            "(回调至区间的入场方式在此处不适用)。",
+            "目标:1R 和 2R。"
+          ]
+        }
+      },
+      {
+        "key": "case-2",
+        "pages": [6, 7],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例二｜Caveman 2 看跌"],
+        "kind": "example",
+        "boundary_reason": "案例二标题/图表在 p6，B20/B22 分析在 p7；保留回调至突破区的方向与触发。",
+        "visual_notes": "p6 下半图和 p7 顶部文字共同标出 B20、B22、R7。",
+        "page_excerpts": {
+          "6": ["案例二:Caveman 2 - 看跌 (Bearish)"],
+          "7": [
+            "分析:B20 作为触发棒,强势收盘于强力阳线信号棒 B19 之下,形成看跌信号。B22 提供了回调至突破区的入场机会。",
+            "入场点:",
+            "在 B20 收盘时做空。",
+            "在 B20 下方一 tick 挂单做空。",
+            "利用 B22 回调至突破点时做空。",
+            "目标:R7。"
+          ]
+        }
+      },
+      {
+        "key": "case-3",
+        "pages": [7, 7],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例三｜Caveman 3 看跌"],
+        "kind": "example",
+        "boundary_reason": "案例三标题、B24 二次触发/回调 B25 和 R4 分析均在 p7，单独建立二次入场子 chunk。",
+        "visual_notes": "p7 中部 ES 图表标出 B22 回调后 B24/B25；二次入场与案例二分开引用。",
+        "page_excerpts": {
+          "7": [
+            "案例三:Caveman 3 - 看跌 (Bearish)",
+            "分析:在 B22 的回调之后,B24 再次成为触发棒,收盘于 B23 之下,提供了二次入场机会。",
+            "在 B24 收盘时做空。",
+            "在 B24 下方挂单做空。",
+            "利用 B25 回调至突破点时做空。",
+            "目标:R4。"
+          ]
+        }
+      },
+      {
+        "key": "case-4",
+        "pages": [7, 8],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例四｜Caveman 4 看跌"],
+        "kind": "example",
+        "boundary_reason": "案例四标题在 p7，B30/B31 分析和 R3 在 p8；跨页只关联本案例。",
+        "visual_notes": "p7 底部标题 + p8 图表/文字，触发与回调均为看跌。",
+        "page_excerpts": {
+          "7": ["案例四:Caveman 4 - 看跌 (Bearish)"],
+          "8": [
+            "分析:B30 触发了又一个看跌信号,B31 提供了回调入场的机会。",
+            "入场点:",
+            "在 B30 收盘时做空。",
+            "在 B30 下方挂单做空。",
+            "利用 B31 回调至突破点时做空。",
+            "目标:R3。"
+          ]
+        }
+      },
+      {
+        "key": "case-5",
+        "pages": [8, 9],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例五｜Caveman 5 看涨"],
+        "kind": "example",
+        "boundary_reason": "案例五标题在 p8，B36/B38/B39 分析和 2R 在 p9；独立保留多次回调买入。",
+        "visual_notes": "p8 底部标题 + p9 ES 图表/文字标出 B36 及 B38、B39 回调。",
+        "page_excerpts": {
+          "8": ["案例五:Caveman 5 - 看涨 (Bullish)"],
+          "9": [
+            "分析:B36 强势收盘,形成看涨信号,随后的 B38 和 B39 提供了回调买入的机会。",
+            "入场点:",
+            "在 B36 收盘时买入。",
+            "在 B36 上方挂单买入。",
+            "利用 B38 或 B39 的回调买入。",
+            "目标:2R。"
+          ]
+        }
+      },
+      {
+        "key": "case-6",
+        "pages": [9, 10],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例六｜Caveman 6 看跌"],
+        "kind": "example",
+        "boundary_reason": "案例六标题在 p9，B49 无需回调分析和 4R 在 p10；不与 p11 的替代测量/案例七混合。",
+        "visual_notes": "p9 底部标题 + p10 图表/文字标出 B48/B49、无需等待回调和 4R。",
+        "page_excerpts": {
+          "9": ["案例六:Caveman 6 - 看跌 (Bearish)"],
+          "10": [
+            "分析:B49 收盘于强阳线 B48 之下,形成看跌信号。这是一个无需等待回调即可入场的例子。",
+            "入场点:",
+            "在 B49 收盘时做空。",
+            "在 B49 下方挂单做空。",
+            "目标:4R。"
+          ]
+        }
+      },
+      {
+        "key": "case-7",
+        "pages": [11, 12],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例七｜Caveman 7 看涨"],
+        "kind": "example",
+        "boundary_reason": "p11 先给 B43 更强信号棒的替代测量和案例七标题，p12 给 B59/B61/1.5R 分析；二者均属于该案例的跨页图文。",
+        "visual_notes": "p11 图表与备选方案、p12 图表/文字共同定位 B43、B59、B61；50% 回调为加仓/二次入场。",
+        "page_excerpts": {
+          "11": [
+            "案例七:Caveman 7 - 看涨 (Bullish)",
+            "备选方案:如上图所示,如果以更强的信号棒 B43 作为基准来重新测量,可以获得更优的目标位,尤其是在趋势延续的情况下。"
+          ],
+          "12": [
+            "分析:B59 作为触发棒,强势收盘。B61 回调至整个价格波动区间的 50% 位置,提供了绝佳的加仓或二次入场点。",
+            "入场点:",
+            "在 B59 收盘时买入。",
+            "在 B59 上方挂单买入。",
+            "在 B61 回调至区间 50% 位置时买入。",
+            "目标:1.5R。"
+          ]
+        }
+      },
+      {
+        "key": "case-8",
+        "pages": [12, 13],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例八｜Caveman 8 看跌"],
+        "kind": "example",
+        "boundary_reason": "案例八标题在 p12，B65 无需回调的看跌分析和 3R 在 p13；保持方向与触发独立。",
+        "visual_notes": "p12 底部标题 + p13 图表/文字标出 B65、下方挂单和 3R。",
+        "page_excerpts": {
+          "12": ["案例八:Caveman 8 - 看跌 (Bearish)"],
+          "13": [
+            "分析:B65 触发了一个无需等待回调的看跌信号。",
+            "入场点:",
+            "在 B65 收盘时做空。",
+            "在 B65 下方挂单做空。",
+            "目标:3R。"
+          ]
+        }
+      },
+      {
+        "key": "case-9",
+        "pages": [13, 14],
+        "title_path": ["Caveman", "2025-06-11 实战案例", "案例九｜Caveman 9 看涨"],
+        "kind": "example",
+        "boundary_reason": "案例九标题在 p13，B74/B75/B76/B77 分析和 1.5R 在 p14；只关联本案例连续三次回调。",
+        "visual_notes": "p13 底部标题 + p14 图表/文字标出 B74 及 B75、B76、B77 回调至突破区。",
+        "page_excerpts": {
+          "13": ["案例九:Caveman 9 - 看涨 (Bullish)"],
+          "14": [
+            "分析:B74 触发看涨信号后,市场连续给出了 B75, B76, B77 三次回调至突破区的机会。",
+            "入场点:",
+            "在 B74 收盘时买入。",
+            "在 B74 上方挂单买入。",
+            "利用 B75, B76 或 B77 的回调买入。",
+            "目标:1.5R。"
+          ]
+        }
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "rose-caveman",
+      "type": "setup",
+      "name": "Caveman（野人）策略",
+      "aliases": ["Caveman Setup", "野人", "Signal Bar + Trigger Bar", "Caveman reversal"],
+      "tags": ["Rose", "失败突破", "反转", "scalp", "HR", "1R", "2R", "第二推", "均线", "TR边缘", "二次入场", "顺势", "DT", "Wedge Top"],
+      "chunk_keys": ["intro", "p2-core-visual", "bearish-rules", "bullish-rules", "invalid-signal-case", "case-1", "case-2", "case-3", "case-4", "case-5", "case-6", "case-7", "case-8", "case-9"],
+      "direction": ["long", "short"],
+      "timeframes": ["短线剥头皮；来源示例为 2025-06-11 日内 ES K 线"],
+      "market_context": [
+        {"statement": "Caveman 由强劲信号棒与反向触发棒组成：一方尝试突破失败，另一方完全压制并启动反转。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"]},
+        {"statement": "触发棒紧随信号棒之后，并完全逆转信号棒的努力、收盘超越信号棒边界。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"]},
+        {"statement": "如果在DT或Wedge Top的位置出现这一模式，胜率会更高。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2, "visual_locator": "p2 图片 Wedge Top 位置标注"},
+        {"statement": "顺势做Caveman成功率比较高。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "看跌背景是多头尝试向上突破失败；看涨背景是空头尝试向下突破失败。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual", "bullish-rules"]}
+      ],
+      "prerequisites": [
+        {"statement": "左侧有一个强势阴线，实体要中等大小以上，上下影线要短。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "多头强势突破左侧阴线的开盘价，并收在开盘价以上。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "触发棒紧随信号棒之后。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"]},
+        {"statement": "突破K和左侧的阴线之间最多间隔2根K线，多于2根就不是Caveman模式了。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "看跌信号棒必须是强劲阳线，实体较大，收盘价接近最高点。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "看涨信号棒必须是强劲阴线，实体较大，收盘价接近最低点；弱阴线如十字星不是好的信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]}
+      ],
+      "recognition_features": [
+        {"statement": "信号棒的强度是决定性因素；没有强力的失败，就不会有强力的反转。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules", "invalid-signal-case"]},
+        {"statement": "强趋势中Caveman大概率会失败，最好出现在二次入场位置。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "处于第二推中的Caveman容易失败。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "在均线附近的Caveman容易失败，比如在均线上方做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "多头Caveman入场点处于TR上沿或空头Caveman入场点处于TR下沿，均容易失败。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "看跌形态为强阳线后出现收盘低于信号棒开盘价或最低价的阴线；看涨形态为强阴线后出现收盘高于信号棒开盘价或最高价的阳线。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules", "bullish-rules"]},
+        {"statement": "本记录将来源 p2 的“均线”作为 EMA 检索别名；来源未给出具体周期。", "declaration_type": "derived_interpretation", "rationale": "p2 图片写均线而未写 EMA 周期；该别名只服务检索，不新增指标规则。", "supporting_chunk_keys": ["p2-core-visual"]}
+      ],
+      "trigger": [
+        {"statement": "看跌触发棒必须是阴线，收盘低于信号棒阳线的开盘价或最低价。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "看涨触发棒必须是阳线，收盘高于信号棒阴线的开盘价或最高价。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]},
+        {"statement": "触发棒收盘完成反向穿越，突破K与左侧K线最多间隔2根K。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "案例一看涨：B5作为触发棒强势收盘于信号棒B4之上，形成看涨信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-1"]},
+        {"statement": "案例二看跌：B20作为触发棒强势收盘于强力阳线信号棒B19之下，形成看跌信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-2"]},
+        {"statement": "案例三看跌：B22回调之后，B24再次成为触发棒，收盘于B23之下，提供二次入场。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-3"]},
+        {"statement": "案例四看跌：B30触发了又一个看跌信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-4"]},
+        {"statement": "案例五看涨：B36强势收盘形成看涨信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-5"]},
+        {"statement": "案例六看跌：B49收盘于强阳线B48之下，形成看跌信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-6"]},
+        {"statement": "案例七看涨：B59作为触发棒强势收盘。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-7"]},
+        {"statement": "案例八看跌：B65触发了一个无需等待回调的看跌信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-8"]},
+        {"statement": "案例九看涨：B74触发看涨信号。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-9"]}
+      ],
+      "entry": [
+        {"statement": "在触发棒收盘时立即做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "在价格回调至突破点（信号棒低点附近）时做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "在信号棒下方一 tick 位置挂单做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "在触发棒收盘时立即做多。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]},
+        {"statement": "在价格回调至突破点（信号棒高点附近）时做多。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]},
+        {"statement": "在触发棒上方一 tick 位置挂单做多。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]},
+        {"statement": "入场方式二：价格回调至突破点，即突破左侧K线的开盘价附近（pullback to breakout）。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "案例一在B5收盘或B5上方挂单买入，回调至区间的入场方式不适用。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-1"]},
+        {"statement": "案例二在B20收盘、B20下方一tick挂单或B22回调至突破点做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-2"]},
+        {"statement": "案例三在B24收盘、B24下方挂单或B25回调至突破点做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-3"]},
+        {"statement": "案例四在B30收盘、B30下方挂单或B31回调至突破点做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-4"]},
+        {"statement": "案例五在B36收盘、B36上方挂单或B38/B39回调买入。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-5"]},
+        {"statement": "案例六在B49收盘或B49下方挂单做空，无需等待回调。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-6"]},
+        {"statement": "案例七在B59收盘、B59上方挂单或B61回调至TR 50%位置买入。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-7"]},
+        {"statement": "案例八在B65收盘或B65下方挂单做空。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-8"]},
+        {"statement": "案例九在B74收盘、B74上方挂单或B75/B76/B77回调至突破区买入。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-9"]}
+      ],
+      "invalidation_stop": [
+        {"statement": "看跌止损设置在信号棒最高点之上。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "看涨止损设置在信号棒最低点之下。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]},
+        {"statement": "入场不利时可在触发棒或测量TR的上/下三分之一处加仓/补救，但这会增加风险。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules", "bullish-rules"]}
+      ],
+      "targets_exit": [
+        {"statement": "This will give you most of the time 2R targets（p2视觉转录）。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2, "visual_locator": "p2 图片 most-of-the-time 2R targets 文字"},
+        {"statement": "止盈：大概率去到2R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "看跌规则总是在HR（Half R，即0.5R）和1R的位置进行剥头皮式止盈。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bearish-rules"]},
+        {"statement": "看涨规则同样在HR（Half R，即0.5R）和1R的位置进行剥头皮式止盈。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["bullish-rules"]},
+        {"statement": "案例一目标为1R和2R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-1"]},
+        {"statement": "案例二目标为R7。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-2"]},
+        {"statement": "案例三目标为R4。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-3"]},
+        {"statement": "案例四目标为R3。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-4"]},
+        {"statement": "案例五目标为2R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-5"]},
+        {"statement": "案例六目标为4R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-6"]},
+        {"statement": "案例七目标为1.5R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-7"]},
+        {"statement": "案例八目标为3R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-8"]},
+        {"statement": "案例九目标为1.5R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-9"]}
+      ],
+      "risk_notes": [
+        {"statement": "信号棒强度是决定性过滤条件；弱信号棒意味着潜在动能不足，应果断放弃。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["invalid-signal-case"]},
+        {"statement": "强趋势、第二推、均线附近和TR边缘的Caveman容易失败，顺势和二次入场背景较优。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2},
+        {"statement": "补救/加仓会增加风险，不能当作无风险行为。", "declaration_type": "derived_interpretation", "rationale": "p3-p4 允许在不利方向的三分之一处补救，但来源未量化其额外风险；本句仅标记该操作的风险含义。", "supporting_chunk_keys": ["bearish-rules", "bullish-rules"]}
+      ],
+      "prohibited": [
+        {"statement": "弱信号棒、十字星或无法识别反转背景时不应交易。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual", "invalid-signal-case"]},
+        {"statement": "强趋势中、第二推中、均线附近以及多头入场在TR上沿/空头入场在TR下沿时过滤掉Caveman。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["p2-core-visual"], "visual_page": 2}
+      ],
+      "exceptions": [
+        {"statement": "案例一回调至区间的入场方式在此处不适用。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-1"]},
+        {"statement": "案例六和案例八是无需等待回调即可入场的例子。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-6", "case-8"]},
+        {"statement": "案例七可用更强的信号棒B43重新测量，以在趋势延续时获得更优目标位。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-7"]}
+      ],
+      "examples": [
+        {"statement": "案例一｜Caveman 1｜看涨｜触发B5，收盘于B4之上；收盘/挂单入场，目标1R和2R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-1"], "pages": [5, 6], "direction": "long", "trigger_bars": ["B5"]},
+        {"statement": "案例二｜Caveman 2｜看跌｜触发B20，B22回调至突破区；收盘/一tick/回调入场，目标R7。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-2"], "pages": [6, 7], "direction": "short", "trigger_bars": ["B20"]},
+        {"statement": "案例三｜Caveman 3｜看跌｜B22回调后B24再次触发，B25回调二次入场，目标R4。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-3"], "pages": [7, 7], "direction": "short", "trigger_bars": ["B24"]},
+        {"statement": "案例四｜Caveman 4｜看跌｜B30触发，B31回调入场，目标R3。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-4"], "pages": [7, 8], "direction": "short", "trigger_bars": ["B30"]},
+        {"statement": "案例五｜Caveman 5｜看涨｜B36强势收盘，B38或B39回调买入，目标2R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-5"], "pages": [8, 9], "direction": "long", "trigger_bars": ["B36"]},
+        {"statement": "案例六｜Caveman 6｜看跌｜B49收盘于B48之下，无需等待回调，目标4R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-6"], "pages": [9, 10], "direction": "short", "trigger_bars": ["B49"]},
+        {"statement": "案例七｜Caveman 7｜看涨｜B59触发，B61回调至TR 50%加仓/二次入场，目标1.5R；B43为备选测量信号棒。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-7"], "pages": [11, 12], "direction": "long", "trigger_bars": ["B59", "B43"]},
+        {"statement": "案例八｜Caveman 8｜看跌｜B65无需等待回调触发，目标3R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-8"], "pages": [12, 13], "direction": "short", "trigger_bars": ["B65"]},
+        {"statement": "案例九｜Caveman 9｜看涨｜B74触发，B75/B76/B77连续三次回调至突破区，目标1.5R。", "declaration_type": "source_assertion", "supporting_chunk_keys": ["case-9"], "pages": [13, 14], "direction": "long", "trigger_bars": ["B74"]}
+      ],
+      "interpretation_notes": [
+        {"statement": "本记录保留来源同时出现的紧随/最多间隔2根K、HR/1R与most-of-the-time 2R表述，检索时并列呈现，不合成为唯一硬规则。", "declaration_type": "derived_interpretation", "rationale": "p2 图片与 p2-p4 正文/案例的原始表述粒度不同；项目不替来源解决该差异。", "supporting_chunk_keys": ["p2-core-visual", "bearish-rules", "bullish-rules", "case-1"]}
+      ],
+      "confidence": 0.96,
+      "source_id": "rose-caveman"
+    }
+  ],
+  "terminology": {
+    "terms": [
+      {"term_en": "Price Action", "term_zh": "价格行为", "aliases": ["PA"], "source_ids": ["rose-strategy", "rose-caveman", "rose-gap-bar", "rose-mother-bar", "nanqiao-checklist"], "note": "项目工作术语，不代表策略有效性结论。"},
+      {"term_en": "Caveman Setup", "term_zh": "Caveman / 野人策略", "aliases": ["野人", "Caveman"], "source_ids": ["rose-caveman"], "note": "强信号棒与更强反向触发棒组成的失败突破反转 setup。"},
+      {"term_en": "EMA / moving average context", "term_zh": "均线附近过滤", "aliases": ["EMA", "均线", "20EMA"], "source_ids": ["rose-caveman"], "note": "p2 图片只陈述均线附近容易失败；不把来源扩写为未给出的具体周期。"},
+      {"term_en": "R / Risk unit", "term_zh": "风险单位", "aliases": ["1R", "0.5R", "HR", "2R", "RR"], "source_ids": ["rose-caveman", "rose-mtr", "rose-mother-bar", "nanqiao-checklist"], "note": "R 的测量端点随来源和 setup 变化；Caveman 同时出现 HR/1R 与 most-of-the-time 2R，具体案例 R 目标原样保留。"},
+      {"term_en": "Tick", "term_zh": "最小跳动单位", "aliases": ["1 tick"], "source_ids": ["rose-caveman", "rose-mtr", "nanqiao-checklist"], "note": "入场或突破位置相对 K 线极值的最小偏移。"}
+    ],
+    "conflicts": [
+      {
+        "topic": "信号棒与触发棒的时序",
+        "sources": ["rose-caveman"],
+        "description": "同一来源并列保留两种表述：p2 正文称触发棒“紧随信号棒之后”；p2 规则图片称突破K和左侧阴线之间“最多间隔2根K线，多于2根就不是Caveman模式了”。未擅自选择或合成为单一时限。",
+        "side_a": {"label": "紧随", "statement": "触发棒紧随信号棒之后", "pages": [2], "chunk_key": "p2-core-visual", "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf pages 2 (正文)"},
+        "side_b": {"label": "最多间隔2根K", "statement": "突破K和左侧的阴线之间最多间隔2根K线，多于2根就不是Caveman模式了", "pages": [2], "chunk_key": "p2-core-visual", "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf page 2 (规则图片视觉转录)"}
+      },
+      {
+        "topic": "目标风险单位",
+        "sources": ["rose-caveman"],
+        "description": "同一来源并列保留 p2 图片的 most-of-the-time 2R/大概率2R 与 p3-p4 正文 HR(0.5R)/1R 剥头皮规则；案例也有 1R/2R、R7、R4、R3 等具体标注。检索不得静默选择一方。",
+        "side_a": {"label": "2R", "statement": "This will give you most of the time 2R targets；止盈：大概率去到2R", "pages": [2], "chunk_key": "p2-core-visual", "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf page 2 (规则图片视觉转录)"},
+        "side_b": {"label": "HR与1R", "statement": "止盈总是在HR（Half R，即0.5R）和1R的位置进行剥头皮式止盈", "pages": [3, 4], "chunk_key": "bearish-rules/bullish-rules", "source_locator": "策略/价格行为学 - Rose 的 Caveman (野人) 交易策略 - forecho's Blog.pdf pages 3-4 (正文规则)"}
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "analysis_run_decision_event",
+  "extensions": {},
+  "event_type": "analysis_decision",
+  "mode": "paper_replay",
+  "stream": "paper_replay",
+  "data_origin": "synthetic_fixture",
+  "synthetic": true,
+  "recorded_at": "2026-08-10T15:03:00Z",
+  "decision_as_of": "2026-08-10T14:45:00Z",
+  "instrument": {
+    "asset_class": "us_equity",
+    "symbol": "AAPL",
+    "venue": "NASDAQ",
+    "currency": "USD"
+  },
+  "timeframe": {
+    "unit": "minute",
+    "multiplier": 5
+  },
+  "session": {
+    "kind": "regular",
+    "timezone": "America/New_York"
+  },
+  "input_mode": "ohlcv",
+  "lineage": {
+    "market_snapshot_id": null,
+    "market_snapshot_hash": null,
+    "market_quality": {
+      "status": "invalid",
+      "codes": [
+        "invalid_market_data"
+      ],
+      "warnings": [],
+      "details": "Market validation stopped the run before provider selection."
+    },
+    "observation_frame_id": null,
+    "observation_frame_hash": null,
+    "knowledge_snapshot_id": "kbs_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "knowledge_snapshot_version": "g013.2026-08-10",
+    "knowledge_snapshot_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "engine_version": "g014-engine-0.1.0",
+    "prompt_template_version": "g014-prompt-0.1.0",
+    "policy_version": "0.1.0",
+    "adapter_version": "fixture-adapter-0.1.0",
+    "provider": "none",
+    "model": "none",
+    "analysis_request_id": "arq_c9499b7339dfc2108e525f348ed7d876ce85f446776caebb097b53533ea7f46b",
+    "analysis_request_hash": "c9499b7339dfc2108e525f348ed7d876ce85f446776caebb097b53533ea7f46b",
+    "evidence_package_id": null,
+    "evidence_package_hash": null,
+    "model_response_id": null,
+    "model_response_hash": null,
+    "analysis_result_id": "par_58db19f538058d5666cd1d3922545375eddab7f9e3888f26cedfa8303299fa6c",
+    "analysis_result_hash": "58db19f538058d5666cd1d3922545375eddab7f9e3888f26cedfa8303299fa6c"
+  },
+  "final_status": "error",
+  "action": "none",
+  "no_live_orders": true,
+  "idempotency_key": "idem_3e818e69ef5b4737e27c1d7c007a3426df4f7734ad3e94ec7c0690e2d64e4c5f",
+  "content_hash": "64ffb8d673d48e7d9f5ed48c4aed111e88375fc849d42fb09e73e623ee22e2f9",
+  "decision_event_id": "dec_64ffb8d673d48e7d9f5ed48c4aed111e88375fc849d42fb09e73e623ee22e2f9"
+}

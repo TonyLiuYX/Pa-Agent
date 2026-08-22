@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/model-call-metadata-0.1.0.schema.json",
+  "title": "Model call metadata v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "model_call_id": {}, "content_hash": {}, "model_request_id": {}, "model_request_hash": {}, "model_response_id": {}, "model_response_hash": {}, "provider": {}, "model": {}, "adapter": {}, "started_at": {}, "completed_at": {}, "latency_ms": {}, "usage": {}, "provider_request_id": {}, "correlation_id": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/modelCallMetadata"
+}

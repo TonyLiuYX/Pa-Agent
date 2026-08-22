@@ -1,0 +1,316 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "policy_outcome_matrix",
+  "extensions": {},
+  "policy_version": "0.1.0",
+  "cases": [
+    {
+      "case_id": "case-malformed_ohlcv",
+      "condition": "malformed_ohlcv",
+      "precedence": 1,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "invalid_market_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": null,
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-ohlc_invariant",
+      "condition": "ohlc_invariant",
+      "precedence": 2,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "invalid_market_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": null,
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-duplicate_bars",
+      "condition": "duplicate_bars",
+      "precedence": 3,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "invalid_market_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": null,
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-out_of_order_bars",
+      "condition": "out_of_order_bars",
+      "precedence": 4,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "invalid_market_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": null,
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-future_bars",
+      "condition": "future_bars",
+      "precedence": 5,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "invalid_market_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": null,
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-insufficient_closed_history",
+      "condition": "insufficient_closed_history",
+      "precedence": 6,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "insufficient_history",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": true,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-partial_coverage_disallowed",
+      "condition": "partial_coverage_disallowed",
+      "precedence": 7,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "partial_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-partial_coverage_allowed",
+      "condition": "partial_coverage_allowed",
+      "precedence": 8,
+      "stage": "market",
+      "disposition": "continue",
+      "expected_status": null,
+      "code": "partial_data",
+      "model_call_allowed": true,
+      "warning_codes": [
+        "partial_data"
+      ],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-stale_beyond_policy",
+      "condition": "stale_beyond_policy",
+      "precedence": 9,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "stale_data",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-incomplete_final_bar_sufficient",
+      "condition": "incomplete_final_bar_sufficient",
+      "precedence": 10,
+      "stage": "market",
+      "disposition": "continue",
+      "expected_status": null,
+      "code": "incomplete_last_bar_excluded",
+      "model_call_allowed": true,
+      "warning_codes": [
+        "incomplete_last_bar_excluded"
+      ],
+      "uncertainty": null,
+      "exclude_incomplete_last_bar": true,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-incomplete_final_bar_insufficient",
+      "condition": "incomplete_final_bar_insufficient",
+      "precedence": 11,
+      "stage": "market",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "insufficient_history",
+      "model_call_allowed": false,
+      "warning_codes": [
+        "incomplete_last_bar_excluded"
+      ],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": true,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-no_actionable_evidence",
+      "condition": "no_actionable_evidence",
+      "precedence": 12,
+      "stage": "evidence",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "no_actionable_evidence",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-only_source_not_stated",
+      "condition": "only_source_not_stated",
+      "precedence": 13,
+      "stage": "evidence",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "no_actionable_evidence",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-unresolved_knowledge_conflict",
+      "condition": "unresolved_knowledge_conflict",
+      "precedence": 14,
+      "stage": "evidence",
+      "disposition": "terminal",
+      "expected_status": "abstain",
+      "code": "conflicting_evidence",
+      "model_call_allowed": false,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-provider_timeout",
+      "condition": "provider_timeout",
+      "precedence": 15,
+      "stage": "model",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "model_timeout",
+      "model_call_allowed": true,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-provider_malformed_response",
+      "condition": "provider_malformed_response",
+      "precedence": 16,
+      "stage": "model",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "invalid_model_response",
+      "model_call_allowed": true,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-forged_lineage",
+      "condition": "forged_lineage",
+      "precedence": 17,
+      "stage": "grounding",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "grounding_failure",
+      "model_call_allowed": true,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    },
+    {
+      "case_id": "case-unresolvable_lineage",
+      "condition": "unresolvable_lineage",
+      "precedence": 18,
+      "stage": "grounding",
+      "disposition": "terminal",
+      "expected_status": "error",
+      "code": "grounding_failure",
+      "model_call_allowed": true,
+      "warning_codes": [],
+      "uncertainty": {
+        "level": "high",
+        "codes": [],
+        "details": "frozen policy outcome"
+      },
+      "exclude_incomplete_last_bar": false,
+      "extensions": {}
+    }
+  ],
+  "content_hash": "cdc106ec6284ac6edbb472040c4df55fefea39536ef91a6da64dc3ed3cc82ee0",
+  "policy_matrix_id": "pom_cdc106ec6284ac6edbb472040c4df55fefea39536ef91a6da64dc3ed3cc82ee0"
+}

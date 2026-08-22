@@ -1,0 +1,12 @@
+{
+  "schema_version": "0.1.0",
+  "goal": "G020",
+  "entries": [
+    {"path": "trade_messages.json", "kind": "trade_array"},
+    {"path": "correction_messages.json", "kind": "correction_cancel_array"},
+    {"path": "status_messages.json", "kind": "status_array"},
+    {"path": "minute_condition_table.json", "kind": "minute_condition_table"},
+    {"path": "second_event.json", "kind": "second_aggregate_event"},
+    {"path": "multi_trade_frozen_second.json", "kind": "multi_trade_frozen_second_aggregate_event"}
+  ]
+}

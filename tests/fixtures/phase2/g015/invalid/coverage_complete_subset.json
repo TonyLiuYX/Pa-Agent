@@ -1,0 +1,7 @@
+{
+  "scenario": "coverage_complete_subset",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "coverage.actual.end_at", "value": "2026-08-10T14:42:00Z"}],
+  "expected_issue_codes": ["malformed_ohlcv", "invalid_market_data"],
+  "expected_condition": "malformed_ohlcv"
+}

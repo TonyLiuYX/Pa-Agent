@@ -1,0 +1,7 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_kind": "g028_feed_session",
+  "entries": [
+    {"path": "builders.py", "purpose": "deterministic G019/G020 fixture builders and scripted test doubles"}
+  ]
+}

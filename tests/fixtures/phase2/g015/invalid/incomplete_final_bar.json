@@ -1,0 +1,7 @@
+{
+  "scenario": "incomplete_final_bar",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "bars[12].is_closed", "value": false}],
+  "expected_issue_codes": ["incomplete_last_bar_excluded"],
+  "expected_condition": "incomplete_final_bar_sufficient"
+}

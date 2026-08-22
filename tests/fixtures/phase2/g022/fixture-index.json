@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "goal": "G022",
+  "provider": "deepseek",
+  "model": "deepseek-v4-flash",
+  "endpoint": "https://api.deepseek.com/chat/completions",
+  "responses": [
+    "success.json",
+    "success_reasoning.json",
+    "finish_length.json",
+    "finish_resource.json",
+    "malformed_content.json"
+  ],
+  "http_statuses": [400, 401, 402, 422, 429, 500, 503],
+  "thinking_modes": ["enabled", "disabled"],
+  "transient_finish_reasons": ["insufficient_system_resource"],
+  "terminal_finish_reasons": ["length", "content_filter", "tool_calls"],
+  "secret_policy": "runtime key is never present in fixture artifacts"
+}

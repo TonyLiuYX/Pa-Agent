@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "analysis_run_decision_event",
+  "extensions": {},
+  "event_type": "analysis_decision",
+  "mode": "paper_replay",
+  "stream": "forward_paper",
+  "data_origin": "synthetic_fixture",
+  "synthetic": true,
+  "recorded_at": "2026-08-10T15:01:00Z",
+  "decision_as_of": "2026-08-10T14:45:00Z",
+  "instrument": {
+    "asset_class": "us_equity",
+    "symbol": "AAPL",
+    "venue": "NASDAQ",
+    "currency": "USD"
+  },
+  "timeframe": {
+    "unit": "minute",
+    "multiplier": 5
+  },
+  "session": {
+    "kind": "regular",
+    "timezone": "America/New_York"
+  },
+  "input_mode": "ohlcv",
+  "lineage": {
+    "market_snapshot_id": "mkt_bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+    "market_snapshot_hash": "bf437b01a526e228712895576ffbac0808f73e0774ddd25bea8ca60a53535753",
+    "market_quality": {
+      "status": "ok",
+      "codes": [],
+      "warnings": [],
+      "details": null
+    },
+    "observation_frame_id": "obs_0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+    "observation_frame_hash": "0388aba0b632c950469a6508bc9ccd155bd38c2680813c933010a8f02af1f293",
+    "knowledge_snapshot_id": "kbs_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "knowledge_snapshot_version": "g013.2026-08-10",
+    "knowledge_snapshot_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "engine_version": "g014-engine-0.1.0",
+    "prompt_template_version": "g014-prompt-0.1.0",
+    "policy_version": "0.1.0",
+    "adapter_version": "fixture-adapter-0.1.0",
+    "provider": "offline",
+    "model": "fixture-model",
+    "analysis_request_id": "arq_c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+    "analysis_request_hash": "c2f9140a831040631afb1812a63aced9d02049f3fd3884e310024d512c8f09d3",
+    "evidence_package_id": "evp_ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+    "evidence_package_hash": "ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+    "model_response_id": "mrs_bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+    "model_response_hash": "bcfd616d9de1de3d6e85ba109a5ffa11188c355bcb18a6a7f8b548510abc9c41",
+    "analysis_result_id": "par_64eae077493047c41ccb8bcd635230333c555ebdf183aba76a99c6230840596f",
+    "analysis_result_hash": "64eae077493047c41ccb8bcd635230333c555ebdf183aba76a99c6230840596f"
+  },
+  "final_status": "signal",
+  "action": "sell",
+  "no_live_orders": true,
+  "idempotency_key": "idem_7c24035701001658e1b5d0586357b2e3714bac672a1b6725414077cbcc713410",
+  "content_hash": "1fe039d853ad06dc3f4e3f83e7c7358655d6397d7aea686eef12691af2931fac",
+  "decision_event_id": "dec_1fe039d853ad06dc3f4e3f83e7c7358655d6397d7aea686eef12691af2931fac"
+}

@@ -1,0 +1,7 @@
+{
+  "scenario": "bad_ohlc",
+  "base_fixture": "valid/market_snapshot.json",
+  "mutations": [{"path": "bars[1].high", "value": "99"}],
+  "expected_issue_codes": ["ohlc_invariant"],
+  "expected_condition": "ohlc_invariant"
+}

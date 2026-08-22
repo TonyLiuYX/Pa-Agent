@@ -1,0 +1,29 @@
+{
+  "id": "resp-g031-success",
+  "object": "response",
+  "created_at": 1775904000,
+  "model": "gpt-5.6-luna",
+  "status": "completed",
+  "service_tier": "default",
+  "usage": {
+    "input_tokens": 128,
+    "output_tokens": 64,
+    "total_tokens": 192,
+    "input_tokens_details": {"cached_tokens": 32},
+    "output_tokens_details": {"reasoning_tokens": 21}
+  },
+  "output": [
+    {"type": "reasoning", "id": "rs_g031", "summary": []},
+    {
+      "type": "message",
+      "role": "assistant",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "text": "{\"schema_version\":\"0.1.0\",\"branch\":\"no_entry\",\"reason\":null,\"direction\":null,\"entry_price\":null,\"stop_price\":null,\"target_price\":null,\"N\":60,\"X\":null,\"grounding\":{\"reason\":null,\"entry_price\":null,\"stop_price\":null,\"target_price\":null},\"confidence\":null,\"uncertainty\":{\"level\":\"high\",\"codes\":[\"no_actionable_evidence\"],\"details\":\"no actionable setup\"},\"shared_market_view_ref\":{\"schema_version\":\"0.1.0\",\"market_snapshot_id\":\"mkt_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"market_snapshot_hash\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"observation_frame_id\":\"obs_bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"observation_frame_hash\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"shared_market_view_id\":\"smv_6ac4a4c1a28d70fefa39d0b9cabf20683da9c02c005ac1923f89673d9929d100\",\"shared_market_view_hash\":\"6ac4a4c1a28d70fefa39d0b9cabf20683da9c02c005ac1923f89673d9929d100\"},\"second_event_ref\":null}"
+        }
+      ]
+    }
+  ]
+}

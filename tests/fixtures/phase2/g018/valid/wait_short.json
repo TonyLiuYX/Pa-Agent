@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "branch": "wait_for_price",
+  "reason": "Range rejection waiting for limit",
+  "direction": "short",
+  "entry_price": "100",
+  "stop_price": "102",
+  "target_price": "98",
+  "N": null,
+  "X": 120,
+  "grounding": {
+    "reason": {"declaration_type": "derived_interpretation", "claim_ids": ["nanqiao-range-extreme-limit:market_context:1"], "evidence_ids": ["evi_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"], "citation_ids": ["cit_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"], "market_refs": ["bar_1111111111111111111111111111111111111111111111111111111111111111"]},
+    "entry_price": {"declaration_type": "derived_interpretation", "claim_ids": ["nanqiao-range-extreme-limit:entry:1"], "evidence_ids": ["evi_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"], "citation_ids": ["cit_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"], "market_refs": ["bar_1111111111111111111111111111111111111111111111111111111111111111"]},
+    "stop_price": {"declaration_type": "derived_interpretation", "claim_ids": ["nanqiao-range-extreme-limit:invalidation_stop:1"], "evidence_ids": ["evi_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"], "citation_ids": ["cit_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"], "market_refs": ["bar_1111111111111111111111111111111111111111111111111111111111111111"]},
+    "target_price": {"declaration_type": "derived_interpretation", "claim_ids": ["nanqiao-range-extreme-limit:targets_exit:1"], "evidence_ids": ["evi_eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"], "citation_ids": ["cit_ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"], "market_refs": ["bar_1111111111111111111111111111111111111111111111111111111111111111"]}
+  },
+  "confidence": "0.8",
+  "uncertainty": {"level": "low", "codes": [], "details": "grounded fixture"},
+  "shared_market_view_ref": {
+    "schema_version": "0.1.0",
+    "market_snapshot_id": "mkt_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "market_snapshot_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "observation_frame_id": "obs_bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "observation_frame_hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "shared_market_view_id": "smv_6ac4a4c1a28d70fefa39d0b9cabf20683da9c02c005ac1923f89673d9929d100",
+    "shared_market_view_hash": "6ac4a4c1a28d70fefa39d0b9cabf20683da9c02c005ac1923f89673d9929d100"
+  },
+  "second_event_ref": null
+}

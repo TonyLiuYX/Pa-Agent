@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/diagnostic-0.1.0.schema.json",
+  "title": "PA extracted-source diagnostic v0.1.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["source_id", "source_file", "file_name", "title", "sha256", "status", "attempted", "extraction_errors"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1},
+    "source_file": {"type": "string", "minLength": 1},
+    "file_name": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"enum": ["success", "partial", "failed"]},
+    "attempted": {"type": "boolean"},
+    "page_count": {"type": ["integer", "null"], "minimum": 1},
+    "image_pages": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+    "extraction_errors": {"type": "array", "items": {"type": "string"}}
+  }
+}

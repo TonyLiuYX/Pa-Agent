@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.9.0",
+  "artifact_kind": "analysis_policy",
+  "extensions": {},
+  "minimum_closed_bars": 2,
+  "max_staleness_seconds": 600,
+  "allow_partial_data": false,
+  "exclude_incomplete_last_bar": true,
+  "required_capabilities": [
+    "price_action"
+  ],
+  "policy_version": "0.1.0",
+  "content_hash": "39092ede347cd09630844e8003a5d16b7641c62d51e79c6944533d48a9e21bc6",
+  "analysis_policy_id": "pol_39092ede347cd09630844e8003a5d16b7641c62d51e79c6944533d48a9e21bc6"
+}

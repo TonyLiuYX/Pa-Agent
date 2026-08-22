@@ -1,0 +1,4924 @@
+{
+  "records": [
+    {
+      "id": "nanqiao-h2-l2",
+      "type": "setup",
+      "name": "趋势回调 H2 / L2（顺大逆小）",
+      "aliases": [
+        "H2",
+        "L2",
+        "高2",
+        "低2"
+      ],
+      "tags": [
+        "南桥",
+        "Breakout",
+        "趋势回调",
+        "一 tick"
+      ],
+      "chunk_keys": [
+        "page-02-semantic",
+        "page-03-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          2
+        ],
+        "visual_pages": [
+          2,
+          3
+        ],
+        "visual_blocks": [
+          "p2-h2-l2-chart",
+          "p3-h2-l2-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中；清单未限定具体周期"
+      ],
+      "market_context": [
+        "趋势明确 HH/HL 或 LL/LH",
+        "强突破或窄通道的回调；宽通道不用"
+      ],
+      "prerequisites": [
+        "逆势回调必须为两段式",
+        "触发 H2/L2",
+        "做多信号 K 必须阳线，做空信号 K 必须阴线"
+      ],
+      "recognition_features": [
+        "与建仓方向一致的信号 K",
+        "反向信号 K 会使 H2/L2 无效"
+      ],
+      "trigger": [
+        {
+          "statement": "信号 K 极值被突破",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-02-semantic"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "信号 K 极值外 1 tick 突破单",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-02-semantic"
+          ]
+        },
+        {
+          "statement": "图示 K25 低点外 1 tick 挂突破单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-03-semantic"
+          ],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        }
+      ],
+      "invalidation_stop": [
+        "3 根逆势 K 离场或结构性反转离场",
+        {
+          "statement": "图示止损：信号 K 高点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-03-semantic"
+          ],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "图示止盈：固定盈亏比 1:1、1:2",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-03-semantic"
+          ],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        },
+        {
+          "statement": "图示止盈：拿到前低",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-03-semantic"
+          ],
+          "visual_page": 3,
+          "visual_block": "p3-h2-l2-chart",
+          "visual_locator": "p3 upper chart green annotation"
+        },
+        {
+          "statement": "文字清单未给出独立固定 H2/L2 目标；以上目标仅来自 p3 图示",
+          "declaration_type": "source_not_stated",
+          "supporting_chunk_keys": [
+            "page-02-semantic"
+          ]
+        }
+      ],
+      "risk_notes": [
+        "强势反向趋势 K 会改变背景"
+      ],
+      "prohibited": [
+        "宽通道",
+        "回调出现强势反向趋势 K",
+        "信号 K 与方向不一致"
+      ],
+      "exceptions": [
+        "结构反转后转入反转 setup，不再按普通 H2/L2 处理"
+      ],
+      "examples": [
+        {
+          "label": "H2/L2 执行表与图例",
+          "pages": [
+            2,
+            2
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "完全按南桥执行清单字段归一化，未补充外部 H2/L2 规则。"
+      ],
+      "confidence": 0.95,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-breakout-failure-breakout",
+      "type": "setup",
+      "name": "突破-失败-突破（二次突破确认）",
+      "aliases": [
+        "Breakout-Failure-Breakout",
+        "失败的失败",
+        "二次突破"
+      ],
+      "tags": [
+        "南桥",
+        "Breakout",
+        "确认",
+        "时间限制"
+      ],
+      "chunk_keys": [
+        "page-03-semantic",
+        "page-04-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          3
+        ],
+        "visual_pages": [
+          3,
+          4
+        ],
+        "visual_blocks": [
+          "p3-breakout-failure-table",
+          "p4-failure-failure-top",
+          "p4-failure-failure-bottom"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "关键位发生实体突破后，第一次尝试失败"
+      ],
+      "prerequisites": [
+        "结构为突破 K → 失败 K → 再次突破 K",
+        "第一次突破必须是实体突破而非影线刺透",
+        "关键位后 3 根 K 内完成"
+      ],
+      "recognition_features": [
+        "失败后价格仍围绕关键位",
+        "第二次突破重新显示方向"
+      ],
+      "trigger": [
+        "第二次突破 K 极值被突破"
+      ],
+      "entry": [
+        {
+          "statement": "第二次突破 K 极值外 1 tick",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-03-semantic"
+          ]
+        },
+        {
+          "statement": "图示在 K14 下方 1 tick 挂突破单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-04-semantic"
+          ],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper 失败的失败 annotation"
+        }
+      ],
+      "invalidation_stop": [
+        "若建仓后成交订单对应 K 收盘为逆势 K，在该 K 极值外 1 tick 突破离场",
+        {
+          "statement": "图示止损：K14 高点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-04-semantic"
+          ],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper 失败的失败 annotation"
+        }
+      ],
+      "targets_exit": [
+        "用途是确认关键位方向成立；清单未给固定目标",
+        {
+          "statement": "失败的失败图示止盈方法一：固定盈亏比 1:1、1:2",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-04-semantic"
+          ],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper green box"
+        },
+        {
+          "statement": "失败的失败图示止盈方法二：根据平均波动，拿固定点数",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-04-semantic"
+          ],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper green box"
+        },
+        {
+          "statement": "失败的失败图示止盈方法三：拿到空头结构彻底破坏",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-04-semantic"
+          ],
+          "visual_page": 4,
+          "visual_block": "p4-failure-failure-top",
+          "visual_locator": "p4 upper green box"
+        }
+      ],
+      "risk_notes": [
+        "超过 3 根 K 结构退化"
+      ],
+      "prohibited": [
+        "超过时间限制",
+        "把影线刺透当成实体突破"
+      ],
+      "exceptions": [
+        "若后续重新形成其他合规结构，应转用对应 setup"
+      ],
+      "examples": [
+        {
+          "label": "二次突破确认表",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "label": "失败的失败视觉案例（K14）",
+          "pages": [
+            4,
+            4
+          ],
+          "visual_page": 4,
+          "visual_blocks": [
+            "p4-failure-failure-top",
+            "p4-failure-failure-bottom"
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "保留南桥文档的硬性时间条件。"
+      ],
+      "confidence": 0.96,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-key-level-reversal",
+      "type": "setup",
+      "name": "关键位结构反转突破单",
+      "aliases": [
+        "关键位反转",
+        "结构反转突破"
+      ],
+      "tags": [
+        "南桥",
+        "双顶",
+        "双底",
+        "楔形",
+        "头肩",
+        "OB",
+        "IB"
+      ],
+      "chunk_keys": [
+        "page-04-semantic",
+        "page-05-semantic",
+        "page-06-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          4,
+          5,
+          6
+        ],
+        "visual_pages": [
+          4,
+          5,
+          6
+        ],
+        "visual_blocks": [
+          "p4-key-level-heading",
+          "p5-key-level-charts",
+          "p6-key-level-charts"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "支撑/阻力、均线、趋势线或通道线附近"
+      ],
+      "prerequisites": [
+        "形成双顶/双底、高2/低2、楔形、头肩、OB/IB 之一",
+        "结构位于关键价位附近"
+      ],
+      "recognition_features": [
+        "关键位出现反向结构",
+        "信号 K 能代表结构突破方向"
+      ],
+      "trigger": [
+        "信号 K 极值突破"
+      ],
+      "entry": [
+        "信号 K 极值外 1 tick 突破单",
+        {
+          "statement": "图示头肩结构：在右肩信号 K 突破建仓",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-05-semantic"
+          ],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        }
+      ],
+      "invalidation_stop": [
+        "以信号 K/结构失效极值外 1 tick 退出",
+        {
+          "statement": "图示头肩结构止损：右肩极值外 1 tick",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-05-semantic"
+          ],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        }
+      ],
+      "targets_exit": [
+        "清单未给统一目标，按结构与常规风控管理",
+        {
+          "statement": "关键位结构图示止盈方法一：固定盈亏比 1:1、1:2",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-05-semantic"
+          ],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        },
+        {
+          "statement": "关键位结构图示止盈方法二：固定点数",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-05-semantic"
+          ],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        },
+        {
+          "statement": "关键位结构图示止盈方法三：拿到空头结构被破坏",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-05-semantic"
+          ],
+          "visual_page": 5,
+          "visual_block": "p5-key-level-charts",
+          "visual_locator": "p5 lower green head-and-shoulders box"
+        }
+      ],
+      "risk_notes": [
+        "形态必须与关键位结合"
+      ],
+      "prohibited": [
+        "远离关键位时机械使用形态名"
+      ],
+      "exceptions": [
+        "不同结构的背景和后续跟随可能改变概率"
+      ],
+      "examples": [
+        {
+          "label": "关键位结构图组",
+          "pages": [
+            4,
+            6
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "页面 6 主要是图文上下文，已链接到同一 key，避免拆散结构。"
+      ],
+      "confidence": 0.86,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-range-extreme-limit",
+      "type": "setup",
+      "name": "区间前高/前低限价反转",
+      "aliases": [
+        "Range Extreme Limit Reversal",
+        "固定 1:1"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "Trading Range",
+        "1:1"
+      ],
+      "chunk_keys": [
+        "page-07-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          7
+        ],
+        "visual_pages": [
+          7
+        ],
+        "visual_blocks": [
+          "p7-range-extreme-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "无趋势的震荡区间"
+      ],
+      "prerequisites": [
+        "识别前高/前低及相近关键位",
+        "若有相近关键位，挂在距离当前更远者"
+      ],
+      "recognition_features": [
+        "价格接近区间前高/前低",
+        "窄区间高度低于 ATR 3 倍或宽区间有 2-3 次单边推动"
+      ],
+      "trigger": [
+        "价格触及限价位置"
+      ],
+      "entry": [
+        "前高挂空，前低挂多，触发即进场"
+      ],
+      "invalidation_stop": [
+        "窄区间使用 1:1 风险回报",
+        "宽区间使用宽止损但遵循强制退出",
+        "突破 K + 跟随 K 后，在跟随 K 极值外 1 tick 突破止损"
+      ],
+      "targets_exit": [
+        "固定 1:1 盈亏比"
+      ],
+      "risk_notes": [
+        "宽区间止损更宽，必须执行强制退出"
+      ],
+      "prohibited": [
+        "有明确趋势时把前高/前低当作区间反转"
+      ],
+      "exceptions": [
+        "实体突破+跟随说明区间反转假设失效"
+      ],
+      "examples": [
+        {
+          "label": "区间前高/前低表",
+          "pages": [
+            7,
+            7
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.93,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-point3-limit",
+      "type": "setup",
+      "name": "宽通道 Point 3 限价反转",
+      "aliases": [
+        "Point 3",
+        "宽通道反转"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "Weak Channel",
+        "Point 3"
+      ],
+      "chunk_keys": [
+        "page-07-semantic",
+        "page-08-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          7,
+          8
+        ],
+        "visual_pages": [
+          8
+        ],
+        "visual_blocks": [
+          "p8-point3-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "宽通道（Weak Channel）"
+      ],
+      "prerequisites": [
+        "识别通道线和第三次触碰位置"
+      ],
+      "recognition_features": [
+        "价格到达通道线 Point 3"
+      ],
+      "trigger": [
+        "触及 Point 3 限价位置"
+      ],
+      "entry": [
+        "在通道线 Point 3 位置提前挂限价单"
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损方法一：根据止盈点数确定止损点数，做 1:1 盈亏比",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-08-semantic"
+          ],
+          "visual_page": 8,
+          "visual_block": "p8-point3-chart",
+          "visual_locator": "p8 green Point 3 annotation"
+        },
+        {
+          "statement": "止损方法二：出现强势趋势突破通道线且有跟随时，在跟随 K 极值外 1 tick 挂突破单止损离场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-08-semantic"
+          ],
+          "visual_page": 8,
+          "visual_block": "p8-point3-chart",
+          "visual_locator": "p8 green Point 3 annotation"
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "止盈：根据当日平均波动幅度，决定止盈多少点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-08-semantic"
+          ],
+          "visual_page": 8,
+          "visual_block": "p8-point3-chart",
+          "visual_locator": "p8 green Point 3 annotation"
+        }
+      ],
+      "risk_notes": [
+        "宽通道反转必须容纳更大波动"
+      ],
+      "prohibited": [
+        "窄区间或强趋势中直接套用 Point 3"
+      ],
+      "exceptions": [
+        "实体突破与跟随出现时转为突破处理"
+      ],
+      "examples": [
+        {
+          "label": "Point 3 宽通道表",
+          "pages": [
+            8,
+            8
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.9,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-trend-50-pullback",
+      "type": "setup",
+      "name": "趋势 50% 回调限价顺势",
+      "aliases": [
+        "50% Pullback",
+        "趋势 50% 回调"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "趋势",
+        "50%"
+      ],
+      "chunk_keys": [
+        "page-09-semantic",
+        "page-10-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          9,
+          10
+        ],
+        "visual_pages": [
+          10
+        ],
+        "visual_blocks": [
+          "p10-pullback-charts"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "强趋势推进段"
+      ],
+      "prerequisites": [
+        "回调为两段式 Low1→Low2/High1→High2，或不超过连续 3 根逆势 K 的弱回调",
+        "不能是单段连续 3 根反向趋势 K"
+      ],
+      "recognition_features": [
+        "趋势段清晰，回调深度到达测量的 50%"
+      ],
+      "trigger": [
+        "价格触及趋势段 50%"
+      ],
+      "entry": [
+        "在趋势段 50% 挂顺势限价单"
+      ],
+      "invalidation_stop": [
+        "强反向趋势 K 收破 50% 时，在极值外 1 tick 止损",
+        "成交 K 收盘后形成连续 3 根逆势 K 时，在第三根极值外 1 tick 退出"
+      ],
+      "targets_exit": [
+        "按趋势和常规风险管理退出；清单未给单一固定目标"
+      ],
+      "risk_notes": [
+        "连续 3 根逆势趋势 K 被视为反转风险"
+      ],
+      "prohibited": [
+        "单段连续 3 根反向趋势 K",
+        "把反转当作普通回调"
+      ],
+      "exceptions": [
+        "若重新出现强趋势控制，可回到顺势 setup 但需重新验证前置条件"
+      ],
+      "examples": [
+        {
+          "label": "50% 回调图文页",
+          "pages": [
+            9,
+            10
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.94,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-trapped-pullback",
+      "type": "setup",
+      "name": "真突破后的回踩限价顺势（Trapped 对手盘）",
+      "aliases": [
+        "Trapped",
+        "突破回踩",
+        "被套对手盘"
+      ],
+      "tags": [
+        "南桥",
+        "Limit",
+        "突破",
+        "跟随"
+      ],
+      "chunk_keys": [
+        "page-11-semantic",
+        "page-12-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          11
+        ],
+        "visual_pages": [
+          11,
+          12
+        ],
+        "visual_blocks": [
+          "p11-trapped-chart",
+          "p12-trapped-continuation"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "关键位真突破并站稳，一方强力推进而另一方被套"
+      ],
+      "prerequisites": [
+        "突破 K 必须是强势趋势 K、实体明显、收盘站在突破方向",
+        "跟随 K 必须同方向延续动能",
+        "两根都不能是十字星/弱实体/明显犹豫"
+      ],
+      "recognition_features": [
+        "突破与跟随同时显示强度",
+        "回踩突破点提供被套对手盘的顺势再入场"
+      ],
+      "trigger": [
+        "价格回踩到突破点且突破方向未被强势否定"
+      ],
+      "entry": [
+        "在突破点挂顺势限价单",
+        {
+          "statement": "图示回踩突破点挂顺势限价单（p12 上部 Trapped 延续图）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-12-semantic"
+          ],
+          "visual_page": 12,
+          "visual_block": "p12-trapped-continuation",
+          "visual_locator": "p12 upper chart green callouts"
+        }
+      ],
+      "invalidation_stop": [
+        "回到突破位内并出现反向强趋势 K，在极值外 1 tick 突破止损",
+        {
+          "statement": "图示 Trapped 失败时回到突破位内，按极值外 1 tick 突破止损",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-12-semantic"
+          ],
+          "visual_page": 12,
+          "visual_block": "p12-trapped-continuation",
+          "visual_locator": "p12 upper chart green callouts"
+        }
+      ],
+      "targets_exit": [
+        "按顺势交易和关键位管理，清单未给固定目标"
+      ],
+      "risk_notes": [
+        "突破 K 或跟随 K 弱时，即使短暂越过关键位也不能使用"
+      ],
+      "prohibited": [
+        "突破/跟随含十字星、弱实体或犹豫形态"
+      ],
+      "exceptions": [
+        "价格未回踩突破点时不追价，等待其他合规 setup"
+      ],
+      "examples": [
+        {
+          "label": "Trapped 回踩表与图",
+          "pages": [
+            11,
+            11
+          ]
+        },
+        {
+          "label": "Trapped 跨页延续图",
+          "pages": [
+            11,
+            12
+          ],
+          "visual_page": 12,
+          "visual_blocks": [
+            "p11-trapped-chart",
+            "p12-trapped-continuation"
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.95,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-opposite-1",
+      "type": "setup",
+      "name": "Always in：逆1失败限价单",
+      "aliases": [
+        "逆1失败",
+        "Low 1 / High 1"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "Limit",
+        "scalp"
+      ],
+      "chunk_keys": [
+        "page-12-semantic",
+        "page-13-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          12
+        ],
+        "visual_pages": [
+          12,
+          13
+        ],
+        "visual_blocks": [
+          "p12-opposite1-table",
+          "p13-opposite1-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情，Always in long/short"
+      ],
+      "prerequisites": [
+        "确定强趋势主方向",
+        "多头等待空头回调触发 Low1，空头等待多头反弹触发 High1"
+      ],
+      "recognition_features": [
+        "顺势 K 后的第一次逆势尝试未能改变主方向"
+      ],
+      "trigger": [
+        "Low1/High1 触发限价单"
+      ],
+      "entry": [
+        "多头强趋势在跟随 K 低点挂多，空头强趋势在跟随 K 高点挂空",
+        {
+          "statement": "图示强势 scalp：在 K18 高点挂限价单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-13-semantic"
+          ],
+          "visual_page": 13,
+          "visual_block": "p13-opposite1-chart",
+          "visual_locator": "p13 upper green 强势 scalp box"
+        }
+      ],
+      "invalidation_stop": [
+        "可放在波段起点/前关键高低点，或前一根顺势趋势 K 极值",
+        "逆势连续 3 根 K 时在第 3 根极值外 1 tick 强制退出"
+      ],
+      "targets_exit": [
+        "scalp 到最后一根顺势趋势 K 收盘，或按 ATR 固定点数",
+        {
+          "statement": "图示结果：顺利止盈 5 个点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-13-semantic"
+          ],
+          "visual_page": 13,
+          "visual_block": "p13-opposite1-chart",
+          "visual_locator": "p13 upper green 强势 scalp box"
+        }
+      ],
+      "risk_notes": [
+        "强趋势中逆势失败的风险由主方向控制"
+      ],
+      "prohibited": [
+        "忽略 Always in 方向而做逆势预测"
+      ],
+      "exceptions": [
+        "三根逆势 K 后退出，不等待主方向自行恢复"
+      ],
+      "examples": [
+        {
+          "label": "Always in 逆1失败表",
+          "pages": [
+            12,
+            12
+          ]
+        },
+        {
+          "label": "逆1强势 scalp 视觉案例",
+          "pages": [
+            12,
+            13
+          ],
+          "visual_page": 13,
+          "visual_blocks": [
+            "p12-opposite1-table",
+            "p13-opposite1-chart"
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.94,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-third-bar",
+      "type": "setup",
+      "name": "Always in：第三根未遂（Third-Bar Failure）",
+      "aliases": [
+        "Third-Bar Failure",
+        "第三根未遂"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "Limit",
+        "逆势失败"
+      ],
+      "chunk_keys": [
+        "page-13-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          13
+        ],
+        "visual_pages": [
+          13
+        ],
+        "visual_blocks": [
+          "p13-third-bar-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情，Always in long/short"
+      ],
+      "prerequisites": [
+        "逆势方第一次或第二次尝试反转",
+        "押注逆势方无法收出连续第三根逆势 K"
+      ],
+      "recognition_features": [
+        "第 2 根逆势 K 收盘仍未形成三根连续逆势趋势"
+      ],
+      "trigger": [
+        "第 2 根逆势 K 收盘确认第三根失败机会"
+      ],
+      "entry": [
+        "在第 2 根逆势 K 收盘价反手建仓，顺主方向"
+      ],
+      "invalidation_stop": [
+        "逆势方收出连续 3 根 K 时，在第 3 根极值外 1 tick 强制退出"
+      ],
+      "targets_exit": [
+        "按 ATR 固定点数或前关键位止盈"
+      ],
+      "risk_notes": [
+        "来源给出逆势第三根失败的经验概率表述，但本项目未验证"
+      ],
+      "prohibited": [
+        "连续第三根逆势 K 已经形成后仍新增该 setup"
+      ],
+      "exceptions": [
+        "若主方向已经被结构性反转取代，转用反转 setup"
+      ],
+      "examples": [
+        {
+          "label": "第三根未遂表",
+          "pages": [
+            13,
+            13
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.92,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-ema20",
+      "type": "setup",
+      "name": "Always in：均线回补 EMA20",
+      "aliases": [
+        "EMA20 Pullback",
+        "均线回补"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "EMA20",
+        "Limit"
+      ],
+      "chunk_keys": [
+        "page-14-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          14
+        ],
+        "visual_pages": [
+          14
+        ],
+        "visual_blocks": [
+          "p14-ema20-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情，Always in long/short"
+      ],
+      "prerequisites": [
+        "强趋势中第一次回补 EMA20",
+        "仍需与 Always in 主方向一致"
+      ],
+      "recognition_features": [
+        "价格第一次回到 EMA20 附近",
+        "趋势参与者可能再次入场"
+      ],
+      "trigger": [
+        "价格触及 EMA20 附近而没有良好反向跟随"
+      ],
+      "entry": [
+        "在 EMA20 附近挂顺趋势限价单",
+        {
+          "statement": "图示 EMA20：在 EMA20 处提前挂限价单做空，后由 K35 成交",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-14-semantic"
+          ],
+          "visual_page": 14,
+          "visual_block": "p14-ema20-chart",
+          "visual_locator": "p14 lower EMA20 chart green box"
+        }
+      ],
+      "invalidation_stop": [
+        "可按目标固定盈亏比，或在逆势实体突破均线且有良好跟随后，于跟随 K 极值外 1 tick 退出"
+      ],
+      "targets_exit": [
+        "按 ATR 固定点数或前一个关键位",
+        {
+          "statement": "图示止盈：根据 ATR 数值，固定止盈 5 个点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-14-semantic"
+          ],
+          "visual_page": 14,
+          "visual_block": "p14-ema20-chart",
+          "visual_locator": "p14 lower EMA20 chart green box"
+        }
+      ],
+      "risk_notes": [
+        "第一次回补与后续反复穿越均线的含义不同"
+      ],
+      "prohibited": [
+        "逆势交易均线回补",
+        "忽略实体突破+跟随退出"
+      ],
+      "exceptions": [
+        "均线另一侧形成强反向趋势时退出并重新判断市场状态",
+        {
+          "statement": "图示风控例外：K35 阳线实体收在均线之上但没有跟随，不立即退出，持仓至止盈目标或重新触发反转离场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-14-semantic"
+          ],
+          "visual_page": 14,
+          "visual_block": "p14-ema20-chart",
+          "visual_locator": "p14 lower EMA20 chart green box"
+        }
+      ],
+      "examples": [
+        {
+          "label": "EMA20 回补表",
+          "pages": [
+            14,
+            14
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.93,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-always-in-breakout-scalp",
+      "type": "setup",
+      "name": "Always in：顺势突破 scalp",
+      "aliases": [
+        "顺势突破",
+        "Breakout scalp"
+      ],
+      "tags": [
+        "南桥",
+        "Always in",
+        "Breakout",
+        "scalp",
+        "ATR"
+      ],
+      "chunk_keys": [
+        "page-14-semantic",
+        "page-15-semantic",
+        "page-16-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          14,
+          15,
+          16
+        ],
+        "visual_pages": [
+          16
+        ],
+        "visual_blocks": [
+          "p14-breakout-heading",
+          "p15-breakout-table",
+          "p16-breakout-chart"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "盘中"
+      ],
+      "market_context": [
+        "突破行情或强趋势行情"
+      ],
+      "prerequisites": [
+        {
+          "statement": "趋势 K 收盘 ≥ 实体 50%（多头）或 ≤ 50%（空头）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-15-semantic"
+          ]
+        }
+      ],
+      "recognition_features": [
+        "趋势 K 收盘位置符合方向阈值",
+        "不做方向预测，只跟随"
+      ],
+      "trigger": [
+        "趋势 K 极值被突破"
+      ],
+      "entry": [
+        {
+          "statement": "趋势 K 极值外 1 tick",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-15-semantic"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损方法一：根据止盈目标位，固定盈亏比",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-15-semantic"
+          ]
+        },
+        {
+          "statement": "止损方法二：逆势方连续 3 根逆势 K 后，在第 3 根 K 极值外 1 tick 挂突破单离场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-15-semantic"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "止盈：根据 ATR 数值固定点数止盈",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-15-semantic"
+          ]
+        }
+      ],
+      "risk_notes": [
+        "执行版强调不做判断、只跟随；ATR 和固定盈亏比必须有外部参数定义"
+      ],
+      "prohibited": [
+        "不符合实体 50% 收盘条件时交易",
+        "与 Always in 方向相反"
+      ],
+      "exceptions": [
+        {
+          "statement": "用途：顺势 scalp，不做判断，只跟随",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "page-16-semantic"
+          ],
+          "visual_page": 16,
+          "visual_block": "p16-breakout-chart",
+          "visual_locator": "p16 chart top statement"
+        },
+        "逆势连续 3 根 K 触发强制退出"
+      ],
+      "examples": [
+        {
+          "label": "顺势突破 scalp 表和连续页",
+          "pages": [
+            14,
+            16
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        "本记录直接归一化南桥执行表字段，无额外推导。"
+      ],
+      "confidence": 0.91,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "nanqiao-discipline-checklist",
+      "type": "discipline",
+      "name": "每一单的 10 秒纪律检查表",
+      "aliases": [
+        "执行清单",
+        "防违规检查",
+        "盘中自检"
+      ],
+      "tags": [
+        "南桥",
+        "纪律",
+        "风险",
+        "执行"
+      ],
+      "chunk_keys": [
+        "page-17-semantic"
+      ],
+      "source_scope": {
+        "text_pages": [
+          17
+        ],
+        "visual_pages": [],
+        "visual_blocks": [
+          "p17-discipline-table"
+        ]
+      },
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "每笔盘中交易"
+      ],
+      "market_context": [
+        "任何准备执行的盘中交易"
+      ],
+      "prerequisites": [
+        "明确趋势/区间/宽通道背景",
+        "确认属于已定义合规 setup 且满足全部前置条件"
+      ],
+      "recognition_features": [
+        "检查入场方式、止损、强制退出、当日止损/次数上限和情绪状态"
+      ],
+      "trigger": [
+        "下单前和持仓中进行 10 秒自检"
+      ],
+      "entry": [
+        "只按对应 setup 规定的突破单或限价单入场"
+      ],
+      "invalidation_stop": [
+        "必须复核对应 setup 的止损和强制退出条件",
+        "连续 3 笔止损后立即下班"
+      ],
+      "targets_exit": [
+        "达到当日目标停止交易",
+        "出现强制退出信号立即执行"
+      ],
+      "risk_notes": [
+        "清单是执行纪律，不替代具体 setup 的结构规则"
+      ],
+      "prohibited": [
+        "不属于已定义 setup 的交易",
+        "情绪化、无聊或报复性交易",
+        "触及限制后继续交易"
+      ],
+      "exceptions": [
+        "无；检查表要求不合规交易全部忽略"
+      ],
+      "examples": [
+        {
+          "label": "南桥 10 秒自检清单",
+          "pages": [
+            17,
+            17
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "纪律检查表要求按系统交易、不按感觉交易，并逐项核对入场、止损和强制退出信号。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将第17页纪律检查表及提醒归一化为可由后续 agent 自动调用的执行约束；不是原文逐字引述，也不是人工审批门槛。",
+          "supporting_chunk_keys": [
+            "page-17-semantic"
+          ]
+        }
+      ],
+      "confidence": 0.97,
+      "source_id": "nanqiao-checklist"
+    },
+    {
+      "id": "rose-caveman",
+      "type": "setup",
+      "name": "Caveman（野人）策略",
+      "aliases": [
+        "Caveman Setup",
+        "野人",
+        "Signal Bar + Trigger Bar",
+        "Caveman reversal"
+      ],
+      "tags": [
+        "Rose",
+        "失败突破",
+        "反转",
+        "scalp",
+        "HR",
+        "1R",
+        "2R",
+        "第二推",
+        "均线",
+        "TR边缘",
+        "二次入场",
+        "顺势",
+        "DT",
+        "Wedge Top"
+      ],
+      "chunk_keys": [
+        "intro",
+        "p2-core-visual",
+        "bearish-rules",
+        "bullish-rules",
+        "invalid-signal-case",
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5",
+        "case-6",
+        "case-7",
+        "case-8",
+        "case-9"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "短线剥头皮；来源示例为 2025-06-11 日内 ES K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "Caveman 由强劲信号棒与反向触发棒组成：一方尝试突破失败，另一方完全压制并启动反转。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ]
+        },
+        {
+          "statement": "触发棒紧随信号棒之后，并完全逆转信号棒的努力、收盘超越信号棒边界。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ]
+        },
+        {
+          "statement": "如果在DT或Wedge Top的位置出现这一模式，胜率会更高。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2,
+          "visual_locator": "p2 图片 Wedge Top 位置标注"
+        },
+        {
+          "statement": "顺势做Caveman成功率比较高。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "看跌背景是多头尝试向上突破失败；看涨背景是空头尝试向下突破失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual",
+            "bullish-rules"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "左侧有一个强势阴线，实体要中等大小以上，上下影线要短。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "多头强势突破左侧阴线的开盘价，并收在开盘价以上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "触发棒紧随信号棒之后。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ]
+        },
+        {
+          "statement": "突破K和左侧的阴线之间最多间隔2根K线，多于2根就不是Caveman模式了。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "看跌信号棒必须是强劲阳线，实体较大，收盘价接近最高点。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "看涨信号棒必须是强劲阴线，实体较大，收盘价接近最低点；弱阴线如十字星不是好的信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "信号棒的强度是决定性因素；没有强力的失败，就不会有强力的反转。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules",
+            "invalid-signal-case"
+          ]
+        },
+        {
+          "statement": "强趋势中Caveman大概率会失败，最好出现在二次入场位置。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "处于第二推中的Caveman容易失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "在均线附近的Caveman容易失败，比如在均线上方做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "多头Caveman入场点处于TR上沿或空头Caveman入场点处于TR下沿，均容易失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "看跌形态为强阳线后出现收盘低于信号棒开盘价或最低价的阴线；看涨形态为强阴线后出现收盘高于信号棒开盘价或最高价的阳线。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules",
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "本记录将来源 p2 的“均线”作为 EMA 检索别名；来源未给出具体周期。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p2 图片写均线而未写 EMA 周期；该别名只服务检索，不新增指标规则。",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "看跌触发棒必须是阴线，收盘低于信号棒阳线的开盘价或最低价。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "看涨触发棒必须是阳线，收盘高于信号棒阴线的开盘价或最高价。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "触发棒收盘完成反向穿越，突破K与左侧K线最多间隔2根K。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "案例一看涨：B5作为触发棒强势收盘于信号棒B4之上，形成看涨信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-1"
+          ]
+        },
+        {
+          "statement": "案例二看跌：B20作为触发棒强势收盘于强力阳线信号棒B19之下，形成看跌信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-2"
+          ]
+        },
+        {
+          "statement": "案例三看跌：B22回调之后，B24再次成为触发棒，收盘于B23之下，提供二次入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-3"
+          ]
+        },
+        {
+          "statement": "案例四看跌：B30触发了又一个看跌信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-4"
+          ]
+        },
+        {
+          "statement": "案例五看涨：B36强势收盘形成看涨信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-5"
+          ]
+        },
+        {
+          "statement": "案例六看跌：B49收盘于强阳线B48之下，形成看跌信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-6"
+          ]
+        },
+        {
+          "statement": "案例七看涨：B59作为触发棒强势收盘。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-7"
+          ]
+        },
+        {
+          "statement": "案例八看跌：B65触发了一个无需等待回调的看跌信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-8"
+          ]
+        },
+        {
+          "statement": "案例九看涨：B74触发看涨信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-9"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "在触发棒收盘时立即做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "在价格回调至突破点（信号棒低点附近）时做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "在信号棒下方一 tick 位置挂单做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "在触发棒收盘时立即做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "在价格回调至突破点（信号棒高点附近）时做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "在触发棒上方一 tick 位置挂单做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "入场方式二：价格回调至突破点，即突破左侧K线的开盘价附近（pullback to breakout）。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "案例一在B5收盘或B5上方挂单买入，回调至区间的入场方式不适用。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-1"
+          ]
+        },
+        {
+          "statement": "案例二在B20收盘、B20下方一tick挂单或B22回调至突破点做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-2"
+          ]
+        },
+        {
+          "statement": "案例三在B24收盘、B24下方挂单或B25回调至突破点做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-3"
+          ]
+        },
+        {
+          "statement": "案例四在B30收盘、B30下方挂单或B31回调至突破点做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-4"
+          ]
+        },
+        {
+          "statement": "案例五在B36收盘、B36上方挂单或B38/B39回调买入。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-5"
+          ]
+        },
+        {
+          "statement": "案例六在B49收盘或B49下方挂单做空，无需等待回调。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-6"
+          ]
+        },
+        {
+          "statement": "案例七在B59收盘、B59上方挂单或B61回调至TR 50%位置买入。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-7"
+          ]
+        },
+        {
+          "statement": "案例八在B65收盘或B65下方挂单做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-8"
+          ]
+        },
+        {
+          "statement": "案例九在B74收盘、B74上方挂单或B75/B76/B77回调至突破区买入。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-9"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "看跌止损设置在信号棒最高点之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "看涨止损设置在信号棒最低点之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "入场不利时可在触发棒或测量TR的上/下三分之一处加仓/补救，但这会增加风险。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules",
+            "bullish-rules"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "This will give you most of the time 2R targets（p2视觉转录）。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2,
+          "visual_locator": "p2 图片 most-of-the-time 2R targets 文字"
+        },
+        {
+          "statement": "止盈：大概率去到2R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "看跌规则总是在HR（Half R，即0.5R）和1R的位置进行剥头皮式止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bearish-rules"
+          ]
+        },
+        {
+          "statement": "看涨规则同样在HR（Half R，即0.5R）和1R的位置进行剥头皮式止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "bullish-rules"
+          ]
+        },
+        {
+          "statement": "案例一目标为1R和2R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-1"
+          ]
+        },
+        {
+          "statement": "案例二目标为R7。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-2"
+          ]
+        },
+        {
+          "statement": "案例三目标为R4。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-3"
+          ]
+        },
+        {
+          "statement": "案例四目标为R3。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-4"
+          ]
+        },
+        {
+          "statement": "案例五目标为2R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-5"
+          ]
+        },
+        {
+          "statement": "案例六目标为4R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-6"
+          ]
+        },
+        {
+          "statement": "案例七目标为1.5R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-7"
+          ]
+        },
+        {
+          "statement": "案例八目标为3R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-8"
+          ]
+        },
+        {
+          "statement": "案例九目标为1.5R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-9"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "信号棒强度是决定性过滤条件；弱信号棒意味着潜在动能不足，应果断放弃。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "invalid-signal-case"
+          ]
+        },
+        {
+          "statement": "强趋势、第二推、均线附近和TR边缘的Caveman容易失败，顺势和二次入场背景较优。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        },
+        {
+          "statement": "补救/加仓会增加风险，不能当作无风险行为。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p3-p4 允许在不利方向的三分之一处补救，但来源未量化其额外风险；本句仅标记该操作的风险含义。",
+          "supporting_chunk_keys": [
+            "bearish-rules",
+            "bullish-rules"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "弱信号棒、十字星或无法识别反转背景时不应交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual",
+            "invalid-signal-case"
+          ]
+        },
+        {
+          "statement": "强趋势中、第二推中、均线附近以及多头入场在TR上沿/空头入场在TR下沿时过滤掉Caveman。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "p2-core-visual"
+          ],
+          "visual_page": 2
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "案例一回调至区间的入场方式在此处不适用。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-1"
+          ]
+        },
+        {
+          "statement": "案例六和案例八是无需等待回调即可入场的例子。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-6",
+            "case-8"
+          ]
+        },
+        {
+          "statement": "案例七可用更强的信号棒B43重新测量，以在趋势延续时获得更优目标位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-7"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "案例一｜Caveman 1｜看涨｜触发B5，收盘于B4之上；收盘/挂单入场，目标1R和2R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-1"
+          ],
+          "pages": [
+            5,
+            6
+          ],
+          "direction": "long",
+          "trigger_bars": [
+            "B5"
+          ]
+        },
+        {
+          "statement": "案例二｜Caveman 2｜看跌｜触发B20，B22回调至突破区；收盘/一tick/回调入场，目标R7。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-2"
+          ],
+          "pages": [
+            6,
+            7
+          ],
+          "direction": "short",
+          "trigger_bars": [
+            "B20"
+          ]
+        },
+        {
+          "statement": "案例三｜Caveman 3｜看跌｜B22回调后B24再次触发，B25回调二次入场，目标R4。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-3"
+          ],
+          "pages": [
+            7,
+            7
+          ],
+          "direction": "short",
+          "trigger_bars": [
+            "B24"
+          ]
+        },
+        {
+          "statement": "案例四｜Caveman 4｜看跌｜B30触发，B31回调入场，目标R3。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-4"
+          ],
+          "pages": [
+            7,
+            8
+          ],
+          "direction": "short",
+          "trigger_bars": [
+            "B30"
+          ]
+        },
+        {
+          "statement": "案例五｜Caveman 5｜看涨｜B36强势收盘，B38或B39回调买入，目标2R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-5"
+          ],
+          "pages": [
+            8,
+            9
+          ],
+          "direction": "long",
+          "trigger_bars": [
+            "B36"
+          ]
+        },
+        {
+          "statement": "案例六｜Caveman 6｜看跌｜B49收盘于B48之下，无需等待回调，目标4R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-6"
+          ],
+          "pages": [
+            9,
+            10
+          ],
+          "direction": "short",
+          "trigger_bars": [
+            "B49"
+          ]
+        },
+        {
+          "statement": "案例七｜Caveman 7｜看涨｜B59触发，B61回调至TR 50%加仓/二次入场，目标1.5R；B43为备选测量信号棒。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-7"
+          ],
+          "pages": [
+            11,
+            12
+          ],
+          "direction": "long",
+          "trigger_bars": [
+            "B59",
+            "B43"
+          ]
+        },
+        {
+          "statement": "案例八｜Caveman 8｜看跌｜B65无需等待回调触发，目标3R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-8"
+          ],
+          "pages": [
+            12,
+            13
+          ],
+          "direction": "short",
+          "trigger_bars": [
+            "B65"
+          ]
+        },
+        {
+          "statement": "案例九｜Caveman 9｜看涨｜B74触发，B75/B76/B77连续三次回调至突破区，目标1.5R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "case-9"
+          ],
+          "pages": [
+            13,
+            14
+          ],
+          "direction": "long",
+          "trigger_bars": [
+            "B74"
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "本记录保留来源同时出现的紧随/最多间隔2根K、HR/1R与most-of-the-time 2R表述，检索时并列呈现，不合成为唯一硬规则。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p2 图片与 p2-p4 正文/案例的原始表述粒度不同；项目不替来源解决该差异。",
+          "supporting_chunk_keys": [
+            "p2-core-visual",
+            "bearish-rules",
+            "bullish-rules",
+            "case-1"
+          ]
+        }
+      ],
+      "confidence": 0.96,
+      "source_id": "rose-caveman"
+    },
+    {
+      "id": "rose-gap-bar",
+      "type": "setup",
+      "name": "Gap Bar 顺势回调策略",
+      "aliases": [
+        "Gap Bar",
+        "跳空 K 线",
+        "隐含供需区"
+      ],
+      "tags": [
+        "Rose",
+        "趋势",
+        "斐波那契",
+        "回调",
+        "供需"
+      ],
+      "chunk_keys": [
+        "definition",
+        "execution",
+        "summary"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源示例为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "Gap Bar 是市场力量失衡的信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "强趋势 K 线是一根远离指数移动平均线（EMA）的强力阳线或阴线，显示出强劲的买方或卖方力量。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "连续的趋势 K 线是几根连续的同向 K 线（例如没有重叠的几根大阳线），可以被看作一个整体的 Gap Bar。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "识别强趋势单 K、连续同向趋势 K，或 K 线重叠形成的隐含供需区。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源列出的三种 Gap Bar 形态整理成识别前置条件；不是额外的通用跳空定义。",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "使用斐波那契工具测量 Gap Bar 的范围，再观察首次回调区域。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition",
+            "summary"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "隐含供需区（Implicit Gap）不要求 K 线之间出现可见空间；看涨 K 线的上影线与下一根看跌 K 线实体重叠时形成供应区，看跌 K 线的下影线与下一根看涨 K 线实体重叠时形成需求区。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "看涨 Gap Bar 显示买方力量和延续倾向，看跌 Gap Bar 显示卖方力量和延续倾向。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "依据来源对强趋势 K 与顺势延续的描述整理多空方向，不扩写为通用市场规则。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution"
+          ]
+        },
+        {
+          "statement": "连续趋势 K 线可以被看作一个整体的 Gap Bar，并用斐波那契工具测量整个上涨波段。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "看涨 Gap Bar 的首次回调中，首批买家通常在 0.66 水平附近出现，更多买家可能在 50% 的位置等待入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "看跌 Gap Bar 的首次回调中，卖家通常在 33% 左右出现，市场可能上探到 50% 的位置。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "execution"
+          ]
+        },
+        {
+          "statement": "当价格回调到来源指定的斐波那契区域并出现顺势反应时，才考虑按 Gap Bar 方向入场。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源的回调测量、限价区域和顺势方向合并为检索条件；来源没有给出额外确认指标。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "看涨时，在 0.66 或 50% 回调买入区挂限价多单；看跌时，在 33% 或 50% 回调卖出区挂限价空单。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "按来源分别描述的买家/卖家限价区域整理多空入场方向；不添加价格、订单有效期或额外确认条件。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution"
+          ]
+        },
+        {
+          "statement": "Gap Bar 形成后等待回调，再顺应 Gap Bar 的方向入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未声明统一的止损价位或止损距离；本记录不推定具体止损规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "Gap Bar PDF 说明回调测量、限价区域和顺势方向，但没有给出硬止损数字或结构失效点。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "来源未声明固定止盈价位、风险倍数或目标距离；本记录不推定具体目标规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "来源只描述趋势延续和可能的收益，没有给出可执行的止盈价位、R 倍数或退出条件。",
+          "supporting_chunk_keys": [
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "Gap Bar 在该来源中的定义比字面可见跳空更宽，包含单 K、连续 K 和隐含供需重叠区。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "帮助检索时避免把来源术语误读为所有市场的可见跳空。",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "0.66、50% 和 33% 是来源经验描述，不是本项目的统计验证。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源未提供样本、胜率或统计检验；本记录只保留其原文比例。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明独立的 prohibited/禁止交易清单；本记录不推定通用禁做条件。",
+          "declaration_type": "source_not_stated",
+          "rationale": "Gap Bar PDF 说明定义、回调比例和顺势方向，但没有单列禁止交易或越权边界。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未声明独立的 exceptions/例外条件；本记录不推定趋势失效或反向交易规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "Gap Bar PDF 没有给出例外、失效或反转后的处理条款，不能把常识性风控写成来源断言。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "label": "看涨单 K、连续 K 与看跌 Gap Bar 的文字案例",
+          "pages": [
+            2,
+            3
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "本记录按来源原有术语保留单 K、连续 K、隐含供需区及多空回调比例；未把通用跳空规则或未声明的风控数字补入来源。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "说明规范化层的保守边界，便于后续检索和来源复核。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "confidence": 0.92,
+      "source_id": "rose-gap-bar"
+    },
+    {
+      "id": "rose-mother-bar",
+      "type": "setup",
+      "name": "Mother Bar（孕线）区域反转与突破",
+      "aliases": [
+        "Mother Bar",
+        "Inside Bar",
+        "母子线",
+        "MB"
+      ],
+      "tags": [
+        "Rose",
+        "孕线",
+        "限价",
+        "Trading Range",
+        "Trap Zone",
+        "MB36"
+      ],
+      "chunk_keys": [
+        "definition-zones",
+        "contexts-confirmation-risk",
+        "example",
+        "conclusion"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源示例图为 ES1 5m；文档没有规定唯一适用周期。"
+      ],
+      "market_context": [
+        {
+          "statement": "这个形态之所以重要，是因为它直观地表示市场进入了一个短暂的平衡状态或震荡区间（Trading Range）。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "在震荡区间内，80% 的突破尝试都会失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "当市场处于明确的趋势中（无论是上涨还是下跌），策略需要调整。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "当趋势发展到第三条腿时，通常意味着趋势衰竭，可能形成楔形顶部（Wedge Top）或楔形底部（Wedge Bottom），反转的概率大大增加。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "Mother Bar（母线）是第一根 K 线。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "Inside Bar（子线）是第二根 K 线，其最高价和最低价完全被第一根 K 线的范围所包裹。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "将 Mother Bar 的范围从下到上标记为 0 到 1。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "来源关键位包括卖出区 0.66~1.1、买入区 0.33~-0.11、陷阱区 0.89~1.1 与 0.11~-0.11，以及 0.21/0.79 竞争位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "在一个大的震荡区间内出现 Mother Bar 时，交易策略是高抛低吸，进行剥头皮交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "上涨趋势前两波上涨（第一、二条腿）中，可以利用买入区挂限价单加入趋势。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "上涨趋势前两波中应避免在卖出区做空，因为这相当于逆势交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "下跌趋势中利用卖出区做空，避免在买入区抄底。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "上涨趋势末端的 Wedge Top 使用卖出区做空并忽略买入区做多；下跌趋势末端的 Wedge Bottom 使用买入区积极做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "看涨突破：K 线实体（不是影线）收盘在 Mother Bar 的 1 水平之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "看跌突破：K 线实体（不是影线）收盘在 Mother Bar 的 0 水平之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "看涨突破的实体还需要收盘在 1.1 陷阱区之上；看跌突破的实体需要收盘在 -0.11 陷阱区之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "当这两个信号同时出现时，意味着真突破的概率大大增加，此时就不应再坚持逆势剥头皮交易。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "震荡区间中在卖出区挂限价空单、在买入区挂限价多单，并在中间区域止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "趋势第一、二条腿按趋势方向在对应区域挂限价：上涨用买入区，下跌用卖出区。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源分别给出的上涨与下跌文字合并为方向映射；来源没有用一条对称总则表述。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源没有给出第三腿参与必须等待结构证据的独立规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "第三腿段落只说明 Wedge Top/Wedge Bottom 的方向与反转概率，没有给出名为结构证据的额外入场门槛。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "可以设置一个较宽、轻易不会触发的硬止损（Hard Stop）以应对黑天鹅事件。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源明确的软止损例子是：在卖出区做空时，若市场连续出现两根强劲的阳线收在最高点，应主动提前离场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源没有给出与上述卖出区做空软止损完全对称的多头版本。",
+          "declaration_type": "source_not_stated",
+          "rationale": "PDF 只写卖出区做空遇到两根强阳线收最高点的案例；不把它未经说明扩展到买入区做多。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "实体突破与陷阱区外收盘两个确认条件同时出现后，不再坚持逆势剥头皮。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "中间区域 0.33~0.66 通常作为剥头皮交易的初步止盈目标。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        },
+        {
+          "statement": "MB36 示例在 123 和 150/161.80 水平位进行剥头皮交易，并以 MB36 高点获利了结。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example"
+          ]
+        },
+        {
+          "statement": "46 号 K 线实体收盘在 MB36 区间内时，持有部分盈利仓位（runner）以达到 79/66% 或 50% 水平位；若未能收盘在 MB36 高点之下，交易结束。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example"
+          ]
+        },
+        {
+          "statement": "突破确认后转为顺势管理，是对来源‘不应再坚持逆势剥头皮’的派生执行解释。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源明确要求停止逆势剥头皮，但没有单独定义顺势管理的仓位、追踪或目标流程。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "剥头皮交易的仓位应该远小于正常摇摆交易仓位，例如只有正常仓位的 1/10。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "来源写的是该策略追求 80%~90% 高胜率和震荡区间 80% 突破失败；本项目没有对这些比例做绩效验证。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "前半句是来源叙述，后半句是本项目的证据边界，不能把来源宣传性比例当作验证结果。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "所有百分比都以具体 Mother Bar 母线范围为基准，不能脱离图表直接套用绝对价格。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源把比例定义在母线 0 到 1 的归一化范围内；绝对价格换算是实现时的必要解释。",
+          "supporting_chunk_keys": [
+            "definition-zones"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "上涨趋势前两腿避免在卖出区做空；下跌趋势前两腿避免在买入区抄底。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "两个突破确认信号同时出现后，不应继续坚持逆势剥头皮。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        },
+        {
+          "statement": "忽略软止损而等待宽硬止损，是对来源‘主动提前离场’要求的反向执行。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源没有使用 prohibited 标题；该项只是把软止损优先级转写为禁止行为。",
+          "supporting_chunk_keys": [
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "同一 Mother Bar 在震荡、趋势第一/二腿和趋势第三腿背景下方向规则不同，背景优先于形态名称。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源逐段列出三类背景及方向；这里将其归纳为背景优先原则，不新增规则。",
+          "supporting_chunk_keys": [
+            "definition-zones",
+            "contexts-confirmation-risk"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "label": "MB36 图表示例（image-14/page 4 与 image-15/page 5）",
+          "pages": [
+            4,
+            5
+          ],
+          "statement": "第 4-5 页图表与文字共同构成 MB36 示例；页面图像本身不单独声明完整入场规则。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "PDF 的规则文字在第 5 页，图像标注承载比例和 K 线位置；将二者合称为一个示例是视觉归属解释。",
+          "supporting_chunk_keys": [
+            "example"
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "第 5 页总结要点与 MB36 文字同页；总结核心/关键/风险的归纳只作为 derived interpretation，唯一独立的结论页 source assertion 是第 6 页练习与观察市场微观结构的句子。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "页内标题无法在现有页级抽取器中再切成文字块，因此通过 claim 级支持键和声明类型保留真实归属。",
+          "supporting_chunk_keys": [
+            "example",
+            "conclusion"
+          ]
+        },
+        {
+          "statement": "通过不断练习，理解不同市场背景下的应对之道，Mother Bar 策略可以成为你观察和利用市场微观结构的有力工具。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "conclusion"
+          ]
+        }
+      ],
+      "confidence": 0.94,
+      "source_id": "rose-mother-bar"
+    },
+    {
+      "id": "rose-mtr",
+      "type": "setup",
+      "name": "MTR（主趋势反转）失败突破与被套盘",
+      "aliases": [
+        "Major Trend Reversal",
+        "主趋势反转",
+        "MTR",
+        "多头陷阱",
+        "空头陷阱",
+        "Bull Trap",
+        "Bear Trap"
+      ],
+      "tags": [
+        "Rose",
+        "MTR",
+        "失败突破",
+        "被套交易者",
+        "实体确认",
+        "风险单位"
+      ],
+      "chunk_keys": [
+        "intro-core",
+        "trap-confirmation",
+        "video-example",
+        "example-one-two",
+        "example-two-three",
+        "risk-management",
+        "summary"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "日内交易中的波段拐点；来源示例包含 ES 期货和 ETH 5 分钟/15 分钟图表"
+      ],
+      "market_context": [
+        {
+          "statement": "本策略的核心在于识别那些被市场\"欺骗\"并套牢的交易者，然后利用他们平仓（止损）时产生的强大动能来获利。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "这通常发生在趋势的末期或者关键的支撑/阻力位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "多头陷阱（Bull Trap）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "空头陷阱（Bear Trap）",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "理解谁被套牢了，以及他们将在哪里离场，是交易成功的关键。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        },
+        {
+          "statement": "识别信号K线、陷阱K线和随后的确认 K 线",
+          "declaration_type": "derived_interpretation",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ],
+          "rationale": "这是将页面 2 的阳线反转与阴线反转小节归纳为一条检索前置条件；来源分别列出信号 K 线、陷阱 K 线和确认步骤，并未逐字写出这一合并句。"
+        },
+        {
+          "statement": "MTR 本质上是一种\"陷阱\"模式，利用的是突破失败。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "intro-core"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "信号K线: 出现一根强劲的阳线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "陷阱K线: 紧接着的 K 线，其最高价超过了信号K线的最高价",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "信号K线: 出现一根强劲的阴线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "陷阱K线: 紧接着的 K 线，其最低价超过了信号K线的最低价",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "有实体阴线收盘 在信号K线的开盘价或最低价之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "有实体阳线收盘 在信号K线的开盘价或最高价之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "等待一个强有力的\"实体K线收盘\"作为确认信号",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "summary"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "在确认之后，可以寻找机会做多。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        },
+        {
+          "statement": "在 B5 收盘时或其下方挂单做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ]
+        },
+        {
+          "statement": "在 0.21 和 0.33 的位置挂限价单卖出。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损单应放置在陷阱K线端点之外一个 Tick 的位置。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做多时：放在陷阱阳线的最低价之下。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做空时：放在陷阱阴线的最高价之上。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "止损: 放在 B5 的最高点上方。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ]
+        },
+        {
+          "statement": "初始止损放在 B42 最高点的上面。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "初始止损放在 B194 最高点的上面。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        },
+        {
+          "statement": "或者看到 B19 没跌破 B18 的最低点，应该尽早止损。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "从 B4 的开盘价到 B5 的最高价画出风险区间 (R)，然后向下寻找 1R 和 2R 的目标位。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ]
+        },
+        {
+          "statement": "目标位是风险区间 (R) 的倍数。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "第一个目标位是 1R。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "第二个目标位是 2R，以此类推。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "补救的目标是让整体仓位回到盈亏平衡点，甚至盈利。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "当价格回到你最初的入场点附近时，就是你解套获利的时机。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "目标价是我们测量区间的 1 倍距离，我们在 B46 顺利止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "目标价是我们测量区间的 1 倍距离，我们在 B202 顺利止盈。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "风险区间 (R) 通常是 从信号K线(第一根K线)的开盘价到陷阱K线(第二根K线)的端点。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做空时：从信号阳线的开盘价，测量到陷阱阴线的最高价。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "做多时：从信号阴线的开盘价，测量到陷阱阳线的最低价。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "使用开盘价进行测量是因为这种方式更保守且更安全。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "根据 Rose 的讲解，一个完整的交易计划不仅包括入场，更重要的是风险和资金管理。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "有时，我们自己也会被套。Rose 对此的建议是：不要慌乱，进入\"修复模式\"。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "如果你做空被套，不要在低位止损，而应该在一个更小的震荡区间的上沿（比如 33% 或 50% 的回调位）去加仓做空。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "risk-management"
+          ]
+        },
+        {
+          "statement": "不能光看 k 线，重要是分析背景。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "不要急于在陷阱出现时就立刻入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "summary"
+          ]
+        },
+        {
+          "statement": "例如，她观察到 Bar 12 并未跌破 Bar 11 的开盘价，因此她认为卖出信号尚不明确，需要更多证据。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "trap-confirmation"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "这里是一个楔形底的背景，三推。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-one-two"
+          ]
+        },
+        {
+          "statement": "如果做空看到 B19 之后应该把止损放在 B19 上方一个 tick。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "在 2025-04-10 的 ES 复盘视频中，经典的例子发生在 B4 和 B5",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ],
+          "label": "B4/B5 复盘实例",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "statement": "2025 年 6 月 13 日 的 ES 期货",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "video-example"
+          ],
+          "label": "示例一",
+          "pages": [
+            3,
+            3
+          ]
+        },
+        {
+          "statement": "2025 年 6 月 15 日 ETH 5 分钟的图表",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "example-two-three"
+          ],
+          "label": "示例三",
+          "pages": [
+            5,
+            5
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "规范化层仅把来源文字组织为背景—识别—确认—入场—风控链，不把来源未给出的胜率或对称规则升级为来源陈述。",
+          "declaration_type": "derived_interpretation",
+          "supporting_chunk_keys": [
+            "intro-core",
+            "trap-confirmation",
+            "video-example",
+            "example-one-two",
+            "example-two-three",
+            "risk-management",
+            "summary"
+          ],
+          "rationale": "这是对同一 MTR 来源多个页面的检索组织，不是 PDF 中逐字出现的单句规则。"
+        }
+      ],
+      "confidence": 0.95,
+      "source_id": "rose-mtr"
+    },
+    {
+      "id": "rose-zone-buy-sell",
+      "type": "concept",
+      "name": "买入区域 / 卖出区域",
+      "aliases": [
+        "Buy Zone",
+        "Sell Zone",
+        "买卖区域"
+      ],
+      "tags": [
+        "Rose",
+        "区域",
+        "被套盘",
+        "scalp"
+      ],
+      "chunk_keys": [
+        "zones-sell",
+        "zones-buy"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线；具体周期以图表上下文为准"
+      ],
+      "market_context": [
+        {
+          "statement": "前高处最后的多头信号K线底部到后面K线的顶部，就是卖出区域",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-sell"
+          ],
+          "visual_page": 4,
+          "visual_locator": "p4 紫色 Sell Zone 带"
+        },
+        {
+          "statement": "前低处最后的空头信号顶部到后面几根线的最低点是买入区域",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-sell"
+          ],
+          "visual_page": 4,
+          "visual_locator": "p4 绿色 Buy Zone 带"
+        },
+        {
+          "statement": "价格到买入区域会被买上来",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-buy"
+          ],
+          "visual_page": 5,
+          "visual_locator": "p5 Buy Zone 箭头标注"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "先区分前高附近的卖出区域和前低附近的买入区域",
+          "declaration_type": "derived_interpretation",
+          "rationale": "把 p4-p5 两个方向的视觉标注整理为检索前置条件。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        },
+        {
+          "statement": "来源没有给出独立于区域图示的固定价格比例",
+          "declaration_type": "source_not_stated",
+          "rationale": "p4-p5 使用案例区域和价格轴，没有跨案例固定数值。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "卖出区域位于前高处最后的多头信号K线底部到后面K线顶部之间",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-sell"
+          ],
+          "visual_page": 4,
+          "visual_locator": "p4 紫色 Sell Zone 带"
+        },
+        {
+          "statement": "买入区域位于前低处最后的空头信号顶部到后面几根线最低点之间",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-sell"
+          ],
+          "visual_page": 4,
+          "visual_locator": "p4 绿色 Buy Zone 带"
+        },
+        {
+          "statement": "价格到卖出区域会被卖下来",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-buy"
+          ],
+          "visual_page": 5,
+          "visual_locator": "p5 Sell Zone 方向箭头"
+        },
+        {
+          "statement": "价格到买入区域会被买上来",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-buy"
+          ],
+          "visual_page": 5,
+          "visual_locator": "p5 Buy Zone 方向箭头"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "价格到卖出区域会被卖下来",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-buy"
+          ],
+          "visual_page": 5,
+          "visual_locator": "p5 Sell Zone 方向箭头"
+        },
+        {
+          "statement": "价格到买入区域会被买上来",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-buy"
+          ],
+          "visual_page": 5,
+          "visual_locator": "p5 Buy Zone 方向箭头"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "来源未规定仅凭买入区域或卖出区域独立下单的统一入场价",
+          "declaration_type": "source_not_stated",
+          "rationale": "p4-p5 解释区域和被套盘行为，没有独立订单价或确认 K 规则。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未给出买卖区域概念的独立固定止损",
+          "declaration_type": "source_not_stated",
+          "rationale": "p4-p5 没有 stop/tick 参数；不能把其他 setup 的止损移入本记录。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "来源未给出买卖区域概念的独立固定目标；图示只说明到区域时的解套/剥头皮行为",
+          "declaration_type": "source_not_stated",
+          "rationale": "p4-p5 没有跨案例目标数值。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "区域是图示背景，不是脱离上下文的必然反转点",
+          "declaration_type": "derived_interpretation",
+          "rationale": "从来源只描述价格到区域的方向性反应而非无条件交易信号归纳。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        },
+        {
+          "statement": "图示中的区域高度随案例变化",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p4 与 p5 的区域位置由各自 K 线案例标定。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明把买入区域或卖出区域当作脱离背景的必然反转规则",
+          "declaration_type": "source_not_stated",
+          "rationale": "来源只有区域和被套盘图示，没有该泛化规则。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未给出区域被强实体突破后的统一例外处理参数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p4-p5 没有定义突破后的固定 stop/target。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p4-p5 标注了 Sell Zone 与 Buy Zone 的两个方向案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ],
+          "visual_page": 4,
+          "visual_locator": "p4-p5 双方向区域案例"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "区域字段只归纳来源图示的边界、方向和被套盘解套语义",
+          "declaration_type": "derived_interpretation",
+          "rationale": "规范化层不从坐标轴或 K 线价格推导额外比例。",
+          "supporting_chunk_keys": [
+            "zones-sell",
+            "zones-buy"
+          ]
+        }
+      ],
+      "confidence": 0.9,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-three-pushes",
+      "type": "setup",
+      "name": "三推的正确画法",
+      "aliases": [
+        "Three Pushes",
+        "三推",
+        "三推结构"
+      ],
+      "tags": [
+        "Rose",
+        "三推",
+        "楔形",
+        "推段距离"
+      ],
+      "chunk_keys": [
+        "three-pushes-shape",
+        "three-pushes-distance"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "三推的形态一推距离差不多可以达到平衡",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-shape"
+          ],
+          "visual_page": 7,
+          "visual_locator": "p7 平衡三推图示"
+        },
+        {
+          "statement": "平衡的三推形态不会出现第三推更长",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-shape"
+          ],
+          "visual_page": 7,
+          "visual_locator": "p7 第三推长度比较"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "第一推到第二推的距离",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-distance"
+          ],
+          "visual_page": 8,
+          "visual_locator": "p8 推段距离测量框"
+        },
+        {
+          "statement": "第二推到第三推的距离应与前面推段作比较",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将 p8 的两个距离框归纳为比较步骤，不添加数值阈值。",
+          "supporting_chunk_keys": [
+            "three-pushes-distance"
+          ],
+          "visual_page": 8,
+          "visual_locator": "p8 推段距离测量框"
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "平衡的三推需要每一推间距大致相同",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-distance"
+          ],
+          "visual_page": 8,
+          "visual_locator": "p8 三推间距比较"
+        },
+        {
+          "statement": "第二推由两段结构组成，两段加起来才是第二次推动",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-distance"
+          ],
+          "visual_page": 8,
+          "visual_locator": "p8 第二推两段测量"
+        },
+        {
+          "statement": "来源用三推间距寻找有效的楔形顶",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-shape"
+          ],
+          "visual_page": 7,
+          "visual_locator": "p7 楔形顶与推段测量"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "来源没有把三推本身规定为独立的统一入场触发器",
+          "declaration_type": "source_not_stated",
+          "rationale": "p7-p8 讲形态、测量和楔形背景，没有固定订单触发价。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "来源没有给出三推 setup 的独立固定入场价",
+          "declaration_type": "source_not_stated",
+          "rationale": "页面只说明如何画三推和寻找趋势起点，未给出可执行价位。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源没有给出三推 setup 的统一止损点或 tick 数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p7-p8 未标注 stop 参数。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "来源没有给出跨案例固定的三推目标倍数",
+          "declaration_type": "source_not_stated",
+          "rationale": "图中有距离测量，但没有统一目标参数。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "三推间距用于结构识别，不能机械把任何三段同向波段当成反转",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源的平衡形态说明限定在其图示背景内。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        },
+        {
+          "statement": "推段距离没有来源给出的固定数值阈值",
+          "declaration_type": "source_not_stated",
+          "rationale": "p7-p8 仅使用相对距离框。",
+          "supporting_chunk_keys": [
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明第四推或第五推具有固定的独立交易规则",
+          "declaration_type": "source_not_stated",
+          "rationale": "标题提出避免第四/第五推，但 p7-p8 没有给出额外规则，不能补写。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未给出不平衡三推或第四/第五推后的统一例外处理",
+          "declaration_type": "source_not_stated",
+          "rationale": "没有额外参数或订单链。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p7-p8 展示三推距离框、第二推两段和楔形顶案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ],
+          "visual_page": 8,
+          "visual_locator": "p8 粉色推段距离框与第二推两段"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "记录保留第一推、第二推、第三推和推段距离关系，不将图上量测转成固定交易参数",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源图示提供相对结构而非可跨案例复用的数值。",
+          "supporting_chunk_keys": [
+            "three-pushes-shape",
+            "three-pushes-distance"
+          ]
+        }
+      ],
+      "confidence": 0.88,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-sentiment-line",
+      "type": "concept",
+      "name": "三推情绪线",
+      "aliases": [
+        "Sentiment Line",
+        "情绪线"
+      ],
+      "tags": [
+        "Rose",
+        "三推",
+        "Sentiment",
+        "楔形目标"
+      ],
+      "chunk_keys": [
+        "sentiment-definition",
+        "sentiment-pullback"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "三推情绪线 Sentiment",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 Sentiment 标注"
+        },
+        {
+          "statement": "情绪线用于三推之后机构在哪儿止盈的图示背景",
+          "declaration_type": "derived_interpretation",
+          "rationale": "第 9 页主题标题提出止盈问题，p10-p11 以线和目标回答。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "第一推的顶点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 第一推顶点"
+        },
+        {
+          "statement": "第二推的回调点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-pullback"
+          ],
+          "visual_page": 11,
+          "visual_locator": "p11 第二推回调点"
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "第一推的顶点连线到第二推的回调点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 顶点至回调点射线"
+        },
+        {
+          "statement": "这根射线就是情绪线Sentiment",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 Sentiment 射线"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "得到情绪线,指向楔形顶之后的目标位",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 射线延伸目标框"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "来源没有给出情绪线的独立统一突破价或入场价",
+          "declaration_type": "source_not_stated",
+          "rationale": "p10-p11 只定义画线、回调点和目标，不给订单触发。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源没有给出情绪线的独立固定止损",
+          "declaration_type": "source_not_stated",
+          "rationale": "p10-p11 没有 stop/tick 参数。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "延长线穿过的位置就是楔形之后的目标位",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 延长线与楔形目标交点"
+        },
+        {
+          "statement": "楔形的目标位非常接近情绪线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-pullback"
+          ],
+          "visual_page": 11,
+          "visual_locator": "p11 目标位与情绪线邻近"
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "情绪线是三推结构中的辅助解释线，不是来源声明的独立保证指标",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p10-p11 将线与三推测量及回调点一起展示。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明脱离三推结构单独交易情绪线",
+          "declaration_type": "source_not_stated",
+          "rationale": "页面没有独立的情绪线交易规则。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未给出情绪线被突破或失效后的统一例外参数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p10-p11 未标注失效价。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p10-p11 展示第一推顶点、第二推回调点、Sentiment line 与楔形目标案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ],
+          "visual_page": 10,
+          "visual_locator": "p10 Sentiment line 与楔形目标框"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "情绪线记录分开保留画线步骤和目标语义，不从图表坐标计算价格",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源仅提供视觉线和相对目标位置。",
+          "supporting_chunk_keys": [
+            "sentiment-definition",
+            "sentiment-pullback"
+          ]
+        }
+      ],
+      "confidence": 0.88,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-mother-bar-scalp",
+      "type": "setup",
+      "name": "Rose 幻灯片 Mother Bar 刮头皮",
+      "aliases": [
+        "Mother Bar scalp",
+        "孕线刮头皮",
+        "孕线"
+      ],
+      "tags": [
+        "Rose",
+        "Mother Bar",
+        "0.66",
+        "1.11",
+        "0.89",
+        "0.21",
+        "Trap Zone"
+      ],
+      "chunk_keys": [
+        "mother-bar-levels",
+        "mother-bar-fibonacci"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "0.66到1.11是Sell Zone",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 红色 Sell Zone"
+        },
+        {
+          "statement": "0.33到-0.11是Buy Zone",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 绿色 Buy Zone"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "斐波那契回撤线的设置",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-fibonacci"
+          ],
+          "visual_page": 14,
+          "visual_locator": "p14 斐波那契回撤设置面板"
+        },
+        {
+          "statement": "0.79/0.21绿线是机构竞争最激烈的位置",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 0.79/0.21 绿色竞争位"
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "多头实体收在79%上方,多头突破概率更高",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 79%上方多头实体标注"
+        },
+        {
+          "statement": "0.89到1.11是Trap Zone",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 上方 Trap Zone 标注"
+        },
+        {
+          "statement": "0.11到-0.11是Trap Zone",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 下方 Trap Zone 标注"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "孕线后面的两根线收盘价如果在50%之下,说明空头现在控制价格",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 50%下方两根收盘控制空头"
+        },
+        {
+          "statement": "收盘价都在50%以上,证明多头掌控价格",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 50%以上收盘控制多头"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "可以在卖出区域0.66 0.79 0.89 1.11挂单做空",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 Sell Zone 分层挂空单"
+        },
+        {
+          "statement": "在下面买入区域0.33 0.21 0.11 0 -0.11挂单做多",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 Buy Zone 分层挂多单"
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未给出 Mother Bar 区域 scalp 的统一固定止损价或 tick 数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p13-p14 有比例、挂单和止盈说明，但没有独立 stop 参数。",
+          "supporting_chunk_keys": [
+            "mother-bar-levels",
+            "mother-bar-fibonacci"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "0.66的卖单在0.33止盈",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 0.66→0.33 止盈链"
+        },
+        {
+          "statement": "0.79的卖单可以在0.5止盈",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 0.79→0.5 止盈链"
+        },
+        {
+          "statement": "触发的买单至少可以往上移动两格止盈,或中间止盈区域平仓",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 买单向上两格/中间区域止盈"
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "0.66到1.11、0.33到-0.11等比例是本 Rose 幻灯片案例的分层",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源在 p13-p14 展示比例设置，未声称跨市场普适。",
+          "supporting_chunk_keys": [
+            "mother-bar-levels",
+            "mother-bar-fibonacci"
+          ]
+        },
+        {
+          "statement": "50% 控制判断与方向区域必须一起读取，不能只看单一比例线",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p13 将两根线收盘位置、控制方和区域挂单写在同一链条中。",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明在强实体突破后仍无条件坚持逆势区域 scalp",
+          "declaration_type": "source_not_stated",
+          "rationale": "p13 只给出控制方、区域和概率叙述，未给出该泛化禁止语句。",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "多头实体收在79%上方,多头突破概率更高",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 79%上方多头实体标注"
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p13-p14 展示 Mother Bar 比例区域、50% 控制、分层挂单/止盈和 Fibonacci 设置",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "mother-bar-levels",
+            "mother-bar-fibonacci"
+          ],
+          "visual_page": 13,
+          "visual_locator": "p13 比例区域/50% 控制与 p14 Fibonacci 设置"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "本记录只使用 Rose 幻灯片 p13-p14 的比例语义，不把其他 Mother Bar 来源的比例合并进来",
+          "declaration_type": "derived_interpretation",
+          "rationale": "保持同名 setup 的 source_id 和数值 provenance 隔离。",
+          "supporting_chunk_keys": [
+            "mother-bar-levels",
+            "mother-bar-fibonacci"
+          ]
+        }
+      ],
+      "confidence": 0.94,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-fofs-swing",
+      "type": "setup",
+      "name": "FOFS 失败的失败是波段",
+      "aliases": [
+        "FOFS",
+        "Failure of Failure is Swing",
+        "失败的失败"
+      ],
+      "tags": [
+        "Rose",
+        "FOFS",
+        "TTR",
+        "双顶",
+        "双底",
+        "1MM",
+        "AB=CD"
+      ],
+      "chunk_keys": [
+        "fofs-construction",
+        "fofs-midpoint-breakout",
+        "fofs-example-ttr",
+        "fofs-example-abcd"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "FOFS 失败的失败是波段",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 FOFS 标题与步骤"
+        },
+        {
+          "statement": "寻找一个TTR窄幅区间",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 TTR 矩形区间"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "再找出两组双顶和双底",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 双顶双底标注"
+        },
+        {
+          "statement": "矩形下沿放在阴线最低收盘价,矩形上沿放在阳线最高收盘价",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 矩形上下沿"
+        },
+        {
+          "statement": "以矩形中线为界",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 0.5 中线"
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "连续两根趋势K收盘价越过中线,则证明此方向即将突破",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-midpoint-breakout"
+          ],
+          "visual_page": 17,
+          "visual_locator": "p17 连续两根趋势 K 越中线"
+        },
+        {
+          "statement": "连续两根阳线越过中线,多头即将突破",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 两根阳线越过中线"
+        },
+        {
+          "statement": "找出不同的双顶双底都可以找出波段机会",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-midpoint-breakout"
+          ],
+          "visual_page": 17,
+          "visual_locator": "p17 双顶双底波段案例"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "等待中线突破入场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-example-ttr"
+          ],
+          "visual_page": 18,
+          "visual_locator": "p18 TTR 中线突破案例"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "在两根趋势K上方挂突破单入场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 两根趋势 K 上方突破单"
+        },
+        {
+          "statement": "p19 案例把中线突破作为波段参与背景",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p19 的图示延续 FOFS 中线突破案例，但 OCR 文本不足以支持新的逐字入场句。",
+          "supporting_chunk_keys": [
+            "fofs-example-abcd"
+          ],
+          "visual_page": 19
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "止损放在第一根趋势K下面",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 第一根趋势 K 下方止损"
+        },
+        {
+          "statement": "来源没有给出超出第一根趋势K结构的固定 tick 止损",
+          "declaration_type": "source_not_stated",
+          "rationale": "p16-p19 只标出结构位置，没有固定点数。",
+          "supporting_chunk_keys": [
+            "fofs-construction",
+            "fofs-midpoint-breakout"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "TTR顶底1MM目标位",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-construction"
+          ],
+          "visual_page": 16,
+          "visual_locator": "p16 TTR 顶底 1MM 目标"
+        },
+        {
+          "statement": "AB=CD",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-midpoint-breakout",
+            "fofs-example-abcd"
+          ],
+          "visual_page": 17,
+          "visual_locator": "p17 AB=CD 量测"
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "FOFS 目标由当前 TTR 顶底和量测案例决定，不是固定点数",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p16-p19 使用 TTR 顶底 1MM、AB=CD 图示。",
+          "supporting_chunk_keys": [
+            "fofs-construction",
+            "fofs-example-abcd"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明在 TTR、双顶/双底和中线条件未完成时机械套用 FOFS",
+          "declaration_type": "source_not_stated",
+          "rationale": "来源列出条件链但没有此句禁止语。",
+          "supporting_chunk_keys": [
+            "fofs-construction",
+            "fofs-midpoint-breakout"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未给出中线两侧力量不清时的额外固定例外参数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p16-p19 没有统一等待时长或替代条件。",
+          "supporting_chunk_keys": [
+            "fofs-construction",
+            "fofs-midpoint-breakout"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p18 展示 TTR、两组双顶双底和中线突破案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-example-ttr"
+          ],
+          "visual_page": 18,
+          "visual_locator": "p18 TTR/双顶双底/中线案例图"
+        },
+        {
+          "statement": "p19 展示 AB=CD 与 1MM 波段目标案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "fofs-example-abcd"
+          ],
+          "visual_page": 19,
+          "visual_locator": "p19 AB/CD 与 1MM 目标框"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "FOFS 规则按构建、方向确认、TTR 案例和 AB=CD 案例拆分，父级上下文由文档根 chunk 保留",
+          "declaration_type": "derived_interpretation",
+          "rationale": "避免把 p16-p19 的 OCR/UI 合并为一个长检索块，同时保留完整 source refs。",
+          "supporting_chunk_keys": [
+            "fofs-construction",
+            "fofs-midpoint-breakout",
+            "fofs-example-ttr",
+            "fofs-example-abcd"
+          ]
+        }
+      ],
+      "confidence": 0.94,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-range-breakout",
+      "type": "setup",
+      "name": "区间突破与价格控制",
+      "aliases": [
+        "Trading Range Breakout",
+        "区间突破",
+        "价格控制"
+      ],
+      "tags": [
+        "Rose",
+        "区间",
+        "上半区",
+        "下半区",
+        "突破"
+      ],
+      "chunk_keys": [
+        "range-method",
+        "range-bull-case",
+        "range-control-case"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "区间突破判断方法",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21,
+          "visual_locator": "p21 区间突破步骤图"
+        },
+        {
+          "statement": "观察价格被控制在区间上面一半还是下面一半",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21,
+          "visual_locator": "p21 上/下半区控制标注"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "区间内寻找3次多头和空头腿",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21,
+          "visual_locator": "p21 三次多空腿"
+        },
+        {
+          "statement": "价格被控制在区间上半区或下半区",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将 p21-p23 的上下半区标签归纳为方向前置条件。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-bull-case",
+            "range-control-case"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "区间内3次多头和空头腿完成",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-bull-case"
+          ],
+          "visual_page": 22,
+          "visual_locator": "p22 三次多空腿"
+        },
+        {
+          "statement": "多头控制价格在区间上半区",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-bull-case"
+          ],
+          "visual_page": 22,
+          "visual_locator": "p22 多头上半区控制"
+        },
+        {
+          "statement": "空头无法将价格收在区间下半区",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-bull-case"
+          ],
+          "visual_page": 22,
+          "visual_locator": "p22 空头下半区失败"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "如果另一方失败,则顺势入场等待区间突破",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21,
+          "visual_locator": "p21 失败后顺势等待突破"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "多头趋势K上方突破单做多",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-bull-case"
+          ],
+          "visual_page": 22,
+          "visual_locator": "p22 多头趋势 K 上方突破单"
+        },
+        {
+          "statement": "来源没有给出空头方向的独立固定突破价",
+          "declaration_type": "source_not_stated",
+          "rationale": "p21-p23 视觉案例明确标注多头趋势 K 上方突破单，未给出对应空头价位。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-control-case"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未给出区间突破 setup 的统一固定止损价或 tick 数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p21-p23 讲控制和目标，没有 stop 参数。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-bull-case",
+            "range-control-case"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "区间突破1MM",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21,
+          "visual_locator": "p21 区间突破 1MM 目标"
+        },
+        {
+          "statement": "AB=CD",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21,
+          "visual_locator": "p21 AB=CD 目标"
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "价格控制是方向背景，不是确定性预测",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p21 的步骤要求继续观察另一方是否重新掌控价格。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-control-case"
+          ]
+        },
+        {
+          "statement": "必须区分失败重夺控制和真正突破",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将 p21 的失败条件和 p22-p23 的案例并列。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-control-case"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明在控制关系未完成时提前假定突破方向",
+          "declaration_type": "source_not_stated",
+          "rationale": "页面没有该固定禁止句，只提供观察步骤。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-bull-case",
+            "range-control-case"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "另一方重新掌控价格时,原突破方向假设需要重新观察",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p21 明确要求继续看对方是否会重新掌控价格。",
+          "supporting_chunk_keys": [
+            "range-method"
+          ],
+          "visual_page": 21
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p22 展示多头控制上半区、空头无法收在下半区和多头突破单",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-bull-case"
+          ],
+          "visual_page": 22,
+          "visual_locator": "p22 多头控制案例"
+        },
+        {
+          "statement": "p23 展示区间多空腿、失败控制与成功掌控价格案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "range-control-case"
+          ],
+          "visual_page": 23,
+          "visual_locator": "p23 失败控制与成功掌控案例"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "区间规则拆为判定方法、多头案例和控制失败案例，保留每页的视觉方向",
+          "declaration_type": "derived_interpretation",
+          "rationale": "避免将 p21-p23 的不同案例合成一条无方向长块。",
+          "supporting_chunk_keys": [
+            "range-method",
+            "range-bull-case",
+            "range-control-case"
+          ]
+        }
+      ],
+      "confidence": 0.91,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-flag-pullback",
+      "type": "setup",
+      "name": "大影线旗形回调",
+      "aliases": [
+        "Flag Pullback",
+        "旗形回调",
+        "大影线回调"
+      ],
+      "tags": [
+        "Rose",
+        "旗形",
+        "内包线",
+        "大影线",
+        "多头",
+        "空头"
+      ],
+      "chunk_keys": [
+        "flag-overview",
+        "flag-bull-case-1",
+        "flag-bear-case",
+        "flag-bull-case-2"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "如何卖出回调并识别空头旗形",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bear-case"
+          ],
+          "visual_page": 27,
+          "visual_locator": "p27 空头旗形标题与步骤"
+        },
+        {
+          "statement": "如何买入回调并识别多头旗形",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1"
+          ],
+          "visual_page": 26,
+          "visual_locator": "p26 多头旗形标题与步骤"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "找到1个带有大影线的外包K线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-overview"
+          ],
+          "visual_page": 25,
+          "visual_locator": "p25 Step1 大影线外包 K"
+        },
+        {
+          "statement": "找到大影线K后面的内包线",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1"
+          ],
+          "visual_page": 26,
+          "visual_locator": "p26 Step2 内包线"
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "上影线意味着多头陷阱",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bear-case"
+          ],
+          "visual_page": 27,
+          "visual_locator": "p27 上影线多头陷阱"
+        },
+        {
+          "statement": "下影线意味着空头陷阱",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1"
+          ],
+          "visual_page": 26,
+          "visual_locator": "p26 下影线空头陷阱"
+        },
+        {
+          "statement": "内包线紧随大影线bar之后",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-overview"
+          ],
+          "visual_page": 25,
+          "visual_locator": "p25 Step2 内包线"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "找到第二个带有大影线的bar,意味着多头进行了第二次尝试并失败",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bear-case"
+          ],
+          "visual_page": 27,
+          "visual_locator": "p27 Step3 第二次多头尝试失败"
+        },
+        {
+          "statement": "找到第二个带有大影线的k线,意味着空头第二次尝试并失败",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1"
+          ],
+          "visual_page": 26,
+          "visual_locator": "p26 Step3 第二次空头尝试失败"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "在一个好的空头信号k之后卖出",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bear-case"
+          ],
+          "visual_page": 27,
+          "visual_locator": "p27 Step4 空头信号 K 卖出"
+        },
+        {
+          "statement": "在一个好的多头信号k上面突破单入场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1"
+          ],
+          "visual_page": 26,
+          "visual_locator": "p26 Step4 多头信号 K 突破单"
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未给出旗形回调的统一固定止损价或 tick 数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p25-p28 给出影线/内包线/第二次失败和入场，没有 stop 参数。",
+          "supporting_chunk_keys": [
+            "flag-overview",
+            "flag-bull-case-1",
+            "flag-bear-case",
+            "flag-bull-case-2"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "来源未给出旗形回调的统一固定目标倍数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p25-p28 只展示回调入场方向，没有固定目标。",
+          "supporting_chunk_keys": [
+            "flag-overview",
+            "flag-bull-case-1",
+            "flag-bear-case",
+            "flag-bull-case-2"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "单根大影线不等于旗形，需等待内包线和第二次尝试失败",
+          "declaration_type": "derived_interpretation",
+          "rationale": "由 p25-p28 共同重复的四步链整理。",
+          "supporting_chunk_keys": [
+            "flag-overview",
+            "flag-bull-case-1",
+            "flag-bear-case",
+            "flag-bull-case-2"
+          ]
+        },
+        {
+          "statement": "多头和空头旗形方向必须按影线陷阱和顺势信号 K 区分",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p26/p28 与 p27 分别给出相反方向案例。",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1",
+            "flag-bear-case",
+            "flag-bull-case-2"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明在没有第二次尝试失败时把单根影线直接当作旗形入场",
+          "declaration_type": "source_not_stated",
+          "rationale": "这是条件链的保守边界，来源没有用禁止句表达。",
+          "supporting_chunk_keys": [
+            "flag-overview",
+            "flag-bear-case"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未给出强反向实体突破后的统一旗形失效参数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p25-p28 未标出固定失效价。",
+          "supporting_chunk_keys": [
+            "flag-overview",
+            "flag-bull-case-1",
+            "flag-bear-case",
+            "flag-bull-case-2"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p26 展示下影线空头陷阱到多头突破单的旗形案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-1"
+          ],
+          "visual_page": 26,
+          "visual_locator": "p26 多头旗形案例一"
+        },
+        {
+          "statement": "p27 展示上影线多头陷阱到空头卖出的旗形案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bear-case"
+          ],
+          "visual_page": 27,
+          "visual_locator": "p27 空头旗形案例"
+        },
+        {
+          "statement": "p28 展示第二个多头旗形突破单案例",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "flag-bull-case-2"
+          ],
+          "visual_page": 28,
+          "visual_locator": "p28 多头旗形案例二"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "旗形主题按总览、两个多头案例和一个空头案例分 chunk，去除重复 TradingView UI/OCR 噪声",
+          "declaration_type": "derived_interpretation",
+          "rationale": "源图中同一四步链有多方向案例，检索层需保留方向差异。",
+          "supporting_chunk_keys": [
+            "flag-overview",
+            "flag-bull-case-1",
+            "flag-bear-case",
+            "flag-bull-case-2"
+          ]
+        }
+      ],
+      "confidence": 0.93,
+      "source_id": "rose-strategy"
+    },
+    {
+      "id": "rose-missed-trend",
+      "type": "setup",
+      "name": "错过趋势后的十字星补救",
+      "aliases": [
+        "Missed Trend Rescue",
+        "趋势中途入场",
+        "十字星补救"
+      ],
+      "tags": [
+        "Rose",
+        "趋势",
+        "十字星",
+        "1MM",
+        "2MM"
+      ],
+      "chunk_keys": [
+        "missed-trend-doji"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源图表为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "在一段趋势中出现十字星",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 趋势中的十字星"
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "等待趋势中的十字星,意味着趋势暂停",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 十字星暂停"
+        },
+        {
+          "statement": "先识别原有趋势方向",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p30 的补救策略以一段已有趋势为背景，没有新方向猜测。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "连接十字星高低点",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 十字星高低点连线"
+        },
+        {
+          "statement": "十字星整体",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 十字星整体量测"
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "在十字星外面挂突破单入场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 十字星外侧突破单"
+        }
+      ],
+      "entry": [
+        {
+          "statement": "连接十字星高低点,突破单入场",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 高低点外侧突破单"
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未给出十字星补救 setup 的独立固定止损价或 tick 数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p30 只写突破单和 1MM/2MM 目标。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "十字星整体的1MM或2MM",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 十字星整体 1MM/2MM 目标"
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "十字星在来源图示中表示趋势暂停，不自动宣告趋势反转",
+          "declaration_type": "derived_interpretation",
+          "rationale": "p30 的文字先要求等待趋势中的十字星，再连接其高低点。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        },
+        {
+          "statement": "突破方向应与原有趋势背景一起判断",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源标题是错过趋势后的中途入场策略。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明在十字星内部反复猜方向的固定规则",
+          "declaration_type": "source_not_stated",
+          "rationale": "p30 只给十字星外侧突破单。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未给出十字星后强反向趋势K的统一失效参数",
+          "declaration_type": "source_not_stated",
+          "rationale": "p30 没有额外失效价。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "statement": "p30 展示趋势中十字星、连接高低点突破和1MM/2MM目标",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ],
+          "visual_page": 30,
+          "visual_locator": "p30 完整补救案例"
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "页面 31 只有持续更新提示，因此本记录只引用页面 30 的可操作图示",
+          "declaration_type": "derived_interpretation",
+          "rationale": "避免把非规则更新页当作策略证据。",
+          "supporting_chunk_keys": [
+            "missed-trend-doji"
+          ]
+        }
+      ],
+      "confidence": 0.92,
+      "source_id": "rose-strategy"
+    }
+  ]
+}

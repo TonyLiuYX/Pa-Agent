@@ -1,0 +1,6 @@
+[
+  {"direction": "long", "entry_price": "10", "stop_price": "10", "target_price": "11", "code": "zero_risk"},
+  {"direction": "long", "entry_price": "10", "stop_price": "11", "target_price": "12", "code": "invalid_level_order"},
+  {"direction": "short", "entry_price": "10", "stop_price": "9", "target_price": "8", "code": "invalid_level_order"},
+  {"direction": "long", "entry_price": 10.5, "stop_price": "9", "target_price": "11", "code": "float_not_allowed"}
+]

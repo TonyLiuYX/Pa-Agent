@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="pa-page-token" content="__PA_PAGE_TOKEN__">
+  <meta name="description" content="Paper Desk — source-grounded price-action advisory and paper trading workspace.">
+  <title>Paper Desk</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#page-content">跳到主要内容</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Paper Desk navigation">
+      <a class="brand" href="/" data-route aria-label="Paper Desk home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><strong>Paper</strong><small>Desk</small></span>
+      </a>
+      <nav class="primary-nav" id="primary-nav"></nav>
+      <div class="market-spine" aria-label="Runtime market spine">
+        <span class="spine-label">MARKET SPINE</span>
+        <div class="spine-track" aria-hidden="true">
+          <i class="spine-node node-feed"></i>
+          <i class="spine-node node-bar"></i>
+          <i class="spine-node node-decision"></i>
+        </div>
+        <div class="spine-status">
+          <span id="spine-state">IDLE</span>
+          <small id="spine-detail">IEX · PAPER</small>
+        </div>
+      </div>
+      <div class="sidebar-foot">
+        <span class="safety-dot" aria-hidden="true"></span>
+        <span>PAPER TRADING ONLY</span>
+        <small>IEX / INTERNAL · LOCAL / LOOPBACK ONLY</small>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <div class="page-heading">
+          <span class="page-kicker" id="page-kicker">WORKSPACE</span>
+          <h1 id="page-title">Paper Desk</h1>
+        </div>
+        <div class="topbar-actions">
+          <div class="runtime-pill" id="runtime-pill" role="status" aria-live="polite">
+            <span class="runtime-indicator" aria-hidden="true"></span>
+            <span id="runtime-label">空闲</span>
+          </div>
+          <button class="icon-button language-toggle" id="language-toggle" type="button" aria-label="Switch language">EN</button>
+          <a class="icon-button settings-link" href="/settings" data-route aria-label="Settings">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2M6 6l1.4 1.4M16.6 16.6 18 18M18 6l-1.4 1.4M7.4 16.6 6 18"/><circle cx="12" cy="12" r="3.2"/></svg>
+          </a>
+        </div>
+      </header>
+
+      <main id="page-content" tabindex="-1"></main>
+
+      <footer class="app-footer">
+        <span>Paper Desk · local workspace</span>
+        <span>Alpaca Basic IEX · single exchange · no live orders</span>
+      </footer>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"></nav>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="detail-drawer" id="detail-drawer" aria-labelledby="drawer-title" aria-hidden="true">
+    <button class="drawer-close" id="drawer-close" type="button" aria-label="Close">×</button>
+    <div id="drawer-content"></div>
+  </aside>
+</body>
+</html>

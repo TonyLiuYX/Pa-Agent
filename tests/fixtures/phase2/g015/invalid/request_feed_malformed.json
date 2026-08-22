@@ -1,0 +1,7 @@
+{
+  "scenario": "request_feed_malformed",
+  "base_fixture": "valid/analysis_request.json",
+  "mutations": [{"path": "extensions.market_feed", "value": {"provider": "alpaca"}}],
+  "expected_issue_codes": ["missing_field", "malformed_market_feed"],
+  "expected_condition": "invalid_market_data"
+}

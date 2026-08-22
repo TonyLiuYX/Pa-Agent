@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pa-engine.local/contracts/schemas/analysis-policy-0.1.0.schema.json",
+  "title": "Analysis policy v0.1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {"schema_version": {}, "artifact_kind": {}, "analysis_policy_id": {}, "content_hash": {}, "minimum_closed_bars": {}, "max_staleness_seconds": {}, "allow_partial_data": {}, "exclude_incomplete_last_bar": {}, "required_capabilities": {}, "policy_version": {}, "extensions": {}},
+  "$ref": "https://pa-engine.local/contracts/schemas/common-0.1.0.schema.json#/$defs/analysisPolicy"
+}

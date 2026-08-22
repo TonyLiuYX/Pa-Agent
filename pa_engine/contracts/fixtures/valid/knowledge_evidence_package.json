@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.1.0",
+  "artifact_kind": "knowledge_evidence_package",
+  "extensions": {},
+  "knowledge_snapshot_id": "kbs_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "knowledge_snapshot_version": "g013.2026-08-10",
+  "knowledge_snapshot_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "retrieval_algorithm": "deterministic_lexical",
+  "retrieval_version": "0.1.0",
+  "query_hash": "9fd7c0be660467ebe7fbb5f77de246ac7f28937cb1cce6d8126960a108c90033",
+  "retrieval_status": "hit",
+  "evidence_items": [
+    {
+      "record_id": "rose-mtr",
+      "field": "market_context",
+      "claim_id": "rose-mtr:market_context:1",
+      "declaration_type": "source_assertion",
+      "statement": "本策略的核心在于识别那些被市场\"欺骗\"并套牢的交易者,然后利用他们平仓(止损)时产生的强大动能来获利。",
+      "statement_sha256": "77d9e185bbff5f4ac4b001796a609b3cb6d3404d91f93a4759abf7c9bbd2ee95",
+      "rationale": null,
+      "citation_ids": [
+        "cit_2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11"
+      ],
+      "evidence_id": "evi_51807c2ee7187c03ca1fed545b0e97d173752f02fbd2cb01df77da42d2d2839c"
+    },
+    {
+      "record_id": "rose-mtr",
+      "field": "entry",
+      "claim_id": "rose-mtr:entry:2",
+      "declaration_type": "source_assertion",
+      "statement": "在 B5 收盘时或其下方挂单做空。",
+      "statement_sha256": "13d1780a3ba604d5e4d2ab6ab53fcb77c8fec72c480f5cf2ab0975bc6d893107",
+      "rationale": null,
+      "citation_ids": [
+        "cit_7bbeebb19de0fc7b5806c941b980e274fd3c311c497bbebf8dcf9dfde402d854"
+      ],
+      "evidence_id": "evi_fdd04dd26215d8a2fc0272b58c615f365a747ab32caf033c6c233035f747f686"
+    },
+    {
+      "record_id": "rose-mtr",
+      "field": "invalidation_stop",
+      "claim_id": "rose-mtr:invalidation_stop:4",
+      "declaration_type": "source_assertion",
+      "statement": "止损: 放在 B5 的最高点上方。",
+      "statement_sha256": "afbdc57c3c6e32cc95b709ce0a8a3ee6287270256c1dfa3f1f8bda51769cfa5c",
+      "rationale": null,
+      "citation_ids": [
+        "cit_ea61a66654673e60f26f8748deae2f038a5a757f899a4b46c32a232d6b9253f5"
+      ],
+      "evidence_id": "evi_b123e6fd8c974b5a692bdf74e11804a27982aad7aef88f0db92e209fe20e87a7"
+    },
+    {
+      "record_id": "rose-mtr",
+      "field": "targets_exit",
+      "claim_id": "rose-mtr:targets_exit:1",
+      "declaration_type": "source_assertion",
+      "statement": "从 B4 的开盘价到 B5 的最高价画出风险区间 (R),然后向下寻找 1R 和 2R 的目标位。",
+      "statement_sha256": "1654a6b1ec534a00f57de5d4c41c0dcfaffe225dd152c00934d3a0666d0f23b6",
+      "rationale": null,
+      "citation_ids": [
+        "cit_23faa415755676614b5d7c50b6b425c84bdf8595e1d341c96b8966f91f7b65ed"
+      ],
+      "evidence_id": "evi_484541edbab40b9f2125ea9b141df376b48bffa47f8664fd29c9855bea44e71b"
+    },
+    {
+      "record_id": "rose-mtr",
+      "field": "trigger",
+      "claim_id": "rose-mtr:trigger:3",
+      "declaration_type": "source_assertion",
+      "statement": "等待一个强有力的\"实体K线收盘\"作为确认信号",
+      "statement_sha256": "817055e7db96367ff076c29f6e714ba87e6dfafea024129b00eb8c0d57698637",
+      "rationale": null,
+      "citation_ids": [
+        "cit_6da26be3dd505499e4e554cea1e3843f9a394a41284111e68b43075a7ab2aad4"
+      ],
+      "evidence_id": "evi_ba630c77b38193e855129e4bfa123be6d4b3391ba9fe6f295b634defc3ad841c"
+    }
+  ],
+  "citations": [
+    {
+      "schema_version": "0.1.0",
+      "artifact_kind": "knowledge_citation",
+      "extensions": {},
+      "citation_kind": "local_chunk",
+      "claim_id": "rose-mtr:market_context:1",
+      "declaration_type": "source_assertion",
+      "source_id": "rose-mtr",
+      "source_file": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+      "source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+      "chunk_id": "rose-mtr:intro-core",
+      "chunk_text_sha256": "5670fc037d987c4eab886d5833fa0f1718db764627e6fd071975060f2b496372",
+      "page_start": 1,
+      "page_end": 1,
+      "pages": [
+        1
+      ],
+      "title_path": [
+        "MTR",
+        "背景、被套交易者与失败突破定义"
+      ],
+      "source_locator": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf pages 1-1",
+      "provenance_status": "source_faithful_pdf",
+      "content_hash": "2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11",
+      "citation_id": "cit_2bbea8e71e2ba55ddfb001790b2b679849475776c5b5ab4d21b5faf318d03c11"
+    },
+    {
+      "schema_version": "0.1.0",
+      "artifact_kind": "knowledge_citation",
+      "extensions": {},
+      "citation_kind": "local_chunk",
+      "claim_id": "rose-mtr:entry:2",
+      "declaration_type": "source_assertion",
+      "source_id": "rose-mtr",
+      "source_file": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+      "source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+      "chunk_id": "rose-mtr:video-example",
+      "chunk_text_sha256": "91fa81169d0ac90d296fbab5f312db5435c6740859df8222e9636e705cec4ad1",
+      "page_start": 3,
+      "page_end": 3,
+      "pages": [
+        3
+      ],
+      "title_path": [
+        "MTR",
+        "B4/B5 复盘实例：被套多头与做空计划"
+      ],
+      "source_locator": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf pages 3-3",
+      "provenance_status": "source_faithful_pdf",
+      "content_hash": "7bbeebb19de0fc7b5806c941b980e274fd3c311c497bbebf8dcf9dfde402d854",
+      "citation_id": "cit_7bbeebb19de0fc7b5806c941b980e274fd3c311c497bbebf8dcf9dfde402d854"
+    },
+    {
+      "schema_version": "0.1.0",
+      "artifact_kind": "knowledge_citation",
+      "extensions": {},
+      "citation_kind": "local_chunk",
+      "claim_id": "rose-mtr:invalidation_stop:4",
+      "declaration_type": "source_assertion",
+      "source_id": "rose-mtr",
+      "source_file": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+      "source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+      "chunk_id": "rose-mtr:video-example",
+      "chunk_text_sha256": "91fa81169d0ac90d296fbab5f312db5435c6740859df8222e9636e705cec4ad1",
+      "page_start": 3,
+      "page_end": 3,
+      "pages": [
+        3
+      ],
+      "title_path": [
+        "MTR",
+        "B4/B5 复盘实例：被套多头与做空计划"
+      ],
+      "source_locator": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf pages 3-3",
+      "provenance_status": "source_faithful_pdf",
+      "content_hash": "ea61a66654673e60f26f8748deae2f038a5a757f899a4b46c32a232d6b9253f5",
+      "citation_id": "cit_ea61a66654673e60f26f8748deae2f038a5a757f899a4b46c32a232d6b9253f5"
+    },
+    {
+      "schema_version": "0.1.0",
+      "artifact_kind": "knowledge_citation",
+      "extensions": {},
+      "citation_kind": "local_chunk",
+      "claim_id": "rose-mtr:targets_exit:1",
+      "declaration_type": "source_assertion",
+      "source_id": "rose-mtr",
+      "source_file": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+      "source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+      "chunk_id": "rose-mtr:video-example",
+      "chunk_text_sha256": "91fa81169d0ac90d296fbab5f312db5435c6740859df8222e9636e705cec4ad1",
+      "page_start": 3,
+      "page_end": 3,
+      "pages": [
+        3
+      ],
+      "title_path": [
+        "MTR",
+        "B4/B5 复盘实例：被套多头与做空计划"
+      ],
+      "source_locator": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf pages 3-3",
+      "provenance_status": "source_faithful_pdf",
+      "content_hash": "23faa415755676614b5d7c50b6b425c84bdf8595e1d341c96b8966f91f7b65ed",
+      "citation_id": "cit_23faa415755676614b5d7c50b6b425c84bdf8595e1d341c96b8966f91f7b65ed"
+    },
+    {
+      "schema_version": "0.1.0",
+      "artifact_kind": "knowledge_citation",
+      "extensions": {},
+      "citation_kind": "local_chunk",
+      "claim_id": "rose-mtr:trigger:3",
+      "declaration_type": "source_assertion",
+      "source_id": "rose-mtr",
+      "source_file": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf",
+      "source_sha256": "9ade5b6c706cdeff09fba8effadffc1d0bda3c4a2004774232bae24ed094e5be",
+      "chunk_id": "rose-mtr:summary",
+      "chunk_text_sha256": "96944979860d0f68d64aafdf3801698e2fdea80508f2b8c4e5fb619a924b099b",
+      "page_start": 7,
+      "page_end": 7,
+      "pages": [
+        7
+      ],
+      "title_path": [
+        "MTR",
+        "来源总结与执行原则"
+      ],
+      "source_locator": "策略/价格行为学 - Rose 的 MTR (主趋势反转) - forecho's Blog 2.pdf pages 7-7",
+      "provenance_status": "source_faithful_pdf",
+      "content_hash": "6da26be3dd505499e4e554cea1e3843f9a394a41284111e68b43075a7ab2aad4",
+      "citation_id": "cit_6da26be3dd505499e4e554cea1e3843f9a394a41284111e68b43075a7ab2aad4"
+    }
+  ],
+  "conflicts": [],
+  "uncertainty": {
+    "level": "low",
+    "codes": [],
+    "details": "exact MTR claim fixture"
+  },
+  "generated_at": "2026-08-10T15:00:00Z",
+  "content_hash": "ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e",
+  "evidence_package_id": "evp_ebb8ce9357cef7f65eaa42ce1844392ace92e411c7f85f7946de53d7a20dd74e"
+}

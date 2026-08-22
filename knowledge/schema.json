@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pa-knowledge/schema-index-0.1.0",
+  "title": "PA knowledge artifact schema index",
+  "version": "0.1.0",
+  "schemas": {
+    "manifest.json": "schemas/manifest-0.1.0.schema.json",
+    "chunks.json": "schemas/chunks-0.1.0.schema.json",
+    "pa_records.json": "schemas/pa_records-0.1.0.schema.json",
+    "terminology.json": "schemas/terminology-0.1.0.schema.json",
+    "processing_issues.json": "schemas/processing_issues-0.1.0.schema.json",
+    "visual_index.json": "schemas/visual_index-0.1.0.schema.json",
+    "validation/quality_report.json": "schemas/quality_report-0.1.0.schema.json",
+    "extracted/<source_id>/diagnostic.json": "schemas/diagnostic-0.1.0.schema.json"
+  }
+}

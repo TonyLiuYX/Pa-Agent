@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "states": [
+    "analysis_due", "analyzing", "sleeping", "waiting_entry", "open_position",
+    "retry_wait", "market_wait", "blocked", "disabled", "exhausted"
+  ],
+  "transitions": [
+    {"from": "analysis_due", "event": "claim", "to": "analyzing"},
+    {"from": "analysis_due", "event": "market_not_ready", "to": "market_wait"},
+    {"from": "analyzing", "event": "no_entry", "to": "sleeping"},
+    {"from": "analyzing", "event": "conditional_entry", "to": "waiting_entry"},
+    {"from": "analyzing", "event": "immediate_open_accepted", "to": "open_position"},
+    {"from": "analyzing", "event": "retryable_provider_failure", "to": "retry_wait"},
+    {"from": "analyzing", "event": "terminal_or_retry_exhausted", "to": "blocked"},
+    {"from": "analyzing", "event": "market_failure", "to": "market_wait"},
+    {"from": "sleeping", "event": "deadline", "to": "analysis_due"},
+    {"from": "sleeping", "event": "market_not_ready", "to": "market_wait"},
+    {"from": "waiting_entry", "event": "fill", "to": "open_position"},
+    {"from": "waiting_entry", "event": "expiry", "to": "analysis_due"},
+    {"from": "waiting_entry", "event": "market_not_ready", "to": "market_wait"},
+    {"from": "open_position", "event": "close", "to": "analysis_due"},
+    {"from": "open_position", "event": "exhausted_close", "to": "exhausted"},
+    {"from": "open_position", "event": "market_not_ready", "to": "market_wait"},
+    {"from": "retry_wait", "event": "deadline", "to": "analysis_due"},
+    {"from": "retry_wait", "event": "market_not_ready", "to": "market_wait"},
+    {"from": "market_wait", "event": "market_recovered", "to": "retained_resume_state"},
+    {"from": "blocked", "event": "configuration_or_semantic_key_changed", "to": "analysis_due"},
+    {"from": "disabled", "event": "enable_without_open_trade", "to": "analysis_due"},
+    {"from": "disabled", "event": "enable_with_open_trade", "to": "open_position"},
+    {"from": "analysis_due", "event": "disable", "to": "disabled"},
+    {"from": "analyzing", "event": "disable", "to": "disabled"},
+    {"from": "sleeping", "event": "disable", "to": "disabled"},
+    {"from": "waiting_entry", "event": "disable_cancel_pending", "to": "disabled"},
+    {"from": "open_position", "event": "disable_monitor_only", "to": "open_position"},
+    {"from": "retry_wait", "event": "disable", "to": "disabled"},
+    {"from": "market_wait", "event": "disable", "to": "disabled"},
+    {"from": "blocked", "event": "disable", "to": "disabled"},
+    {"from": "analysis_due", "event": "account_exhausted", "to": "exhausted"},
+    {"from": "waiting_entry", "event": "account_exhausted", "to": "exhausted"}
+  ]
+}

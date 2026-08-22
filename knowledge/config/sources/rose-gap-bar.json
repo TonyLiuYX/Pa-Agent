@@ -1,0 +1,324 @@
+{
+  "source_id": "rose-gap-bar",
+  "document_spec": {
+    "file_name": "价格行为学 - Rose 的 Gap Bar - forecho's Blog.pdf",
+    "title": "Rose 的 Gap Bar",
+    "language": "zh-CN",
+    "ocr_when_text_chars_below": 80,
+    "chunk_specs": [
+      {
+        "key": "definition",
+        "pages": [
+          1,
+          2
+        ],
+        "title_path": [
+          "Gap Bar",
+          "定义与识别"
+        ],
+        "kind": "concept",
+        "boundary_reason": "页面 1 的三种 Gap Bar 定义与页面 2 的看涨单 K、连续 K 测量说明构成一个完整概念；页面 2 只在此块保留一次，避免与后续检索块机械重复。",
+        "visual_notes": "页面 2 图示把 Gap Bar 的范围和斐波那契回撤位叠加在趋势图上。"
+      },
+      {
+        "key": "execution",
+        "pages": [
+          3,
+          3
+        ],
+        "title_path": [
+          "Gap Bar",
+          "回调入场与方向规则"
+        ],
+        "kind": "setup",
+        "boundary_reason": "页面 3 同时承接连续看涨 K 的回调后支撑结果与看跌 Gap Bar 的文字方向/比例规则；页面 2 的测量前置和页面 4 的来源总结分别由相邻块引用，避免整页重叠。",
+        "visual_notes": "页面 3 图示是连续看涨 K 线的回调后支撑与延续案例。"
+      },
+      {
+        "key": "summary",
+        "pages": [
+          4,
+          4
+        ],
+        "title_path": [
+          "Gap Bar",
+          "来源总结"
+        ],
+        "kind": "summary",
+        "boundary_reason": "页面 4 的原文摘要单独保留作检索回退；不再把它拼入执行块，避免精确子串重复。",
+        "visual_notes": "页面 4 以文字总结为主，无需额外识别无关图片。"
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "rose-gap-bar",
+      "type": "setup",
+      "name": "Gap Bar 顺势回调策略",
+      "aliases": [
+        "Gap Bar",
+        "跳空 K 线",
+        "隐含供需区"
+      ],
+      "tags": [
+        "Rose",
+        "趋势",
+        "斐波那契",
+        "回调",
+        "供需"
+      ],
+      "chunk_keys": [
+        "definition",
+        "execution",
+        "summary"
+      ],
+      "direction": [
+        "long",
+        "short"
+      ],
+      "timeframes": [
+        "来源示例为日内 K 线"
+      ],
+      "market_context": [
+        {
+          "statement": "Gap Bar 是市场力量失衡的信号。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "强趋势 K 线是一根远离指数移动平均线（EMA）的强力阳线或阴线，显示出强劲的买方或卖方力量。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "连续的趋势 K 线是几根连续的同向 K 线（例如没有重叠的几根大阳线），可以被看作一个整体的 Gap Bar。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        }
+      ],
+      "prerequisites": [
+        {
+          "statement": "识别强趋势单 K、连续同向趋势 K，或 K 线重叠形成的隐含供需区。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源列出的三种 Gap Bar 形态整理成识别前置条件；不是额外的通用跳空定义。",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "使用斐波那契工具测量 Gap Bar 的范围，再观察首次回调区域。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition",
+            "summary"
+          ]
+        }
+      ],
+      "recognition_features": [
+        {
+          "statement": "隐含供需区（Implicit Gap）不要求 K 线之间出现可见空间；看涨 K 线的上影线与下一根看跌 K 线实体重叠时形成供应区，看跌 K 线的下影线与下一根看涨 K 线实体重叠时形成需求区。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "看涨 Gap Bar 显示买方力量和延续倾向，看跌 Gap Bar 显示卖方力量和延续倾向。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "依据来源对强趋势 K 与顺势延续的描述整理多空方向，不扩写为通用市场规则。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution"
+          ]
+        },
+        {
+          "statement": "连续趋势 K 线可以被看作一个整体的 Gap Bar，并用斐波那契工具测量整个上涨波段。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        }
+      ],
+      "trigger": [
+        {
+          "statement": "看涨 Gap Bar 的首次回调中，首批买家通常在 0.66 水平附近出现，更多买家可能在 50% 的位置等待入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "看跌 Gap Bar 的首次回调中，卖家通常在 33% 左右出现，市场可能上探到 50% 的位置。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "execution"
+          ]
+        },
+        {
+          "statement": "当价格回调到来源指定的斐波那契区域并出现顺势反应时，才考虑按 Gap Bar 方向入场。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "将来源的回调测量、限价区域和顺势方向合并为检索条件；来源没有给出额外确认指标。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "entry": [
+        {
+          "statement": "看涨时，在 0.66 或 50% 回调买入区挂限价多单；看跌时，在 33% 或 50% 回调卖出区挂限价空单。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "按来源分别描述的买家/卖家限价区域整理多空入场方向；不添加价格、订单有效期或额外确认条件。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution"
+          ]
+        },
+        {
+          "statement": "Gap Bar 形成后等待回调，再顺应 Gap Bar 的方向入场。",
+          "declaration_type": "source_assertion",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        }
+      ],
+      "invalidation_stop": [
+        {
+          "statement": "来源未声明统一的止损价位或止损距离；本记录不推定具体止损规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "Gap Bar PDF 说明回调测量、限价区域和顺势方向，但没有给出硬止损数字或结构失效点。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "targets_exit": [
+        {
+          "statement": "来源未声明固定止盈价位、风险倍数或目标距离；本记录不推定具体目标规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "来源只描述趋势延续和可能的收益，没有给出可执行的止盈价位、R 倍数或退出条件。",
+          "supporting_chunk_keys": [
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "risk_notes": [
+        {
+          "statement": "Gap Bar 在该来源中的定义比字面可见跳空更宽，包含单 K、连续 K 和隐含供需重叠区。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "帮助检索时避免把来源术语误读为所有市场的可见跳空。",
+          "supporting_chunk_keys": [
+            "definition"
+          ]
+        },
+        {
+          "statement": "0.66、50% 和 33% 是来源经验描述，不是本项目的统计验证。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "来源未提供样本、胜率或统计检验；本记录只保留其原文比例。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "prohibited": [
+        {
+          "statement": "来源未声明独立的 prohibited/禁止交易清单；本记录不推定通用禁做条件。",
+          "declaration_type": "source_not_stated",
+          "rationale": "Gap Bar PDF 说明定义、回调比例和顺势方向，但没有单列禁止交易或越权边界。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "exceptions": [
+        {
+          "statement": "来源未声明独立的 exceptions/例外条件；本记录不推定趋势失效或反向交易规则。",
+          "declaration_type": "source_not_stated",
+          "rationale": "Gap Bar PDF 没有给出例外、失效或反转后的处理条款，不能把常识性风控写成来源断言。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "label": "看涨单 K、连续 K 与看跌 Gap Bar 的文字案例",
+          "pages": [
+            2,
+            3
+          ]
+        }
+      ],
+      "interpretation_notes": [
+        {
+          "statement": "本记录按来源原有术语保留单 K、连续 K、隐含供需区及多空回调比例；未把通用跳空规则或未声明的风控数字补入来源。",
+          "declaration_type": "derived_interpretation",
+          "rationale": "说明规范化层的保守边界，便于后续检索和来源复核。",
+          "supporting_chunk_keys": [
+            "definition",
+            "execution",
+            "summary"
+          ]
+        }
+      ],
+      "confidence": 0.92,
+      "source_id": "rose-gap-bar"
+    }
+  ],
+  "terminology": {
+    "terms": [
+      {
+        "term_en": "Price Action",
+        "term_zh": "价格行为",
+        "aliases": [
+          "PA"
+        ],
+        "source_ids": [
+          "rose-strategy",
+          "rose-caveman",
+          "rose-gap-bar",
+          "rose-mother-bar",
+          "nanqiao-checklist"
+        ],
+        "note": "项目工作术语，不代表策略有效性结论。"
+      },
+      {
+        "term_en": "Gap Bar",
+        "term_zh": "Gap Bar / 跳空 K 线",
+        "aliases": [
+          "隐含缺口",
+          "隐含供需区"
+        ],
+        "source_ids": [
+          "rose-gap-bar"
+        ],
+        "note": "该来源把 Gap Bar 扩展为强趋势单 K、连续趋势 K 或 K 线重叠形成的隐含供需区，不等同于所有市场的可见跳空。"
+      }
+    ],
+    "conflicts": [
+      {
+        "topic": "Gap Bar 的定义",
+        "sources": [
+          "rose-gap-bar"
+        ],
+        "description": "该来源将强趋势单 K、连续趋势 K 和隐含供需重叠均称为 Gap Bar；知识库保留该来源定义，未与一般可见跳空定义合并。"
+      }
+    ]
+  }
+}
