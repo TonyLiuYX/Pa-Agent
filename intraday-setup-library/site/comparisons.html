@@ -1,0 +1,153 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>入场前的结构比较</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f3ec;color:#24332f;font:16px/1.75 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}header{background:#132e2a;color:#f7f3e8;padding:22px 5vw;display:flex;flex-wrap:wrap;gap:8px 20px}header a{color:#d6e8d6}main{max-width:1160px;margin:32px auto;padding:0 28px}h1{font-size:32px;line-height:1.35;font-weight:650}h2{margin-top:2em;font-size:22px;border-top:1px solid #d1d8cf;padding-top:1em}h3{font-size:18px}a{color:#19605c;overflow-wrap:anywhere}p,li,td,th{overflow-wrap:anywhere}.lead{max-width:860px}.muted{color:#62736a;font-size:14px}.tag{display:inline-block;background:#e4e9dc;border:1px solid #ced9c8;border-radius:4px;font-size:12px;padding:1px 7px;margin:2px}input,select,button{font:inherit;border:1px solid #aabfb0;border-radius:5px;background:#fff;padding:9px 12px}button{cursor:pointer}button:hover{background:#e4eddf}input[type=search]{width:100%}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}select{max-width:220px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:15px}.card{background:#fffef9;border:1px solid #d4ddd0;padding:20px;border-radius:8px}.card h3{margin:4px 0}.card p{font-size:14px}.notice{background:#e7ede1;border-left:4px solid #6e9278;padding:12px 16px}.toc{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}.toc a{max-width:290px}.meta{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;font-size:14px;background:#e9ede2;padding:16px}.compare,.table-scroll{overflow-x:auto;margin:20px 0}table{width:100%;border-collapse:collapse}td,th{vertical-align:top;text-align:left;border-bottom:1px solid #ccd8ce;padding:10px;font-size:14px}.compare td{min-width:230px}.compare th:first-child{min-width:95px}.compare ol{padding-left:20px;margin:0}img{max-width:100%;height:auto;display:block;margin:14px auto;border:1px solid #d5ddcf;border-radius:6px}code{font-size:.9em;background:#e3e9df;padding:2px 5px}pre{padding:15px;background:#e3e9df;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #8ea48f;padding-left:14px}.actions{display:flex;gap:10px;flex-wrap:wrap}footer{margin:50px 0;font-size:13px;color:#64796c}@media(max-width:650px){main{padding:0 16px}h1{font-size:25px}.meta{grid-template-columns:1fr}select{max-width:100%}header{font-size:14px}}</style></head><body><header><a href="index.html">INTRADAY / 日内 Setup</a><a href="sources.html">来源</a><a href="taxonomy.html">分类</a><a href="comparisons.html">比较</a><a href="learning.html">学习路线</a><a href="glossary.html">术语</a><a href="quality.html">质量报告</a><a href="recognition.html">程序化识别</a></header><main><h1>入场前的结构比较</h1>
+<p>比较前提、位置和行为顺序，不根据后来盈亏区分。首页可选择1–3条逐轴比较。</p>
+<h2>最容易混淆的决策边界</h2>
+<div class="table-scroll"><table><thead><tr><th>比较组</th><th>入场前就能观察的区别</th><th>不应如何区分</th></tr></thead><tbody><tr><td><a href="setups/SET-0002.html">SET-0002</a> / <a href="setups/SET-0021.html">SET-0021</a></td><td>2冻结现金首五分钟与首柱方向；21必须有新闻/跳空盘前参与，使用开盘前已知PMH</td><td>不能只因突破线价格不同就拆条；删去21的库存前提需重审合并</td></tr><tr><td><a href="setups/SET-0006.html">SET-0006</a> / <a href="setups/SET-0009.html">SET-0009</a> / <a href="setups/SET-0015.html">SET-0015</a></td><td>两段回撤第二次恢复 / 首次极浅暂停 / 普通回撤必要缩量与量恢复</td><td>不用后来哪个涨得快来区分</td></tr><tr><td><a href="setups/SET-0008.html">SET-0008</a> / <a href="setups/SET-0014.html">SET-0014</a></td><td>8要求旧趋势破坏后再测原极值；14要求首强反向冲击后的首弱回撤</td><td>不按最终是否成为全天反转来改标签</td></tr><tr><td><a href="setups/SET-0013.html">SET-0013</a> / <a href="setups/SET-0016.html">SET-0016</a></td><td>内包柱嵌套 / 固定水平被反复压向且拒绝距离缩短</td><td>一个小范围不自动具备两套前提</td></tr><tr><td><a href="setups/SET-0003.html">SET-0003</a> / <a href="setups/SET-0040.html">SET-0040</a> / <a href="setups/SET-0047.html">SET-0047</a></td><td>大量主动成交低位移后反向接力 / 主动冲击减少 / 支持持续但逐档小量缓慢磨过</td><td>大挂单、低量暂停与真实承接不能统称吸收</td></tr><tr><td><a href="setups/SET-0020.html">SET-0020</a> / <a href="setups/SET-0038.html">SET-0038</a> / <a href="setups/SET-0037.html">SET-0037</a></td><td>已结束前日尾部次日开盘 / 当前段伸展先失败 / 回旧价值并完成接受窗口后横穿</td><td>不将未来最终Profile当入场前分布</td></tr><tr><td><a href="setups/SET-0023.html">SET-0023</a> / <a href="setups/SET-0024.html">SET-0024</a> / <a href="setups/SET-0025.html">SET-0025</a></td><td>弱开盘跌势后收复 / 原趋势中的反向探测穿透后失败 / 双向平衡中的偏离衰退</td><td>不把所有穿VWAP或离VWAP远都当同一信号</td></tr><tr><td><a href="setups/SET-0042.html">SET-0042</a> / <a href="setups/SET-0043.html">SET-0043</a></td><td>已固定主动区被守住 / 逆旧趋势主动尝试被否认，价格反穿该区</td><td>相同Footprint配色不意味着相同交易方向</td></tr><tr><td><a href="setups/SET-0031.html">SET-0031</a> / <a href="setups/SET-0032.html">SET-0032</a></td><td>首个预案信息分支 / 后续新增内容改变净解释</td><td>第二段价格波动不自动证明第二段新信息</td></tr><tr><td><a href="setups/SET-0001.html">SET-0001</a> / <a href="setups/SET-0035.html">SET-0035</a> / <a href="setups/SET-0050.html">SET-0050</a></td><td>旧session边缘失败 / 当日IB首侧失败后反侧突破再回收 / 隔夜库存失败并反穿今日cash open</td><td>不因都是开盘反转就省略各自必要历史顺序</td></tr><tr><td><a href="setups/SET-0048.html">SET-0048</a> / <a href="setups/SET-0049.html">SET-0049</a></td><td>因果同刻动态带且多半小时时点 / 早期收益符号只驱动最后半小时</td><td>参数、杠杆与止损版不能继承别版收益</td></tr></tbody></table></div>
+<p>这些条件可能在同一交易中重叠。一个样本可以多标签，但setup ID仍只按独立规则计数；复盘须先锁主假说，不能事后选最赚钱的标签。</p>
+<h2>SET-0001 ↔ SET-0002</h2>
+<p><a href="setups/SET-0001.html">SET-0001 · 前一交易区间突破失败后的开盘反转</a> / <a href="setups/SET-0002.html">SET-0002 · 五分钟开盘区间突破</a>：ORB等待固定开盘区间形成并顺突破入场；本条已有外侧突破失败并交易反向回收。</p>
+<h2>SET-0001 ↔ SET-0007</h2>
+<p><a href="setups/SET-0001.html">SET-0001 · 前一交易区间突破失败后的开盘反转</a> / <a href="setups/SET-0007.html">SET-0007 · 三推高潮后的反转</a>：楔形反转必须出现分开的三次高潮推进；本条不要求三推。</p>
+<h2>SET-0003 ↔ SET-0040</h2>
+<p><a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a> / <a href="setups/SET-0040.html">SET-0040 · 单向伸展末端的主动流耗尽反向短打</a>：耗尽关注主动冲击减少；本条关注大量主动冲击仍无法推进。</p>
+<h2>SET-0003 ↔ SET-0041</h2>
+<p><a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a> / <a href="setups/SET-0041.html">SET-0041 · 阶梯跳价后低量区保持的延续</a>：主动roll需要突然反向冲击，不要求事先看到大量成交被承接。</p>
+<h2>SET-0004 ↔ SET-0010</h2>
+<p><a href="setups/SET-0004.html">SET-0004 · 显著成交重心跌破后的回测延续</a> / <a href="setups/SET-0010.html">SET-0010 · 突破后首次回测守住旧边界</a>：普通突破回测只需价格边界；本条还需事先可识别的成交重心和高价接受不足。</p>
+<h2>SET-0004 ↔ SET-0035</h2>
+<p><a href="setups/SET-0004.html">SET-0004 · 显著成交重心跌破后的回测延续</a> / <a href="setups/SET-0035.html">SET-0035 · IB 首侧失败后的反侧突破与回收</a>：价值迁移延续要求新成交区建立；本条交易旧重心角色变化。</p>
+<h2>SET-0005 ↔ SET-0013</h2>
+<p><a href="setups/SET-0005.html">SET-0005 · 内包线突破失败陷阱</a> / <a href="setups/SET-0013.html">SET-0013 · 趋势内双内包压缩首次释放</a>：ii突破交易压缩后的顺向释放，本条必须先有外侧突破失败。</p>
+<h2>SET-0005 ↔ SET-0001</h2>
+<p><a href="setups/SET-0005.html">SET-0005 · 内包线突破失败陷阱</a> / <a href="setups/SET-0001.html">SET-0001 · 前一交易区间突破失败后的开盘反转</a>：前日范围失败使用session边界；本条依赖特定内包与短窗口序列。</p>
+<h2>SET-0006 ↔ SET-0009</h2>
+<p><a href="setups/SET-0006.html">SET-0006 · 趋势中的两段回撤第二次入场</a> / <a href="setups/SET-0009.html">SET-0009 · 强推进后的首次微型回撤</a>：微通道第一次回撤之前没有正常回撤；本条必须已有第一次恢复失败。</p>
+<h2>SET-0006 ↔ SET-0015</h2>
+<p><a href="setups/SET-0006.html">SET-0006 · 趋势中的两段回撤第二次入场</a> / <a href="setups/SET-0015.html">SET-0015 · 缩量普通回撤后的成交恢复</a>：缩量回撤需要量能退潮，不要求两次恢复；本条必须两段。</p>
+<h2>SET-0007 ↔ SET-0008</h2>
+<p><a href="setups/SET-0007.html">SET-0007 · 三推高潮后的反转</a> / <a href="setups/SET-0008.html">SET-0008 · 旧趋势破坏后再测极值的主要反转</a>：MTR必须先破旧趋势结构再重测；本条可以在第一轮高潮末端触发。</p>
+<h2>SET-0007 ↔ SET-0011</h2>
+<p><a href="setups/SET-0007.html">SET-0007 · 三推高潮后的反转</a> / <a href="setups/SET-0011.html">SET-0011 · 趋势末端最后旗形突破失败</a>：Final flag必须先有晚段横向旗形及其突破失败；本条不要求旗形。</p>
+<h2>SET-0008 ↔ SET-0014</h2>
+<p><a href="setups/SET-0008.html">SET-0008 · 旧趋势破坏后再测极值的主要反转</a> / <a href="setups/SET-0014.html">SET-0014 · 趋势第一次反向冲击后的首回撤</a>：Anti在第一冲击后首回撤即可考虑；本条要求旧极值再次接受检验。</p>
+<h2>SET-0009 ↔ SET-0015</h2>
+<p><a href="setups/SET-0009.html">SET-0009 · 强推进后的首次微型回撤</a> / <a href="setups/SET-0015.html">SET-0015 · 缩量普通回撤后的成交恢复</a>：缩量多柱回撤已经有普通反向摆动，本条只处理强推进的第一次短暂停顿。</p>
+<h2>SET-0010 ↔ SET-0013</h2>
+<p><a href="setups/SET-0010.html">SET-0010 · 突破后首次回测守住旧边界</a> / <a href="setups/SET-0013.html">SET-0013 · 趋势内双内包压缩首次释放</a>：II在压缩释放时入，本条释放已发生且等待回测。</p>
+<h2>SET-0011 ↔ SET-0008</h2>
+<p><a href="setups/SET-0011.html">SET-0011 · 趋势末端最后旗形突破失败</a> / <a href="setups/SET-0008.html">SET-0008 · 旧趋势破坏后再测极值的主要反转</a>：MTR必先破旧通道再测极值；本条必先出现晚段横旗及其延续失败。</p>
+<h2>SET-0011 ↔ SET-0005</h2>
+<p><a href="setups/SET-0011.html">SET-0011 · 趋势末端最后旗形突破失败</a> / <a href="setups/SET-0005.html">SET-0005 · 内包线突破失败陷阱</a>：Hikkake必有inside-bar和限定时序；本条没有该K线序列要求。</p>
+<h2>SET-0012 ↔ SET-0007</h2>
+<p><a href="setups/SET-0012.html">SET-0012 · 连续推进后的分数回撤反向短交易</a> / <a href="setups/SET-0007.html">SET-0007 · 三推高潮后的反转</a>：楔形需三个分开的摆动推进，本条是连续柱的一次推进。</p>
+<h2>SET-0012 ↔ SET-0040</h2>
+<p><a href="setups/SET-0012.html">SET-0012 · 连续推进后的分数回撤反向短交易</a> / <a href="setups/SET-0040.html">SET-0040 · 单向伸展末端的主动流耗尽反向短打</a>：订单流耗尽要求成交/梯级变化，本条仅观察价格且目标是部分回撤。</p>
+<h2>SET-0013 ↔ SET-0016</h2>
+<p><a href="setups/SET-0013.html">SET-0013 · 趋势内双内包压缩首次释放</a> / <a href="setups/SET-0016.html">SET-0016 · 反复逼近固定边界的压力突破</a>：压力突破必反复攻击事前水平、反向回撤缩短；本条必有嵌套母柱，不要求反复水平测试。</p>
+<h2>SET-0014 ↔ SET-0009</h2>
+<p><a href="setups/SET-0014.html">SET-0014 · 趋势第一次反向冲击后的首回撤</a> / <a href="setups/SET-0009.html">SET-0009 · 强推进后的首次微型回撤</a>：微回撤需要未有普通回撤的强推进，但不要求之前的旧趋势被打断。</p>
+<h2>SET-0016 ↔ SET-0010</h2>
+<p><a href="setups/SET-0016.html">SET-0016 · 反复逼近固定边界的压力突破</a> / <a href="setups/SET-0010.html">SET-0010 · 突破后首次回测守住旧边界</a>：回测突破需要越界已经发生；本条在第一次有效越界之前建立压力假说。</p>
+<h2>SET-0017 ↔ SET-0005</h2>
+<p><a href="setups/SET-0017.html">SET-0017 · 逆趋势实体柱试探失败后的顺势入场</a> / <a href="setups/SET-0005.html">SET-0005 · 内包线突破失败陷阱</a>：Hikkake要求inside起点及其后假突破，本条要求逆向大实体承诺且一柱期限。</p>
+<h2>SET-0017 ↔ SET-0006</h2>
+<p><a href="setups/SET-0017.html">SET-0017 · 逆趋势实体柱试探失败后的顺势入场</a> / <a href="setups/SET-0006.html">SET-0006 · 趋势中的两段回撤第二次入场</a>：H2要求两段回撤；本条不数两段，只检验逆向柱是否获得跟随。</p>
+<h2>SET-0018 ↔ SET-0006</h2>
+<p><a href="setups/SET-0018.html">SET-0018 · 平衡区间边缘的第二次反向信号</a> / <a href="setups/SET-0006.html">SET-0006 · 趋势中的两段回撤第二次入场</a>：H2依据既有单向趋势恢复，本条依据已经出现双向平衡并预期中部。</p>
+<h2>SET-0018 ↔ SET-0037</h2>
+<p><a href="setups/SET-0018.html">SET-0018 · 平衡区间边缘的第二次反向信号</a> / <a href="setups/SET-0037.html">SET-0037 · 旧价值区重新接受后的横穿</a>：价值区轮转需前一profile及开盘外→回内的接受时间，本条无需Profile或外部开盘。</p>
+<h2>SET-0019 ↔ SET-0006</h2>
+<p><a href="setups/SET-0019.html">SET-0019 · 原始顺势信号止损后快速恢复的延迟入场</a> / <a href="setups/SET-0006.html">SET-0006 · 趋势中的两段回撤第二次入场</a>：H2只要求首次恢复失败，本条必须典型触发已发生且对应模式止损被穿。</p>
+<h2>SET-0019 ↔ SET-0005</h2>
+<p><a href="setups/SET-0019.html">SET-0019 · 原始顺势信号止损后快速恢复的延迟入场</a> / <a href="setups/SET-0005.html">SET-0005 · 内包线突破失败陷阱</a>：Hikkake不要求先前顺势模式已触发且其止损被扫。</p>
+<h2>SET-0020 ↔ SET-0038</h2>
+<p><a href="setups/SET-0020.html">SET-0020 · 前日低量尾部的次日回价值区</a> / <a href="setups/SET-0038.html">SET-0038 · 当前低量伸展的失败反转回价值</a>：本条使用已结束前日和次日开盘；0038 在当前 session 的伸展末端等失败触发。</p>
+<h2>SET-0020 ↔ SET-0050</h2>
+<p><a href="setups/SET-0020.html">SET-0020 · 前日低量尾部的次日回价值区</a> / <a href="setups/SET-0050.html">SET-0050 · 隔夜方向失败后反穿现金开盘线</a>：0050 以隔夜极值失败和当日现金开盘线反穿触发，不要求旧价值分布。</p>
+<h2>SET-0021 ↔ SET-0002</h2>
+<p><a href="setups/SET-0021.html">SET-0021 · 盘前高点的开盘动量突破</a> / <a href="setups/SET-0002.html">SET-0002 · 五分钟开盘区间突破</a>：0002 必须等待第一根5分钟棒结束；本条的边界在盘前已知并可在开盘立刻触发。</p>
+<h2>SET-0021 ↔ SET-0009</h2>
+<p><a href="setups/SET-0021.html">SET-0021 · 盘前高点的开盘动量突破</a> / <a href="setups/SET-0009.html">SET-0009 · 强推进后的首次微型回撤</a>：0009 是已发生强驱动后的第一微回调，本条须穿越盘前边界。</p>
+<h2>SET-0022 ↔ SET-0023</h2>
+<p><a href="setups/SET-0022.html">SET-0022 · 开盘洗盘后守住盘前支撑</a> / <a href="setups/SET-0023.html">SET-0023 · 弱开盘跌势的 VWAP 收复</a>：0023 的决定触发是重新站上当日VWAP；本条可在仍低于VWAP的支撑复测处进入。</p>
+<h2>SET-0022 ↔ SET-0018</h2>
+<p><a href="setups/SET-0022.html">SET-0022 · 开盘洗盘后守住盘前支撑</a> / <a href="setups/SET-0018.html">SET-0018 · 平衡区间边缘的第二次反向信号</a>：0018 在已确认平衡边缘等第二信号；本条处理现金开盘突发洗盘并依赖盘前背景。</p>
+<h2>SET-0023 ↔ SET-0024</h2>
+<p><a href="setups/SET-0023.html">SET-0023 · 弱开盘跌势的 VWAP 收复</a> / <a href="setups/SET-0024.html">SET-0024 · VWAP 穿透、偏离失败与回测</a>：0024 在原弱方向背景中等穿越偏离失败后的回测做空，而非把首次穿线当多头恢复。</p>
+<h2>SET-0024 ↔ SET-0043</h2>
+<p><a href="setups/SET-0024.html">SET-0024 · VWAP 穿透、偏离失败与回测</a> / <a href="setups/SET-0043.html">SET-0043 · 逆势主动失衡失败后的顺势回归</a>：0043 用明确失败的对角失衡区做原趋势；本条规定均价穿透与二次偏离，不必须堆叠失衡。</p>
+<h2>SET-0025 ↔ SET-0024</h2>
+<p><a href="setups/SET-0025.html">SET-0025 · 平衡日的 VWAP 过度偏离回归</a> / <a href="setups/SET-0024.html">SET-0024 · VWAP 穿透、偏离失败与回测</a>：0024 必须穿透和偏离均价后回测起点；本条在远离且平衡的外侧等衰退。</p>
+<h2>SET-0025 ↔ SET-0038</h2>
+<p><a href="setups/SET-0025.html">SET-0025 · 平衡日的 VWAP 过度偏离回归</a> / <a href="setups/SET-0038.html">SET-0038 · 当前低量伸展的失败反转回价值</a>：0038 依赖旧价值分布与低量伸展，本条目标为动态成交均价并要求当日平衡。</p>
+<h2>SET-0026 ↔ SET-0025</h2>
+<p><a href="setups/SET-0026.html">SET-0026 · 历史高成交日 VWAP 压力与量能断崖</a> / <a href="setups/SET-0025.html">SET-0025 · 平衡日的 VWAP 过度偏离回归</a>：0025 使用今天平VWAP并回到均价；本条历史高成交日线只是潜在供给参考。</p>
+<h2>SET-0026 ↔ SET-0021</h2>
+<p><a href="setups/SET-0026.html">SET-0026 · 历史高成交日 VWAP 压力与量能断崖</a> / <a href="setups/SET-0021.html">SET-0021 · 盘前高点的开盘动量突破</a>：0021 开盘强买量突破PMH，本条寻找这类动量失败后的历史压力拒绝，但两者不能只因做多/做空而算同一交易。</p>
+<h2>SET-0027 ↔ SET-0030</h2>
+<p><a href="setups/SET-0027.html">SET-0027 · 市场确认后的个股相对强弱交易</a> / <a href="setups/SET-0030.html">SET-0030 · 领导市场先行的滞后市场 IB 突破</a>：0030 两个相关期货同方向、领导市场先破IB带动滞后市场；本条先用相反响应检验股票强弱再等市场。</p>
+<h2>SET-0027 ↔ SET-0028</h2>
+<p><a href="setups/SET-0027.html">SET-0027 · 市场确认后的个股相对强弱交易</a> / <a href="setups/SET-0028.html">SET-0028 · 新消息后的第二日关键位接受</a>：0028 必须有前一日新消息和次日关键位接受；本条不必须第二天事件。</p>
+<h2>SET-0028 ↔ SET-0015</h2>
+<p><a href="setups/SET-0028.html">SET-0028 · 新消息后的第二日关键位接受</a> / <a href="setups/SET-0015.html">SET-0015 · 缩量普通回撤后的成交恢复</a>：0015 是普通趋势的低量回调；本条必须前日重大信息和次日的关键位接受，不能只加一个news标签。</p>
+<h2>SET-0028 ↔ SET-0029</h2>
+<p><a href="setups/SET-0028.html">SET-0028 · 新消息后的第二日关键位接受</a> / <a href="setups/SET-0029.html">SET-0029 · 突发新闻的第一轮价格反应</a>：0029 捕捉刚发布后的第一分钟；本条在事件次日经过新的接受过程。</p>
+<h2>SET-0029 ↔ SET-0031</h2>
+<p><a href="setups/SET-0029.html">SET-0029 · 突发新闻的第一轮价格反应</a> / <a href="setups/SET-0031.html">SET-0031 · 事前预案中的宏观意外与跨市场确认</a>：0031 有事前共识分支与多市场确认；本条处理突然到达的个股信息第一轮。</p>
+<h2>SET-0029 ↔ SET-0015</h2>
+<p><a href="setups/SET-0029.html">SET-0029 · 突发新闻的第一轮价格反应</a> / <a href="setups/SET-0015.html">SET-0015 · 缩量普通回撤后的成交恢复</a>：新闻第一轮后的普通小回调是0015事件版本，不能重复计数。</p>
+<h2>SET-0030 ↔ SET-0039</h2>
+<p><a href="setups/SET-0030.html">SET-0030 · 领导市场先行的滞后市场 IB 突破</a> / <a href="setups/SET-0039.html">SET-0039 · 同一水平前后成交能量改变的突破</a>：0039 只需同一产品相对成交能量改变；本条双市场先行不可删。</p>
+<h2>SET-0031 ↔ SET-0032</h2>
+<p><a href="setups/SET-0031.html">SET-0031 · 事前预案中的宏观意外与跨市场确认</a> / <a href="setups/SET-0032.html">SET-0032 · 多阶段公告的净信息重新判断</a>：0032 已有第一段价格反应，后续信息改变净含义才重新判断。</p>
+<h2>SET-0032 ↔ SET-0014</h2>
+<p><a href="setups/SET-0032.html">SET-0032 · 多阶段公告的净信息重新判断</a> / <a href="setups/SET-0014.html">SET-0014 · 趋势第一次反向冲击后的首回撤</a>：0014 可仅由价格冲击后弱回调触发；本条必须可核对新增信息。</p>
+<h2>SET-0033 ↔ SET-0016</h2>
+<p><a href="setups/SET-0033.html">SET-0033 · TPO 台阶的破位与接受</a> / <a href="setups/SET-0016.html">SET-0016 · 反复逼近固定边界的压力突破</a>：0016 必须反复攻击且回调缩小，只有平边缘不够；本条依TPO拍卖台阶并观察外侧接受。</p>
+<h2>SET-0033 ↔ SET-0034</h2>
+<p><a href="setups/SET-0033.html">SET-0033 · TPO 台阶的破位与接受</a> / <a href="setups/SET-0034.html">SET-0034 · 台阶久攻不破后的反向持仓退出</a>：0034 等台阶解决反复失败后，从相反边缘的加速撤仓进入。</p>
+<h2>SET-0034 ↔ SET-0018</h2>
+<p><a href="setups/SET-0034.html">SET-0034 · 台阶久攻不破后的反向持仓退出</a> / <a href="setups/SET-0018.html">SET-0018 · 平衡区间边缘的第二次反向信号</a>：0018 用范围边缘第二反转信号，本条要求台阶多次失败后的范围相反破位加速。</p>
+<h2>SET-0035 ↔ SET-0002</h2>
+<p><a href="setups/SET-0035.html">SET-0035 · IB 首侧失败后的反侧突破与回收</a> / <a href="setups/SET-0002.html">SET-0002 · 五分钟开盘区间突破</a>：0002 一侧首5分钟方向突破即可，本条必须先错侧失败再反侧接受，且IB窗口不同。</p>
+<h2>SET-0035 ↔ SET-0010</h2>
+<p><a href="setups/SET-0035.html">SET-0035 · IB 首侧失败后的反侧突破与回收</a> / <a href="setups/SET-0010.html">SET-0010 · 突破后首次回测守住旧边界</a>：0010 只要求一个既有边界的首次回测；本条额外必需双侧拍卖失败序列。</p>
+<h2>SET-0036 ↔ SET-0041</h2>
+<p><a href="setups/SET-0036.html">SET-0036 · Footprint P 形上分布边缘保持</a> / <a href="setups/SET-0041.html">SET-0041 · 阶梯跳价后低量区保持的延续</a>：0041 必须阶梯跳过薄量区且反向流少，本条先形成厚的新接受块并靠其边缘执行。</p>
+<h2>SET-0036 ↔ SET-0042</h2>
+<p><a href="setups/SET-0036.html">SET-0036 · Footprint P 形上分布边缘保持</a> / <a href="setups/SET-0042.html">SET-0042 · 堆叠对角失衡区的保持与再推进</a>：0042 以连续对角失衡区为参考，本条只需要成交分布结构，不必须堆叠失衡。</p>
+<h2>SET-0037 ↔ SET-0020</h2>
+<p><a href="setups/SET-0037.html">SET-0037 · 旧价值区重新接受后的横穿</a> / <a href="setups/SET-0020.html">SET-0020 · 前日低量尾部的次日回价值区</a>：0020 次日近低量尾部极值可直接开盘入，目标入口价值边；本条等重新进入价值并接受后到另一边。</p>
+<h2>SET-0037 ↔ SET-0004</h2>
+<p><a href="setups/SET-0037.html">SET-0037 · 旧价值区重新接受后的横穿</a> / <a href="setups/SET-0004.html">SET-0004 · 显著成交重心跌破后的回测延续</a>：0004 旧VPOC被方向性突破并形成外部新价值；本条在旧价值内得到接受。</p>
+<h2>SET-0039 ↔ SET-0047</h2>
+<p><a href="setups/SET-0039.html">SET-0039 · 同一水平前后成交能量改变的突破</a> / <a href="setups/SET-0047.html">SET-0047 · 厚市场被动承接的缓慢磨过</a>：0047 不要求速度/主动量爆发，而以厚市场持续被动持价渐进执行。</p>
+<h2>SET-0039 ↔ SET-0041</h2>
+<p><a href="setups/SET-0039.html">SET-0039 · 同一水平前后成交能量改变的突破</a> / <a href="setups/SET-0041.html">SET-0041 · 阶梯跳价后低量区保持的延续</a>：0041 的核心是阶梯跳过薄区后反向流少；本条要求同位旧尝试与新尝试强度变化。</p>
+<h2>SET-0040 ↔ SET-0045</h2>
+<p><a href="setups/SET-0040.html">SET-0040 · 单向伸展末端的主动流耗尽反向短打</a> / <a href="setups/SET-0045.html">SET-0045 · 冰山受阻、流转向与弱冲洗后的再拍卖</a>：0045 必须先有冰山、卖压转换和弱冲洗的多段序列，本条只需末端耗尽短打。</p>
+<h2>SET-0042 ↔ SET-0043</h2>
+<p><a href="setups/SET-0042.html">SET-0042 · 堆叠对角失衡区的保持与再推进</a> / <a href="setups/SET-0043.html">SET-0043 · 逆势主动失衡失败后的顺势回归</a>：0043 堆叠主动方本身失败，越回区后交易反方向；本条要求区保持而继续。</p>
+<h2>SET-0042 ↔ SET-0003</h2>
+<p><a href="setups/SET-0042.html">SET-0042 · 堆叠对角失衡区的保持与再推进</a> / <a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a>：0003 大量主动成交无推进作吸收反转，本条先已发生推进/主动区，后测试保持。</p>
+<h2>SET-0043 ↔ SET-0003</h2>
+<p><a href="setups/SET-0043.html">SET-0043 · 逆势主动失衡失败后的顺势回归</a> / <a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a>：0003 从大量成交无推进看反转；本条必须特定逆势区被反穿并恢复旧趋势。</p>
+<h2>SET-0044 ↔ SET-0003</h2>
+<p><a href="setups/SET-0044.html">SET-0044 · 价格破位而累计 Delta 背离的反转</a> / <a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a>：0003 看局部大量卖成交不再压价，本条须累计流与价格的多段方向背离。</p>
+<h2>SET-0044 ↔ SET-0007</h2>
+<p><a href="setups/SET-0044.html">SET-0044 · 价格破位而累计 Delta 背离的反转</a> / <a href="setups/SET-0007.html">SET-0007 · 三推高潮后的反转</a>：0007 价格三推就可构成，本条楔形仅触发层，累计背离不可删除。</p>
+<h2>SET-0045 ↔ SET-0003</h2>
+<p><a href="setups/SET-0045.html">SET-0045 · 冰山受阻、流转向与弱冲洗后的再拍卖</a> / <a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a>：0003 局部吸收即可反向，本条须整个先供给、深跌、流转向、再受阻、弱冲洗序列。</p>
+<h2>SET-0046 ↔ SET-0034</h2>
+<p><a href="setups/SET-0046.html">SET-0046 · 弱多头背景下黏住卖价的向下清仓</a> / <a href="setups/SET-0034.html">SET-0034 · 台阶久攻不破后的反向持仓退出</a>：0034 台阶久攻失败后破相反范围，本条须高收/现金失败和黏卖价持续。</p>
+<h2>SET-0046 ↔ SET-0047</h2>
+<p><a href="setups/SET-0046.html">SET-0046 · 弱多头背景下黏住卖价的向下清仓</a> / <a href="setups/SET-0047.html">SET-0047 · 厚市场被动承接的缓慢磨过</a>：0047 原理在厚产品的被动买方慢推，触发不依快速bid被拿和反弹浅。</p>
+<h2>SET-0047 ↔ SET-0003</h2>
+<p><a href="setups/SET-0047.html">SET-0047 · 厚市场被动承接的缓慢磨过</a> / <a href="setups/SET-0003.html">SET-0003 · 关键位置吸收后的反转</a>：0003 用受阻成交反转，本条被动买方沿突破路径持续承接来支持延续。</p>
+<h2>SET-0048 ↔ SET-0002</h2>
+<p><a href="setups/SET-0048.html">SET-0048 · 按同一时刻历史波动定义的日内噪声带动量</a> / <a href="setups/SET-0002.html">SET-0002 · 五分钟开盘区间突破</a>：0002 参考当日首5分钟实价区间；本条用过去14日同一时刻动态幅度，触发与风险检查时钟不同。</p>
+<h2>SET-0048 ↔ SET-0049</h2>
+<p><a href="setups/SET-0048.html">SET-0048 · 按同一时刻历史波动定义的日内噪声带动量</a> / <a href="setups/SET-0049.html">SET-0049 · 首段收益方向驱动的最后半小时</a>：0049 固定15:30按早期收益符号定方向，本条可在多个半小时时点触发噪声带突破。</p>
+<h2>SET-0049 ↔ SET-0027</h2>
+<p><a href="setups/SET-0049.html">SET-0049 · 首段收益方向驱动的最后半小时</a> / <a href="setups/SET-0027.html">SET-0027 · 市场确认后的个股相对强弱交易</a>：0027 比较股票与指数相对响应，本条预测同一资产的不同时段。</p>
+<h2>SET-0050 ↔ SET-0001</h2>
+<p><a href="setups/SET-0050.html">SET-0050 · 隔夜方向失败后反穿现金开盘线</a> / <a href="setups/SET-0001.html">SET-0001 · 前一交易区间突破失败后的开盘反转</a>：0001 在前一session范围边界失败触发；本条须隔夜方向失败并反穿今天开盘线，即使仍在旧范围外也可触发。</p><footer>Markdown 为正文主记录 · reviewed 表示规则记录审查 · 来源及真实图表外链需要联网。正文、原创示意、检索和比较可离线使用。<br><a href="readme.html">使用与维护</a> · <a href="research.html">研究报告</a></footer></main></body></html>

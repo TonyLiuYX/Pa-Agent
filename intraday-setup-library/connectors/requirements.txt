@@ -1,0 +1,2 @@
+# Optional live WebSocket client; demo/JSONL/calendar/history use the standard library.
+websockets==17.1

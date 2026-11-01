@@ -1,0 +1,1154 @@
+{
+  "schema_version": "1.0.0",
+  "description": "多轴标签可重叠；独立数量按reviewed ID计数。此文件为JSON兼容YAML，标准库可读取。",
+  "dimensions": {
+    "method_families": {
+      "label": "方法家族",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "VWAP",
+          "label": "VWAP"
+        },
+        {
+          "id": "auction_profile",
+          "label": "拍卖与分布"
+        },
+        {
+          "id": "compression_breakout",
+          "label": "压缩突破"
+        },
+        {
+          "id": "event_driven",
+          "label": "新闻与宏观事件"
+        },
+        {
+          "id": "footprint_delta",
+          "label": "Footprint与Delta"
+        },
+        {
+          "id": "liquidity_inventory",
+          "label": "流动性与库存"
+        },
+        {
+          "id": "opening_gap",
+          "label": "开盘与跳空"
+        },
+        {
+          "id": "price_action_reversal",
+          "label": "PA 反转结构"
+        },
+        {
+          "id": "price_action_trend",
+          "label": "PA 顺势结构"
+        },
+        {
+          "id": "quantitative_time",
+          "label": "量化与时段"
+        },
+        {
+          "id": "relative_strength_lead_lag",
+          "label": "相对强弱与先行"
+        },
+        {
+          "id": "tape_DOM",
+          "label": "逐笔与DOM"
+        }
+      ]
+    },
+    "mechanism": {
+      "label": "具体行为机制",
+      "multi_label": false,
+      "values": [
+        {
+          "id": "aggression_price_divergence",
+          "label": "aggression_price_divergence"
+        },
+        {
+          "id": "aggressor_exhaustion",
+          "label": "aggressor_exhaustion"
+        },
+        {
+          "id": "auction_acceptance_shift",
+          "label": "auction_acceptance_shift"
+        },
+        {
+          "id": "auction_boundary_resolution",
+          "label": "auction_boundary_resolution"
+        },
+        {
+          "id": "auction_value_reacceptance",
+          "label": "auction_value_reacceptance"
+        },
+        {
+          "id": "balance_edge_rejection",
+          "label": "balance_edge_rejection"
+        },
+        {
+          "id": "boundary_acceptance_retest",
+          "label": "boundary_acceptance_retest"
+        },
+        {
+          "id": "climactic_reversal",
+          "label": "climactic_reversal"
+        },
+        {
+          "id": "closing_momentum_predictability",
+          "label": "closing_momentum_predictability"
+        },
+        {
+          "id": "complex_pullback",
+          "label": "complex_pullback"
+        },
+        {
+          "id": "countertrend_commitment_failure",
+          "label": "countertrend_commitment_failure"
+        },
+        {
+          "id": "countertrend_initiative_failure",
+          "label": "countertrend_initiative_failure"
+        },
+        {
+          "id": "countertrend_volume_dryup",
+          "label": "countertrend_volume_dryup"
+        },
+        {
+          "id": "cross_market_relative_strength",
+          "label": "cross_market_relative_strength"
+        },
+        {
+          "id": "delayed_event_repricing",
+          "label": "delayed_event_repricing"
+        },
+        {
+          "id": "failed_auction_unwind",
+          "label": "failed_auction_unwind"
+        },
+        {
+          "id": "failed_breakout",
+          "label": "failed_breakout"
+        },
+        {
+          "id": "failed_countertrend_probe",
+          "label": "failed_countertrend_probe"
+        },
+        {
+          "id": "failed_liquidation_reauction",
+          "label": "failed_liquidation_reauction"
+        },
+        {
+          "id": "failed_opening_selloff",
+          "label": "failed_opening_selloff"
+        },
+        {
+          "id": "failed_pattern_stop_recovery",
+          "label": "failed_pattern_stop_recovery"
+        },
+        {
+          "id": "first_shallow_pause",
+          "label": "first_shallow_pause"
+        },
+        {
+          "id": "immediate_information_shock",
+          "label": "immediate_information_shock"
+        },
+        {
+          "id": "initiative_intensity_change",
+          "label": "initiative_intensity_change"
+        },
+        {
+          "id": "initiative_zone_support",
+          "label": "initiative_zone_support"
+        },
+        {
+          "id": "inside_bar_trap",
+          "label": "inside_bar_trap"
+        },
+        {
+          "id": "intraday_mean_reversion",
+          "label": "intraday_mean_reversion"
+        },
+        {
+          "id": "late_continuation_failure",
+          "label": "late_continuation_failure"
+        },
+        {
+          "id": "lead_lag_breakout",
+          "label": "lead_lag_breakout"
+        },
+        {
+          "id": "liquidity_gap_continuation",
+          "label": "liquidity_gap_continuation"
+        },
+        {
+          "id": "macro_surprise_repricing",
+          "label": "macro_surprise_repricing"
+        },
+        {
+          "id": "micro_value_acceptance",
+          "label": "micro_value_acceptance"
+        },
+        {
+          "id": "nested_compression_release",
+          "label": "nested_compression_release"
+        },
+        {
+          "id": "new_regime_first_pullback",
+          "label": "new_regime_first_pullback"
+        },
+        {
+          "id": "opening_momentum",
+          "label": "opening_momentum"
+        },
+        {
+          "id": "overhead_supply_rejection",
+          "label": "overhead_supply_rejection"
+        },
+        {
+          "id": "overnight_inventory_failure",
+          "label": "overnight_inventory_failure"
+        },
+        {
+          "id": "passive_absorption",
+          "label": "passive_absorption"
+        },
+        {
+          "id": "passive_support_grind",
+          "label": "passive_support_grind"
+        },
+        {
+          "id": "progressive_boundary_pressure",
+          "label": "progressive_boundary_pressure"
+        },
+        {
+          "id": "sequential_information_repricing",
+          "label": "sequential_information_repricing"
+        },
+        {
+          "id": "streak_partial_retrace",
+          "label": "streak_partial_retrace"
+        },
+        {
+          "id": "stretched_value_reversion",
+          "label": "stretched_value_reversion"
+        },
+        {
+          "id": "time_normalized_volatility_breakout",
+          "label": "time_normalized_volatility_breakout"
+        },
+        {
+          "id": "trapped_inventory_unwind",
+          "label": "trapped_inventory_unwind"
+        },
+        {
+          "id": "trend_regime_reversal",
+          "label": "trend_regime_reversal"
+        },
+        {
+          "id": "two_sided_opening_auction_failure",
+          "label": "two_sided_opening_auction_failure"
+        },
+        {
+          "id": "value_reclaim",
+          "label": "value_reclaim"
+        },
+        {
+          "id": "vulnerable_long_inventory_unwind",
+          "label": "vulnerable_long_inventory_unwind"
+        }
+      ]
+    },
+    "structure_locations": {
+      "label": "结构位置",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "HVN",
+          "label": "HVN"
+        },
+        {
+          "id": "TPO_ledge",
+          "label": "TPO_ledge"
+        },
+        {
+          "id": "VPOC",
+          "label": "VPOC"
+        },
+        {
+          "id": "broken_boundary",
+          "label": "broken_boundary"
+        },
+        {
+          "id": "cash_high",
+          "label": "cash_high"
+        },
+        {
+          "id": "countertrend_bar",
+          "label": "countertrend_bar"
+        },
+        {
+          "id": "current_profile_tail",
+          "label": "current_profile_tail"
+        },
+        {
+          "id": "drive_origin",
+          "label": "drive_origin"
+        },
+        {
+          "id": "event_response",
+          "label": "event_response"
+        },
+        {
+          "id": "extension_extreme",
+          "label": "extension_extreme"
+        },
+        {
+          "id": "failed_imbalance_zone",
+          "label": "failed_imbalance_zone"
+        },
+        {
+          "id": "failed_range_edge",
+          "label": "failed_range_edge"
+        },
+        {
+          "id": "first_new_direction_pullback",
+          "label": "first_new_direction_pullback"
+        },
+        {
+          "id": "first_pause",
+          "label": "first_pause"
+        },
+        {
+          "id": "first_reaction_bar",
+          "label": "first_reaction_bar"
+        },
+        {
+          "id": "fixed_horizontal_boundary",
+          "label": "fixed_horizontal_boundary"
+        },
+        {
+          "id": "fixed_time_entry",
+          "label": "fixed_time_entry"
+        },
+        {
+          "id": "flush_low",
+          "label": "flush_low"
+        },
+        {
+          "id": "historical_high_volume_day_VWAP",
+          "label": "historical_high_volume_day_VWAP"
+        },
+        {
+          "id": "iceberg_ceiling",
+          "label": "iceberg_ceiling"
+        },
+        {
+          "id": "initial_balance",
+          "label": "initial_balance"
+        },
+        {
+          "id": "inside_bar_boundary",
+          "label": "inside_bar_boundary"
+        },
+        {
+          "id": "jumped_low_volume_area",
+          "label": "jumped_low_volume_area"
+        },
+        {
+          "id": "late_flag",
+          "label": "late_flag"
+        },
+        {
+          "id": "market_context",
+          "label": "market_context"
+        },
+        {
+          "id": "micro_distribution_edge",
+          "label": "micro_distribution_edge"
+        },
+        {
+          "id": "mother_bar",
+          "label": "mother_bar"
+        },
+        {
+          "id": "new_information_stage",
+          "label": "new_information_stage"
+        },
+        {
+          "id": "old_trend_extreme",
+          "label": "old_trend_extreme"
+        },
+        {
+          "id": "opening_range",
+          "label": "opening_range"
+        },
+        {
+          "id": "opposite_range_edge",
+          "label": "opposite_range_edge"
+        },
+        {
+          "id": "original_stop_reference",
+          "label": "original_stop_reference"
+        },
+        {
+          "id": "overnight_low",
+          "label": "overnight_low"
+        },
+        {
+          "id": "premarket_high",
+          "label": "premarket_high"
+        },
+        {
+          "id": "premarket_support",
+          "label": "premarket_support"
+        },
+        {
+          "id": "prior_news_day_level",
+          "label": "prior_news_day_level"
+        },
+        {
+          "id": "prior_profile_tail",
+          "label": "prior_profile_tail"
+        },
+        {
+          "id": "prior_range_edge",
+          "label": "prior_range_edge"
+        },
+        {
+          "id": "prior_value_area",
+          "label": "prior_value_area"
+        },
+        {
+          "id": "probe_origin",
+          "label": "probe_origin"
+        },
+        {
+          "id": "pullback_extreme",
+          "label": "pullback_extreme"
+        },
+        {
+          "id": "range_edge",
+          "label": "range_edge"
+        },
+        {
+          "id": "repeated_price_level",
+          "label": "repeated_price_level"
+        },
+        {
+          "id": "same_time_noise_band",
+          "label": "same_time_noise_band"
+        },
+        {
+          "id": "session_VWAP",
+          "label": "session_VWAP"
+        },
+        {
+          "id": "stacked_imbalance_zone",
+          "label": "stacked_imbalance_zone"
+        },
+        {
+          "id": "stock_support",
+          "label": "stock_support"
+        },
+        {
+          "id": "streak_extreme",
+          "label": "streak_extreme"
+        },
+        {
+          "id": "swing_extreme",
+          "label": "swing_extreme"
+        },
+        {
+          "id": "third_push_extreme",
+          "label": "third_push_extreme"
+        },
+        {
+          "id": "today_cash_open",
+          "label": "today_cash_open"
+        }
+      ]
+    },
+    "environment_tags": {
+      "label": "市场环境",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "aggressor_fade",
+          "label": "aggressor_fade"
+        },
+        {
+          "id": "auction_shift",
+          "label": "auction_shift"
+        },
+        {
+          "id": "balance",
+          "label": "balance"
+        },
+        {
+          "id": "climax",
+          "label": "climax"
+        },
+        {
+          "id": "closing",
+          "label": "closing"
+        },
+        {
+          "id": "compression",
+          "label": "compression"
+        },
+        {
+          "id": "directional",
+          "label": "directional"
+        },
+        {
+          "id": "divergence",
+          "label": "divergence"
+        },
+        {
+          "id": "extended",
+          "label": "extended"
+        },
+        {
+          "id": "extreme_test",
+          "label": "extreme_test"
+        },
+        {
+          "id": "failed_auction",
+          "label": "failed_auction"
+        },
+        {
+          "id": "gap",
+          "label": "gap"
+        },
+        {
+          "id": "information_shock",
+          "label": "information_shock"
+        },
+        {
+          "id": "intensity_change",
+          "label": "intensity_change"
+        },
+        {
+          "id": "liquidation",
+          "label": "liquidation"
+        },
+        {
+          "id": "liquidity_gap",
+          "label": "liquidity_gap"
+        },
+        {
+          "id": "market_alignment",
+          "label": "market_alignment"
+        },
+        {
+          "id": "micro_balance",
+          "label": "micro_balance"
+        },
+        {
+          "id": "news",
+          "label": "news"
+        },
+        {
+          "id": "opening",
+          "label": "opening"
+        },
+        {
+          "id": "overnight_inventory",
+          "label": "overnight_inventory"
+        },
+        {
+          "id": "passive_support",
+          "label": "passive_support"
+        },
+        {
+          "id": "pullback",
+          "label": "pullback"
+        },
+        {
+          "id": "regime_change",
+          "label": "regime_change"
+        },
+        {
+          "id": "scheduled_event",
+          "label": "scheduled_event"
+        },
+        {
+          "id": "second_day",
+          "label": "second_day"
+        },
+        {
+          "id": "session_boundary",
+          "label": "session_boundary"
+        },
+        {
+          "id": "strong_drive",
+          "label": "strong_drive"
+        },
+        {
+          "id": "time_normalized",
+          "label": "time_normalized"
+        },
+        {
+          "id": "time_of_day",
+          "label": "time_of_day"
+        },
+        {
+          "id": "vulnerable_inventory",
+          "label": "vulnerable_inventory"
+        }
+      ]
+    },
+    "markets_observed": {
+      "label": "来源实际日内市场",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "AHPI美股10秒/1分钟",
+          "label": "AHPI美股10秒/1分钟"
+        },
+        {
+          "id": "BTC（来源图表）",
+          "label": "BTC（来源图表）"
+        },
+        {
+          "id": "Brooks开盘日内讲义",
+          "label": "Brooks开盘日内讲义"
+        },
+        {
+          "id": "Brooks日内价格图",
+          "label": "Brooks日内价格图"
+        },
+        {
+          "id": "Brooks日内区间图",
+          "label": "Brooks日内区间图"
+        },
+        {
+          "id": "Brooks日内图例",
+          "label": "Brooks日内图例"
+        },
+        {
+          "id": "Bund/BTP期货（ECB）",
+          "label": "Bund/BTP期货（ECB）"
+        },
+        {
+          "id": "Bund期货",
+          "label": "Bund期货"
+        },
+        {
+          "id": "Bund期货（AXIA）",
+          "label": "Bund期货（AXIA）"
+        },
+        {
+          "id": "Bund期货（文字情境）",
+          "label": "Bund期货（文字情境）"
+        },
+        {
+          "id": "CAT期权（来源执行示例）",
+          "label": "CAT期权（来源执行示例）"
+        },
+        {
+          "id": "DAX期货",
+          "label": "DAX期货"
+        },
+        {
+          "id": "DAX（来源实际案例）",
+          "label": "DAX（来源实际案例）"
+        },
+        {
+          "id": "ES日内（Brooks讲义）",
+          "label": "ES日内（Brooks讲义）"
+        },
+        {
+          "id": "ES期货1/5分钟",
+          "label": "ES期货1/5分钟"
+        },
+        {
+          "id": "ES期货5分钟",
+          "label": "ES期货5分钟"
+        },
+        {
+          "id": "ES期货5分钟日内案例",
+          "label": "ES期货5分钟日内案例"
+        },
+        {
+          "id": "ES期货图例",
+          "label": "ES期货图例"
+        },
+        {
+          "id": "ES期货（Brooks讲义）",
+          "label": "ES期货（Brooks讲义）"
+        },
+        {
+          "id": "EUR/USD期货",
+          "label": "EUR/USD期货"
+        },
+        {
+          "id": "Eurostoxx期货",
+          "label": "Eurostoxx期货"
+        },
+        {
+          "id": "Eurostoxx期货与DAX期货",
+          "label": "Eurostoxx期货与DAX期货"
+        },
+        {
+          "id": "FDAX期货3分钟",
+          "label": "FDAX期货3分钟"
+        },
+        {
+          "id": "GBP/USD（原场所/合约未确认）",
+          "label": "GBP/USD（原场所/合约未确认）"
+        },
+        {
+          "id": "GM美股1分钟",
+          "label": "GM美股1分钟"
+        },
+        {
+          "id": "NYMEX CL期货3分钟（日内顺势再入案例）",
+          "label": "NYMEX CL期货3分钟（日内顺势再入案例）"
+        },
+        {
+          "id": "QQQ/XLF/IWM/DIA/EEM/FXI/EFA/VWO/IYR/TLT（论文扩展）",
+          "label": "QQQ/XLF/IWM/DIA/EEM/FXI/EFA/VWO/IYR/TLT（论文扩展）"
+        },
+        {
+          "id": "RTS指数期货 RIH9",
+          "label": "RTS指数期货 RIH9"
+        },
+        {
+          "id": "S&P500期货",
+          "label": "S&P500期货"
+        },
+        {
+          "id": "S&P500期货（回顾研究）",
+          "label": "S&P500期货（回顾研究）"
+        },
+        {
+          "id": "S&P500期货（文字情境）",
+          "label": "S&P500期货（文字情境）"
+        },
+        {
+          "id": "SPY ETF",
+          "label": "SPY ETF"
+        },
+        {
+          "id": "SPY ETF 3分钟",
+          "label": "SPY ETF 3分钟"
+        },
+        {
+          "id": "债券/黄金/ES（FOMC）",
+          "label": "债券/黄金/ES（FOMC）"
+        },
+        {
+          "id": "原油期货",
+          "label": "原油期货"
+        },
+        {
+          "id": "德国Bund期货",
+          "label": "德国Bund期货"
+        },
+        {
+          "id": "指数期货（教育规则）",
+          "label": "指数期货（教育规则）"
+        },
+        {
+          "id": "指数期货（规则与ES研究）",
+          "label": "指数期货（规则与ES研究）"
+        },
+        {
+          "id": "期货（Jigsaw教育规则）",
+          "label": "期货（Jigsaw教育规则）"
+        },
+        {
+          "id": "期货（Jigsaw／AXIA文字案例，合约未明确）",
+          "label": "期货（Jigsaw／AXIA文字案例，合约未明确）"
+        },
+        {
+          "id": "期货（P形案例未核对具体合约）",
+          "label": "期货（P形案例未核对具体合约）"
+        },
+        {
+          "id": "欧洲债券/Eurostoxx/EUR（ECB）",
+          "label": "欧洲债券/Eurostoxx/EUR（ECB）"
+        },
+        {
+          "id": "美国上市股票（论文样本）",
+          "label": "美国上市股票（论文样本）"
+        },
+        {
+          "id": "美国个股",
+          "label": "美国个股"
+        },
+        {
+          "id": "美国个股与SPY",
+          "label": "美国个股与SPY"
+        },
+        {
+          "id": "美国债券/黄金/ES期货（FOMC）",
+          "label": "美国债券/黄金/ES期货（FOMC）"
+        },
+        {
+          "id": "美国小盘个股",
+          "label": "美国小盘个股"
+        },
+        {
+          "id": "美股1分钟（SAI）",
+          "label": "美股1分钟（SAI）"
+        },
+        {
+          "id": "美股开盘1分钟（SAI）",
+          "label": "美股开盘1分钟（SAI）"
+        },
+        {
+          "id": "美股盘中15分钟（SAI）",
+          "label": "美股盘中15分钟（SAI）"
+        },
+        {
+          "id": "股票1/5分钟（Bulkowski规则）",
+          "label": "股票1/5分钟（Bulkowski规则）"
+        },
+        {
+          "id": "黄金期货 GCM1（Bookmap图例）",
+          "label": "黄金期货 GCM1（Bookmap图例）"
+        }
+      ]
+    },
+    "session_tags": {
+      "label": "交易时段",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "closing",
+          "label": "closing"
+        },
+        {
+          "id": "european_open",
+          "label": "european_open"
+        },
+        {
+          "id": "intraday",
+          "label": "intraday"
+        },
+        {
+          "id": "macro",
+          "label": "macro"
+        },
+        {
+          "id": "news_release",
+          "label": "news_release"
+        },
+        {
+          "id": "opening",
+          "label": "opening"
+        },
+        {
+          "id": "overnight",
+          "label": "overnight"
+        },
+        {
+          "id": "premarket",
+          "label": "premarket"
+        },
+        {
+          "id": "scheduled_check",
+          "label": "scheduled_check"
+        },
+        {
+          "id": "second_day",
+          "label": "second_day"
+        }
+      ]
+    },
+    "pa_role": {
+      "label": "PA作用",
+      "multi_label": false,
+      "values": [
+        {
+          "id": "core",
+          "label": "core"
+        },
+        {
+          "id": "non_primary",
+          "label": "non_primary"
+        },
+        {
+          "id": "supporting",
+          "label": "supporting"
+        }
+      ]
+    },
+    "data_requirements": {
+      "label": "必要数据",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "DOM",
+          "label": "DOM"
+        },
+        {
+          "id": "EMA_optional",
+          "label": "EMA_optional"
+        },
+        {
+          "id": "OHLC",
+          "label": "OHLC"
+        },
+        {
+          "id": "TPO",
+          "label": "TPO"
+        },
+        {
+          "id": "VWAP",
+          "label": "VWAP"
+        },
+        {
+          "id": "VWAP_optional",
+          "label": "VWAP_optional"
+        },
+        {
+          "id": "bid_ask_classified_trades",
+          "label": "bid_ask_classified_trades"
+        },
+        {
+          "id": "bid_ask_volume",
+          "label": "bid_ask_volume"
+        },
+        {
+          "id": "cash_open",
+          "label": "cash_open"
+        },
+        {
+          "id": "classified_trades",
+          "label": "classified_trades"
+        },
+        {
+          "id": "consensus_notes",
+          "label": "consensus_notes"
+        },
+        {
+          "id": "cumulative_delta",
+          "label": "cumulative_delta"
+        },
+        {
+          "id": "daily_ATR",
+          "label": "daily_ATR"
+        },
+        {
+          "id": "diagonal_footprint",
+          "label": "diagonal_footprint"
+        },
+        {
+          "id": "footprint",
+          "label": "footprint"
+        },
+        {
+          "id": "historical_session_VWAP",
+          "label": "historical_session_VWAP"
+        },
+        {
+          "id": "index_OHLC",
+          "label": "index_OHLC"
+        },
+        {
+          "id": "initial_balance",
+          "label": "initial_balance"
+        },
+        {
+          "id": "intraday_prices",
+          "label": "intraday_prices"
+        },
+        {
+          "id": "minute_OHLCV",
+          "label": "minute_OHLCV"
+        },
+        {
+          "id": "news",
+          "label": "news"
+        },
+        {
+          "id": "news_sequence",
+          "label": "news_sequence"
+        },
+        {
+          "id": "news_timestamp",
+          "label": "news_timestamp"
+        },
+        {
+          "id": "official_release",
+          "label": "official_release"
+        },
+        {
+          "id": "original_pattern_stop_reference",
+          "label": "original_pattern_stop_reference"
+        },
+        {
+          "id": "overnight_OHLC",
+          "label": "overnight_OHLC"
+        },
+        {
+          "id": "premarket",
+          "label": "premarket"
+        },
+        {
+          "id": "previous_close",
+          "label": "previous_close"
+        },
+        {
+          "id": "previous_session_levels",
+          "label": "previous_session_levels"
+        },
+        {
+          "id": "prices",
+          "label": "prices"
+        },
+        {
+          "id": "prior_cash_close",
+          "label": "prior_cash_close"
+        },
+        {
+          "id": "prior_day_levels",
+          "label": "prior_day_levels"
+        },
+        {
+          "id": "prior_session_TPO",
+          "label": "prior_session_TPO"
+        },
+        {
+          "id": "prior_session_levels_optional",
+          "label": "prior_session_levels_optional"
+        },
+        {
+          "id": "session_clock",
+          "label": "session_clock"
+        },
+        {
+          "id": "session_profile",
+          "label": "session_profile"
+        },
+        {
+          "id": "session_volume_profile",
+          "label": "session_volume_profile"
+        },
+        {
+          "id": "stock_OHLC",
+          "label": "stock_OHLC"
+        },
+        {
+          "id": "synchronized_market_OHLC",
+          "label": "synchronized_market_OHLC"
+        },
+        {
+          "id": "synchronized_prices",
+          "label": "synchronized_prices"
+        },
+        {
+          "id": "time_and_sales",
+          "label": "time_and_sales"
+        },
+        {
+          "id": "trade_classification",
+          "label": "trade_classification"
+        },
+        {
+          "id": "trade_prints",
+          "label": "trade_prints"
+        },
+        {
+          "id": "trend_structure",
+          "label": "trend_structure"
+        },
+        {
+          "id": "volume",
+          "label": "volume"
+        },
+        {
+          "id": "volume_at_price",
+          "label": "volume_at_price"
+        },
+        {
+          "id": "volume_optional",
+          "label": "volume_optional"
+        },
+        {
+          "id": "volume_profile",
+          "label": "volume_profile"
+        }
+      ]
+    },
+    "execution_mode": {
+      "label": "执行方式",
+      "multi_label": false,
+      "values": [
+        {
+          "id": "discretionary",
+          "label": "discretionary"
+        },
+        {
+          "id": "mixed",
+          "label": "mixed"
+        },
+        {
+          "id": "systematic_source_version",
+          "label": "systematic_source_version"
+        }
+      ]
+    },
+    "status": {
+      "label": "资料状态",
+      "multi_label": false,
+      "values": [
+        {
+          "id": "reviewed",
+          "label": "reviewed"
+        }
+      ]
+    },
+    "market_types": {
+      "label": "市场类别",
+      "multi_label": true,
+      "values": [
+        {
+          "id": "ETF",
+          "label": "ETF"
+        },
+        {
+          "id": "FX_venue_unconfirmed",
+          "label": "外汇标的（场所未确认）"
+        },
+        {
+          "id": "crypto",
+          "label": "加密资产"
+        },
+        {
+          "id": "futures",
+          "label": "期货"
+        },
+        {
+          "id": "options",
+          "label": "期权来源执行例"
+        },
+        {
+          "id": "stocks",
+          "label": "股票"
+        },
+        {
+          "id": "unconfirmed",
+          "label": "原图市场未确认"
+        }
+      ]
+    }
+  },
+  "fingerprint_axes": [
+    "市场前提",
+    "关键位置",
+    "行为顺序",
+    "入场触发",
+    "失效逻辑",
+    "预期路径",
+    "必要数据"
+  ],
+  "pa_definitions": {
+    "core": "必要结构和顺序由价格行为主导，数据工具辅助",
+    "supporting": "价格提供确认或风险位置，核心前提仍需成交、分布、均价、事件或跨市场信息",
+    "non_primary": "核心决策由非PA数据/模型定义，K线展示不使它成为PA"
+  }
+}

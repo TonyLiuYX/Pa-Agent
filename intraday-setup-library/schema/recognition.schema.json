@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source-linked executable setup catalog",
+  "type": "object",
+  "required": ["rule_version", "setups", "variant_graphs"],
+  "additionalProperties": false,
+  "properties": {
+    "rule_version": {"type": "string"},
+    "setups": {"type": "array", "minItems": 50, "maxItems": 50, "items": {"$ref": "#/$defs/spec"}},
+    "variant_graphs": {"type": "array", "minItems": 34, "maxItems": 34, "items": {"$ref": "#/$defs/spec"}}
+  },
+  "$defs": {
+    "test": {"type": "array", "minItems": 3, "maxItems": 3, "prefixItems": [
+      {"type": "string"}, {"enum": ["eq", "gt", "ge", "lt", "le"]}, {"type": ["string", "number", "boolean"]}
+    ], "items": false},
+    "stage": {"type": "object", "required": ["name", "tests", "capture", "deadline_bars"], "properties": {
+      "name": {"type": "string", "minLength": 1},
+      "tests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/test"}},
+      "capture": {"type": "object", "additionalProperties": {"type": "string"}},
+      "deadline_bars": {"type": ["integer", "null"], "minimum": 1},
+      "same_frame": {"type": "boolean"}
+    }, "additionalProperties": false},
+    "spec": {"type": "object", "required": ["setup_id", "name_zh", "requirements", "stages", "directions", "scales", "source_version", "source_sha256", "condition_provenance", "validation_status", "variant_status", "invalidation_mode"], "properties": {
+      "setup_id": {"type": "string", "pattern": "^SET-[0-9]{4}$"},
+      "name_zh": {"type": "string"},
+      "requirements": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+      "stages": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/stage"}},
+      "directions": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": [1, -1]}},
+      "scales": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer", "minimum": 0}},
+      "continuation_scales": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "integer", "minimum": 0}},
+      "reentry_after_invalidation": {"type": "boolean"},
+      "source_version": {"type": "string"}, "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+      "condition_provenance": {"const": "editor_operationalization/editor_proposal_not_tested"},
+      "validation_status": {"const": "synthetic_only; real_market_validation_not_run"},
+      "invalidation_mode": {"enum": ["sampled_close", "atr_touch", "acceptance_close", "extreme_break"]},
+      "variant_status": {"type": "object", "additionalProperties": {"const": "implemented_experimental"}}
+    }}
+  }
+}

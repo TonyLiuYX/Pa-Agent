@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://intraday-library.invalid/schema/source.schema.json",
+  "title": "source record",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "url",
+    "canonical_url",
+    "source_family",
+    "author",
+    "publisher",
+    "source_type",
+    "title",
+    "published",
+    "language",
+    "accessed",
+    "access_status",
+    "actual_read_scope",
+    "read_locator",
+    "summary",
+    "limitations",
+    "commercial_interest",
+    "unknown_fields",
+    "link_state"
+  ],
+  "properties": {
+    "access_error": {
+      "type": "string"
+    },
+    "access_method": {
+      "type": "string"
+    },
+    "access_status": {
+      "type": "string"
+    },
+    "accessed": {
+      "type": "string",
+      "format": "date"
+    },
+    "actual_read_scope": {
+      "enum": [
+        "not_read",
+        "abstract_only",
+        "related_sections",
+        "full_article",
+        "full_main_text",
+        "full_text",
+        "transcript_read",
+        "related_pdf_pages",
+        "related_author_manuscript_cached_text",
+        "video_watched",
+        "caption_read"
+      ]
+    },
+    "author": {
+      "type": "string"
+    },
+    "canonical_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "commercial_interest": {
+      "type": "string"
+    },
+    "extracted_characters": {
+      "type": "integer"
+    },
+    "http_status": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^SRC-[0-9]{4}$"
+    },
+    "language": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "link_state": {
+      "type": "string"
+    },
+    "pdf_pages": {
+      "type": "integer"
+    },
+    "published": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "read_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "read_detail": {
+      "type": "string"
+    },
+    "read_locator": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "retrieved_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "source_family": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "title": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "unknown_fields": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://"
+    },
+    "previous_read_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "requires_reread": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,186 @@
+{
+  "status": "passed",
+  "data_kind": "synthetic",
+  "input_events": 391,
+  "configured_graphs": 84,
+  "state_transitions": 201,
+  "transition_states": {
+    "candidate": 64,
+    "formed": 35,
+    "triggered": 28,
+    "expired": 44,
+    "invalidated": 6,
+    "completed": 24
+  },
+  "input_sha256": "cb350dfe6ceaa3b2e760bbb431c63f0d1e183bba1ef4108c0b1663c7ba226a24",
+  "algorithm_sha256": "9a77a608b3b0e4e4c9a2765f295d57599592ddbb7471bcff0cef96a6f9678c41",
+  "configuration_sha256": "ab6c0b0ce81b0c97364a25fff2d134573a22e2f2e77a47f926fe3495c6bc9a17",
+  "unfinished_at_eof": [],
+  "evaluation": {
+    "report_version": "0.1.0",
+    "groups": [
+      {
+        "setup_id": "SET-0005",
+        "variant_id": "base",
+        "source_kind": "synthetic",
+        "split": "test",
+        "symbol": "SYNTH",
+        "venue": "SYNTHETIC",
+        "regime": "trap",
+        "positive_cases": 1,
+        "negative_cases": 0,
+        "candidate": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "recall_95ci": [
+            0.2065,
+            1
+          ],
+          "precision_95ci": [
+            0.2065,
+            1
+          ],
+          "false_positives_per_annotated_hour": 0.0,
+          "confirmation_delay_seconds": [
+            -60.0
+          ],
+          "ignored_unannotated_detections": 3,
+          "annotated_hours": 0.06666666666666667
+        },
+        "confirmed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "recall_95ci": [
+            0.2065,
+            1
+          ],
+          "precision_95ci": [
+            0.2065,
+            1
+          ],
+          "false_positives_per_annotated_hour": 0.0,
+          "confirmation_delay_seconds": [
+            -60.0
+          ],
+          "ignored_unannotated_detections": 3,
+          "annotated_hours": 0.06666666666666667
+        },
+        "triggered": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "recall_95ci": [
+            0.2065,
+            1
+          ],
+          "precision_95ci": [
+            0.2065,
+            1
+          ],
+          "false_positives_per_annotated_hour": 0.0,
+          "confirmation_delay_seconds": [
+            0.0
+          ],
+          "ignored_unannotated_detections": 0,
+          "annotated_hours": 0.06666666666666667
+        },
+        "acceptance": "synthetic_logic_only"
+      },
+      {
+        "setup_id": "SET-0049",
+        "variant_id": "base",
+        "source_kind": "synthetic",
+        "split": "test",
+        "symbol": "SYNTH",
+        "venue": "SYNTHETIC",
+        "regime": "clock",
+        "positive_cases": 1,
+        "negative_cases": 0,
+        "candidate": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "recall_95ci": [
+            0.2065,
+            1
+          ],
+          "precision_95ci": [
+            0.2065,
+            1
+          ],
+          "false_positives_per_annotated_hour": 0.0,
+          "confirmation_delay_seconds": [
+            0.0
+          ],
+          "ignored_unannotated_detections": 0,
+          "annotated_hours": 0.016666666666666666
+        },
+        "confirmed": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "recall_95ci": [
+            0.2065,
+            1
+          ],
+          "precision_95ci": [
+            0.2065,
+            1
+          ],
+          "false_positives_per_annotated_hour": 0.0,
+          "confirmation_delay_seconds": [
+            0.0
+          ],
+          "ignored_unannotated_detections": 0,
+          "annotated_hours": 0.016666666666666666
+        },
+        "triggered": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "recall": 1.0,
+          "precision": 1.0,
+          "recall_95ci": [
+            0.2065,
+            1
+          ],
+          "precision_95ci": [
+            0.2065,
+            1
+          ],
+          "false_positives_per_annotated_hour": 0.0,
+          "confirmation_delay_seconds": [
+            0.0
+          ],
+          "ignored_unannotated_detections": 0,
+          "annotated_hours": 0.016666666666666666
+        },
+        "acceptance": "synthetic_logic_only"
+      }
+    ],
+    "disputed_cases": [],
+    "data_ineligible_cases": [],
+    "scope": "event recognition only; no returns, orders, fills or profitability verification",
+    "sampling_note": "precision applies only to annotated windows; unannotated detections are not assumed false",
+    "targets": {
+      "candidate_recall": 0.95,
+      "confirmed_recall": 0.85,
+      "confirmed_precision": 0.85
+    },
+    "market_validation": "not_run"
+  },
+  "output_directory": "/Users/liuyixuan/Desktop/pa final/recognition-runs/v1.2.0-demo-run",
+  "scope": "391 invented inputs and two synthetic labels; not historical market accuracy."
+}

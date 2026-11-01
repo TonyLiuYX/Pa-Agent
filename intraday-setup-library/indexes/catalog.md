@@ -1,0 +1,54 @@
+# 条目目录
+
+仅 reviewed 独立ID计入合格数量；多个标签不重复计数。
+
+- [SET-0001 · 前一交易区间突破失败后的开盘反转 / Opening Failed Breakout of Prior Range](../setups/SET-0001.md) — reviewed · PA:core · limited_single_family
+- [SET-0002 · 五分钟开盘区间突破 / 5-minute Opening Range Breakout](../setups/SET-0002.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0003 · 关键位置吸收后的反转 / Absorption Reversal](../setups/SET-0003.md) — reviewed · PA:supporting · multiple_families
+- [SET-0004 · 显著成交重心跌破后的回测延续 / Prominent VPOC Flip](../setups/SET-0004.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0005 · 内包线突破失败陷阱 / Hikkake](../setups/SET-0005.md) — reviewed · PA:core · limited_single_family
+- [SET-0006 · 趋势中的两段回撤第二次入场 / High 2 / Low 2 Two-Legged Pullback](../setups/SET-0006.md) — reviewed · PA:core · independent_context_only
+- [SET-0007 · 三推高潮后的反转 / Three-Push Wedge Climax Reversal](../setups/SET-0007.md) — reviewed · PA:core · limited_single_family
+- [SET-0008 · 旧趋势破坏后再测极值的主要反转 / Major Trend Reversal](../setups/SET-0008.md) — reviewed · PA:core · limited_single_family
+- [SET-0009 · 强推进后的首次微型回撤 / First Micro Pullback After Strong Drive](../setups/SET-0009.md) — reviewed · PA:core · multiple_families
+- [SET-0010 · 突破后首次回测守住旧边界 / Breakout Pullback / Break and Retest](../setups/SET-0010.md) — reviewed · PA:core · multiple_families
+- [SET-0011 · 趋势末端最后旗形突破失败 / Final Flag Reversal](../setups/SET-0011.md) — reviewed · PA:core · limited_single_family
+- [SET-0012 · 连续推进后的分数回撤反向短交易 / Bulkowski Retrace Day Trade](../setups/SET-0012.md) — reviewed · PA:core · limited_derivative_corroboration
+- [SET-0013 · 趋势内双内包压缩首次释放 / Double Inside Bar Trend Release](../setups/SET-0013.md) — reviewed · PA:core · independent_context_only
+- [SET-0014 · 趋势第一次反向冲击后的首回撤 / Anti / Snap Pullback](../setups/SET-0014.md) — reviewed · PA:core · independent_context_only
+- [SET-0015 · 缩量普通回撤后的成交恢复 / Low-Volume Pullback](../setups/SET-0015.md) — reviewed · PA:core · independent_context_only
+- [SET-0016 · 反复逼近固定边界的压力突破 / Buildup / Pressure Breakout](../setups/SET-0016.md) — reviewed · PA:core · independent_context_only
+- [SET-0017 · 逆趋势实体柱试探失败后的顺势入场 / Trend Bar Failure](../setups/SET-0017.md) — reviewed · PA:core · limited_single_family
+- [SET-0018 · 平衡区间边缘的第二次反向信号 / Trading Range Edge Second Signal Fade](../setups/SET-0018.md) — reviewed · PA:core · limited_single_family
+- [SET-0019 · 原始顺势信号止损后快速恢复的延迟入场 / Stopped-Out Setup Re-entry](../setups/SET-0019.md) — reviewed · PA:core · limited_single_family
+- [SET-0020 · 前日低量尾部的次日回价值区 / Caught in the Hole](../setups/SET-0020.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0021 · 盘前高点的开盘动量突破 / Gap and Go / Pre-market High Break](../setups/SET-0021.md) — reviewed · PA:core · multiple_families
+- [SET-0022 · 开盘洗盘后守住盘前支撑 / Opening Washout Support Buy](../setups/SET-0022.md) — reviewed · PA:core · independent_context_only
+- [SET-0023 · 弱开盘跌势的 VWAP 收复 / Opening Washout VWAP Reclaim](../setups/SET-0023.md) — reviewed · PA:supporting · multiple_families
+- [SET-0024 · VWAP 穿透、偏离失败与回测 / VWAP Penetration–Deviation–Retest](../setups/SET-0024.md) — reviewed · PA:supporting · independent_context_only
+- [SET-0025 · 平衡日的 VWAP 过度偏离回归 / Flat VWAP Stretch Fade](../setups/SET-0025.md) — reviewed · PA:supporting · independent_context_only
+- [SET-0026 · 历史高成交日 VWAP 压力与量能断崖 / VWAP Boulevard Short](../setups/SET-0026.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0027 · 市场确认后的个股相对强弱交易 / Market-confirmed Relative Strength / Weakness](../setups/SET-0027.md) — reviewed · PA:supporting · multiple_families
+- [SET-0028 · 新消息后的第二日关键位接受 / Second-day News Acceptance Play](../setups/SET-0028.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0029 · 突发新闻的第一轮价格反应 / Breaking News First Move](../setups/SET-0029.md) — reviewed · PA:supporting · independent_context_only
+- [SET-0030 · 领导市场先行的滞后市场 IB 突破 / Correlated-market-led Initial Balance Break](../setups/SET-0030.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0031 · 事前预案中的宏观意外与跨市场确认 / Preplanned Macro Surprise Reaction](../setups/SET-0031.md) — reviewed · PA:supporting · independent_event_facts_only
+- [SET-0032 · 多阶段公告的净信息重新判断 / Multi-part Announcement Reassessment](../setups/SET-0032.md) — reviewed · PA:supporting · independent_event_facts_only
+- [SET-0033 · TPO 台阶的破位与接受 / TPO Ledge Break and Acceptance](../setups/SET-0033.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0034 · 台阶久攻不破后的反向持仓退出 / Failed Ledge Positioning Unwind](../setups/SET-0034.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0035 · IB 首侧失败后的反侧突破与回收 / Failed-first-side IB Reversal and Acceptance](../setups/SET-0035.md) — reviewed · PA:core · limited_single_family
+- [SET-0036 · Footprint P 形上分布边缘保持 / Footprint Micro P-shape Distribution Hold](../setups/SET-0036.md) — reviewed · PA:supporting · independent_context_only
+- [SET-0037 · 旧价值区重新接受后的横穿 / Prior Value-area Reacceptance Traverse / 80% Rule](../setups/SET-0037.md) — reviewed · PA:supporting · independent_counter_evidence_only
+- [SET-0038 · 当前低量伸展的失败反转回价值 / Stretched Volume-profile Failure Reversion](../setups/SET-0038.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0039 · 同一水平前后成交能量改变的突破 / Volume Energy-change Break](../setups/SET-0039.md) — reviewed · PA:supporting · independent_context_only
+- [SET-0040 · 单向伸展末端的主动流耗尽反向短打 / Exhaustion-flow Fade Scalp](../setups/SET-0040.md) — reviewed · PA:supporting · multiple_families
+- [SET-0041 · 阶梯跳价后低量区保持的延续 / Jump-flow Low-volume-area Continuation](../setups/SET-0041.md) — reviewed · PA:supporting · limited_single_family
+- [SET-0042 · 堆叠对角失衡区的保持与再推进 / Stacked Imbalance Zone Hold](../setups/SET-0042.md) — reviewed · PA:non_primary · limited_single_family
+- [SET-0043 · 逆势主动失衡失败后的顺势回归 / Failed Countertrend Imbalance Trap](../setups/SET-0043.md) — reviewed · PA:non_primary · limited_single_family
+- [SET-0044 · 价格破位而累计 Delta 背离的反转 / Cumulative-delta Divergence Failed-break Reversal](../setups/SET-0044.md) — reviewed · PA:supporting · independent_context_only
+- [SET-0045 · 冰山受阻、流转向与弱冲洗后的再拍卖 / Iceberg Reauction after Weak Flush](../setups/SET-0045.md) — reviewed · PA:non_primary · independent_context_only
+- [SET-0046 · 弱多头背景下黏住卖价的向下清仓 / Sticky-offer Long-liquidation Continuation](../setups/SET-0046.md) — reviewed · PA:non_primary · independent_context_only
+- [SET-0047 · 厚市场被动承接的缓慢磨过 / Steady Absorption-driven Drift Break](../setups/SET-0047.md) — reviewed · PA:non_primary · independent_context_only
+- [SET-0048 · 按同一时刻历史波动定义的日内噪声带动量 / Time-of-day Noise-band Intraday Momentum](../setups/SET-0048.md) — reviewed · PA:non_primary · limited_single_family
+- [SET-0049 · 首段收益方向驱动的最后半小时 / First-to-last Half-hour Momentum](../setups/SET-0049.md) — reviewed · PA:non_primary · limited_single_family
+- [SET-0050 · 隔夜方向失败后反穿现金开盘线 / Overnight-position Reversal through Cash Open](../setups/SET-0050.md) — reviewed · PA:core · limited_single_family

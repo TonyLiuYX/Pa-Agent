@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "validation": "actual_ten_hour_soak_and_persisted_full_replay",
+  "verified_at_utc": "2026-10-05T07:19:08.981163+00:00",
+  "report": "/Users/liuyixuan/Desktop/pa final/runtime-runs/soak-v1.3.0-20261004-candidate-7/soak-report.json",
+  "report_sha256": "4a8bf15a84122ebbb8f488c0692d0bc9086216b7fdeb8171280f2d49d5d6a450",
+  "core_sha256": "f1dc3d6d042a3ae8d408b032e60197741fbaea902fad5af937371800d9aeb325",
+  "identity": {
+    "schema_version": "1.0.0",
+    "configuration_sha256": "9e319834d0421c79806475206315e4aab01ad2038d1b348c96e825acd30d4a9c",
+    "algorithm_sha256": "87355e549d27f3860519d00c12d61a6f219ce56a266534fe4eed0d511014e81e",
+    "runtime_sha256": "25d73eb68aee4e7e4866775cf9e20e3bdf519667e3447639c86b01df933f4f4d",
+    "execution_sha256": "f1470bd0bed81a992f8649e4d231b8123fd34dfe243dd58b43de62ecfe10dcd2"
+  },
+  "observation_seconds": 36000.103071,
+  "required_seconds": 36000,
+  "fault_counts": {
+    "duplicate": 7,
+    "backlog_burst": 7,
+    "disconnect_reconnect": 7,
+    "before_commit": 6,
+    "after_commit": 6,
+    "checkpoint_restart": 6
+  },
+  "journal_events": 83046,
+  "journal_sha256": "ce067e131e82061f33be6491e4e4e4060224357dd40f357e7d0d946a4ab83230",
+  "derived_sha256": "d6b9b74cc75ee59855bc8cefbfade8d9195708ab3d003611735706eb56a9d78b",
+  "source_kind": "synthetic",
+  "market_validation": "not_run"
+}

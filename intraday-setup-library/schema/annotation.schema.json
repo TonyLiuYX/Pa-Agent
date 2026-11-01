@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Manual event annotation (window and split semantics checked separately)",
+  "type": "object",
+  "required": [
+    "case_id",
+    "setup_id",
+    "symbol",
+    "venue",
+    "direction",
+    "positive",
+    "start",
+    "end",
+    "group_id",
+    "source_kind",
+    "source"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "setup_id": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "variant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "venue": {
+      "type": "string",
+      "minLength": 1
+    },
+    "direction": {
+      "type": "integer",
+      "enum": [
+        -1,
+        1
+      ]
+    },
+    "positive": {
+      "type": "boolean"
+    },
+    "start": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "end": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "trigger_time": {
+      "oneOf": [
+        {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "group_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "split": {
+      "enum": [
+        "development",
+        "validation",
+        "test"
+      ]
+    },
+    "source_kind": {
+      "enum": [
+        "synthetic",
+        "real_market"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "annotator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rule_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "data_eligible": {
+      "type": "boolean"
+    },
+    "disputed": {
+      "type": "boolean"
+    },
+    "complete_coverage": {
+      "type": "boolean",
+      "description": "Explicitly attest the entire outer window was annotated for this setup, variant, symbol, venue and direction. Defaults false; disputed or ineligible coverage is rejected."
+    },
+    "stage_windows": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "candidate": {
+          "type": "object",
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            }
+          },
+          "additionalProperties": false
+        },
+        "formed": {
+          "type": "object",
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            }
+          },
+          "additionalProperties": false
+        },
+        "triggered": {
+          "type": "object",
+          "required": [
+            "start",
+            "end"
+          ],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "review_records": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": true
+}

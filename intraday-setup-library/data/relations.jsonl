@@ -1,0 +1,74 @@
+{"id": "REL-000001", "schema_version": "1.0.0", "from": "SET-0001", "to": "SET-0002", "type": "contrasts_with", "reason": "ORB等待固定开盘区间形成并顺突破入场；本条已有外侧突破失败并交易反向回收。", "date": "2026-10-02"}
+{"id": "REL-000002", "schema_version": "1.0.0", "from": "SET-0001", "to": "SET-0007", "type": "contrasts_with", "reason": "楔形反转必须出现分开的三次高潮推进；本条不要求三推。", "date": "2026-10-02"}
+{"id": "REL-000003", "schema_version": "1.0.0", "from": "SET-0003", "to": "SET-0040", "type": "contrasts_with", "reason": "耗尽关注主动冲击减少；本条关注大量主动冲击仍无法推进。", "date": "2026-10-02"}
+{"id": "REL-000004", "schema_version": "1.0.0", "from": "SET-0003", "to": "SET-0041", "type": "contrasts_with", "reason": "主动roll需要突然反向冲击，不要求事先看到大量成交被承接。", "date": "2026-10-02"}
+{"id": "REL-000005", "schema_version": "1.0.0", "from": "SET-0004", "to": "SET-0010", "type": "contrasts_with", "reason": "普通突破回测只需价格边界；本条还需事先可识别的成交重心和高价接受不足。", "date": "2026-10-02"}
+{"id": "REL-000006", "schema_version": "1.0.0", "from": "SET-0004", "to": "SET-0035", "type": "contrasts_with", "reason": "价值迁移延续要求新成交区建立；本条交易旧重心角色变化。", "date": "2026-10-02"}
+{"id": "REL-000007", "schema_version": "1.0.0", "from": "SET-0005", "to": "SET-0013", "type": "contrasts_with", "reason": "ii突破交易压缩后的顺向释放，本条必须先有外侧突破失败。", "date": "2026-10-02"}
+{"id": "REL-000008", "schema_version": "1.0.0", "from": "SET-0005", "to": "SET-0001", "type": "contrasts_with", "reason": "前日范围失败使用session边界；本条依赖特定内包与短窗口序列。", "date": "2026-10-02"}
+{"id": "REL-000009", "schema_version": "1.0.0", "from": "SET-0006", "to": "SET-0009", "type": "contrasts_with", "reason": "微通道第一次回撤之前没有正常回撤；本条必须已有第一次恢复失败。", "date": "2026-10-02"}
+{"id": "REL-000010", "schema_version": "1.0.0", "from": "SET-0006", "to": "SET-0015", "type": "contrasts_with", "reason": "缩量回撤需要量能退潮，不要求两次恢复；本条必须两段。", "date": "2026-10-02"}
+{"id": "REL-000011", "schema_version": "1.0.0", "from": "SET-0007", "to": "SET-0008", "type": "contrasts_with", "reason": "MTR必须先破旧趋势结构再重测；本条可以在第一轮高潮末端触发。", "date": "2026-10-02"}
+{"id": "REL-000012", "schema_version": "1.0.0", "from": "SET-0007", "to": "SET-0011", "type": "contrasts_with", "reason": "Final flag必须先有晚段横向旗形及其突破失败；本条不要求旗形。", "date": "2026-10-02"}
+{"id": "REL-000013", "schema_version": "1.0.0", "from": "SET-0008", "to": "SET-0014", "type": "contrasts_with", "reason": "Anti在第一冲击后首回撤即可考虑；本条要求旧极值再次接受检验。", "date": "2026-10-02"}
+{"id": "REL-000014", "schema_version": "1.0.0", "from": "SET-0009", "to": "SET-0015", "type": "contrasts_with", "reason": "缩量多柱回撤已经有普通反向摆动，本条只处理强推进的第一次短暂停顿。", "date": "2026-10-02"}
+{"id": "REL-000015", "schema_version": "1.0.0", "from": "SET-0010", "to": "SET-0013", "type": "contrasts_with", "reason": "II在压缩释放时入，本条释放已发生且等待回测。", "date": "2026-10-02"}
+{"id": "REL-000016", "schema_version": "1.0.0", "from": "SET-0011", "to": "SET-0008", "type": "contrasts_with", "reason": "MTR必先破旧通道再测极值；本条必先出现晚段横旗及其延续失败。", "date": "2026-10-02"}
+{"id": "REL-000017", "schema_version": "1.0.0", "from": "SET-0011", "to": "SET-0005", "type": "contrasts_with", "reason": "Hikkake必有inside-bar和限定时序；本条没有该K线序列要求。", "date": "2026-10-02"}
+{"id": "REL-000018", "schema_version": "1.0.0", "from": "SET-0012", "to": "SET-0007", "type": "contrasts_with", "reason": "楔形需三个分开的摆动推进，本条是连续柱的一次推进。", "date": "2026-10-02"}
+{"id": "REL-000019", "schema_version": "1.0.0", "from": "SET-0012", "to": "SET-0040", "type": "contrasts_with", "reason": "订单流耗尽要求成交/梯级变化，本条仅观察价格且目标是部分回撤。", "date": "2026-10-02"}
+{"id": "REL-000020", "schema_version": "1.0.0", "from": "SET-0013", "to": "SET-0016", "type": "contrasts_with", "reason": "压力突破必反复攻击事前水平、反向回撤缩短；本条必有嵌套母柱，不要求反复水平测试。", "date": "2026-10-02"}
+{"id": "REL-000021", "schema_version": "1.0.0", "from": "SET-0014", "to": "SET-0009", "type": "contrasts_with", "reason": "微回撤需要未有普通回撤的强推进，但不要求之前的旧趋势被打断。", "date": "2026-10-02"}
+{"id": "REL-000022", "schema_version": "1.0.0", "from": "SET-0016", "to": "SET-0010", "type": "contrasts_with", "reason": "回测突破需要越界已经发生；本条在第一次有效越界之前建立压力假说。", "date": "2026-10-02"}
+{"id": "REL-000023", "schema_version": "1.0.0", "from": "SET-0017", "to": "SET-0005", "type": "contrasts_with", "reason": "Hikkake要求inside起点及其后假突破，本条要求逆向大实体承诺且一柱期限。", "date": "2026-10-02"}
+{"id": "REL-000024", "schema_version": "1.0.0", "from": "SET-0017", "to": "SET-0006", "type": "contrasts_with", "reason": "H2要求两段回撤；本条不数两段，只检验逆向柱是否获得跟随。", "date": "2026-10-02"}
+{"id": "REL-000025", "schema_version": "1.0.0", "from": "SET-0018", "to": "SET-0006", "type": "contrasts_with", "reason": "H2依据既有单向趋势恢复，本条依据已经出现双向平衡并预期中部。", "date": "2026-10-02"}
+{"id": "REL-000026", "schema_version": "1.0.0", "from": "SET-0018", "to": "SET-0037", "type": "contrasts_with", "reason": "价值区轮转需前一profile及开盘外→回内的接受时间，本条无需Profile或外部开盘。", "date": "2026-10-02"}
+{"id": "REL-000027", "schema_version": "1.0.0", "from": "SET-0019", "to": "SET-0006", "type": "contrasts_with", "reason": "H2只要求首次恢复失败，本条必须典型触发已发生且对应模式止损被穿。", "date": "2026-10-02"}
+{"id": "REL-000028", "schema_version": "1.0.0", "from": "SET-0019", "to": "SET-0005", "type": "contrasts_with", "reason": "Hikkake不要求先前顺势模式已触发且其止损被扫。", "date": "2026-10-02"}
+{"id": "REL-000029", "schema_version": "1.0.0", "from": "SET-0020", "to": "SET-0038", "type": "contrasts_with", "reason": "本条使用已结束前日和次日开盘；0038 在当前 session 的伸展末端等失败触发。", "date": "2026-10-02"}
+{"id": "REL-000030", "schema_version": "1.0.0", "from": "SET-0020", "to": "SET-0050", "type": "contrasts_with", "reason": "0050 以隔夜极值失败和当日现金开盘线反穿触发，不要求旧价值分布。", "date": "2026-10-02"}
+{"id": "REL-000031", "schema_version": "1.0.0", "from": "SET-0021", "to": "SET-0002", "type": "contrasts_with", "reason": "0002 必须等待第一根5分钟棒结束；本条的边界在盘前已知并可在开盘立刻触发。", "date": "2026-10-02"}
+{"id": "REL-000032", "schema_version": "1.0.0", "from": "SET-0021", "to": "SET-0009", "type": "contrasts_with", "reason": "0009 是已发生强驱动后的第一微回调，本条须穿越盘前边界。", "date": "2026-10-02"}
+{"id": "REL-000033", "schema_version": "1.0.0", "from": "SET-0022", "to": "SET-0023", "type": "contrasts_with", "reason": "0023 的决定触发是重新站上当日VWAP；本条可在仍低于VWAP的支撑复测处进入。", "date": "2026-10-02"}
+{"id": "REL-000034", "schema_version": "1.0.0", "from": "SET-0022", "to": "SET-0018", "type": "contrasts_with", "reason": "0018 在已确认平衡边缘等第二信号；本条处理现金开盘突发洗盘并依赖盘前背景。", "date": "2026-10-02"}
+{"id": "REL-000035", "schema_version": "1.0.0", "from": "SET-0023", "to": "SET-0024", "type": "contrasts_with", "reason": "0024 在原弱方向背景中等穿越偏离失败后的回测做空，而非把首次穿线当多头恢复。", "date": "2026-10-02"}
+{"id": "REL-000036", "schema_version": "1.0.0", "from": "SET-0024", "to": "SET-0043", "type": "contrasts_with", "reason": "0043 用明确失败的对角失衡区做原趋势；本条规定均价穿透与二次偏离，不必须堆叠失衡。", "date": "2026-10-02"}
+{"id": "REL-000037", "schema_version": "1.0.0", "from": "SET-0025", "to": "SET-0024", "type": "contrasts_with", "reason": "0024 必须穿透和偏离均价后回测起点；本条在远离且平衡的外侧等衰退。", "date": "2026-10-02"}
+{"id": "REL-000038", "schema_version": "1.0.0", "from": "SET-0025", "to": "SET-0038", "type": "contrasts_with", "reason": "0038 依赖旧价值分布与低量伸展，本条目标为动态成交均价并要求当日平衡。", "date": "2026-10-02"}
+{"id": "REL-000039", "schema_version": "1.0.0", "from": "SET-0026", "to": "SET-0025", "type": "contrasts_with", "reason": "0025 使用今天平VWAP并回到均价；本条历史高成交日线只是潜在供给参考。", "date": "2026-10-02"}
+{"id": "REL-000040", "schema_version": "1.0.0", "from": "SET-0026", "to": "SET-0021", "type": "contrasts_with", "reason": "0021 开盘强买量突破PMH，本条寻找这类动量失败后的历史压力拒绝，但两者不能只因做多/做空而算同一交易。", "date": "2026-10-02"}
+{"id": "REL-000041", "schema_version": "1.0.0", "from": "SET-0027", "to": "SET-0030", "type": "contrasts_with", "reason": "0030 两个相关期货同方向、领导市场先破IB带动滞后市场；本条先用相反响应检验股票强弱再等市场。", "date": "2026-10-02"}
+{"id": "REL-000042", "schema_version": "1.0.0", "from": "SET-0027", "to": "SET-0028", "type": "contrasts_with", "reason": "0028 必须有前一日新消息和次日关键位接受；本条不必须第二天事件。", "date": "2026-10-02"}
+{"id": "REL-000043", "schema_version": "1.0.0", "from": "SET-0028", "to": "SET-0015", "type": "contrasts_with", "reason": "0015 是普通趋势的低量回调；本条必须前日重大信息和次日的关键位接受，不能只加一个news标签。", "date": "2026-10-02"}
+{"id": "REL-000044", "schema_version": "1.0.0", "from": "SET-0028", "to": "SET-0029", "type": "contrasts_with", "reason": "0029 捕捉刚发布后的第一分钟；本条在事件次日经过新的接受过程。", "date": "2026-10-02"}
+{"id": "REL-000045", "schema_version": "1.0.0", "from": "SET-0029", "to": "SET-0031", "type": "contrasts_with", "reason": "0031 有事前共识分支与多市场确认；本条处理突然到达的个股信息第一轮。", "date": "2026-10-02"}
+{"id": "REL-000046", "schema_version": "1.0.0", "from": "SET-0029", "to": "SET-0015", "type": "contrasts_with", "reason": "新闻第一轮后的普通小回调是0015事件版本，不能重复计数。", "date": "2026-10-02"}
+{"id": "REL-000047", "schema_version": "1.0.0", "from": "SET-0030", "to": "SET-0039", "type": "contrasts_with", "reason": "0039 只需同一产品相对成交能量改变；本条双市场先行不可删。", "date": "2026-10-02"}
+{"id": "REL-000048", "schema_version": "1.0.0", "from": "SET-0031", "to": "SET-0032", "type": "contrasts_with", "reason": "0032 已有第一段价格反应，后续信息改变净含义才重新判断。", "date": "2026-10-02"}
+{"id": "REL-000049", "schema_version": "1.0.0", "from": "SET-0032", "to": "SET-0014", "type": "contrasts_with", "reason": "0014 可仅由价格冲击后弱回调触发；本条必须可核对新增信息。", "date": "2026-10-02"}
+{"id": "REL-000050", "schema_version": "1.0.0", "from": "SET-0033", "to": "SET-0016", "type": "contrasts_with", "reason": "0016 必须反复攻击且回调缩小，只有平边缘不够；本条依TPO拍卖台阶并观察外侧接受。", "date": "2026-10-02"}
+{"id": "REL-000051", "schema_version": "1.0.0", "from": "SET-0033", "to": "SET-0034", "type": "contrasts_with", "reason": "0034 等台阶解决反复失败后，从相反边缘的加速撤仓进入。", "date": "2026-10-02"}
+{"id": "REL-000052", "schema_version": "1.0.0", "from": "SET-0034", "to": "SET-0018", "type": "contrasts_with", "reason": "0018 用范围边缘第二反转信号，本条要求台阶多次失败后的范围相反破位加速。", "date": "2026-10-02"}
+{"id": "REL-000053", "schema_version": "1.0.0", "from": "SET-0035", "to": "SET-0002", "type": "contrasts_with", "reason": "0002 一侧首5分钟方向突破即可，本条必须先错侧失败再反侧接受，且IB窗口不同。", "date": "2026-10-02"}
+{"id": "REL-000054", "schema_version": "1.0.0", "from": "SET-0035", "to": "SET-0010", "type": "contrasts_with", "reason": "0010 只要求一个既有边界的首次回测；本条额外必需双侧拍卖失败序列。", "date": "2026-10-02"}
+{"id": "REL-000055", "schema_version": "1.0.0", "from": "SET-0036", "to": "SET-0041", "type": "contrasts_with", "reason": "0041 必须阶梯跳过薄量区且反向流少，本条先形成厚的新接受块并靠其边缘执行。", "date": "2026-10-02"}
+{"id": "REL-000056", "schema_version": "1.0.0", "from": "SET-0036", "to": "SET-0042", "type": "contrasts_with", "reason": "0042 以连续对角失衡区为参考，本条只需要成交分布结构，不必须堆叠失衡。", "date": "2026-10-02"}
+{"id": "REL-000057", "schema_version": "1.0.0", "from": "SET-0037", "to": "SET-0020", "type": "contrasts_with", "reason": "0020 次日近低量尾部极值可直接开盘入，目标入口价值边；本条等重新进入价值并接受后到另一边。", "date": "2026-10-02"}
+{"id": "REL-000058", "schema_version": "1.0.0", "from": "SET-0037", "to": "SET-0004", "type": "contrasts_with", "reason": "0004 旧VPOC被方向性突破并形成外部新价值；本条在旧价值内得到接受。", "date": "2026-10-02"}
+{"id": "REL-000059", "schema_version": "1.0.0", "from": "SET-0039", "to": "SET-0047", "type": "contrasts_with", "reason": "0047 不要求速度/主动量爆发，而以厚市场持续被动持价渐进执行。", "date": "2026-10-02"}
+{"id": "REL-000060", "schema_version": "1.0.0", "from": "SET-0039", "to": "SET-0041", "type": "contrasts_with", "reason": "0041 的核心是阶梯跳过薄区后反向流少；本条要求同位旧尝试与新尝试强度变化。", "date": "2026-10-02"}
+{"id": "REL-000061", "schema_version": "1.0.0", "from": "SET-0040", "to": "SET-0045", "type": "contrasts_with", "reason": "0045 必须先有冰山、卖压转换和弱冲洗的多段序列，本条只需末端耗尽短打。", "date": "2026-10-02"}
+{"id": "REL-000062", "schema_version": "1.0.0", "from": "SET-0042", "to": "SET-0043", "type": "contrasts_with", "reason": "0043 堆叠主动方本身失败，越回区后交易反方向；本条要求区保持而继续。", "date": "2026-10-02"}
+{"id": "REL-000063", "schema_version": "1.0.0", "from": "SET-0042", "to": "SET-0003", "type": "contrasts_with", "reason": "0003 大量主动成交无推进作吸收反转，本条先已发生推进/主动区，后测试保持。", "date": "2026-10-02"}
+{"id": "REL-000064", "schema_version": "1.0.0", "from": "SET-0043", "to": "SET-0003", "type": "contrasts_with", "reason": "0003 从大量成交无推进看反转；本条必须特定逆势区被反穿并恢复旧趋势。", "date": "2026-10-02"}
+{"id": "REL-000065", "schema_version": "1.0.0", "from": "SET-0044", "to": "SET-0003", "type": "contrasts_with", "reason": "0003 看局部大量卖成交不再压价，本条须累计流与价格的多段方向背离。", "date": "2026-10-02"}
+{"id": "REL-000066", "schema_version": "1.0.0", "from": "SET-0044", "to": "SET-0007", "type": "contrasts_with", "reason": "0007 价格三推就可构成，本条楔形仅触发层，累计背离不可删除。", "date": "2026-10-02"}
+{"id": "REL-000067", "schema_version": "1.0.0", "from": "SET-0045", "to": "SET-0003", "type": "contrasts_with", "reason": "0003 局部吸收即可反向，本条须整个先供给、深跌、流转向、再受阻、弱冲洗序列。", "date": "2026-10-02"}
+{"id": "REL-000068", "schema_version": "1.0.0", "from": "SET-0046", "to": "SET-0034", "type": "contrasts_with", "reason": "0034 台阶久攻失败后破相反范围，本条须高收/现金失败和黏卖价持续。", "date": "2026-10-02"}
+{"id": "REL-000069", "schema_version": "1.0.0", "from": "SET-0046", "to": "SET-0047", "type": "contrasts_with", "reason": "0047 原理在厚产品的被动买方慢推，触发不依快速bid被拿和反弹浅。", "date": "2026-10-02"}
+{"id": "REL-000070", "schema_version": "1.0.0", "from": "SET-0047", "to": "SET-0003", "type": "contrasts_with", "reason": "0003 用受阻成交反转，本条被动买方沿突破路径持续承接来支持延续。", "date": "2026-10-02"}
+{"id": "REL-000071", "schema_version": "1.0.0", "from": "SET-0048", "to": "SET-0002", "type": "contrasts_with", "reason": "0002 参考当日首5分钟实价区间；本条用过去14日同一时刻动态幅度，触发与风险检查时钟不同。", "date": "2026-10-02"}
+{"id": "REL-000072", "schema_version": "1.0.0", "from": "SET-0048", "to": "SET-0049", "type": "contrasts_with", "reason": "0049 固定15:30按早期收益符号定方向，本条可在多个半小时时点触发噪声带突破。", "date": "2026-10-02"}
+{"id": "REL-000073", "schema_version": "1.0.0", "from": "SET-0049", "to": "SET-0027", "type": "contrasts_with", "reason": "0027 比较股票与指数相对响应，本条预测同一资产的不同时段。", "date": "2026-10-02"}
+{"id": "REL-000074", "schema_version": "1.0.0", "from": "SET-0050", "to": "SET-0001", "type": "contrasts_with", "reason": "0001 在前一session范围边界失败触发；本条须隔夜方向失败并反穿今天开盘线，即使仍在旧范围外也可触发。", "date": "2026-10-02"}

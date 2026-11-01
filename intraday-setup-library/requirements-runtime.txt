@@ -1,0 +1,2 @@
+# Optional live WebSocket connector. The local demo and paper engine need only stdlib.
+websockets==17.1

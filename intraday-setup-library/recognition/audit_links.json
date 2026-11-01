@@ -1,0 +1,1218 @@
+{
+  "schema_version": "1.0.0",
+  "scope": "14 remaining in-rule directed synthetic audit cases; dispositions explain inputs and rule boundaries, not market performance",
+  "original_case_count": 250,
+  "linked_case_count": 14,
+  "source_summary_sha256": "db2f9efaf580a45dd4ce19bd7fe16b5061712ceb2b96cddf10c9d00a7ac43819",
+  "cases": [
+    {
+      "case_id": "SET-0002-S2",
+      "verification_level": "rule_graph",
+      "original_title": "突破发生在09:35:05逐笔价，下一分钟尚未收盘",
+      "disposition": "fixed_clock_fixture_boundary",
+      "explanation": "Source graph fixture uses integer minute indices rather than 09:35:05 event time. Source-preserving supplemental-orb-event-clock.json validates the continuation on real event-window timestamps.",
+      "regression_reference": "evaluation.tests.test_audit_engine.AuditEngineTests.test_real_trade_continues_orb_before_next_minute_closes",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0002-S2.json",
+        "sha256": "8e6f43dad24ca02b915a08b2cc37a37d3fba452c824b232325f223319e0666ea"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0002-S2.json",
+        "sha256": "a9dcf413d3f4be30c21204705c990df8c7cdd34292096371e5e5da01579fa320"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "orb_ready": true,
+            "orb_direction": true,
+            "orb_liquidity": true,
+            "orb_edge": 11,
+            "orb_stop": 9
+          },
+          {
+            "directional_extreme": 11.01,
+            "__seconds": 0,
+            "__observation_kind": "event_window"
+          }
+        ],
+        "original_steps": [
+          {
+            "orb_ready": true,
+            "orb_direction": true,
+            "orb_liquidity": true,
+            "orb_edge": 11,
+            "orb_stop": 9
+          },
+          {
+            "directional_extreme": 11.01,
+            "__seconds": 0,
+            "__observation_kind": "event_window"
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0008-S2",
+      "verification_level": "rule_graph",
+      "original_title": "高低点抬高0.50的HL主要反转",
+      "disposition": "explicit_variant_boundary",
+      "explanation": "The base narrow retest remains distinct. higher_low is the explicit executable version; the original case requested base only.",
+      "regression_reference": "evaluation.tests.test_variants",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0008-S2.json",
+        "sha256": "fe1fa161a4569e27acabf0f1db44ed92c144e013617898e80c16ab894b059afb"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0008-S2.json",
+        "sha256": "28cd4ce4480dce2367b6e4d87b2827085d2af9e51770cec52cdf6de49a5a1cc1"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "trend_break": true,
+            "old_extreme": 11
+          },
+          {
+            "directional_low": 11.5,
+            "old_extreme_retest": true
+          },
+          {
+            "signal": true
+          },
+          {
+            "directional_extreme": 12
+          }
+        ],
+        "original_steps": [
+          {
+            "trend_break": true,
+            "old_extreme": 11
+          },
+          {
+            "directional_low": 11.5,
+            "old_extreme_retest": true
+          },
+          {
+            "signal": true
+          },
+          {
+            "directional_extreme": 12
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0008-S3",
+      "verification_level": "rule_graph",
+      "original_title": "更低低点0.50的LL主要反转",
+      "disposition": "explicit_variant_boundary",
+      "explanation": "The base narrow retest remains distinct. lower_low is the explicit executable version; the original case requested base only.",
+      "regression_reference": "evaluation.tests.test_variants",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0008-S3.json",
+        "sha256": "a46997503b45e5be6f111e84180e4f5d7ee84e3ea9b34a46813b78aad65087ae"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0008-S3.json",
+        "sha256": "51d55d7753528079af69be03b66b700a4e3a049987114567bb0a9c0a99df0d96"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "trend_break": true,
+            "old_extreme": 11
+          },
+          {
+            "directional_low": 10.5,
+            "old_extreme_retest": true
+          },
+          {
+            "signal": true
+          },
+          {
+            "directional_extreme": 12
+          }
+        ],
+        "original_steps": [
+          {
+            "trend_break": true,
+            "old_extreme": 11
+          },
+          {
+            "directional_low": 10.5,
+            "old_extreme_retest": true
+          },
+          {
+            "signal": true
+          },
+          {
+            "directional_extreme": 12
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0022-S3",
+      "verification_level": "rule_graph",
+      "original_title": "复测支撑与恢复高点穿越在同一根 1 分钟棒",
+      "disposition": "causal_sequence_required",
+      "explanation": "The retest signal high is learned only at bar close. A separate later price observation must break the frozen endpoint.",
+      "regression_reference": "evaluation.tests.test_audit_engine",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0022-S3.json",
+        "sha256": "834ffb3d6e5df354b49ddc23020b76b30eae740ec622a41c889c48107c9065f1"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0022-S3.json",
+        "sha256": "d03eb83fea4f5982dfa8fede1be9bf1dd97b4cc0f4d9fcbd9c2ed781a10cfc47"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "opening": true,
+            "pm_wash": true,
+            "pm_support": 11
+          },
+          {
+            "directional_low": 11,
+            "signal": true,
+            "directional_extreme": 12
+          }
+        ],
+        "original_steps": [
+          {
+            "opening": true,
+            "pm_wash": true,
+            "pm_support": 11
+          },
+          {
+            "directional_low": 11,
+            "signal": true,
+            "directional_extreme": 12
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0024-S1",
+      "verification_level": "raw_pipeline",
+      "original_title": "穿透、失败偏离和回测在 3 秒内完成",
+      "disposition": "raw_sequence_and_context_not_satisfied",
+      "explanation": "Short scales are implemented. The frozen raw sequence still does not establish every required failed-deviation, flow, and retest condition in order. Preserve rejection; do not invent a second deviation.",
+      "regression_reference": "evaluation.tests.raw_scenarios:audit:SET-0024-S1",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0024-S1.json",
+        "sha256": "a0ecaf4851ac48b3693b788dc0cc14d52b8915f18ee35a342cdf93de3835f5e6"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0024-S1.json",
+        "sha256": "0a325686019c5b9b36e3129d250c27dae4faa8d924159439b43cace7bcf1c004"
+      },
+      "frozen_input": {
+        "kind": "synthetic_raw_market_events",
+        "events": [
+          {
+            "event_id": "session2026-09-30T07:30:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "session",
+            "event_time": "2026-09-30T11:30:00+00:00",
+            "arrival_time": "2026-09-30T11:30:00+00:00",
+            "payload": {
+              "open_time": "2026-09-30T09:30:00-04:00",
+              "close_time": "2026-09-30T16:00:00-04:00",
+              "tick_size": 0.01,
+              "asset_class": "equity"
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:31:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:31:00+00:00",
+            "arrival_time": "2026-09-30T13:31:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.9,
+              "close": 100,
+              "volume": 10000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 1000000
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:32:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:32:00+00:00",
+            "arrival_time": "2026-09-30T13:32:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.9,
+              "close": 100,
+              "volume": 10000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 1000000
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:33:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:33:00+00:00",
+            "arrival_time": "2026-09-30T13:33:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.9,
+              "close": 100,
+              "volume": 10000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 1000000
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:34:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:34:00+00:00",
+            "arrival_time": "2026-09-30T13:34:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.9,
+              "close": 100,
+              "volume": 10000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 1000000
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:35:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:35:00+00:00",
+            "arrival_time": "2026-09-30T13:35:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.9,
+              "close": 100,
+              "volume": 10000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 1000000
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:36:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:36:00+00:00",
+            "arrival_time": "2026-09-30T13:36:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.9,
+              "close": 100,
+              "volume": 10000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 1000000
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:36:01-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:36:01+00:00",
+            "arrival_time": "2026-09-30T13:36:01+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.05,
+              "low": 99.98,
+              "close": 100.04,
+              "volume": 10000,
+              "seconds": 1,
+              "closed": true,
+              "notional": 1000400.0000000001
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:36:02-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:36:02+00:00",
+            "arrival_time": "2026-09-30T13:36:02+00:00",
+            "payload": {
+              "open": 100.04,
+              "high": 100.06,
+              "low": 100.01,
+              "close": 100.02,
+              "volume": 10000,
+              "seconds": 1,
+              "closed": true,
+              "notional": 1000200.0
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:36:03-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:36:03+00:00",
+            "arrival_time": "2026-09-30T13:36:03+00:00",
+            "payload": {
+              "open": 100.02,
+              "high": 100.03,
+              "low": 99.95,
+              "close": 99.96,
+              "volume": 10000,
+              "seconds": 1,
+              "closed": true,
+              "notional": 999599.9999999999
+            },
+            "quality": "complete"
+          }
+        ],
+        "include_variants": false,
+        "focus_features": [
+          "vwap_cross",
+          "vwap_deviation_fail",
+          "flow_activity",
+          "flow_resume",
+          "overnight_failure"
+        ],
+        "config": null
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0024-S5",
+      "verification_level": "rule_graph",
+      "original_title": "穿透与偏离失败同一 1 分钟棒、后棒回测",
+      "disposition": "causal_sequence_required",
+      "explanation": "Penetration and a subsequent failed deviation are different observations; the graph fixture supplies them on one frame.",
+      "regression_reference": "evaluation.tests.test_graphs",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0024-S5.json",
+        "sha256": "fbe3b828a195d83f5b777d3fc3400de4ead8580bad81814526d103046a42682f"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0024-S5.json",
+        "sha256": "c66d099f96a9402a0fdc5f0cba2db89d7e7a84da8641d98ad3e0a983eaa2712c"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "overnight_failure": true,
+            "vwap_cross": true,
+            "impulse_origin": 11,
+            "vwap_deviation_fail": true,
+            "flow_activity": 1.3
+          },
+          {
+            "directional_low": 11,
+            "flow_resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "overnight_failure": true,
+            "vwap_cross": true,
+            "impulse_origin": 11,
+            "vwap_deviation_fail": true,
+            "flow_activity": 1.3
+          },
+          {
+            "directional_low": 11,
+            "flow_resume": true
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0026-S4",
+      "verification_level": "raw_pipeline",
+      "original_title": "盘前已在历史压力完成拒绝与量断崖",
+      "disposition": "cash_session_execution_boundary",
+      "explanation": "This raw input is entirely premarket. Current engine only executes ordinary setup frames during the declared cash session. A premarket execution version would be a separate rule.",
+      "regression_reference": "evaluation.tests.raw_scenarios:audit:SET-0026-S4",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0026-S4.json",
+        "sha256": "7f8959f938a881c375eade4d4c73929f765a77d320211470ca2db7bc377def02"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0026-S4.json",
+        "sha256": "493ff2ff34c73ec516220f33543a3440e41670e4e6b26ed497b5c451cd4292df"
+      },
+      "frozen_input": {
+        "kind": "synthetic_raw_market_events",
+        "events": [
+          {
+            "event_id": "session2026-09-30T07:30:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "session",
+            "event_time": "2026-09-30T11:30:00+00:00",
+            "arrival_time": "2026-09-30T11:30:00+00:00",
+            "payload": {
+              "open_time": "2026-09-30T09:30:00-04:00",
+              "close_time": "2026-09-30T16:00:00-04:00",
+              "tick_size": 0.01,
+              "asset_class": "equity",
+              "history": [
+                {
+                  "as_of": "2026-09-16T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-17T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-18T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-19T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-20T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-21T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-22T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-23T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-24T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-25T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-26T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-27T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-28T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                },
+                {
+                  "as_of": "2026-09-29T16:00:00-04:00",
+                  "source": "synthetic_history",
+                  "cash_open": 100.0,
+                  "close": 100.0,
+                  "high": 101.0,
+                  "low": 99.0,
+                  "volume": 3900000.0,
+                  "closes": {
+                    "09:37": 101.0
+                  },
+                  "volumes": {
+                    "09:36": 250,
+                    "09:37": 250
+                  }
+                }
+              ]
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:20:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:20:00+00:00",
+            "arrival_time": "2026-09-30T13:20:00+00:00",
+            "payload": {
+              "open": 100,
+              "high": 100.1,
+              "low": 99.98,
+              "close": 100.01,
+              "volume": 1000,
+              "seconds": 60,
+              "closed": true,
+              "notional": 100010.0
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:21:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:21:00+00:00",
+            "arrival_time": "2026-09-30T13:21:00+00:00",
+            "payload": {
+              "open": 100.01,
+              "high": 100.03,
+              "low": 99.9,
+              "close": 99.92,
+              "volume": 200,
+              "seconds": 60,
+              "closed": true,
+              "notional": 19984.0
+            },
+            "quality": "complete"
+          },
+          {
+            "event_id": "bar2026-09-30T09:22:00-04:00",
+            "symbol": "SYN",
+            "venue": "SYN",
+            "kind": "bar",
+            "event_time": "2026-09-30T13:22:00+00:00",
+            "arrival_time": "2026-09-30T13:22:00+00:00",
+            "payload": {
+              "open": 99.92,
+              "high": 99.95,
+              "low": 99.7,
+              "close": 99.72,
+              "volume": 100,
+              "seconds": 60,
+              "closed": true,
+              "notional": 9972.0
+            },
+            "quality": "complete"
+          }
+        ],
+        "include_variants": false,
+        "focus_features": [
+          "historical_vwap_reject",
+          "volume_cliff",
+          "resume"
+        ],
+        "config": null
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0027-S1",
+      "verification_level": "feature_provider",
+      "original_title": "股票先抗跌，指数后快速补涨使近 6 棒相对收益为负",
+      "disposition": "frozen_feature_fixture_boundary",
+      "explanation": "The provider now reconstructs earlier synchronized pressure resistance; the authored graph path retains injected relative_strength=0.0 and contains no earlier stock/benchmark raw history.",
+      "regression_reference": "evaluation.tests.test_audit_features",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0027-S1.json",
+        "sha256": "f8109524b22d5c1c1a4d8fdbd419b3a2f845b1327d328604fb5d81dad747ba98"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0027-S1.json",
+        "sha256": "b5b74b4ad43e1ad7e4ba7383c163ffd53e3c29d46b7f330c2acbb326389744ef"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "daily_aligned": true,
+            "relative_strength": 0.0
+          },
+          {
+            "market_confirm": true
+          },
+          {
+            "resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "daily_aligned": true,
+            "relative_strength": 0.0
+          },
+          {
+            "market_confirm": true
+          },
+          {
+            "resume": true
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0028-S1",
+      "verification_level": "feature_provider",
+      "original_title": "第二日越过前日新闻接受位 100.50，尚未越前日高 103",
+      "disposition": "missing_explicit_reference",
+      "explanation": "The frozen provider input never supplied prior_acceptance_level=100.50. Supplemental explicit reference and current provider regression demonstrate the supported input without rewriting original evidence.",
+      "regression_reference": "evaluation.tests.raw_scenarios:second-day-acceptance",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0028-S1.json",
+        "sha256": "76ec6d5d3dd055536e8105b0755a852bb2cafdb6e36a2516ee388a703ffecf22"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0028-S1.json",
+        "sha256": "3c39305c024f184cea5a30baceb1a08b1f92600e5d88a1a2684fc39deb0854a3"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "second_day_news": true,
+            "second_day_break": false,
+            "second_day_edge": 103
+          },
+          {
+            "accepted": true,
+            "compression": 0.6
+          },
+          {
+            "resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "second_day_news": true,
+            "prior_break": false,
+            "prior_edge": 103
+          },
+          {
+            "accepted": true,
+            "compression": 0.6
+          },
+          {
+            "resume": true
+          }
+        ],
+        "compatibility_adapters": [
+          {
+            "frame_index": 0,
+            "old_feature": "prior_break",
+            "new_feature": "second_day_break",
+            "value": false
+          },
+          {
+            "frame_index": 0,
+            "old_feature": "prior_edge",
+            "new_feature": "second_day_edge",
+            "value": 103
+          }
+        ],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0028-S4",
+      "verification_level": "rule_graph",
+      "original_title": "当天唯一最新消息是小更新，原重大前日消息仍有效",
+      "disposition": "frozen_feature_fixture_boundary",
+      "explanation": "The compound prior-day news provider is fixed. The original graph fixture explicitly injects second_day_news=False, so it cannot demonstrate this provider fix.",
+      "regression_reference": "evaluation.tests.test_audit_features",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0028-S4.json",
+        "sha256": "bfcefb6c2daec16742bf3314840f0f1039565bd08b5178380c9328ae79ab38b7"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0028-S4.json",
+        "sha256": "f981b56007982c76bd0afd7950e5ba3bf0dbcc6f11351b316a4fd59a1b2e286a"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "second_day_news": false,
+            "second_day_break": true,
+            "second_day_edge": 11
+          },
+          {
+            "accepted": true,
+            "compression": 0.6
+          },
+          {
+            "resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "second_day_news": false,
+            "prior_break": true,
+            "prior_edge": 11
+          },
+          {
+            "accepted": true,
+            "compression": 0.6
+          },
+          {
+            "resume": true
+          }
+        ],
+        "compatibility_adapters": [
+          {
+            "frame_index": 0,
+            "old_feature": "prior_break",
+            "new_feature": "second_day_break",
+            "value": true
+          },
+          {
+            "frame_index": 0,
+            "old_feature": "prior_edge",
+            "new_feature": "second_day_edge",
+            "value": 11
+          }
+        ],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0030-S3",
+      "verification_level": "rule_graph",
+      "original_title": "自身破 IB 和停顿后续行在同一分钟",
+      "disposition": "causal_sequence_required",
+      "explanation": "IB breakout, acceptance and later flow continuation are sequential; an authored single frame cannot prove a subsequent pause and resumption.",
+      "regression_reference": "evaluation.tests.test_graphs",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0030-S3.json",
+        "sha256": "06c159a87b009aee658d06fc77e4fd955b8b5d44f8931e9979b63e84e33c82e4"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0030-S3.json",
+        "sha256": "a81e13275204151882a9ba44daefeabdc723653613426b35edcc589e5ac667d3"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "leader_break": true
+          },
+          {
+            "ib_break": true,
+            "accepted": true,
+            "ib_edge": 11,
+            "flow_resume": true,
+            "resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "leader_break": true
+          },
+          {
+            "ib_break": true,
+            "accepted": true,
+            "ib_edge": 11,
+            "flow_resume": true,
+            "resume": true
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0032-S3",
+      "verification_level": "rule_graph",
+      "original_title": "新内容公布与新方向接受、结构恢复同一分钟",
+      "disposition": "causal_sequence_required",
+      "explanation": "A reassessment must be followed by acceptance beyond its frozen signal level and later resumption. The original single frame does not establish that order.",
+      "regression_reference": "evaluation.tests.test_graphs",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0032-S3.json",
+        "sha256": "56e33e0c79947f042297e0400a59bdfc7899d85aef4631ba5eed4f905177c371"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0032-S3.json",
+        "sha256": "8fab8c00a1ed1d46cde88fb115afd97d2abf412db37d8dc6758250bd6c4180bf"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "reassessment": true
+          },
+          {
+            "accepted": true,
+            "cross_confirm": true,
+            "resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "reassessment": true
+          },
+          {
+            "accepted": true,
+            "cross_confirm": true,
+            "resume": true
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0033-S1",
+      "verification_level": "feature_provider",
+      "original_title": "三个完整 TPO 时段边缘在相邻 1 tick 组成台阶",
+      "disposition": "incompatible_feature_fixture_domain",
+      "explanation": "Adjacent tick ledges are implemented. The original provider replacement splices ~100.01 levels into a graph fixture with a different price domain, so rejection must remain traceable.",
+      "regression_reference": "evaluation.tests.test_audit_features",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0033-S1.json",
+        "sha256": "d0ed6fccd6c2280f6299ed33423ace051fac0e1160dc3ba9d785b8fd8a955944"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0033-S1.json",
+        "sha256": "508c98f65d144d8fcc362df3e92054faa19c001637c9c4c6db5f726c78b2970e"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "ledge_break": true,
+            "ledge": 100.01
+          },
+          {
+            "accepted": true,
+            "flow_resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "ledge_break": true,
+            "ledge": 100.01
+          },
+          {
+            "accepted": true,
+            "flow_resume": true
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    },
+    {
+      "case_id": "SET-0033-S5",
+      "verification_level": "rule_graph",
+      "original_title": "台阶突破与外侧接受/流确认同一分钟",
+      "disposition": "acceptance_window_required",
+      "explanation": "The frozen fixture claims same-frame acceptance. Acceptance concerns three actual closes beyond the captured ledge, followed by the required flow condition.",
+      "regression_reference": "evaluation.tests.test_graphs",
+      "frozen_original": {
+        "path": "setup-situation-audit-2026-10-02/evidence/SET-0033-S5.json",
+        "sha256": "ef7f21d091eb9f08925940993fd2cd11218752f83a255f22d033e0ef7856be69"
+      },
+      "frozen_v1_2_verification": {
+        "path": "setup-situation-verification-2026-10-02/evidence/SET-0033-S5.json",
+        "sha256": "61f803205562a0e1048deb11dc31931a3a1b3c5fd1184eb224db0133f73783a7"
+      },
+      "frozen_input": {
+        "kind": "injected_normalized_features",
+        "steps": [
+          {
+            "ledge_break": true,
+            "ledge": 11,
+            "accepted": true,
+            "flow_resume": true
+          }
+        ],
+        "original_steps": [
+          {
+            "ledge_break": true,
+            "ledge": 11,
+            "accepted": true,
+            "flow_resume": true
+          }
+        ],
+        "compatibility_adapters": [],
+        "options": {
+          "seconds": null,
+          "direction": null,
+          "remove_caps": [],
+          "include_variants": false,
+          "indices": null
+        }
+      },
+      "market_validation": "not_run"
+    }
+  ],
+  "market_validation": "not_run"
+}

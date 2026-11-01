@@ -18,3 +18,11 @@ paper-desk-cloud/.vinext/
 paper-desk-cloud/dist/
 paper-desk-cloud/.wrangler/
 paper-desk-cloud/coverage/
+
+# Latest research workbench: local runs and credentials never enter the release
+/runtime-runs/
+/recognition-runs/
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm

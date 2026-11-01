@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Causal detection event and version identity",
+  "type": "object",
+  "required": [
+    "detection_id",
+    "setup_id",
+    "variant_id",
+    "symbol",
+    "venue",
+    "direction",
+    "scale_seconds",
+    "state",
+    "identified_at",
+    "evidence_cutoff",
+    "anchor",
+    "conditions",
+    "structure_score",
+    "evidence_score",
+    "data_status",
+    "missing",
+    "source_version",
+    "source_sha256",
+    "rule_version",
+    "market_status",
+    "algorithm_sha256",
+    "configuration_sha256"
+  ],
+  "properties": {
+    "detection_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "setup_id": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "variant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "symbol": {
+      "type": "string",
+      "minLength": 1
+    },
+    "venue": {
+      "type": "string",
+      "minLength": 1
+    },
+    "direction": {
+      "type": "integer",
+      "enum": [
+        -1,
+        1
+      ]
+    },
+    "scale_seconds": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "state": {
+      "enum": [
+        "candidate",
+        "formed",
+        "triggered",
+        "invalidated",
+        "expired",
+        "completed"
+      ]
+    },
+    "identified_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "evidence_cutoff": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "anchor": {
+      "type": "object"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "structure_score": {
+      "type": "number"
+    },
+    "evidence_score": {
+      "type": "number"
+    },
+    "data_status": {
+      "enum": [
+        "complete",
+        "partial",
+        "unavailable"
+      ]
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "rule_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "market_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "algorithm_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "configuration_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "observation_kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "related_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_kind": {
+      "enum": [
+        "synthetic",
+        "real_market",
+        "unknown"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

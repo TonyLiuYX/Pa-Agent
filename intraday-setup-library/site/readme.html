@@ -1,0 +1,59 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>日内交易 Setup 知识库与模拟研究工作台</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f3ec;color:#24332f;font:16px/1.75 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}header{background:#132e2a;color:#f7f3e8;padding:22px 5vw;display:flex;flex-wrap:wrap;gap:8px 20px}header a{color:#d6e8d6}main{max-width:1160px;margin:32px auto;padding:0 28px}h1{font-size:32px;line-height:1.35;font-weight:650}h2{margin-top:2em;font-size:22px;border-top:1px solid #d1d8cf;padding-top:1em}h3{font-size:18px}a{color:#19605c;overflow-wrap:anywhere}p,li,td,th{overflow-wrap:anywhere}.lead{max-width:860px}.muted{color:#62736a;font-size:14px}.tag{display:inline-block;background:#e4e9dc;border:1px solid #ced9c8;border-radius:4px;font-size:12px;padding:1px 7px;margin:2px}input,select,button{font:inherit;border:1px solid #aabfb0;border-radius:5px;background:#fff;padding:9px 12px}button{cursor:pointer}button:hover{background:#e4eddf}input[type=search]{width:100%}.filters{display:flex;flex-wrap:wrap;gap:8px;margin:15px 0}select{max-width:220px;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:15px}.card{background:#fffef9;border:1px solid #d4ddd0;padding:20px;border-radius:8px}.card h3{margin:4px 0}.card p{font-size:14px}.notice{background:#e7ede1;border-left:4px solid #6e9278;padding:12px 16px}.toc{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}.toc a{max-width:290px}.meta{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;font-size:14px;background:#e9ede2;padding:16px}.compare,.table-scroll{overflow-x:auto;margin:20px 0}table{width:100%;border-collapse:collapse}td,th{vertical-align:top;text-align:left;border-bottom:1px solid #ccd8ce;padding:10px;font-size:14px}.compare td{min-width:230px}.compare th:first-child{min-width:95px}.compare ol{padding-left:20px;margin:0}img{max-width:100%;height:auto;display:block;margin:14px auto;border:1px solid #d5ddcf;border-radius:6px}code{font-size:.9em;background:#e3e9df;padding:2px 5px}pre{padding:15px;background:#e3e9df;overflow:auto}pre code{padding:0}blockquote{border-left:3px solid #8ea48f;padding-left:14px}.actions{display:flex;gap:10px;flex-wrap:wrap}footer{margin:50px 0;font-size:13px;color:#64796c}@media(max-width:650px){main{padding:0 16px}h1{font-size:25px}.meta{grid-template-columns:1fr}select{max-width:100%}header{font-size:14px}}</style></head><body><header><a href="index.html">INTRADAY / 日内 Setup</a><a href="sources.html">来源</a><a href="taxonomy.html">分类</a><a href="comparisons.html">比较</a><a href="learning.html">学习路线</a><a href="glossary.html">术语</a><a href="quality.html">质量报告</a><a href="recognition.html">程序化识别</a></header><main><h1>日内交易 Setup 知识库与模拟研究工作台</h1>
+<p>本版完成50个实质不同的 reviewed 主记录，以简体中文说明前提、位置、行为顺序、触发、失效、管理及证据边界。reviewed 表示本研究规则记录审查通过；没有独立证明这些方法的净盈利能力。</p>
+<p>v1.1 新增全部50条的程序化识别研究引擎及34个变体，保留原文规则、独立版本和可追溯条件。算法采用多周期、多转折尺度、位置容差、逐笔窗口和多个关键位的独立序列跟踪；真实行情召回率、精确率及美股迁移仍待验证。</p>
+<p>v1.2 根据250种定向情形审计修复端点触发、兼容同帧阶段、显式回测变体、数值特征及噪声带止损后重入，算法规则升至0.2.0。修复范围、保留限制和实际复验见<a href="recognition-fixes.html">修复说明</a>；原50条setup正文保持原版本。</p>
+<p>本轮增加免费Alpaca IEX行情连接、持久化运行日志、崩溃恢复、统一自动模拟账户和本地浏览器工作台。现行项目版本、内容日期和实验执行模型版本以 <a href="../release.json">release.json</a> 为准。工程检查、真实市场验证和实验账户表现分别报告。</p>
+<h2>启动研究工作台</h2>
+<p>Python标准库即可运行无密钥演示，使用固定观察名单SPY、QQQ、AAPL、MSFT、NVDA。运行目录必须在本项目之外：</p>
+<pre><code>python3 -m runtime serve --mode demo --data-dir ../runtime-runs/demo</code></pre>
+<p>默认演示只有一个合成交易会话，结束后显示SOURCE_ENDED。需要跨会话观察可用 <code>--sessions 20 --pace 0.25</code>；它按合成会话推进，跳过周末但不冒充真实交易日历。会话数和实时历史天数也可在配置中设置为 <code>demo_sessions</code>、<code>alpaca_history_sessions</code>。</p>
+<p>打开终端返回的本地地址，默认是 <code>http://127.0.0.1:8765</code>。工作台包含总览、行情与证据、模拟账户、逐事件回放与标注、能力矩阵及研究报告。演示资料始终标为合成资料；关闭浏览器不会停止后台。终端Ctrl+C结束进程，日志和账本保留。</p>
+<p>接入免费实时IEX行情时，先按 <a href="connectors.html">连接器说明</a> 在本地环境设置Alpaca密钥，再使用Python 3.11或更新版本安装固定依赖 <code>websockets==17.1</code>。根目录与连接器的依赖清单使用同一版本；安装、诊断与运行应使用同一个Python环境。环境诊断只显示是否配置，不打印凭证：</p>
+<pre><code>python3 -m pip install -r requirements-runtime.txt
+python3 -m runtime doctor
+python3 -m runtime serve --mode live --data-dir ../runtime-runs/live</code></pre>
+<p>实时启动可用 <code>--history-sessions 30</code> 请求最多30个已完成会话，默认15，0表示不请求历史。明确前一交易日缺资料时，其高低点和收盘参考保持未知；ATR及同刻校准只使用所需连续、完整的交易日，不用更早日期替代。</p>
+<p>系统显式使用IEX，其成交量和覆盖不能当作全美市场完整观测。深度、真实买卖分类、新闻等资料缺失时保持未知；所有84张规则图都列入能力检查，必要资料及执行条件满足才参与自动模拟。真实连接需本地有效凭证及实际开市时段；首轮实时连接验收目前仍待执行。</p>
+<p>恢复时使用原目录；算法、规则、配置或执行模型改变后，恢复会拒绝续跑，需要新建运行并回放原始资料：</p>
+<pre><code>python3 -m runtime resume --data-dir ../runtime-runs/demo
+python3 -m runtime replay --input ../data/events.jsonl --data-dir ../runtime-runs/replay
+python3 -m runtime export --data-dir ../runtime-runs/demo
+python3 -m runtime analyze-backfill --data-dir ../runtime-runs/live --output ../recognition-runs/backfill-study</code></pre>
+<p>回补分析只读取已提交资料并使用独立识别器，不修改原运行或创建模拟账户。输出目录必须是项目外的新目录；缺对应品种、场所、日期及当时已知的session上下文时保存缺项并返回blocked，不借用当前日资料。</p>
+<p>统一账户默认初始资金100,000美元、每次预算净值10%、最多5个品种、不加仓或自动反手；采用触发后下一条有效报价、1 tick不利滑点、默认零费用、1%止损阈值、2%目标阈值和60分钟最长持有。缺报价时订单等待或超时，不补造成交。详细冲突、日终和当日风险规则见 <a href="paper.html">模拟执行说明</a>。这些是独立实验执行规则，不能继承来源策略收益。</p>
+<p>使用 <a href="../config/runtime.example.json">配置样例</a> 调整观察名单和模拟参数。密钥只放本地环境，不能写入配置、日志、导出或发布包。不会发送真实交易订单，也不会调用收费LLM。</p>
+<p>完整运行接口、事务和恢复操作见 <a href="runtime.html">运行平台说明</a>，实际墙钟十小时稳定性方法见 <a href="soak.html">稳定性操作手册</a>。原发布包、Git基线及校验范围保留在 <a href="baseline.html">开发基线</a>。行情、检测、账户、日志、标注与冻结评价数据集的公共契约位于 <a href="runtime-contracts.html">公共契约说明</a>、<a href="data-dictionary.html">数据字典</a> 及相应 <code>*.schema.json</code>；Schema还需配合时序、资金和哈希语义校验。</p>
+<p>当前检查点优化保留v1 JSON与校验和格式兼容，生产恢复继续校验核心身份；实际容量、重放及备份恢复的分阶段内存结果见 <a href="verification.html">验收记录</a>。短时资源诊断不计十小时。候选3因RSS超限失败，候选4在独立复审发现历史日期与执行venue缺陷后正常中断；候选4实际观察28133.869205秒，97889事件的原版本全日志重放通过。原证据均保留，旧时长不累计。修复版本必须在新目录重新完整计时，最新恢复位置见 <a href="../research/development-checkpoint.json">开发检查点</a>，逐项实现与缺口见 <a href="implementation-acceptance.html">计划验收对照</a>。</p>
+<h2>验证状态</h2>
+<p>候选7的固定版本十小时合成稳定性验收及只读门禁已通过：有效观察36000.103071秒，83046条完整日志独立重放通过289.654239秒，覆盖39次故障和18次恢复，107文件的冻结核心保持不变。实际结果见 <a href="../reports/soak-results.json">十小时原报告副本</a>、<a href="../reports/soak-validation.json">只读门禁</a> 和 <a href="soak.html">稳定性操作手册</a>。停止测试时仍有5个未关闭的合成持仓，没有补造平仓；该结果仅说明本次输入、配置和环境下的工程稳定性。候选1–6的失败或中断记录保留，任何旧时长、压力、smoke或轮询时间均未累计至本次观察，也不作为开发人时。</p>
+<p>真实市场标签仍为0，首轮真实IEX连接、识别精确率/召回率、美股迁移和盈利验证均为 <code>not_run</code>。工程测试和合成模拟结果不代替市场验证。正式归档身份、最终CRC/manifest、重建、CLI及提交/tag结果以项目外 <code>intraday-setup-library-v1.3.0-release-checks.json</code> 和 <code>runtime-runs/candidate7-final-release-20261005/delivery-completion.json</code> 为准。当前边界与流程见 <a href="release-notes.html">发布说明</a>。</p>
+<h2>程序化识别与回放</h2>
+<p>从 <a href="recognition.html">使用指南</a>、<a href="recognition-catalog.html">全部50条可执行目录</a> 和 <a href="evaluation.html">评价协议</a> 开始。工程测试结果见 <a href="../reports/recognition-validation.json">识别测试报告</a> 与 <a href="../reports/recognition-smoke.json">合成回放摘要</a>。实时增量接口与JSONL回放使用同一引擎；通用CSV适配器需要显式交易日历。</p>
+<pre><code>python3 scripts/test_recognition.py --require-jsonschema
+python3 -m recognition demo --output ../recognition-runs/demo-input
+python3 -m recognition replay --input ../recognition-runs/demo-input/events.jsonl --output ../recognition-runs/demo-run --variants</code></pre>
+<p>宽候选、严格形成、触发和失效单独输出；数据不足不会被补成订单流确认。合成示例只用于工程复现。输入与结果置于项目外，每次回放使用新目录；原有50条正文不因算法化而自动变更为已验证策略。</p>
+<h2>打开与检索</h2>
+<p>双击 <a href="index.html">离线首页</a>。普通桌面浏览器即可使用，无需服务器、账号或联网；英文名、中文名、别名和完整正文均参与搜索。空格分隔关键词取交集，十个筛选维度也取交集。清空筛选可恢复50条。</p>
+<p>勾选1–3个条目后点击“比较已选条目”，检查七轴指纹、入场、失效和管理。选择在筛选变化后保留，使用“清空选择”重置。点击条目进入15节全文，再通过双向相关导航比较最近结构。来源页反向显示被引用条目和证据的具体支持范围。</p>
+<p>先阅读 <a href="learning.html">学习路线</a>、<a href="glossary.html">术语表</a>、<a href="taxonomy.html">多轴分类</a> 和 <a href="comparisons.html">结构比较</a>。只需要Markdown时从 <a href="index.html">目录</a> 开始。</p>
+<h2>证据与图表的读法</h2>
+<p>86份来源记录中，76份有实际阅读范围，覆盖23个来源族；64份用于最终条目。来源、阅读、引用和独立核心核验分别计数。7条有多个独立族的核心说明，其余大多为同族或只有背景补充，逐条如实标明。</p>
+<p>46/50条有实际查看过的行情图；44/50条有对应结构片段或模型示例，两条只有背景图。SET-0025、0028、0037、0049保留真实案例缺口。历史行情上的假设订单不是实盘审核，Footprint片段也不等于完整触发验证。</p>
+<p>因未确认原图再分发授权，真实图表只提供原站图片/精确PDF页链接、原创解读及核对状态，需要联网。包内50张原创SVG七轴示意可离线显示，均标“非真实市场数据”，不增加真实案例覆盖。source_schematic、reconstructed_chart等类型预留在schema中，本版没有将它们冒充行情。</p>
+<h2>文件职责</h2>
+<div class="table-scroll"><table><thead><tr><th>路径</th><th>职责</th></tr></thead><tbody><tr><td>setups/SET-*.md</td><td>唯一正文主记录；JSON兼容YAML front matter + 15节</td></tr><tr><td>data/sources.jsonl</td><td>来源作者、家族、时间、访问和实际阅读范围</td></tr><tr><td>data/evidence.jsonl</td><td>主张性质、支持/背景/限制关系、定位、核对状态</td></tr><tr><td>data/visuals.jsonl</td><td>视觉来源、权利、日期/周期/时区缺失、查看范围</td></tr><tr><td>data/relations.jsonl</td><td>条目之间双向浏览的语义关系</td></tr><tr><td>data/taxonomy.yaml</td><td>多轴分类；JSON兼容YAML，避免额外解析依赖</td></tr><tr><td>assets/diagrams</td><td>本项目原创SVG，非真实价格图</td></tr><tr><td>indexes</td><td>目录、别名、比较、来源、术语、学习路线</td></tr><tr><td>exports</td><td>全文JSON与UTF-8 BOM目录CSV，均由主记录生成</td></tr><tr><td>site</td><td>可直接file://打开的离线HTML，没有外部脚本或追踪资源</td></tr><tr><td>schema</td><td>主记录、行情、检测、日志、执行、报告、标注和冻结数据集的公共Schema及数据字典</td></tr><tr><td>recognition</td><td>输入契约、因果特征、50条规则/34变体、增量识别与回放CLI</td></tr><tr><td>evaluation</td><td>手工标注评价、独立事件匹配、合成数据与回归测试</td></tr><tr><td>runtime</td><td>SQLite WAL事件日志、单写运行器、版本检查、恢复和本地API</td></tr><tr><td>connectors</td><td>免费IEX、合成演示和JSONL回放数据源</td></tr><tr><td>paper</td><td>统一模拟资金、信号冲突、报价成交、风险及退出</td></tr><tr><td>workbench</td><td>原生浏览器工作台及本地图表文件、LICENSE和NOTICE</td></tr><tr><td>research</td><td>候选、合并决策、语义自审、搜索路径、状态和交接</td></tr><tr><td>reports</td><td>研究报告、质量审查、实际执行的验证记录</td></tr><tr><td>templates</td><td>setup编写、候选审核、通用交易复盘模板</td></tr><tr><td>manifest.json</td><td>版本、统计及交付文件SHA-256清单</td></tr></tbody></table></div>
+<h2>复盘与扩充</h2>
+<p>复制 <a href="../templates/trade-review-template.md">复盘模板</a>，保留setup ID、版本、纽约/交易所时区、入场前截图和当时规则。分别评估“识别是否成立”“是否按计划成交”和“单笔盈亏”，不要把亏损自动改标为无效setup。</p>
+<p>维护者先读 <a href="../AGENTS.md">AGENTS.md</a>、<a href="../research/state.json">state.json</a>、<a href="handoff.html">handoff.md</a> 与别名索引。读取状态 → 对照七轴去重 → 实读来源、记录证据 → 编写/更新主记录 → 处理视觉资料 → 语义审查 → 重建 → 验证 → 记版本变化。新增ID继续递增，不复用合并/弃用ID。</p>
+<p>在项目目录运行：</p>
+<pre><code>python3 scripts/test_recognition.py --require-jsonschema
+python3 scripts/test_runtime.py --require-jsonschema
+python3 scripts/report.py
+python3 scripts/build.py --clean
+python3 scripts/validate.py --require-jsonschema</code></pre>
+<p>构建只需Python标准库；验证也可用标准库完成跨文件和结构检查。安装 <code>jsonschema</code> 后会另外执行完整Draft 2020-12 schema检查，缺少时输出明确未执行标记，可加 <code>--require-jsonschema</code> 强制要求。浏览器验证需可选的Playwright与Chromium，见 <code>scripts/test_site.py</code>。<code>scripts/fetch_sources.py</code> 仅是可选获取助手，BeautifulSoup/pypdf依赖见requirements；下载不改变实际阅读状态。</p>
+<p>修改报告或测试结果后再构建，最后验证manifest。不要直接修改生成的HTML、JSON或CSV。外链本次可访问不保证以后持续可用；403、404、空内容和网络故障分别记录，不将一次请求失败当永久死链。</p>
+<p>使用 <code>python3 scripts/build.py --output ../新建空目录</code> 构建完整的隔离交付副本，源目录不会被写入。交付采用显式文件allowlist，排除隐藏目录、Git、虚拟环境、缓存、凭证、数据库、运行目录和ZIP；不会递归把整个工作目录收进manifest。<code>python3 scripts/verify_rebuild.py</code> 检查两个隔离构建和ZIP的可复现性。</p>
+<p>候选包使用 <code>python3 scripts/package.py --candidate --output ../新候选名称.zip</code>。正式发布使用 <code>python3 scripts/package.py --soak-report 项目外稳定性目录/soak-report.json --output ../新正式名称.zip</code>，脚本先执行真实十小时及当前核心的只读门禁。随后只读验证项目，仅收录allowlist与manifest共同确认的文件，固定ZIP条目时间、权限和顺序，检查CRC和逐文件哈希；旁边保存release-checks.json，明确candidate或formal。现有ZIP会保留，请为新发布使用新文件名。</p>
+<p>本版提供识别、模拟执行、恢复及浏览器的工程验收路径；实际检查记录保存在reports。研究数据不足的地方已留在报告和状态中，后续真实市场验证需要数据及独立标注。</p><footer>Markdown 为正文主记录 · reviewed 表示规则记录审查 · 来源及真实图表外链需要联网。正文、原创示意、检索和比较可离线使用。<br><a href="readme.html">使用与维护</a> · <a href="research.html">研究报告</a></footer></main></body></html>

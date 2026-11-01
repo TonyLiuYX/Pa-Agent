@@ -1,0 +1,694 @@
+{
+  "status": "passed",
+  "version": "1.3.0",
+  "content_date": "2026-10-03",
+  "executed_at_utc": "2026-10-03T16:07:59.551645+00:00",
+  "duration_seconds": 1.101,
+  "environment": {
+    "python": "3.14.3",
+    "browser": "Chromium 151.0.7922.34"
+  },
+  "fixture": false,
+  "run_id": "f475e4d3-b089-4474-8794-274834d03d68",
+  "mode": "demo",
+  "identity": {
+    "schema_version": "1.0.0",
+    "configuration_sha256": "590f636e3ab4014ccb939050e05d1c03bf96bee761d08a566811c2d8bd522bfb",
+    "algorithm_sha256": "8683407bebb8c37ae98282bd9e39dae067d79144d87b5246994572c5498b0896",
+    "runtime_sha256": "37755fb9e9956733a32c9e23116d004d623b3f3e28001e67befd96b0ce4e5b0c",
+    "execution_sha256": "f1470bd0bed81a992f8649e4d231b8123fd34dfe243dd58b43de62ecfe10dcd2"
+  },
+  "market_validation": "not_run",
+  "checks": [
+    "five views render",
+    "memory maintenance health summary reflects the current API without inferring released bytes",
+    "keyboard evidence selection",
+    "local candlestick chart fits desktop and mobile containers",
+    "account state renders",
+    "raw-event step and reset",
+    "inclusive known-time range resets replay and filters events",
+    "conclusions hidden by default",
+    "complete annotation coverage unchecked by default",
+    "market validation boundary visible",
+    "research evaluation states and metrics render",
+    "390px viewport has no document overflow",
+    "no JavaScript page errors"
+  ],
+  "screenshots_sha256": {
+    "overview.png": "28154ca999e56ad024cbf1383aed9cb5627052a27d58b94a62caf0b73ef02f43",
+    "market.png": "88be2483065b7832c825525258badc1c8ef1e3c545d3b2c1782525a63f7640fb",
+    "replay.png": "8b38c57592dd975b0e1257cf9f6987e08b14dc1b702b0e645cf57cac8f03a25e",
+    "research.png": "e0664a34a52c07ea2a01354ee6e939fd931c2dda6b1c2e639805e81b43c02566",
+    "mobile.png": "4fe28bb0583644e74db8e1c01947f61980f9a8eb15b5182568b0e024a0dbae70"
+  },
+  "console_errors": [],
+  "scope": "Browser behavior and rendering; synthetic/recorded engineering evidence, no real-market performance validation.",
+  "synthetic_write_validation": {
+    "status": "passed",
+    "version": "1.3.0",
+    "content_date": "2026-10-03",
+    "executed_at_utc": "2026-10-03T16:08:11.429246+00:00",
+    "duration_seconds": 2.661,
+    "environment": {
+      "python": "3.14.3",
+      "browser": "Chromium 151.0.7922.34"
+    },
+    "fixture": true,
+    "run_id": "synthetic-ui-fixture",
+    "mode": "demo",
+    "identity": {},
+    "market_validation": "not_run",
+    "checks": [
+      "five views render",
+      "memory maintenance health summary reflects the current API without inferring released bytes",
+      "keyboard evidence selection",
+      "local candlestick chart fits desktop and mobile containers",
+      "account state renders",
+      "raw-event step and reset",
+      "inclusive known-time range resets replay and filters events",
+      "conclusions hidden by default",
+      "complete annotation coverage unchecked by default",
+      "market validation boundary visible",
+      "research evaluation states and metrics render",
+      "390px viewport has no document overflow",
+      "no JavaScript page errors",
+      "memory maintenance ready waits for its first call",
+      "memory maintenance completed preserves a zero native byte result",
+      "memory maintenance completed preserves a zero native flag",
+      "memory maintenance unsupported platform is explicit",
+      "memory maintenance error is explicit with raw details",
+      "older API missing memory maintenance remains unreported",
+      "synthetic run locks annotation source type",
+      "unknown replay requires and preserves manually declared source",
+      "stage-window label submitted with session token",
+      "accepted label remains saving until its committed cursor is visible",
+      "expired commit wait remains explicitly pending and performs no automatic duplicate POST",
+      "complete coverage false and true submit as booleans; disputed disables claim",
+      "three stage TP FP FN values render separately",
+      "version mismatch and capacity limits block metrics with visible reasons",
+      "latest label revision replaces earlier case without duplicates",
+      "older in-flight snapshot cannot replace newly submitted label",
+      "pause and resume entry controls"
+    ],
+    "screenshots_sha256": {
+      "overview.png": "a3ba8c9f0fda89521756d2bf39151491cd91f0a7c58663ec3fa3780b0e25c71a",
+      "market.png": "cdfe4a1efdbaef0543f9f10fd932c4a0547560649e623581d4bb5be8e9324366",
+      "replay.png": "8b3e79ab83e0fb25722ebba21ba84d27e8b10c022e894b3b5e59c7de168bb4ff",
+      "research.png": "4904b20355df141efef3157cdceb0958c3b938c28076ab7cbfe14202fe670497",
+      "mobile.png": "7c710d8dbe5def842abb51fefb2572d96948129de89301aeb6b8ffb5f972fd19"
+    },
+    "console_errors": [],
+    "scope": "Current final frontend against isolated configured synthetic HTTP-contract responses. Delayed/expired commit, source selection, label revision and allocator-display regression only; configured report values are not runtime or market performance.",
+    "frontend_files": {
+      "workbench/app.js": "319f692200d03be1e7e66b603b448ac21721dece77ed705d546cff891ca18694",
+      "workbench/index.html": "7961e52fc31e02d4102e699a4993b3bddc0514f456386fc2fe29bc5500384d69",
+      "workbench/style.css": "78b0023dc8aa28d381bf435bc4147752645d4749f75c3aa710feaec0ecbd92d5"
+    },
+    "frontend_identity_scope": "Current final frontend bytes match the strict product-path run; these files were not edited during the affected follow-up browser checks."
+  },
+  "actual_synthetic_research_validation": {
+    "status": "passed",
+    "version": "1.3.0",
+    "content_date": "2026-10-03",
+    "executed_at_utc": "2026-10-03T16:08:12.252282+00:00",
+    "fixture": true,
+    "source": "actual local synthetic demo API",
+    "run_id": "f475e4d3-b089-4474-8794-274834d03d68",
+    "identity": {
+      "schema_version": "1.0.0",
+      "configuration_sha256": "590f636e3ab4014ccb939050e05d1c03bf96bee761d08a566811c2d8bd522bfb",
+      "algorithm_sha256": "8683407bebb8c37ae98282bd9e39dae067d79144d87b5246994572c5498b0896",
+      "runtime_sha256": "37755fb9e9956733a32c9e23116d004d623b3f3e28001e67befd96b0ce4e5b0c",
+      "execution_sha256": "f1470bd0bed81a992f8649e4d231b8123fd34dfe243dd58b43de62ecfe10dcd2"
+    },
+    "browser": "Chromium 151.0.7922.34",
+    "source_active_at_submission": false,
+    "market_validation": "not_run",
+    "checks": [
+      "writes restricted to demo synthetic mode",
+      "complete coverage explicit true with three independent windows persisted",
+      "actual committed report snapshot contains matching algorithm identity",
+      "three visible stage TP FP FN equal actual API metrics",
+      "complete coverage preserves selected direction scope",
+      "wrong rule version visibly blocks scoring without fabricated stage values",
+      "latest revision with corrected version restores scoring",
+      "no JavaScript page errors"
+    ],
+    "evaluated_group": {
+      "setup_id": "SET-0049",
+      "variant_id": "base",
+      "source_kind": "synthetic",
+      "split": "validation",
+      "symbol": "SPY",
+      "venue": "SYNTHETIC",
+      "regime": "synthetic_ui_contract",
+      "positive_cases": 1,
+      "negative_cases": 0,
+      "candidate": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "recall_95ci": [
+          0.2065,
+          1
+        ],
+        "precision_95ci": [
+          0.2065,
+          1
+        ],
+        "false_positives_per_annotated_hour": 0.0,
+        "confirmation_delay_seconds": [
+          0.0
+        ],
+        "ignored_unannotated_detections": 0,
+        "annotated_hours": 0.1
+      },
+      "confirmed": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "recall_95ci": [
+          0.2065,
+          1
+        ],
+        "precision_95ci": [
+          0.2065,
+          1
+        ],
+        "false_positives_per_annotated_hour": 0.0,
+        "confirmation_delay_seconds": [
+          0.0
+        ],
+        "ignored_unannotated_detections": 0,
+        "annotated_hours": 0.1
+      },
+      "triggered": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "recall_95ci": [
+          0.2065,
+          1
+        ],
+        "precision_95ci": [
+          0.2065,
+          1
+        ],
+        "false_positives_per_annotated_hour": 0.0,
+        "confirmation_delay_seconds": [
+          0.0
+        ],
+        "ignored_unannotated_detections": 0,
+        "annotated_hours": 0.1
+      },
+      "acceptance": "synthetic_logic_only"
+    },
+    "evaluation_snapshot": {
+      "run_id": "f475e4d3-b089-4474-8794-274834d03d68",
+      "identity": {
+        "algorithm_sha256": "8683407bebb8c37ae98282bd9e39dae067d79144d87b5246994572c5498b0896",
+        "configuration_sha256": "590f636e3ab4014ccb939050e05d1c03bf96bee761d08a566811c2d8bd522bfb",
+        "execution_sha256": "f1470bd0bed81a992f8649e4d231b8123fd34dfe243dd58b43de62ecfe10dcd2",
+        "runtime_sha256": "37755fb9e9956733a32c9e23116d004d623b3f3e28001e67befd96b0ce4e5b0c",
+        "schema_version": "1.0.0"
+      },
+      "processed_cursor": 11715,
+      "outbox_cursor": 17775,
+      "max_detection_record_id": 17758,
+      "max_label_record_id": 17775,
+      "source_kind": "synthetic",
+      "market_validation": "not_run",
+      "label_count": 1,
+      "label_sha256": "bf5e7148db073f332c999e84959fe90c9a72fe27018c866152d693a759d31fc7",
+      "labels_hash_scope": "latest committed label revision per case, including record provenance",
+      "scanned_predictions": 1630,
+      "related_predictions": 2,
+      "detection_sha256": "9f7511f66a84fb38f576e94d651558a2c176387af58b28da2a1786312a680f1f",
+      "committed_detection_sha256": "6b6a5302a7eaf4fe1e6c212206d4b9948b42e2a07cc1f8df08972bf64e7d358b",
+      "invalid_predictions": [],
+      "detection_hash_complete": true,
+      "detection_hash_scope": "related prediction records inside eligible outer annotation windows",
+      "committed_detection_hash_complete": true,
+      "detection_scan_performed": true
+    },
+    "console_errors": [],
+    "screenshots_sha256": {
+      "research-committed.png": "173c0bf8fab3b0dead8a1611bde67c93f625a8fc94cf46101d5f1fe41151e097",
+      "research-version-mismatch.png": "03d4f4f8f0036599162565cde5a61a54e92cfe080be9055dc16f6e4a1ccfff4a"
+    },
+    "scope": "Synthetic annotations derived from fixture output test UI/API matching only; not blind human labels or market performance.",
+    "frontend_files": {
+      "workbench/app.js": "319f692200d03be1e7e66b603b448ac21721dece77ed705d546cff891ca18694",
+      "workbench/index.html": "7961e52fc31e02d4102e699a4993b3bddc0514f456386fc2fe29bc5500384d69",
+      "workbench/style.css": "78b0023dc8aa28d381bf435bc4147752645d4749f75c3aa710feaec0ecbd92d5"
+    },
+    "frontend_identity_scope": "Current final frontend bytes match the strict product-path run; these files were not edited during the affected follow-up browser checks.",
+    "runtime_validation_scope": "SourceEnded isolated synthetic preview. This validates current UI/API behavior and does not claim active-collection submission, blind human labels, real-market performance or ten-hour stability.",
+    "current_source_core_sha256": "a9926ca99d5c877bcdf3482cb55d949279ced6876d98aad0b17ed8ce5d15e9df",
+    "api_matches_current_source_identity": true
+  },
+  "product_paths_validation": {
+    "status": "passed",
+    "executed_at": "2026-10-03T16:05:39.018682+00:00",
+    "run_id": "f475e4d3-b089-4474-8794-274834d03d68",
+    "runtime_sha256": "37755fb9e9956733a32c9e23116d004d623b3f3e28001e67befd96b0ce4e5b0c",
+    "browser": "151.0.7922.34",
+    "checks": [
+      {
+        "name": "before interface reproduced: no order history continuation or causal replay chart",
+        "scope": "before_actual_preview_released_ui",
+        "status": "passed"
+      },
+      {
+        "name": "order history has a working product entry and deduplicates order identities",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "older order revisions do not replace the newest status and refresh retains loaded history",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "inclusive real range starts with one observed candle and no loaded engine conclusion",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "blind annotation also hides already-saved future-window labels until explicit opt-in",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "next, previous and reset project only the already-viewed raw bar prefix",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "adopt current event fills time/symbol without supplying setup or structure judgement",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "actual early historical decisions are loaded by event sequence beyond the initial latest snapshot",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "signal condition exposes observation time, provenance and source evidence identifiers",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "downloaded research JSON retains current committed three-stage report and validation scope",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "run export button downloads an actual CRC-valid research archive with input provenance",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "actual SSE network interruption recovers through visible reconnect without reload or resubmission",
+        "scope": "actual_synthetic_preview",
+        "status": "passed"
+      },
+      {
+        "name": "replay loads forward detection pages and excludes same-timestamp future event_seq decisions",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "raw replay crosses its 100-event page without exposing four future candles or decisions",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "later detection page appears only at its decision event and disappears when stepping back",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "historical replay decisions expose keyboard-selectable condition evidence",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "three-page action budget explicitly preserves unknown coverage until continuation reads all 650 decisions",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "manual SSE continuation uses the last received ID rather than zero",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "new replay controls and causal chart remain usable without mobile horizontal overflow",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "mobile research page keeps both report and full-run download entries usable",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "symbol can remain recognizable while a global paused-entry gate blocks automatic simulation",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "legacy coverage fixture without a global gate retains the per-symbol execution capability",
+        "scope": "controlled_synthetic_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "same-run manual SSE recovery retains the last received continuation cursor",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "new run clears old paginated orders and fills while loading only its own snapshot",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "new run clears selected evidence, replay and conclusions and rejects a late old raw response",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "new run reconnects SSE from its own committed cursor rather than the prior run cursor",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "human draft survives a run change and cannot be submitted until its new-run provenance is reconfirmed",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "explicit provenance reconfirmation does not submit or repeat any write operation",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "same-source new run preserves the human draft without adding a provenance confirmation step",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      },
+      {
+        "name": "empty annotation form changes source without unnecessary confirmation or automatic writes",
+        "scope": "controlled_run_change_browser_routes",
+        "status": "passed"
+      }
+    ],
+    "checks_passed": 30,
+    "page_errors": [],
+    "source_core_before": "a9926ca99d5c877bcdf3482cb55d949279ced6876d98aad0b17ed8ce5d15e9df",
+    "source_core_after": "a9926ca99d5c877bcdf3482cb55d949279ced6876d98aad0b17ed8ce5d15e9df",
+    "source_core_unchanged_during_checks": true,
+    "preview_identity": {
+      "schema_version": "1.0.0",
+      "configuration_sha256": "590f636e3ab4014ccb939050e05d1c03bf96bee761d08a566811c2d8bd522bfb",
+      "algorithm_sha256": "8683407bebb8c37ae98282bd9e39dae067d79144d87b5246994572c5498b0896",
+      "runtime_sha256": "37755fb9e9956733a32c9e23116d004d623b3f3e28001e67befd96b0ce4e5b0c",
+      "execution_sha256": "f1470bd0bed81a992f8649e4d231b8123fd34dfe243dd58b43de62ecfe10dcd2"
+    },
+    "preview_identity_unchanged_during_checks": true,
+    "api_matches_current_source_identity": true,
+    "source_runtime_sha256": "37755fb9e9956733a32c9e23116d004d623b3f3e28001e67befd96b0ce4e5b0c",
+    "source_algorithm_sha256": "8683407bebb8c37ae98282bd9e39dae067d79144d87b5246994572c5498b0896",
+    "core_validation_scope": "Current-core acceptance requires identical source-core start/end and preview runtime/algorithm identity equal to source. Explicit compatibility mode never claims current-core API acceptance.",
+    "frontend_files": {
+      "workbench/app.js": "319f692200d03be1e7e66b603b448ac21721dece77ed705d546cff891ca18694",
+      "workbench/index.html": "7961e52fc31e02d4102e699a4993b3bddc0514f456386fc2fe29bc5500384d69",
+      "workbench/style.css": "78b0023dc8aa28d381bf435bc4147752645d4749f75c3aa710feaec0ecbd92d5",
+      "workbench/tests/product_paths_check.py": "7baffc026ef4f9d5c46d68ca565c0d3bb9883caba44f45fe6e330393a240f74a",
+      "workbench/tests/run_switch_check.py": "41199530952d8f2536f8a74c95298bcf312ccb01971c5b883a36faaec3d4403f"
+    },
+    "files": {
+      "before-orders.png": {
+        "bytes": 233469,
+        "sha256": "f6f11eedea4c25908be48d663382538a3e91959abc1297c60746d18b33577766"
+      },
+      "before-replay.png": {
+        "bytes": 222131,
+        "sha256": "63e44ba7c0e4544211a48a4e1e598b73ba66d4a5ee459671c4e10c1cb7245f33"
+      },
+      "after-orders-history.png": {
+        "bytes": 239500,
+        "sha256": "84b8d6bff60cba131c334be8f6d5e6bdc88b506e06e3c84e612871de04586432"
+      },
+      "after-blind-replay.png": {
+        "bytes": 238027,
+        "sha256": "26e7635946926c29e89afcde1f0484d856a3dc6f0b2151ee039de556e224033d"
+      },
+      "after-actual-historical-conclusion.png": {
+        "bytes": 362919,
+        "sha256": "32c04fb7929b0744b2cea451f299be0c99c4e6ef2c7c108540f39eb253dfa0b0"
+      },
+      "after-condition-evidence.png": {
+        "bytes": 273434,
+        "sha256": "f84a0f80925e0948ea50b3ce2b33e5625377038c5ea85e6ffec7e67b273752d9"
+      },
+      "after-research-download.png": {
+        "bytes": 296053,
+        "sha256": "d8c4d93d13e7a089bd8521b8a9864a663cb930e5212726d2901b5e27cec9aa7c"
+      },
+      "after-replay-history-boundary.png": {
+        "bytes": 837036,
+        "sha256": "f3f2ac4eab9fec65f6a4631b32b94554c9f64fdc86b826a7f330cfb8507ee479"
+      },
+      "after-replay-mobile.png": {
+        "bytes": 187413,
+        "sha256": "0f55b5e85348bb7510576f25f7fc247bd5d06ab76b948365f0bf1ca77ea52ecc"
+      },
+      "after-research-mobile.png": {
+        "bytes": 186579,
+        "sha256": "4eedca7fe116e9def8bb397280f0af2798e4b2195790199f54b6776e4f0d02cf"
+      },
+      "after-symbol-global-gate.png": {
+        "bytes": 165770,
+        "sha256": "2e1942f952643489c50d1c2ec09ad9cff241ad1fdafe909e16d9344ea1ae55a2"
+      },
+      "run-change-A-loaded.png": {
+        "bytes": 289207,
+        "sha256": "f3774fd42eae67bed03eac304aec0002dffb3cc9666aabd1dd5762566935f601"
+      },
+      "run-change-B-after-refresh.png": {
+        "bytes": 241160,
+        "sha256": "8dd67b335d5c837a8798a949464e7617e5de41a7b391bd43a33b314f63df8d77"
+      },
+      "committed-reports.json": {
+        "bytes": 164966,
+        "sha256": "9528b4bb48d9f14aadd245e33c3136b7b55165fc55390506759ddd5cfab5ae98"
+      },
+      "current-preview-export.zip": {
+        "bytes": 1760684,
+        "sha256": "7ac0bc7ca2cd21c853e83fb05389c676cfa32fd87dcdcc492d37f0445433a357"
+      }
+    },
+    "before_source": {
+      "git_ref": "b1dbdc1d34192c0cc313538935e5682e9c69fbf0",
+      "scope": "Optional earlier frontend served by controlled browser routes against same preview API; see preserved before screenshots when supplied."
+    },
+    "source_kind": "synthetic",
+    "market_validation": "not_run",
+    "long_run_scope": "independent soak Runner was not opened or modified",
+    "limitations": [
+      "Replay reads the committed journal and does not recalculate historical engine/account state.",
+      "No blind human labels or market-performance validation are claimed.",
+      "Synthetic route assertions exercise pagination/network boundaries; they are separated from actual preview checks."
+    ]
+  },
+  "manual_visual_review": {
+    "status": "completed",
+    "screens": [
+      "replay.png",
+      "research-committed.png",
+      "run-change-B-after-refresh.png"
+    ],
+    "scope": "Current final frontend SourceEnded preview: blind first-event replay has no future candle; three stage metrics remain readable; controlled source-change view clears old raw data and preserves a draft with conditional provenance review."
+  },
+  "submission_visibility_fix": {
+    "status": "passed",
+    "scope": "Current final frontend controlled fixture confirms delayed saves remain pending until committed and expired waits do not duplicate POST. Current SourceEnded synthetic API confirms committed revisions and report matching; no active-collection acceptance is claimed."
+  },
+  "memory_maintenance_validation": {
+    "status": "passed",
+    "actual_health_sample_after_browser_checks": {
+      "platform": "darwin",
+      "backend": "darwin_malloc_zone_pressure_relief",
+      "status": "completed",
+      "attempts": 19,
+      "api_reported_bytes": 0,
+      "api_return_flag": null,
+      "last_duration_seconds": 0.005660166993038729,
+      "total_duration_seconds": 0.09619942007702775,
+      "reason": null,
+      "error_code": null
+    },
+    "fixture_statuses": [
+      "ready",
+      "completed_bytes_zero",
+      "completed_flag_zero",
+      "unsupported",
+      "error",
+      "missing"
+    ],
+    "scope": "Current final frontend actual health rendering and configured controlled status assertions; raw native zero values are retained without inferring RSS release bytes."
+  },
+  "current_core_acceptance": {
+    "status": "passed",
+    "source_core_before_product_paths": "a9926ca99d5c877bcdf3482cb55d949279ced6876d98aad0b17ed8ce5d15e9df",
+    "source_core_after_all_affected_regressions": "a9926ca99d5c877bcdf3482cb55d949279ced6876d98aad0b17ed8ce5d15e9df",
+    "api_matches_current_source_identity": true,
+    "preview_identity_unchanged": true,
+    "frontend_files": {
+      "workbench/app.js": "319f692200d03be1e7e66b603b448ac21721dece77ed705d546cff891ca18694",
+      "workbench/index.html": "7961e52fc31e02d4102e699a4993b3bddc0514f456386fc2fe29bc5500384d69",
+      "workbench/style.css": "78b0023dc8aa28d381bf435bc4147752645d4749f75c3aa710feaec0ecbd92d5"
+    },
+    "synthetic_only": true,
+    "source_active_at_research_submission": false,
+    "source_state": "SOURCE_ENDED",
+    "scope": "Current product30, actual13, research8 and configured fixture30 share identical final frontend bytes. The independent long-run Runner was not opened or modified."
+  },
+  "external_evidence": {
+    "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-run-epoch-final-product-paths-20261003/product-path-validation.json": {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-run-epoch-final-product-paths-20261003/product-path-validation.json",
+      "bytes": 10706,
+      "sha256": "718246fdccb68c6be1290b9fd1092ef508682fdb3d722a7f49bb4679aa94efa4"
+    },
+    "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-final-epoch-actual-20261003/workbench-validation.json": {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-final-epoch-actual-20261003/workbench-validation.json",
+      "bytes": 2906,
+      "sha256": "5c7a461c0e214753b3e6330d59dd57314769eaba36d185eaf3c83a62f6fc6cae"
+    },
+    "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-final-epoch-research-20261003/workbench-research-validation.json": {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-final-epoch-research-20261003/workbench-research-validation.json",
+      "bytes": 5556,
+      "sha256": "4e5570c4f420a786bfa25a824ec1ceb717406051eb91692f0329b038336b3e77"
+    },
+    "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-final-epoch-controlled-20261003/workbench-validation.json": {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-final-epoch-controlled-20261003/workbench-validation.json",
+      "bytes": 3361,
+      "sha256": "59ec65a5a13e90d8214e44275046b2be84c5599782dd911e367989c6c0e1da3b"
+    }
+  },
+  "historical_fixture_evidence": {
+    "scope": "Older fixtures and their screenshots retain historical execution dates; use the current synthetic_write_validation for final-frontend fixture acceptance.",
+    "records": [
+      {
+        "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-run-epoch-final-product-paths-20261003/previous-project-report-before-final-epoch-regressions.json",
+        "bytes": 23702,
+        "sha256": "c53301db7556d8f1c99bda8466765141466fff339b25b18f6eb3f29ba013b162"
+      },
+      {
+        "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-product-paths-20261003/product-path-validation.json",
+        "bytes": 8715,
+        "sha256": "c7f3a2e66d3696a1a310a2bbdd69e2013881a89812f162df05396ff03b53053e",
+        "checks": 22,
+        "executed_at": "2026-10-03T15:52:14.670647+00:00",
+        "scope": "Historical frontend acceptance before the final run-epoch/draft review implementation; retained, not current final frontend acceptance."
+      },
+      {
+        "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-run-epoch-product-paths-20261003/product-path-validation.json",
+        "bytes": 10304,
+        "sha256": "48cbaceec856f425ed423abf94569049e45fe9ded50c86a45bc0e3194c27f25d",
+        "checks": 28,
+        "executed_at": "2026-10-03T16:03:56.081839+00:00",
+        "scope": "Historical frontend acceptance before the final run-epoch/draft review implementation; retained, not current final frontend acceptance."
+      },
+      {
+        "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-actual-20261003/workbench-validation.json",
+        "bytes": 2052,
+        "sha256": "fc7defe1d25d2b3b3a8ad5492b2a69a70dfd511f293a930ebce8db2f9c3e5550",
+        "checks": 13,
+        "executed_at": "2026-10-03T15:52:19.213595+00:00",
+        "scope": "Historical pre-epoch frontend regression; current frontend has separate fresh actual/controlled evidence."
+      },
+      {
+        "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-research-20261003/workbench-research-validation.json",
+        "bytes": 4702,
+        "sha256": "f443de2d0c4ad07e7334f06d73f0e22823494a7f48a2f5f2bfbaa4b0f4bf468f",
+        "checks": 8,
+        "executed_at": "2026-10-03T15:52:40.701147+00:00",
+        "scope": "Historical pre-epoch frontend regression; current frontend has separate fresh actual/controlled evidence."
+      },
+      {
+        "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-controlled-20261003/workbench-validation.json",
+        "bytes": 2748,
+        "sha256": "886ff32a724a7bd54350c4f5e2865ac75f106dc94a68ee26c54603e353063bd3",
+        "checks": 30,
+        "executed_at": "2026-10-03T15:54:06.978472+00:00",
+        "scope": "Historical pre-epoch frontend regression; current frontend has separate fresh actual/controlled evidence."
+      }
+    ]
+  },
+  "frontend_files": {
+    "workbench/app.js": "319f692200d03be1e7e66b603b448ac21721dece77ed705d546cff891ca18694",
+    "workbench/index.html": "7961e52fc31e02d4102e699a4993b3bddc0514f456386fc2fe29bc5500384d69",
+    "workbench/style.css": "78b0023dc8aa28d381bf435bc4147752645d4749f75c3aa710feaec0ecbd92d5"
+  },
+  "frontend_identity_scope": "Current final frontend bytes match the strict product-path run; these files were not edited during the affected follow-up browser checks.",
+  "runtime_validation_scope": "SourceEnded isolated synthetic preview. This validates current UI/API behavior and does not claim active-collection submission, blind human labels, real-market performance or ten-hour stability.",
+  "current_source_core_sha256": "a9926ca99d5c877bcdf3482cb55d949279ced6876d98aad0b17ed8ce5d15e9df",
+  "api_matches_current_source_identity": true,
+  "historical_ui_validations": [
+    {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-run-epoch-final-product-paths-20261003/previous-project-report-before-final-epoch-regressions.json",
+      "bytes": 23702,
+      "sha256": "c53301db7556d8f1c99bda8466765141466fff339b25b18f6eb3f29ba013b162"
+    },
+    {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-product-paths-20261003/product-path-validation.json",
+      "bytes": 8715,
+      "sha256": "c7f3a2e66d3696a1a310a2bbdd69e2013881a89812f162df05396ff03b53053e",
+      "checks": 22,
+      "executed_at": "2026-10-03T15:52:14.670647+00:00",
+      "scope": "Historical frontend acceptance before the final run-epoch/draft review implementation; retained, not current final frontend acceptance."
+    },
+    {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-run-epoch-product-paths-20261003/product-path-validation.json",
+      "bytes": 10304,
+      "sha256": "48cbaceec856f425ed423abf94569049e45fe9ded50c86a45bc0e3194c27f25d",
+      "checks": 28,
+      "executed_at": "2026-10-03T16:03:56.081839+00:00",
+      "scope": "Historical frontend acceptance before the final run-epoch/draft review implementation; retained, not current final frontend acceptance."
+    },
+    {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-actual-20261003/workbench-validation.json",
+      "bytes": 2052,
+      "sha256": "fc7defe1d25d2b3b3a8ad5492b2a69a70dfd511f293a930ebce8db2f9c3e5550",
+      "checks": 13,
+      "executed_at": "2026-10-03T15:52:19.213595+00:00",
+      "scope": "Historical pre-epoch frontend regression; current frontend has separate fresh actual/controlled evidence."
+    },
+    {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-research-20261003/workbench-research-validation.json",
+      "bytes": 4702,
+      "sha256": "f443de2d0c4ad07e7334f06d73f0e22823494a7f48a2f5f2bfbaa4b0f4bf468f",
+      "checks": 8,
+      "executed_at": "2026-10-03T15:52:40.701147+00:00",
+      "scope": "Historical pre-epoch frontend regression; current frontend has separate fresh actual/controlled evidence."
+    },
+    {
+      "path": "/Users/liuyixuan/Desktop/pa final/runtime-runs/workbench-candidate5-controlled-20261003/workbench-validation.json",
+      "bytes": 2748,
+      "sha256": "886ff32a724a7bd54350c4f5e2865ac75f106dc94a68ee26c54603e353063bd3",
+      "checks": 30,
+      "executed_at": "2026-10-03T15:54:06.978472+00:00",
+      "scope": "Historical pre-epoch frontend regression; current frontend has separate fresh actual/controlled evidence."
+    }
+  ]
+}

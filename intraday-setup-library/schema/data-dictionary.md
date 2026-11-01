@@ -1,0 +1,45 @@
+# 数据字典与维护契约 · schema 1.0.0
+
+所有JSONL为UTF-8一行一个对象；ID是稳定引用，不依赖标题。Markdown front matter使用JSON语法（也是合法YAML）；只有setups正文为条目唯一主记录。导出全文、索引和HTML可删除后重建。禁止根据脚本通过自动升为reviewed。
+
+## 主记录
+
+`setup.schema.json`同时接受主metadata与生成的全文JSON。id、version、中文英文名称、别名、名称性质、状态、摘要及七轴均必填。`logic_fingerprint`顺序固定：市场前提、位置、行为顺序、触发、失效、路径、数据。`sections/body_markdown/file_path/source_sha256`由构建生成，主文件无需写入。
+
+分类轴为method_families、mechanism、structure_locations、environment_tags、market_types、session_tags、pa_role、data_requirements、execution_mode、status。taxonomy是JSON兼容YAML的值表，多标签可重叠。具体markets_observed只说来源实际讨论/示例，不代表净盈利支持；markets_context_only标跨日/背景；markets_supported与migration_hypotheses分别记录有依据适用判断与未验证迁移，本版保守留空或正文说明未验证。
+
+session含交易日边界、时区、数据商分段和当日平仓限制；context_timeframe与trigger_timeframe不混用。未知trigger为null，unknown_fields给原因。`reviewed_at`仅reviewed必须有日期。draft/provisional/candidate不计合格数；merged要alias_of，deprecated说明原因，不删除旧ID。name_nature=editor_descriptive_with_source_term意味着中文是编辑描述，英语保留源术语。
+
+`source_coverage`列实际读的资料份数、家族和真正核心支持source IDs；independent_corroboration不能仅根据家族数量自动设multiple_families。limited_single_family、limited_derivative_corroboration、independent_context_only、independent_event_facts_only、independent_counter_evidence_only各表达不同限制。盈利标签与该字段分离；author_backtest_*不是独立复现。
+
+## 来源
+
+`source.schema.json`要求原URL、规范URL、作者、出版者、来源族、资料类型、时间、语言、访问状态、阅读范围和摘要。published允许部分日期字符串或null；null的未核实原因见unknown_fields。actual_read_scope如related_pdf_pages必须配read_locator；not_read无法支持最终条目。full_main_text仅正文，不含未看影片、付费课程或所有关联页。
+
+access_status记录获取结果；link_state区分checked_accessible、restricted_access、http_404_at_check、wrong_or_empty_content、temporary_network_failure和direct_restricted_cached_text_read。404是本次响应，未确认永久删除；403不等于死链。retrieved_sha256校验本次取得版本，不代表内容已阅读。获取助手重新取得内容变化会设requires_reread，不覆盖以前阅读结论。
+
+source_family按实质作者/机构/转载归并，不按域名一一分组；托管网站不是自动独立作者。publisher和潜在商业关联另记。未取得完整PDF不声称读全文。
+
+## 证据
+
+`evidence.schema.json`一项主张关联setup_id和source_id，含locator、claim、source_rule、主张类型、关系及核对状态。重要编辑操作化使用editor_operationalization/operationalizes/editor_proposal_not_tested，不归因给原作者。
+
+主张类型包括定义/事实、实践规则、行为假说、社区观点、编辑归纳、未经核验收益、研究规则、官方事件事实和反证。relationship=supports才计核心规则支持；context_only只背景，limits/opposes是限制/反证。text_checked仅证实原文含该内容，不说明作者观点为真。notes记录歧义与支持范围。
+
+performance_context如涉及表现统计，保存市场、样本/时期、数据来源、成本、执行假设和是否独立核验；未知成本null配理由。touch/clean/净交易胜率不可互换。无实际回测不能设independently_reproduced。
+
+## 视觉与关系
+
+`visual.schema.json`材料类型分real_source_chart、source_schematic、synthetic_structure_diagram、reconstructed_chart、aggregate_performance_figure。本版实际数据只有真实原站价格图和原创示意两种。verification=chart_viewed*表示已看该静态图；generated_not_market_evidence明确排除行情证据。case_scope分structure_and_trigger、pattern_fragment、historical_model_overlay、context_only等，图表已看不自动验证全部必要规则或订单。
+
+外部原图local_path=null，只保存url/精确页、尺寸、被查看图像/页面渲染的SHA-256、alt、原创解读及权利说明。原图重绘或截取必须新增记录并说明处理，不能复用原图核验标签。本地原创SVG有相对路径、实际文件SHA-256和illustration_only；不计真实案例覆盖。symbol、market_date、timeframe、timezone、time_locator无法核实则null与missing/time_locator_reason，不猜测。PDF定位使用PDF页序，能确认时另列印刷页码。
+
+`relation.schema.json`用from/to/type/reason/date保存关系，contrasts_with仅存一次，站点双向显示。别名/镜像/位置变体合并决策保存research/merge-decisions而非虚增setup文件。
+
+## 补充记录与统计
+
+候选state为retained、merged、rejected、provisional、related_not_counted、candidate_unread。这个队列状态不等同setup.status；只有reviewed独立SET ID计50。semantic-review记录本研究AI辅助逐条自审的判断与限制，未有独立人工专家复核。
+
+视觉覆盖按条目去重：广义已看行情包括背景；较严口径排除context_only/跨日/相关逆向背景，仍含模式片段和历史模型，不能称实际订单审计。来源统计分别列记录数、实际读、被引用、来源族；标签/市场分布重叠不得相加当独立数。
+
+manifest不包含自身哈希（避免循环），列所有交付文件的相对路径、大小和SHA-256，排除缓存/系统隐藏文件和ZIP。修改测试报告后须重新build再validate，ZIP打在项目目录外。

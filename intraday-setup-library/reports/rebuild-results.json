@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "version": "1.3.0",
+  "date": "2026-10-03",
+  "different_files": [],
+  "scope": "Two clean allowlisted distributions and deterministic ZIPs; frozen inputs only, no market performance validation.",
+  "deliverable_files_compared": 461,
+  "manifest_equal": true,
+  "input_manifest_sha256": "accc208602c516d47df0c8b0047c777c77772ce2ef738c87c2e1952d2360543f",
+  "archive_sha256": "da8925031c9b635a3c8b9f0777d324b90b7c7da4b5602a86eeb0d3431a8fa632",
+  "archive_equal": true,
+  "zip_bytes": 4894402,
+  "archive_scope": "Temporary frozen-input validation snapshots; final published archive identity is in its external release-checks report.",
+  "temporary_copies_removed": true
+}

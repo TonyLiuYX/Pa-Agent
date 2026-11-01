@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://intraday-library.invalid/schema/relation.schema.json",
+  "title": "relation record",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "from",
+    "to",
+    "type",
+    "reason",
+    "date"
+  ],
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "from": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^REL-[0-9]{6}$"
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "to": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "type": {
+      "enum": [
+        "contrasts_with",
+        "variant_of",
+        "shares_context",
+        "requires",
+        "alias_of"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

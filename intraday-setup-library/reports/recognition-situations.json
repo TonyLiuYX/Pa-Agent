@@ -1,0 +1,362 @@
+{
+  "created_at": "2026-10-02T23:29:20.082372-04:00",
+  "setups": 50,
+  "situations": 250,
+  "source_audit": "setup-situation-audit-2026-10-02",
+  "source_audit_algorithm_sha256": "517ccc4dc386e62c7bec05d5ac7ba3808ad8bb1533e7f2bd160f74387ff01886",
+  "current_algorithm_sha256": "9a77a608b3b0e4e4c9a2765f295d57599592ddbb7471bcff0cef96a6f9678c41",
+  "before_case_target_confirmed": 44,
+  "after_case_target_confirmed": 63,
+  "after_case_target_unconfirmed": 187,
+  "changes": {
+    "newly_confirmed": 19,
+    "unchanged": 231
+  },
+  "outcomes": {
+    "基础版已确认": 41,
+    "裁量／规则外变体，未确认": 126,
+    "仅已有变体确认": 21,
+    "数据／输入限制，未确认": 47,
+    "原规则内未确认，待核查": 14,
+    "指定变体重入已确认": 1
+  },
+  "verification_levels": {
+    "raw_pipeline": 26,
+    "rule_graph": 196,
+    "feature_provider": 28
+  },
+  "positive_graph_controls_passed": 250,
+  "raw_control_changes": [
+    {
+      "case_id": "SET-0002-S1",
+      "before": {
+        "base_complete_trigger": true,
+        "triggered_variants": [],
+        "partial_trigger": false,
+        "states": [
+          "formed",
+          "triggered"
+        ],
+        "missing": []
+      },
+      "after": {
+        "base_complete_trigger": false,
+        "triggered_variants": [],
+        "partial_trigger": true,
+        "states": [
+          "formed",
+          "triggered"
+        ],
+        "missing": [
+          "intrabar_order_unknown"
+        ]
+      },
+      "source_input_unchanged": true
+    },
+    {
+      "case_id": "SET-0048-S5",
+      "before": {
+        "base_complete_trigger": true,
+        "triggered_variants": [
+          "same_side_band",
+          "same_side_vwap"
+        ],
+        "partial_trigger": false,
+        "states": [
+          "invalidated",
+          "triggered"
+        ],
+        "missing": []
+      },
+      "after": {
+        "base_complete_trigger": true,
+        "triggered_variants": [
+          "same_side_band",
+          "same_side_vwap"
+        ],
+        "partial_trigger": false,
+        "states": [
+          "formed",
+          "invalidated",
+          "triggered"
+        ],
+        "missing": []
+      },
+      "source_input_unchanged": true
+    },
+    {
+      "case_id": "SET-0049-S1",
+      "before": {
+        "base_complete_trigger": true,
+        "triggered_variants": [],
+        "partial_trigger": false,
+        "states": [
+          "triggered"
+        ],
+        "missing": []
+      },
+      "after": {
+        "base_complete_trigger": true,
+        "triggered_variants": [],
+        "partial_trigger": false,
+        "states": [
+          "formed",
+          "triggered"
+        ],
+        "missing": []
+      },
+      "source_input_unchanged": true
+    }
+  ],
+  "source_project_unchanged_during_verification": true,
+  "original_audit_unchanged": true,
+  "regression": {
+    "status": "passed",
+    "test_methods_run": 88,
+    "subtests_passed": 300,
+    "algorithm_sha256": "9a77a608b3b0e4e4c9a2765f295d57599592ddbb7471bcff0cef96a6f9678c41",
+    "source_report": "../intraday-setup-library/reports/recognition-validation.json",
+    "report_sha256": "32bce4e78d79fbd824dbf9e9de54f0de2e221fd0102e875a321ee4df8a4029d7",
+    "copied_report": "project-regression-report.json",
+    "scope": "Reuses the project owner's current passed complete suite; not rerun here."
+  },
+  "supplemental": {
+    "explicit_variants": {
+      "status": "passed",
+      "cases": [
+        "SET-0008-S2:higher_low",
+        "SET-0008-S3:lower_low"
+      ],
+      "file": "supplemental-variants.json"
+    },
+    "explicit_prior_acceptance_level": {
+      "status": "passed",
+      "selected_edge": 100.5,
+      "break": true,
+      "file": "supplemental-explicit-reference.json"
+    },
+    "explicit_orb_event_clock": {
+      "status": "passed",
+      "case": "SET-0002-S2",
+      "indices": [
+        4,
+        304
+      ],
+      "base_complete_trigger": true,
+      "file": "supplemental-orb-event-clock.json"
+    }
+  },
+  "fixture_source": "intraday-setup-library-v1.1.0.zip; original source-before.json hashes match",
+  "compatibility_adapter": "SET-0028 prior_break/prior_edge renamed to second_day_break/second_day_edge; values unchanged",
+  "historical_market_accuracy": {
+    "measured": false,
+    "labels": 0,
+    "recall": null,
+    "precision": null
+  },
+  "limitations": [
+    "250 cases are directed synthetic stress cases, not real trades or market recall.",
+    "196 injected-feature cases verify the rule graph only; 28 feature-provider cases splice recalculated features into authored paths.",
+    "SET-0028-S1 never supplies prior_acceptance_level; its original input remains unchanged. An explicit-reference project regression is separate evidence.",
+    "SET-0028-S4 injects second_day_news=False; it cannot demonstrate the corrected compound-news provider. A project provider regression is separate evidence.",
+    "Historical source_refs and original descriptions belong to the original audit; line numbers may have shifted after repairs."
+  ],
+  "feature_provider_changes": [
+    {
+      "case_id": "SET-0003-S2",
+      "changes": {
+        "features": {
+          "before": {
+            "absorption": false,
+            "flow_turn": false,
+            "flow_resume": false,
+            "flow_activity": 1.49,
+            "attack_energy": 0.0,
+            "weak_attack": false,
+            "exhaustion": false,
+            "jump": false,
+            "jump_edge": null,
+            "jump_risk": null,
+            "thin_hold": null,
+            "stacked": false,
+            "stacked150": false,
+            "imbalance_edge": null,
+            "imbalance_risk": null,
+            "imbalance150_edge": null,
+            "imbalance150_risk": null,
+            "counter_stacked": false,
+            "counter_zone_edge": null,
+            "counter_zone_risk": null,
+            "cvd_divergence": null,
+            "supply_block": false,
+            "supply": 10,
+            "sticky_offer": null,
+            "passive_support": null
+          },
+          "after": {
+            "absorption": false,
+            "flow_turn": false,
+            "flow_resume": false,
+            "flow_activity": 1.49,
+            "attack_energy": 0.0,
+            "weak_attack": false,
+            "exhaustion": false,
+            "jump": false,
+            "jump_edge": null,
+            "jump_risk": null,
+            "thin_hold": null,
+            "stacked": false,
+            "stacked150": false,
+            "imbalance_edge": null,
+            "imbalance_risk": null,
+            "imbalance150_edge": null,
+            "imbalance150_risk": null,
+            "counter_stacked": false,
+            "counter_zone_edge": null,
+            "counter_zone_risk": null,
+            "cvd_divergence": null,
+            "supply_block": false,
+            "supply": 10,
+            "sticky_offer": null,
+            "passive_support": null,
+            "passive_reload_count": null,
+            "passive_reload_volume": null
+          }
+        },
+        "control_features": {
+          "before": {
+            "absorption": true,
+            "flow_turn": false,
+            "flow_resume": false,
+            "flow_activity": 1.5,
+            "attack_energy": 0.0,
+            "weak_attack": false,
+            "exhaustion": false,
+            "jump": false,
+            "jump_edge": null,
+            "jump_risk": null,
+            "thin_hold": null,
+            "stacked": false,
+            "stacked150": false,
+            "imbalance_edge": null,
+            "imbalance_risk": null,
+            "imbalance150_edge": null,
+            "imbalance150_risk": null,
+            "counter_stacked": false,
+            "counter_zone_edge": null,
+            "counter_zone_risk": null,
+            "cvd_divergence": null,
+            "supply_block": false,
+            "supply": 10,
+            "sticky_offer": null,
+            "passive_support": null
+          },
+          "after": {
+            "absorption": true,
+            "flow_turn": false,
+            "flow_resume": false,
+            "flow_activity": 1.5,
+            "attack_energy": 0.0,
+            "weak_attack": false,
+            "exhaustion": false,
+            "jump": false,
+            "jump_edge": null,
+            "jump_risk": null,
+            "thin_hold": null,
+            "stacked": false,
+            "stacked150": false,
+            "imbalance_edge": null,
+            "imbalance_risk": null,
+            "imbalance150_edge": null,
+            "imbalance150_risk": null,
+            "counter_stacked": false,
+            "counter_zone_edge": null,
+            "counter_zone_risk": null,
+            "cvd_divergence": null,
+            "supply_block": false,
+            "supply": 10,
+            "sticky_offer": null,
+            "passive_support": null,
+            "passive_reload_count": null,
+            "passive_reload_volume": null
+          }
+        }
+      },
+      "complete_target_after": false
+    },
+    {
+      "case_id": "SET-0018-S1",
+      "changes": {
+        "volume_cliff": {
+          "before": null,
+          "after": false
+        }
+      },
+      "complete_target_after": false
+    },
+    {
+      "case_id": "SET-0021-S1",
+      "changes": {
+        "second_day_news": {
+          "before": false,
+          "after": null
+        }
+      },
+      "complete_target_after": true
+    },
+    {
+      "case_id": "SET-0026-S1",
+      "changes": {
+        "volume_cliff": {
+          "before": false,
+          "after": true
+        }
+      },
+      "complete_target_after": true
+    },
+    {
+      "case_id": "SET-0030-S1",
+      "changes": {
+        "leader_break": {
+          "before": false,
+          "after": true
+        }
+      },
+      "complete_target_after": true
+    },
+    {
+      "case_id": "SET-0033-S1",
+      "changes": {
+        "ledge_break": {
+          "before": false,
+          "after": true
+        },
+        "ledge": {
+          "before": 100.0,
+          "after": 100.01
+        }
+      },
+      "complete_target_after": false
+    },
+    {
+      "case_id": "SET-0034-S1",
+      "changes": {
+        "ledge_failed": {
+          "before": false,
+          "after": true
+        }
+      },
+      "complete_target_after": true
+    },
+    {
+      "case_id": "SET-0047-S1",
+      "changes": {
+        "passive_support": {
+          "before": false,
+          "after": true
+        }
+      },
+      "complete_target_after": true
+    }
+  ]
+}

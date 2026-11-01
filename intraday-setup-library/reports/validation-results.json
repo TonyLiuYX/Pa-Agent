@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-03",
+  "version": "1.3.0",
+  "status": "passed",
+  "reviewed_count": 50,
+  "schema_checks": "passed",
+  "recognition": {
+    "status": "passed",
+    "setup_count": 50,
+    "graph_count": 84,
+    "variant_count": 34,
+    "schema_checks": "passed",
+    "errors": [],
+    "market_validation": "not_run"
+  },
+  "checks": [
+    "Recognition: 50 source-linked base graphs, 34 variant graphs, feature providers and generated catalog",
+    "JSONL/front matter UTF-8 parsing and unique stable IDs",
+    "Five Draft 2020-12 JSON Schemas with format checks",
+    "15 sections, seven axes, nearest comparisons, taxonomy, review trail and body references",
+    "Evidence/source ownership, read scopes, editor-rule attribution, visual rights/types and SVG assets",
+    "Relations and candidate/merge targets",
+    "Generated full JSON and UTF-8 CSV consistency",
+    "All local HTML links, anchors, chapter pages, image paths and embedded offline data",
+    "Manifest exact file set, SHA-256, sizes and count consistency"
+  ],
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "setup": 50,
+    "source": 86,
+    "evidence": 106,
+    "visual": 107,
+    "relation": 74
+  },
+  "scope_note": "Structural checks do not replace semantic review or demonstrate profitability."
+}

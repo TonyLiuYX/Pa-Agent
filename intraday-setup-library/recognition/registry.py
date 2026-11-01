@@ -1,0 +1,207 @@
+"""Explicit feature contracts used by executable graphs.
+
+Dependencies describe minimum observation families. Runtime capability checks
+remain authoritative: a registered provider does not imply a current value.
+"""
+from dataclasses import asdict, dataclass
+from .data import SCALES
+
+
+@dataclass(frozen=True)
+class FeatureDefinition:
+    value_type: str
+    provider: str
+    requirements: tuple[str, ...]
+    scales: tuple[int, ...] = (0, *SCALES)
+    unknown_reasons: tuple[str, ...] = ("missing_input", "insufficient_history", "outside_observation_window", "data_disruption")
+
+
+FEATURE_REGISTRY = {
+    'absorption': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades', 'key_levels')),
+    'accepted': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'anti_impulse': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'attack_energy': FeatureDefinition('number', 'recognition.features.make_frame', ('classified_trades',)),
+    'balance': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'boulevard_context': FeatureDefinition('boolean', 'recognition.features._news_features', ('news',)),
+    'captured_retest': FeatureDefinition('boolean', 'recognition.engine.GraphRecognizer._values', ('bars',)),
+    'cash_open': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'catalyst_gap': FeatureDefinition('boolean', 'recognition.features._news_features', ('news',)),
+    'close_double_inside': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'compression': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'compression_risk': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'counter_energy': FeatureDefinition('number', 'recognition.features.make_frame', ('classified_trades',)),
+    'counter_impulse': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'counter_stacked': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'counter_zone_edge': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'counter_zone_risk': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'cross_confirm': FeatureDefinition('boolean', 'recognition.features._cross_features', ('synced_market',)),
+    'cvd_divergence': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'daily_aligned': FeatureDefinition('boolean', 'recognition.features._cross_features', ('daily_context',)),
+    'directional_extreme': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'directional_price': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'distribution_edge': FeatureDefinition('number', 'recognition.features._profile_features', ('volume_profile',)),
+    'double_inside': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'drive_origin': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'drive_recovery': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'early_sign': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('bars',)),
+    'ema_near': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'exhaustion': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'extreme': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'failed_extension': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'first_micro': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'flag_edge': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'flag_failure': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'flat_vwap': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('exact_vwap',)),
+    'flow_activity': FeatureDefinition('number', 'recognition.features.make_frame', ('classified_trades',)),
+    'flow_resume': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'flow_turn': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'half_hour': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'hikkake_risk': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'hikkake_start': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'hikkake_trigger': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'historical_vwap_reject': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('historical_vwap',)),
+    'ib_break': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'ib_edge': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'ib_first_failure': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'imbalance150_edge': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'imbalance150_risk': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'imbalance_edge': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'imbalance_risk': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'impulse': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'impulse_origin': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'inner_edge': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'instant_open': FeatureDefinition('boolean', 'recognition.engine.RecognitionEngine._point_frame', ('price_observation',)),
+    'joint_sign': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('bars',)),
+    'jump': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'jump_edge': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'jump_risk': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'key': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'key_break': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'key_near': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'last_half_hour': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'late_flag': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'leader_break': FeatureDefinition('boolean', 'recognition.features._cross_features', ('synced_market',)),
+    'ledge': FeatureDefinition('number', 'recognition.features._profile_features', ('tpo',)),
+    'ledge_break': FeatureDefinition('boolean', 'recognition.features._profile_features', ('tpo',)),
+    'ledge_failed': FeatureDefinition('boolean', 'recognition.features._profile_features', ('tpo',)),
+    'london_0800': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'low_volume_pullback': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'macro_surprise': FeatureDefinition('boolean', 'recognition.features._news_features', ('news', 'consensus')),
+    'market_confirm': FeatureDefinition('boolean', 'recognition.features._cross_features', ('synced_market',)),
+    'micro_p': FeatureDefinition('boolean', 'recognition.features._profile_features', ('bars',)),
+    'mother_edge': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'mother_risk': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'near_pm_edge': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'news_fresh60': FeatureDefinition('boolean', 'recognition.features._news_features', ('news',)),
+    'news_fresh90': FeatureDefinition('boolean', 'recognition.features._news_features', ('news',)),
+    'news_risk': FeatureDefinition('number', 'recognition.features._news_features', ('news',)),
+    'noise_break': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('same_time14', 'previous_close')),
+    'old_extreme': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'old_extreme_retest': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'opening': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'opposite_band': FeatureDefinition('number', 'recognition.features._vwap_features', ('same_time14', 'previous_close')),
+    'orb_direction': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'orb_edge': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'orb_liquidity': FeatureDefinition('boolean', 'recognition.features.make_frame', ('liquidity_history',)),
+    'orb_ready': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'orb_stop': FeatureDefinition('number', 'recognition.features.make_frame', ('daily_atr14',)),
+    'overnight_failure': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'overnight_risk': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'parabolic': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'parent_sweep': FeatureDefinition('boolean', 'recognition.engine.RecognitionEngine._parents', ('parent_detection',)),
+    'passive_support': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades', 'depth')),
+    'pause_edge': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'pm_edge': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'pm_support': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'pm_wash': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'poc': FeatureDefinition('number', 'recognition.features._profile_features', ('volume_profile',)),
+    'poc_break': FeatureDefinition('boolean', 'recognition.features._profile_features', ('volume_profile',)),
+    'poc_retest': FeatureDefinition('boolean', 'recognition.features._profile_features', ('volume_profile',)),
+    'pressure': FeatureDefinition('boolean', 'recognition.features.make_frame', ('classified_trades',)),
+    'price_basis': FeatureDefinition('string', 'recognition.engine.RecognitionEngine._point_frame', ('price_observation',)),
+    'prior_entry': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'prior_opposite_break': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'prior_reclaim': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'prior_tail_open': FeatureDefinition('boolean', 'recognition.features._profile_features', ('prior_volume_profile',)),
+    'prior_tail_risk': FeatureDefinition('number', 'recognition.features._profile_features', ('prior_volume_profile',)),
+    'prior_value_poc': FeatureDefinition('number', 'recognition.features._profile_features', ('prior_tpo',)),
+    'profile_stretch': FeatureDefinition('boolean', 'recognition.features._profile_features', ('volume_profile',)),
+    'prominent_poc': FeatureDefinition('boolean', 'recognition.features._profile_features', ('volume_profile',)),
+    'pullback': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'range_boundary': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'range_break_edge': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'range_edge': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'reassessment': FeatureDefinition('boolean', 'recognition.features._news_features', ('news', 'consensus')),
+    'relative_strength': FeatureDefinition('number', 'recognition.features._cross_features', ('synced_market',)),
+    'resume': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'retest_beyond': FeatureDefinition('boolean', 'recognition.engine.GraphRecognizer._values', ('bars',)),
+    'retest_equal': FeatureDefinition('boolean', 'recognition.engine.GraphRecognizer._values', ('bars',)),
+    'retest_inside': FeatureDefinition('boolean', 'recognition.engine.GraphRecognizer._values', ('bars',)),
+    'retrace_start': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'rvol': FeatureDefinition('number', 'recognition.features.make_frame', ('volume_baseline',)),
+    'sai_catalyst_gap': FeatureDefinition('boolean', 'recognition.features._news_features', ('news',)),
+    'same_band': FeatureDefinition('number', 'recognition.features._vwap_features', ('same_time14', 'previous_close')),
+    'second_day_break': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'second_day_edge': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'second_day_news': FeatureDefinition('boolean', 'recognition.features._news_features', ('news',)),
+    'shallow_bounce': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'signal': FeatureDefinition('boolean', 'recognition.features.make_frame', ('bars',)),
+    'signal_edge': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'signal_risk': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'slow_drift': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'stacked': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'stacked150': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'sticky_offer': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades', 'depth')),
+    'strict_hold': FeatureDefinition('boolean', 'recognition.engine.GraphRecognizer._values', ('bars',)),
+    'supply': FeatureDefinition('number', 'recognition.features._flow_features', ('classified_trades',)),
+    'supply_block': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades', 'depth')),
+    'tail_reject': FeatureDefinition('boolean', 'recognition.features._profile_features', ('bars',)),
+    'thin_hold': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'three_push': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'tight_flag_edge': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'trend': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'trend_bar_failure': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'trend_break': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'trend_origin': FeatureDefinition('number', 'recognition.features._price_features', ('bars',)),
+    'triple_inside': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'value_entry': FeatureDefinition('number', 'recognition.features._profile_features', ('bars',)),
+    'value_inside60': FeatureDefinition('boolean', 'recognition.features._profile_features', ('prior_tpo',)),
+    'value_return': FeatureDefinition('boolean', 'recognition.features._profile_features', ('bars',)),
+    'value_risk': FeatureDefinition('number', 'recognition.features._profile_features', ('bars',)),
+    'value_two_brackets': FeatureDefinition('boolean', 'recognition.features._profile_features', ('prior_tpo',)),
+    'volume_cliff': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'volume_increase': FeatureDefinition('number', 'recognition.features.make_frame', ('bars',)),
+    'volume_value_entry': FeatureDefinition('number', 'recognition.features._profile_features', ('bars',)),
+    'volume_value_inside60': FeatureDefinition('boolean', 'recognition.features._profile_features', ('prior_volume_profile',)),
+    'volume_value_return': FeatureDefinition('boolean', 'recognition.features._profile_features', ('bars',)),
+    'volume_value_risk': FeatureDefinition('number', 'recognition.features._profile_features', ('bars',)),
+    'vwap_band': FeatureDefinition('number', 'recognition.features._vwap_features', ('same_time14', 'previous_close', 'exact_vwap')),
+    'vwap_cross': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('exact_vwap',)),
+    'vwap_deviation_fail': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('exact_vwap',)),
+    'vwap_reclaim': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('exact_vwap',)),
+    'vwap_stretch': FeatureDefinition('boolean', 'recognition.features._vwap_features', ('exact_vwap',)),
+    'weak_attack': FeatureDefinition('boolean', 'recognition.features._flow_features', ('classified_trades',)),
+    'weak_flush': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+    'weak_long_context': FeatureDefinition('boolean', 'recognition.features._cross_features', ('prior_session',)),
+    'weak_open_drop': FeatureDefinition('boolean', 'recognition.features._price_features', ('bars',)),
+}
+
+
+def feature_document():
+    return {name: asdict(definition) for name, definition in FEATURE_REGISTRY.items()}
+
+
+def validate_feature_value(name, value):
+    if name not in FEATURE_REGISTRY:
+        raise ValueError("unregistered feature: " + name)
+    if value is None:
+        return True
+    from .models import finite
+    kind = FEATURE_REGISTRY[name].value_type
+    if kind == "number":
+        finite(value, name)
+    elif kind == "boolean" and type(value) is not bool:
+        raise ValueError(name + ": boolean feature required")
+    elif kind == "string" and type(value) is not str:
+        raise ValueError(name + ": string feature required")
+    return True

@@ -1,0 +1,65 @@
+# 别名与合并去向
+
+名称和多空镜像不另计数。相关位置变体的重定向不表示全部执行规则完全相同；以目标条目第9、13节和去重记录为准。
+
+- Opening Reversal, Failed BO below yesterday’s range → [SET-0001](../setups/SET-0001.md)
+- ORB, 5m ORB, Opening Range Breakdown → [SET-0002](../setups/SET-0002.md)
+- Stopping Volume, Iceberg absorption（非同义） → [SET-0003](../setups/SET-0003.md)
+- VPOC Break and Retest, VPOC passive continuation → [SET-0004](../setups/SET-0004.md)
+- Inside Bar False Breakout, Hikkake Trade Setup → [SET-0005](../setups/SET-0005.md)
+- H2, L2, M2B, M2S, Two-legged pullback → [SET-0006](../setups/SET-0006.md)
+- Wedge Top/Bottom, Parabolic Wedge → [SET-0007](../setups/SET-0007.md)
+- Major Trend Reversal → [SET-0008](../setups/SET-0008.md)
+- First Micro Pullback After Strong Drive → [SET-0009](../setups/SET-0009.md)
+- Breakout Pullback / Break and Retest → [SET-0010](../setups/SET-0010.md)
+- Final Flag Reversal → [SET-0011](../setups/SET-0011.md)
+- Bulkowski Retrace Day Trade → [SET-0012](../setups/SET-0012.md)
+- Double Inside Bar Trend Release → [SET-0013](../setups/SET-0013.md)
+- Anti / Snap Pullback → [SET-0014](../setups/SET-0014.md)
+- Low-Volume Pullback → [SET-0015](../setups/SET-0015.md)
+- Buildup / Pressure Breakout → [SET-0016](../setups/SET-0016.md)
+- Trend Bar Failure → [SET-0017](../setups/SET-0017.md)
+- Trading Range Edge Second Signal Fade → [SET-0018](../setups/SET-0018.md)
+- Stopped-Out Setup Re-entry → [SET-0019](../setups/SET-0019.md)
+- Caught in the Hole → [SET-0020](../setups/SET-0020.md)
+- Gap and Go / Pre-market High Break → [SET-0021](../setups/SET-0021.md)
+- Opening Washout Support Buy → [SET-0022](../setups/SET-0022.md)
+- Opening Washout VWAP Reclaim → [SET-0023](../setups/SET-0023.md)
+- VWAP Penetration–Deviation–Retest → [SET-0024](../setups/SET-0024.md)
+- Flat VWAP Stretch Fade → [SET-0025](../setups/SET-0025.md)
+- VWAP Boulevard Short → [SET-0026](../setups/SET-0026.md)
+- Market-confirmed Relative Strength / Weakness → [SET-0027](../setups/SET-0027.md)
+- Second-day News Acceptance Play → [SET-0028](../setups/SET-0028.md)
+- Breaking News First Move → [SET-0029](../setups/SET-0029.md)
+- Correlated-market-led Initial Balance Break → [SET-0030](../setups/SET-0030.md)
+- Preplanned Macro Surprise Reaction → [SET-0031](../setups/SET-0031.md)
+- Multi-part Announcement Reassessment → [SET-0032](../setups/SET-0032.md)
+- TPO Ledge Break and Acceptance → [SET-0033](../setups/SET-0033.md)
+- Failed Ledge Positioning Unwind → [SET-0034](../setups/SET-0034.md)
+- Failed-first-side IB Reversal and Acceptance → [SET-0035](../setups/SET-0035.md)
+- Footprint Micro P-shape Distribution Hold → [SET-0036](../setups/SET-0036.md)
+- Prior Value-area Reacceptance Traverse / 80% Rule → [SET-0037](../setups/SET-0037.md)
+- Stretched Volume-profile Failure Reversion → [SET-0038](../setups/SET-0038.md)
+- Volume Energy-change Break → [SET-0039](../setups/SET-0039.md)
+- Exhaustion-flow Fade Scalp → [SET-0040](../setups/SET-0040.md)
+- Jump-flow Low-volume-area Continuation → [SET-0041](../setups/SET-0041.md)
+- Stacked Imbalance Zone Hold → [SET-0042](../setups/SET-0042.md)
+- Failed Countertrend Imbalance Trap → [SET-0043](../setups/SET-0043.md)
+- Cumulative-delta Divergence Failed-break Reversal → [SET-0044](../setups/SET-0044.md)
+- Iceberg Reauction after Weak Flush → [SET-0045](../setups/SET-0045.md)
+- Sticky-offer Long-liquidation Continuation → [SET-0046](../setups/SET-0046.md)
+- Steady Absorption-driven Drift Break → [SET-0047](../setups/SET-0047.md)
+- Time-of-day Noise-band Intraday Momentum → [SET-0048](../setups/SET-0048.md)
+- First-to-last Half-hour Momentum → [SET-0049](../setups/SET-0049.md)
+- Overnight-position Reversal through Cash Open → [SET-0050](../setups/SET-0050.md)
+- A Plain and Simple Trend Line Channel Trading Strategy → [SET-0018](../setups/SET-0018.md)；通道边缘是位置变体；本文较长周期例不独立增加日内条目，第二信号仍以主记录规则为准。
+- Anchor Zones Trading Strategy → [SET-0018](../setups/SET-0018.md)；Anchor高量区作为区间边缘参考，不另计新的行为序列；不能把工具位置与本条第二信号等同。
+- NR7 Trading Strategy → [SET-0013](../setups/SET-0013.md)；NR7/NR4的不同压缩柱定义保留为压缩释放的来源变体，不按柱数阈值再计数；NR7必须另锁趋势与保护规则。
+- M2B/M2S 与 H2/L2 → [SET-0006](../setups/SET-0006.md)；均线位置与命名差异不改变两段回撤第二次恢复机制。
+- 一分钟/十五分钟/六十分钟 ORB → [SET-0002](../setups/SET-0002.md)；仅改时间窗口及止损比例不另计数；IB特殊首侧失败或先行关系另有必要顺序。
+- SPI大买量延续而非Boulevard崩落 → [SET-0026](../setups/SET-0026.md)；反例归入本条失败/否决，不新增一条镜像策略。
+- Poor high / poor low / TPO ledge → [SET-0033](../setups/SET-0033.md)；仅上下方向镜像及台阶称谓不同；必须保留突破并接受的共同执行条件。
+- CVD显示的吸收与Footprint吸收 → [SET-0003](../setups/SET-0003.md)；若必要现象仍是大量冲击低位移，换工具不产生新setup；单独价量背离而没有大量承接见44。
+- 噪声带14日/仓位缩放/4倍杠杆 → [SET-0048](../setups/SET-0048.md)；信号的市场前提与顺序未变；模型管理与杠杆版本记录在同一ID。
+- 首段符号/r12/同号联合/回归配置 → [SET-0049](../setups/SET-0049.md)；同一日内预测关系的实现与持仓模块，不计四条。
+- Big Dawg午间低量旗形 → [SET-0015](../setups/SET-0015.md)；新闻和相对量筛选是缩量回撤背景版本；保留原时间与量条件，不重复计数。

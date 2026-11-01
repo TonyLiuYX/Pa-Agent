@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://intraday-library.invalid/schema/visual.schema.json",
+  "title": "visual record",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "setup_ids",
+    "material_type",
+    "source_id",
+    "url",
+    "local_path",
+    "locator",
+    "symbol",
+    "market_date",
+    "timeframe",
+    "timezone",
+    "author",
+    "verification",
+    "format",
+    "dimensions",
+    "sha256",
+    "alt",
+    "caption",
+    "case_scope",
+    "rights",
+    "annotation",
+    "missing",
+    "accessed",
+    "time_locator",
+    "time_locator_reason"
+  ],
+  "properties": {
+    "accessed": {
+      "type": "string",
+      "format": "date"
+    },
+    "alt": {
+      "type": "string"
+    },
+    "annotation": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "case_scope": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "format": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^VIS-[0-9]{6}$"
+    },
+    "local_path": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "locator": {
+      "type": "string"
+    },
+    "market_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "material_type": {
+      "enum": [
+        "real_source_chart",
+        "source_schematic",
+        "synthetic_structure_diagram",
+        "reconstructed_chart",
+        "aggregate_performance_figure"
+      ]
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "rights": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "setup_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^SET-[0-9]{4}$"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "source_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^SRC-[0-9]{4}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "symbol": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "time_locator": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "time_locator_reason": {
+      "type": "string"
+    },
+    "timeframe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "timezone": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "verification": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

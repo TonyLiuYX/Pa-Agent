@@ -1,0 +1,6 @@
+# Core build and structural validation use the Python standard library.
+# These packages enable full JSON Schema, optional public-source extraction and UI testing.
+jsonschema
+beautifulsoup4
+pypdf
+playwright

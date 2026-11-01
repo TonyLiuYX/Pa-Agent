@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="920" viewBox="0 0 980 920" role="img" aria-labelledby="title desc">
+<title id="title">SET-0030 · 决策结构示意</title><desc id="desc">原创七轴示意，非真实市场数据；相关市场方向一致并有可核实先行者；滞后市场自己的固定IB边界；领导先动+滞后单向推进及自身流确认；滞后产品破IB并在外保持再续行；自身恢复IB/先行方向被否认；结构目标、相关性复核、当日平仓；同步双市场OHLC+量+DOM</desc>
+<rect width="980" height="920" fill="#f5f3ec"/>
+<style>text{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}</style>
+<text x="36" y="52" fill="#193c36" font-size="26" font-weight="650">SET-0030 · 决策结构示意</text>
+<text x="36" y="88" fill="#73553b" font-size="18">原创结构图 · 非真实市场数据 · 不显示价格、成交或收益</text>
+<rect x="36" y="120" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="154" font-size="17" fill="#225d50" font-weight="650">01 市场前提</text>
+<text x="224" y="154" font-size="18" fill="#233b34">相关市场方向一致并有可核实先行者</text>
+<rect x="36" y="224" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="258" font-size="17" fill="#225d50" font-weight="650">02 关键位置</text>
+<text x="224" y="258" font-size="18" fill="#233b34">滞后市场自己的固定IB边界</text>
+<rect x="36" y="328" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="362" font-size="17" fill="#225d50" font-weight="650">03 行为顺序</text>
+<text x="224" y="362" font-size="18" fill="#233b34">领导先动+滞后单向推进及自身流确认</text>
+<rect x="36" y="432" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="466" font-size="17" fill="#225d50" font-weight="650">04 入场触发</text>
+<text x="224" y="466" font-size="18" fill="#233b34">滞后产品破IB并在外保持再续行</text>
+<rect x="36" y="536" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="570" font-size="17" fill="#924a41" font-weight="650">05 失效逻辑</text>
+<text x="224" y="570" font-size="18" fill="#233b34">自身恢复IB/先行方向被否认</text>
+<rect x="36" y="640" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="674" font-size="17" fill="#225d50" font-weight="650">06 预期路径</text>
+<text x="224" y="674" font-size="18" fill="#233b34">结构目标、相关性复核、当日平仓</text>
+<rect x="36" y="744" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="778" font-size="17" fill="#225d50" font-weight="650">07 必要数据</text>
+<text x="224" y="778" font-size="18" fill="#233b34">同步双市场OHLC+量+DOM</text>
+<text x="36" y="876" fill="#526f60" font-size="16">从入场前的可观察条件检查；风险与管理版本请回到正文。</text>
+</svg>

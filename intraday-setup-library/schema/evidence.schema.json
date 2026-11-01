@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://intraday-library.invalid/schema/evidence.schema.json",
+  "title": "evidence record",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "setup_id",
+    "source_id",
+    "locator",
+    "claim",
+    "claim_type",
+    "source_rule",
+    "relationship",
+    "verification",
+    "notes",
+    "accessed"
+  ],
+  "properties": {
+    "accessed": {
+      "type": "string",
+      "format": "date"
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_type": {
+      "enum": [
+        "observed_definition",
+        "practitioner_rule",
+        "behavior_hypothesis",
+        "community_opinion",
+        "editor_operationalization",
+        "unverified_profit_claim",
+        "research_rule",
+        "event_fact",
+        "counter_evidence"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^EVD-[0-9]{6}$"
+    },
+    "locator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "string"
+    },
+    "performance_context": {
+      "type": "object"
+    },
+    "relationship": {
+      "enum": [
+        "supports",
+        "context_only",
+        "limits",
+        "opposes",
+        "disputed",
+        "operationalizes"
+      ]
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "setup_id": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^SRC-[0-9]{4}$"
+    },
+    "source_rule": {
+      "type": "string"
+    },
+    "verification": {
+      "enum": [
+        "text_checked",
+        "editor_proposal_not_tested",
+        "not_checked"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

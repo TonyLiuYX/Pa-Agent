@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-03",
+  "version": "1.3.0",
+  "status": "passed",
+  "environment": {
+    "python": "3.14.3",
+    "platform": "Darwin",
+    "playwright": "1.62.0",
+    "browser": "Chromium 151.0.7922.34",
+    "url_mode": "file://",
+    "http_requests_blocked": true,
+    "mobile_viewport": [
+      390,
+      844
+    ]
+  },
+  "checks": [
+    "file:// home renders 50 records with network requests blocked",
+    "Chinese full-text search finds absorption",
+    "English AND-token search finds failed breakout",
+    "Alias search finds H2/M2 record",
+    "Body-only formula search finds noise-band record",
+    "Zero-result state renders without errors",
+    "PA + market multi-axis filters intersect correctly",
+    "Data requirement filter matches actual DOM records",
+    "Visual gap filter matches actual record coverage",
+    "Context-only visual filter separates background records",
+    "Method family + environment filters preserve specific VWAP balance setup",
+    "Structure-location filter returns lead-lag IB and two-sided IB records",
+    "Execution-mode filter separates three source model versions",
+    "Empty comparison gives actionable selection hint",
+    "Fourth comparison selection is rejected with visible reason",
+    "Three-record comparison contains real fingerprint, entry, stop and management text",
+    "Comparison selection persists after search changes",
+    "Clear comparison resets selections and table",
+    "Card navigates to full 15-section setup page",
+    "Original local SVG renders in case section with meaningful alt text",
+    "Setup-to-source link and source reverse citation work",
+    "Bidirectional related-setup navigation works",
+    "Learning, glossary, comparison, quality, report, aliases and source indexes render",
+    "README links to offline recognition guide",
+    "Offline executable catalog renders all 50 definitions and variants",
+    "Recognition catalog links to independent evaluation protocol",
+    "All 50 setup pages render 15 chapters and load their local original SVG",
+    "390px mobile home and horizontal comparison stay within viewport",
+    "Mobile full-record case section loads local SVG and stays within viewport",
+    "Mobile original-size diagram link opens the actual local SVG",
+    "390px recognition, catalog and evaluation pages stay within viewport",
+    "No JavaScript page errors or HTTP(S) requests throughout offline tests"
+  ],
+  "errors": [],
+  "console_errors": [],
+  "network_requests": [],
+  "screenshots": [
+    "reports/previews/desktop-comparison.png",
+    "reports/previews/setup-absorption.png",
+    "reports/previews/desktop-recognition.png",
+    "reports/previews/desktop-home.png",
+    "reports/previews/mobile-home.png",
+    "reports/previews/mobile-noise-band.png",
+    "reports/previews/mobile-recognition.png"
+  ],
+  "manual_visual_review": {
+    "status": "passed",
+    "scope": "All seven current captured desktop/mobile offline screenshots visually reviewed after rule0.2.2 rebuild; readable layouts, local diagrams and scrollable code/comparison panes."
+  },
+  "limitations": [
+    "Chromium headless tested; no dedicated Safari/Firefox test",
+    "Original source charts stay external; tests check local own diagrams and links, not remote market execution",
+    "This is a reading UI test, not a strategy backtest"
+  ]
+}

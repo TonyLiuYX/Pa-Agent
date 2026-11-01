@@ -1,0 +1,355 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://intraday-library.invalid/schema/setup.schema.json",
+  "title": "setup record",
+  "type": "object",
+  "required": [
+    "id",
+    "schema_version",
+    "version",
+    "name_zh",
+    "name_en",
+    "aliases",
+    "name_nature",
+    "status",
+    "summary",
+    "mechanism",
+    "method_families",
+    "market_types",
+    "structure_locations",
+    "environment_tags",
+    "pa_role",
+    "markets_observed",
+    "markets_supported",
+    "migration_hypotheses",
+    "session",
+    "session_tags",
+    "context_timeframe",
+    "trigger_timeframe",
+    "data_requirements",
+    "execution_mode",
+    "source_ids",
+    "evidence_ids",
+    "visual_ids",
+    "rule_completeness",
+    "independent_corroboration",
+    "profit_evidence",
+    "created",
+    "updated",
+    "reviewed_at",
+    "known_gaps",
+    "logic_fingerprint",
+    "unknown_fields",
+    "review_scope",
+    "source_coverage"
+  ],
+  "properties": {
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "body_markdown": {
+      "type": "string"
+    },
+    "context_timeframe": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created": {
+      "type": "string",
+      "format": "date"
+    },
+    "data_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "environment_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^EVD-[0-9]{6}$"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "execution_mode": {
+      "type": "string"
+    },
+    "file_path": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "independent_corroboration": {
+      "enum": [
+        "limited_single_family",
+        "limited_derivative_corroboration",
+        "independent_context_only",
+        "independent_event_facts_only",
+        "independent_counter_evidence_only",
+        "multiple_families",
+        "not_evaluated"
+      ]
+    },
+    "known_gaps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "logic_fingerprint": {
+      "type": "array",
+      "minItems": 7,
+      "maxItems": 7,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "market_types": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "markets_context_only": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "markets_observed": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "markets_supported": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "mechanism": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method_families": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "migration_hypotheses": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "name_en": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name_nature": {
+      "type": "string"
+    },
+    "name_zh": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pa_role": {
+      "enum": [
+        "core",
+        "supporting",
+        "non_primary"
+      ]
+    },
+    "profit_evidence": {
+      "enum": [
+        "not_established",
+        "author_backtest_specific_version",
+        "author_backtest_not_reproduced",
+        "independently_reproduced",
+        "independently_audited_live"
+      ]
+    },
+    "review_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "rule_completeness": {
+      "type": "string",
+      "minLength": 1
+    },
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "sections": {
+      "type": "object",
+      "minProperties": 15,
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "session": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "source_coverage": {
+      "type": "object"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^SRC-[0-9]{4}$"
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "provisional",
+        "draft",
+        "reviewed",
+        "merged",
+        "deprecated"
+      ]
+    },
+    "structure_locations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "trigger_timeframe": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "unknown_fields": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "visual_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^VIS-[0-9]{6}$"
+      },
+      "uniqueItems": true
+    },
+    "alias_of": {
+      "type": "string",
+      "pattern": "^SET-[0-9]{4}$"
+    },
+    "deprecated_reason": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "reviewed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "reviewed_at": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "merged"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "alias_of"
+        ]
+      }
+    }
+  ]
+}

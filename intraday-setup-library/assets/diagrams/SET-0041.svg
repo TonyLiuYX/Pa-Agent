@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="920" viewBox="0 0 980 920" role="img" aria-labelledby="title desc">
+<title id="title">SET-0041 · 决策结构示意</title><desc id="desc">原创七轴示意，非真实市场数据；关键位置有方向压力；跳价后留下的薄成交区；实际阶梯跳过+反向流少；跳价或薄区保持后续推版本；薄区补成交并被穿回；下一拍卖参考、反向流返回即撤、当日结束；DOM/逐笔动态+volume at price</desc>
+<rect width="980" height="920" fill="#f5f3ec"/>
+<style>text{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}</style>
+<text x="36" y="52" fill="#193c36" font-size="26" font-weight="650">SET-0041 · 决策结构示意</text>
+<text x="36" y="88" fill="#73553b" font-size="18">原创结构图 · 非真实市场数据 · 不显示价格、成交或收益</text>
+<rect x="36" y="120" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="154" font-size="17" fill="#225d50" font-weight="650">01 市场前提</text>
+<text x="224" y="154" font-size="18" fill="#233b34">关键位置有方向压力</text>
+<rect x="36" y="224" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="258" font-size="17" fill="#225d50" font-weight="650">02 关键位置</text>
+<text x="224" y="258" font-size="18" fill="#233b34">跳价后留下的薄成交区</text>
+<rect x="36" y="328" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="362" font-size="17" fill="#225d50" font-weight="650">03 行为顺序</text>
+<text x="224" y="362" font-size="18" fill="#233b34">实际阶梯跳过+反向流少</text>
+<rect x="36" y="432" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="466" font-size="17" fill="#225d50" font-weight="650">04 入场触发</text>
+<text x="224" y="466" font-size="18" fill="#233b34">跳价或薄区保持后续推版本</text>
+<rect x="36" y="536" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="570" font-size="17" fill="#924a41" font-weight="650">05 失效逻辑</text>
+<text x="224" y="570" font-size="18" fill="#233b34">薄区补成交并被穿回</text>
+<rect x="36" y="640" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="674" font-size="17" fill="#225d50" font-weight="650">06 预期路径</text>
+<text x="224" y="674" font-size="18" fill="#233b34">下一拍卖参考、反向流返回即撤、当日结束</text>
+<rect x="36" y="744" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="778" font-size="17" fill="#225d50" font-weight="650">07 必要数据</text>
+<text x="224" y="778" font-size="18" fill="#233b34">DOM/逐笔动态+volume at price</text>
+<text x="36" y="876" fill="#526f60" font-size="16">从入场前的可观察条件检查；风险与管理版本请回到正文。</text>
+</svg>

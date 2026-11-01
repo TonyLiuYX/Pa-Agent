@@ -1,0 +1,31 @@
+{
+  "mode": "demo",
+  "symbols": [
+    "SPY",
+    "QQQ",
+    "AAPL",
+    "MSFT",
+    "NVDA"
+  ],
+  "include_variants": true,
+  "host": "127.0.0.1",
+  "port": 8765,
+  "pace_seconds": 0.02,
+  "demo_sessions": 1,
+  "alpaca_history_sessions": 15,
+  "queue_size": 10000,
+  "checkpoint_seconds": 60,
+  "checkpoint_events": 10000,
+  "recognition": {},
+  "paper": {
+    "initial_cash": "100000.00",
+    "allocation_fraction": "0.10",
+    "max_positions": 5,
+    "stop_fraction": "0.01",
+    "target_fraction": "0.02",
+    "fee_per_fill": "0.00",
+    "slippage_ticks": 1
+  },
+  "source_kind": "unknown",
+  "retention": {}
+}

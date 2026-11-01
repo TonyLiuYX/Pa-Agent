@@ -1,0 +1,324 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Engineering report: explicit observation and experiment identity",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "account",
+    "coverage",
+    "journal_sha256",
+    "scope",
+    "configuration",
+    "derived_sha256",
+    "input_provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "mode",
+        "state",
+        "watchlist",
+        "processed_cursor",
+        "health",
+        "identity",
+        "market_validation",
+        "execution"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mode": {
+          "enum": [
+            "demo",
+            "live",
+            "replay"
+          ]
+        },
+        "state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "watchlist": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "processed_cursor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "health": {
+          "type": "object"
+        },
+        "identity": {
+          "type": "object",
+          "required": [
+            "configuration_sha256",
+            "algorithm_sha256",
+            "runtime_sha256",
+            "execution_sha256"
+          ],
+          "properties": {
+            "configuration_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "algorithm_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "runtime_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "execution_sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "additionalProperties": true
+        },
+        "market_validation": {
+          "const": "not_run"
+        },
+        "execution": {
+          "const": "paper_only"
+        }
+      },
+      "additionalProperties": true
+    },
+    "account": {
+      "type": "object",
+      "required": [
+        "balance_cents",
+        "equity_cents",
+        "available_cents",
+        "locked_cents",
+        "reserved_cents",
+        "realized_pnl_cents",
+        "unrealized_pnl_cents",
+        "fees_cents",
+        "balance",
+        "equity",
+        "available",
+        "locked",
+        "reserved",
+        "realized_pnl",
+        "unrealized_pnl",
+        "fees",
+        "currency",
+        "execution_model",
+        "execution_version",
+        "execution_sha256",
+        "day",
+        "daily_entry_blocked",
+        "entry_paused",
+        "position_count",
+        "pending_entries",
+        "fee_per_fill",
+        "valuation_times",
+        "performance_scope"
+      ],
+      "properties": {
+        "balance_cents": {
+          "type": "integer"
+        },
+        "equity_cents": {
+          "type": "integer"
+        },
+        "available_cents": {
+          "type": "integer"
+        },
+        "locked_cents": {
+          "type": "integer"
+        },
+        "reserved_cents": {
+          "type": "integer"
+        },
+        "realized_pnl_cents": {
+          "type": "integer"
+        },
+        "unrealized_pnl_cents": {
+          "type": "integer"
+        },
+        "fees_cents": {
+          "type": "integer"
+        },
+        "balance": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "equity": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "available": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "locked": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "reserved": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "realized_pnl": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "unrealized_pnl": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "fees": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "currency": {
+          "const": "USD"
+        },
+        "execution_model": {
+          "enum": [
+            "next_quote_experimental",
+            "next_bar_proxy_experimental"
+          ]
+        },
+        "execution_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "execution_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "day": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "daily_entry_blocked": {
+          "type": "boolean"
+        },
+        "entry_paused": {
+          "type": "boolean"
+        },
+        "position_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "pending_entries": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fee_per_fill": {
+          "type": "string",
+          "pattern": "^-?[0-9]+\\.[0-9]{2}$"
+        },
+        "valuation_times": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "date-time",
+            "pattern": "(Z|[+-][0-9]{2}:[0-9]{2})$"
+          }
+        },
+        "performance_scope": {
+          "const": "experimental_overlay_not_source_strategy"
+        }
+      },
+      "additionalProperties": true
+    },
+    "coverage": {
+      "type": "object"
+    },
+    "journal_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "configuration": {
+      "type": "object"
+    },
+    "derived_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "input_provenance": {
+      "type": "object",
+      "required": [
+        "data_sha256",
+        "rule_sha256",
+        "detections_sha256",
+        "algorithm_sha256",
+        "configuration_sha256",
+        "data_file",
+        "rule_file",
+        "detections_file",
+        "scope",
+        "processed_cursor"
+      ],
+      "properties": {
+        "data_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "rule_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "detections_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "algorithm_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "configuration_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "data_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rule_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "detections_file": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "processed_cursor": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "research_reports": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="920" viewBox="0 0 980 920" role="img" aria-labelledby="title desc">
+<title id="title">SET-0049 · 决策结构示意</title><desc id="desc">原创七轴示意，非真实市场数据；完整现金日、有昨收和10点价；固定15:30入口/16点退出；首段昨收至10点收益符号；15:30长正短非正；联合版另记；时间退出；价格硬风险仅编辑版；16:00全部平、真实收盘执行成本；昨收+10点+15:30/16点数据与纽约时钟</desc>
+<rect width="980" height="920" fill="#f5f3ec"/>
+<style>text{font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}</style>
+<text x="36" y="52" fill="#193c36" font-size="26" font-weight="650">SET-0049 · 决策结构示意</text>
+<text x="36" y="88" fill="#73553b" font-size="18">原创结构图 · 非真实市场数据 · 不显示价格、成交或收益</text>
+<rect x="36" y="120" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="154" font-size="17" fill="#225d50" font-weight="650">01 市场前提</text>
+<text x="224" y="154" font-size="18" fill="#233b34">完整现金日、有昨收和10点价</text>
+<rect x="36" y="224" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="258" font-size="17" fill="#225d50" font-weight="650">02 关键位置</text>
+<text x="224" y="258" font-size="18" fill="#233b34">固定15:30入口/16点退出</text>
+<rect x="36" y="328" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="362" font-size="17" fill="#225d50" font-weight="650">03 行为顺序</text>
+<text x="224" y="362" font-size="18" fill="#233b34">首段昨收至10点收益符号</text>
+<rect x="36" y="432" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="466" font-size="17" fill="#225d50" font-weight="650">04 入场触发</text>
+<text x="224" y="466" font-size="18" fill="#233b34">15:30长正短非正；联合版另记</text>
+<rect x="36" y="536" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="570" font-size="17" fill="#924a41" font-weight="650">05 失效逻辑</text>
+<text x="224" y="570" font-size="18" fill="#233b34">时间退出；价格硬风险仅编辑版</text>
+<rect x="36" y="640" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="674" font-size="17" fill="#225d50" font-weight="650">06 预期路径</text>
+<text x="224" y="674" font-size="18" fill="#233b34">16:00全部平、真实收盘执行成本</text>
+<rect x="36" y="744" width="908" height="88" rx="8" fill="#fffef9" stroke="#cbd6c9"/>
+<text x="55" y="778" font-size="17" fill="#225d50" font-weight="650">07 必要数据</text>
+<text x="224" y="778" font-size="18" fill="#233b34">昨收+10点+15:30/16点数据与纽约时钟</text>
+<text x="36" y="876" fill="#526f60" font-size="16">从入场前的可观察条件检查；风险与管理版本请回到正文。</text>
+</svg>

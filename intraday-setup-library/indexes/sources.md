@@ -1,0 +1,90 @@
+# 来源反向索引
+
+实际阅读和下载分别计数，同族内容不自动构成独立核验。
+
+- [SRC-0001 · Patterns on the Open](https://www.brookstradingcourse.com/wp-content/uploads/2018/10/181030-futuresio-Patterns-on-the-Open-Al-Brooks.pdf) — brooks / related_sections；引用：[SET-0001](../setups/SET-0001.md), [SET-0007](../setups/SET-0007.md), [SET-0008](../setups/SET-0008.md), [SET-0013](../setups/SET-0013.md), [SET-0018](../setups/SET-0018.md)
+- [SRC-0002 · Practical Application of Order Flow, Part 2](https://www.jigsawtrading.com/wp-content/uploads/2014/03/PracticalApplicationOfOrderFlow-Pt2.pdf) — jigsaw / related_sections；引用：[SET-0003](../setups/SET-0003.md), [SET-0039](../setups/SET-0039.md), [SET-0040](../setups/SET-0040.md), [SET-0047](../setups/SET-0047.md)
+- [SRC-0003 · Order Flow Absorption & Market Reversals by Axia Futures](https://www.jigsawtrading.com/blog/order-flow-absorption-market-reversals/) — axia / full_article；引用：[SET-0003](../setups/SET-0003.md)
+- [SRC-0004 · Day Trading VPOC and Market Profile](https://axiafutures.com/blog/day-trading-vpoc-and-market-profile/) — axia / full_article；引用：[SET-0004](../setups/SET-0004.md)
+- [SRC-0005 · A Profitable Day Trading Strategy For The U.S. Equity Market](https://alexandria.unisg.ch/server/api/core/bitstreams/3c2989c4-688d-4d78-8a71-f02690990d51/content) — concretum-bbt / related_sections；引用：[SET-0002](../setups/SET-0002.md)
+- [SRC-0006 · Open Drive Trading Strategies](https://axiafutures.com/blog/open-drive-trading-strategies/) — axia / full_article；引用：[SET-0020](../setups/SET-0020.md), [SET-0050](../setups/SET-0050.md)
+- [SRC-0007 · Hikkake Trade Setup](https://www.tradingsetupsreview.com/hikkake/) — galen-woods / full_main_text；引用：[SET-0005](../setups/SET-0005.md)
+- [SRC-0008 · 4 Price Action Trading Strategies That Profit From Trapped Traders](https://www.tradingsetupsreview.com/4-day-trading-strategies-profit-trapped-traders/) — galen-woods / full_main_text；引用：[SET-0005](../setups/SET-0005.md), [SET-0017](../setups/SET-0017.md)
+- [SRC-0009 · E-mini Bulls Finding Support Testing September 11 Low](https://www.brookstradingcourse.com/analysis/e-mini-bulls-finding-support-testing-september-11th-low/) — brooks / related_sections；引用：[SET-0009](../setups/SET-0009.md)
+- [SRC-0010 · How To Trade A Market Profile Ledge](https://axiafutures.com/blog/trading-market-profile-ledge/) — axia / full_main_text；引用：[SET-0033](../setups/SET-0033.md), [SET-0034](../setups/SET-0034.md)
+- [SRC-0011 · 2 Trades Using Market Profile Ledges](https://axiafutures.com/blog/2-trades-using-market-profile-ledges/) — axia / full_main_text；引用：[SET-0034](../setups/SET-0034.md)
+- [SRC-0012 · Footprint Strategies You Can Apply In Your Trading](https://axiafutures.com/blog/footprint-strategies-you-can-apply-in-your-trading/) — axia / full_main_text；引用：[SET-0036](../setups/SET-0036.md)
+- [SRC-0013 · My Experience: Trading the Open Playbook](https://saitrades.com/wp-content/uploads/2021/03/Trading-the-Open-Playbook.pdf) — sai-trades / related_sections；引用：[SET-0010](../setups/SET-0010.md), [SET-0014](../setups/SET-0014.md), [SET-0015](../setups/SET-0015.md), [SET-0016](../setups/SET-0016.md), [SET-0021](../setups/SET-0021.md), [SET-0022](../setups/SET-0022.md), [SET-0023](../setups/SET-0023.md), [SET-0029](../setups/SET-0029.md)
+- [SRC-0014 · Trading Strategy Against Overnight Positioning](https://axiafutures.com/blog/trading-strategy-against-overnight-positioning/) — axia / full_main_text；引用：[SET-0050](../setups/SET-0050.md)
+- [SRC-0015 · Two-legged Pullback to Moving Average (M2B, M2S)](https://www.tradingsetupsreview.com/two-legged-pullback-to-moving-average-m2b-m2s/) — galen-woods / full_main_text；引用：[SET-0006](../setups/SET-0006.md)
+- [SRC-0016 · 10 best price action trading patterns](https://www.brookstradingcourse.com/price-action/10-best-price-action-trading-patterns/) — brooks / full_main_text；引用：[SET-0007](../setups/SET-0007.md), [SET-0008](../setups/SET-0008.md), [SET-0010](../setups/SET-0010.md), [SET-0011](../setups/SET-0011.md), [SET-0018](../setups/SET-0018.md)
+- [SRC-0017 · Fundamental Trading Patterns](https://adamhgrimes.com/fundamental-trading-patterns/) — adam-grimes / full_main_text；引用：[SET-0006](../setups/SET-0006.md), [SET-0014](../setups/SET-0014.md)
+- [SRC-0018 · Market Pattern: The Failure Test](https://adamhgrimes.com/failure-test/) — adam-grimes / full_main_text；引用：[SET-0022](../setups/SET-0022.md)
+- [SRC-0019 · Double Inside Bar Pattern For Intraday Trading](https://www.tradingsetupsreview.com/double-inside-bar-pattern-for-intraday-trading/) — galen-woods / full_main_text；引用：[SET-0013](../setups/SET-0013.md)
+- [SRC-0020 · Low Volume Pullback Strategy (Expanded)](https://www.tradingsetupsreview.com/low-volume-pullback-strategy-expanded/) — galen-woods / full_main_text；引用：[SET-0015](../setups/SET-0015.md)
+- [SRC-0021 · A Plain and Simple Trend Line Channel Trading Strategy](https://www.tradingsetupsreview.com/plain-simple-trend-line-channel-trading-strategy/) — galen-woods / full_main_text；引用：无最终条目引用
+- [SRC-0022 · The VWAP Indicator Ultimate Guide And Video](https://www.tradingsim.com/blog/vwap-indicator) — tradingsim / related_sections；引用：[SET-0023](../setups/SET-0023.md), [SET-0024](../setups/SET-0024.md), [SET-0025](../setups/SET-0025.md), [SET-0026](../setups/SET-0026.md)
+- [SRC-0023 · VWAP Boulevard: The Ultimate Day Trading Strategy for Low-Float Stocks [#vwapboulevard]](https://www.tradingsim.com/blog/vwap-boulevard) — tradingsim / full_main_text；引用：[SET-0026](../setups/SET-0026.md)
+- [SRC-0024 · https://www.warriortrading.com/mastering-the-gap-and-go-strategy/](https://www.warriortrading.com/mastering-the-gap-and-go-strategy/) — warrior / not_read；引用：无最终条目引用
+- [SRC-0025 · Technical Analysis Series](https://media.warriortrading.com/2022/06/03110459/Technical-Analysis-v3.pdf) — warrior / related_sections；引用：[SET-0009](../setups/SET-0009.md), [SET-0021](../setups/SET-0021.md)
+- [SRC-0026 · Our Trading Methodology](https://oneoption.com/intro-series/our-trading-methodology/) — oneoption / full_main_text；引用：[SET-0027](../setups/SET-0027.md)
+- [SRC-0027 · Relative Strength & Weakness](https://oneoption.com/intro-series/relative-strength-weakness/) — oneoption / full_main_text；引用：无最终条目引用
+- [SRC-0028 · Stretched Volume Profile Strategy In Crypto](https://axiafutures.com/blog/stretched-volume-profile-strategy-in-crypto/) — axia / full_main_text；引用：[SET-0038](../setups/SET-0038.md)
+- [SRC-0029 · Breakout Energy Change Trade](https://axiafutures.com/blog/breakout-energy-change-trade/) — axia / full_main_text；引用：[SET-0039](../setups/SET-0039.md)
+- [SRC-0030 · Steady Continuation Drift Breakout Trade](https://axiafutures.com/blog/steady-continuation-drift-breakout-trade/) — axia / full_main_text；引用：[SET-0047](../setups/SET-0047.md)
+- [SRC-0031 · Volume Delta Reversal Trade Strategy](https://axiafutures.com/blog/volume-delta-reversal-trade-strategy/) — axia / full_main_text；引用：[SET-0044](../setups/SET-0044.md)
+- [SRC-0032 · 2 Ways To Scalp The Exhaustion Move](https://axiafutures.com/blog/2-ways-to-scalp-the-exhaustion-move/) — axia / full_main_text；引用：[SET-0038](../setups/SET-0038.md), [SET-0040](../setups/SET-0040.md)
+- [SRC-0033 · Identifying True Liquidity With Bookmap](https://bookmap.com/blog/identifying-true-liquidity-with-bookmap) — bookmap / full_main_text；引用：[SET-0003](../setups/SET-0003.md)
+- [SRC-0034 · Unfinished auction. What it is?](https://atas.net/blog/unfinished-auction-what-it-is-and-how-to-trade-it/) — atas / full_main_text；引用：无最终条目引用
+- [SRC-0035 · Imbalance – what is it? How to trade imbalance.](https://atas.net/blog/how-to-find-and-trade-imbalance/) — atas / full_main_text；引用：[SET-0042](../setups/SET-0042.md), [SET-0043](../setups/SET-0043.md), [SET-0044](../setups/SET-0044.md)
+- [SRC-0036 · An imbalance. Did you know that size matters?](https://atas.net/blog/imbalance-why-the-size-matters/) — atas / full_main_text；引用：[SET-0042](../setups/SET-0042.md), [SET-0043](../setups/SET-0043.md)
+- [SRC-0037 · Beat the Market: An Effective Intraday Momentum Strategy for S&P500 ETF (SPY)](https://concretumgroup.com/wp-content/uploads/2026/02/Beat-the-Market.pdf) — concretum-bbt / related_sections；引用：[SET-0048](../setups/SET-0048.md)
+- [SRC-0038 · Market Profile Caught In The Hole Trade](https://axiafutures.com/blog/market-profile-caught-in-the-hole-trade/) — axia / full_main_text；引用：[SET-0020](../setups/SET-0020.md)
+- [SRC-0039 · Use This Volume Pattern To Manage Your Trade](https://axiafutures.com/blog/use-this-volume-pattern-to-manage-your-trade/) — axia / full_main_text；引用：[SET-0041](../setups/SET-0041.md)
+- [SRC-0040 · Complexity & Inductive Thinking: How To Add Depth To Your Trading Tools](https://axiafutures.com/blog/how-to-depth-trading-tools/) — axia / related_sections；引用：无最终条目引用
+- [SRC-0041 · Trading Long Liquidation Break In US Equities](https://axiafutures.com/blog/trading-long-liquidation-break-in-us-equities/) — axia / full_main_text；引用：[SET-0046](../setups/SET-0046.md)
+- [SRC-0042 · The Big Dawg Consolidation Cheat Sheet](https://smbpowerpoints.s3.amazonaws.com/The_Big_Dog_Consolidation_Cheat_Sheet.pdf) — smb / full_text；引用：[SET-0029](../setups/SET-0029.md)
+- [SRC-0043 · Algo Trading Strategy You Can Beat](https://axiafutures.com/blog/algo-trading-strategy-you-can-beat/) — axia / full_main_text；引用：无最终条目引用
+- [SRC-0044 · Trading the Fed Rate Decision](https://axiafutures.com/blog/trading-the-fed-rate-decision/) — axia / full_main_text；引用：[SET-0031](../setups/SET-0031.md), [SET-0032](../setups/SET-0032.md)
+- [SRC-0045 · How To Trade The ECB Decision – December 2020](https://axiafutures.com/blog/how-to-trade-the-ecb-decision-december-2020/) — axia / full_main_text；引用：[SET-0031](../setups/SET-0031.md), [SET-0032](../setups/SET-0032.md)
+- [SRC-0046 · Blogs from Axia Futures](https://axiafutures.com/blog/how-to-trade-the-boe-decision-september-2020/) — axia / not_read；引用：无最终条目引用
+- [SRC-0047 · A Simple and Effective Price Action Trading Setup](https://www.tradingsetupsreview.com/simple-effective-price-action-trading-setup/) — galen-woods / full_main_text；引用：[SET-0017](../setups/SET-0017.md)
+- [SRC-0048 · Forex Price Action Re-Entry Trading Strategy](https://www.tradingsetupsreview.com/forex-price-action-re-entry-trading/) — galen-woods / full_main_text；引用：[SET-0019](../setups/SET-0019.md)
+- [SRC-0049 · Second Day Play](https://www.smbtraining.com/blog/second-day-play) — smb / full_main_text；引用：[SET-0027](../setups/SET-0027.md), [SET-0028](../setups/SET-0028.md)
+- [SRC-0050 · The Explosive Second Day Play](https://www.smbtraining.com/blog/the-explosive-second-day-play) — smb / transcript_read；引用：[SET-0028](../setups/SET-0028.md)
+- [SRC-0051 · NR7 Trading Strategy](https://www.tradingsetupsreview.com/nr7-trading-strategy/) — galen-woods / full_main_text；引用：[SET-0019](../setups/SET-0019.md)
+- [SRC-0052 · Anchor Zones Trading Strategy](https://www.tradingsetupsreview.com/anchor-zones-trading-strategy/) — galen-woods / full_main_text；引用：无最终条目引用
+- [SRC-0053 · Bulkowski's Retrace Day Trading Setup](https://www.tradingsetupsreview.com/bulkowskis-retrace-day-trading-setup/) — galen-woods / full_main_text；引用：[SET-0012](../setups/SET-0012.md), [SET-0019](../setups/SET-0019.md)
+- [SRC-0054 · Intraday Trend Trading With Price Action (Trade Price)](https://www.tradingsetupsreview.com/intraday-trend-trading-price-action-trade-price/) — galen-woods / full_main_text；引用：无最终条目引用
+- [SRC-0055 · How To Trade Reversals By Spotting The Big Players With Volume Spikes](https://www.tradingsetupsreview.com/trade-reversals-spotting-big-players/) — galen-woods / full_main_text；引用：无最终条目引用
+- [SRC-0056 · 标题未核实](https://www.investopedia.com/articles/forex/08/five-minute-momo.asp) — investopedia-fx / not_read；引用：无最终条目引用
+- [SRC-0057 · 标题未核实](https://adamhgrimes.com/breakout-trades-holding-level/) — adam-grimes / not_read；引用：无最终条目引用
+- [SRC-0058 · Bulkowski's Retrace Day Trading Setup (long)](https://www.thepatternsite.com/retracel.html) — bulkowski / full_main_text；引用：[SET-0012](../setups/SET-0012.md)
+- [SRC-0059 · #1: How to Trade Breakouts Like a Pro](https://www.tradingwithrayner.com/course/how-to-trade-breakouts-like-a-pro-how-to-trade-breakouts-like-a-pro/) — rayner-teo / full_main_text；引用：[SET-0016](../setups/SET-0016.md)
+- [SRC-0060 · #6: How to Avoid False Breakout](https://www.tradingwithrayner.com/course/how-to-avoid-false-breakout-my-secret-technique/) — rayner-teo / full_main_text；引用：[SET-0016](../setups/SET-0016.md)
+- [SRC-0061 · Intraday Dynamic Pairs Trading Using Correlation And Cointegration Approach](https://www.quantconnect.com/research/15347/intraday-dynamic-pairs-trading-using-correlation-and-cointegration-approach/) — quantconnect / related_sections；引用：无最终条目引用
+- [SRC-0062 · Trading Strategies Around Poor Lows And Poor Highs](https://axiafutures.com/blog/trading-strategies-around-poor-lows-and-poor-highs/) — axia / full_main_text；引用：[SET-0033](../setups/SET-0033.md)
+- [SRC-0063 · How Can Footprint Help Your Trade Execution](https://axiafutures.com/blog/how-can-footprint-help-your-trade-execution/) — axia / full_main_text；引用：[SET-0041](../setups/SET-0041.md), [SET-0045](../setups/SET-0045.md)
+- [SRC-0064 · How to use the TPO charts in ATAS](https://atas.net/blog/tpo-charts-in-atas-how-to-trade/) — atas / full_main_text；引用：无最终条目引用
+- [SRC-0065 · Everything you need to know about Volume profile types](https://atas.net/blog/volume-profile-types/) — atas / full_main_text；引用：[SET-0036](../setups/SET-0036.md)
+- [SRC-0066 · Analyzing TPO: 5 tips from Jim Dalton’s](https://atas.net/blog/analyzing-tpo-5-important-elements-in-jim-daltons-opinion/) — atas / full_main_text；引用：无最终条目引用
+- [SRC-0067 · How to trade profitably using Footprint charts?](https://atas.net/blog/how-to-trade-profitably-using-footprint-charts/) — atas / not_read；引用：无最终条目引用
+- [SRC-0068 · What Happens When Book Liquidity Disappears? How to Trade Air Pockets](https://bookmap.com/blog/what-happens-when-book-liquidity-disappears-how-to-trade-air-pockets) — bookmap / not_read；引用：无最终条目引用
+- [SRC-0069 · How to Spot Long Liquidations Before They Break](https://bookmap.com/blog/how-to-spot-long-liquidations-before-they-break) — bookmap / full_main_text；引用：[SET-0045](../setups/SET-0045.md), [SET-0046](../setups/SET-0046.md)
+- [SRC-0070 · VWAP Trend Trading Strategies](https://axiafutures.com/blog/vwap-trend-trading-strategies/) — axia / full_main_text；引用：[SET-0024](../setups/SET-0024.md)
+- [SRC-0071 · The Definitive Guide to VWAP Strategies for New Futures Traders](https://ninjatrader.com/futures/blogs/vwap-strategies-futures/) — ninjatrader / full_main_text；引用：[SET-0025](../setups/SET-0025.md)
+- [SRC-0072 · Trading Initial Balance Break Using Market Profile](https://axiafutures.com/blog/trading-initial-balance-break-using-market-profile/) — axia / full_main_text；引用：[SET-0030](../setups/SET-0030.md), [SET-0035](../setups/SET-0035.md)
+- [SRC-0073 · Initial Balance Break Led By Other Correlated Market](https://axiafutures.com/blog/initial-balance-break-led-by-other-correlated-market/) — axia / full_main_text；引用：[SET-0030](../setups/SET-0030.md)
+- [SRC-0074 · Eurostoxx Initial Balance High – Live Trading](https://axiafutures.com/blog/eurostoxx-initial-balance-high-live-trading/) — axia / full_main_text；引用：[SET-0035](../setups/SET-0035.md)
+- [SRC-0075 · The 80% Rule: Tested & Debunked](https://amtbalance.com/va-80-rule) — amt-balance / full_main_text；引用：[SET-0037](../setups/SET-0037.md)
+- [SRC-0076 · 80% Rule](https://www.luxalgo.com/library/indicator/80-percent-rule/) — luxalgo / related_sections；引用：[SET-0037](../setups/SET-0037.md)
+- [SRC-0077 · 标题未核实](https://www.metrotrade.com/what-is-the-80-rule-in-futures-trading/) — metrotrade / not_read；引用：无最终条目引用
+- [SRC-0078 · 标题未核实](https://www.guofuzhou.com/) — gao-han-li-zhou / not_read；引用：无最终条目引用
+- [SRC-0079 · Intraday Momentum: The First Half-Hour Return Predicts the Last Half-Hour Return](https://jplinvest.dk/wp-content/uploads/2020/12/Intraday-momentum-The-first-half-hour-return-predicts-the-last-half-hour-return.pdf) — gao-han-li-zhou / not_read；引用：无最终条目引用
+- [SRC-0080 · 标题未核实](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2552752) — gao-han-li-zhou / not_read；引用：无最终条目引用
+- [SRC-0081 · Intraday Momentum: The First Half-Hour Return Predicts the Last Half-Hour Return (October 2014 preprint)](https://smallake.kr/wp-content/uploads/2015/01/SSRN-id2440866.pdf) — gao-han-li-zhou / related_pdf_pages；引用：[SET-0049](../setups/SET-0049.md)
+- [SRC-0082 · Foreign Exchange Reversals in New York Time](https://www.researchgate.net/publication/228692589_Foreign_exchange_reversals_in_New_York_time) — lebaron-zhao / related_author_manuscript_cached_text；引用：无最终条目引用
+- [SRC-0083 · Powerful Trading Strategies (OneOption public ebook)](https://oneoption.com/wp-content/uploads/2022/07/ebook-old.pdf) — oneoption / related_pdf_pages；引用：[SET-0027](../setups/SET-0027.md)
+- [SRC-0084 · Federal Reserve issues FOMC statement](https://www.federalreserve.gov/newsevents/pressreleases/monetary20210922a.htm) — federal-reserve / full_main_text；引用：[SET-0032](../setups/SET-0032.md)
+- [SRC-0085 · Monetary policy decisions — 12 September 2019](https://www.ecb.europa.eu/press/pr/date/2019/html/ecb.mp190912~08de50b4d2.en.html) — ecb / full_main_text；引用：[SET-0032](../setups/SET-0032.md)
+- [SRC-0086 · Monetary policy decisions — 4 June 2020](https://www.ecb.europa.eu/press/pr/date/2020/html/ecb.mp200604~a307d3429c.en.html) — ecb / full_main_text；引用：[SET-0031](../setups/SET-0031.md)
